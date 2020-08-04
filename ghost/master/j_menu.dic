@@ -26,11 +26,11 @@ OpenSakuraMenu
 		
 		if jazzlover == 1 || jazzfriend == 1 && badbad < 3
 		{
-			//"\0\s[5]\b2HI!!! CAN I HELP?"
-			//"\0\s[5]\b2I'LL BE RIGHT AT IT!!!"
-			//"\0\s[5]\b2I'LL BE HAPPY TO HELP YOU!!!"
-			//"\0\s[5]\b2I'LL DO MY BEST FOR YOU!!!"
-			"\0\s[5]\b2error"
+			"\0\s[5]\b2HI!!! CAN I HELP?"
+			"\0\s[5]\b2I'LL BE RIGHT AT IT!!!"
+			"\0\s[5]\b2I'LL BE HAPPY TO HELP YOU!!!"
+			"\0\s[5]\b2I'LL DO MY BEST FOR YOU!!!"
+			
 		}
 		
 		
@@ -67,8 +67,8 @@ MenuRun
 	
 	"\![*]\q[Tell me something new,altalk]\n\n"
 	--
-    "\![*]\q[I want to try,testvariable]\n/
-	\![*]\q[I want to talk,talk]\n/
+    //\![*]\q[I want to try,testvariable]\n/
+	"\![*]\q[I want to talk,talk]\n/
 	\![*]\q[I want to give you something,gift]\n/
 	\![*]\q[I need some help,dosomething]\n\n/
 	\![*]\q[Show me the Config Menu,configmenu]\n\n\n/
