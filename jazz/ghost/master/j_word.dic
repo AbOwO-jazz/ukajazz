@@ -1,0 +1,735 @@
+﻿//---------------------------Envelopes--------------------------
+//This .dic file is probably one of the simplest you will have to edit, and in fact, if the way it works doesn't appeal to you, you can completely ignore it if you like!
+//Basically, what this file does is set up certain things that I believe are called envelopes or SakuraScriptEnv on the CROW-SSP Dictionary site (which I link to a few times throughout the walkthrough), but I've always kind of thought of them as variables. Envelopes is probably a less confusing name though.
+//Essentially, what this file is for is for creating lists populated with items, and storing them in a word that can later be called during dialogue. If you've read the walkthrough or gone through any of the other .dic files, you've probably seen these before. They are always preceded with a % sign and have a word in parentheses (well, almost always) afterwards. %(username) is one, which displays the user's name, and %(heshe) is another, which displays the right pronoun depending on what the user selected in bootend.dic or menu.dic. Other ones you might not have seen include %(passmin), which shows how many minutes have passed since the ghost was started, %(screenheight) which shows the height of the display they're currently on, and %(keroname) for the name of the second character, among many, many others. Many of these are predefined by the AYA scripting and will be listed on the CROW-SSP site mentioned above, and many of them you will never have to use. By far the ones you will be using the most will be %(username) and the pronoun ones, and those are the only ones you'll have to worry about normally.
+
+
+jokerandom
+ {
+	"a child and their friend."
+	"two little skeletons."
+	"a big mistake."
+	"an angry goose."
+	"a little flower."
+	"someone still present."
+	"a big dog and a little dog."
+	"yourself."
+	"a little red bandanna."
+ }
+
+ idlejazz2
+ {
+    "*Jazz is deep in thought..."
+	"*Jazz hums quietly to himself."
+	"*Jazz is quiet."
+	"*Jazz starts daydreaming."
+	"*Jazz idles."
+	"*Jazz waits for something to happen."
+	"*Jazz thinks of what to say next."
+}
+
+
+
+idlejazz
+{
+	"He thinks it over."
+	"He hesitates."
+	"He hums."
+	"He gives it a thought."
+	"He thinks for a minute."
+	"He frowns."
+	"He sighs."
+	"He idles."
+	
+}
+
+idlescarf
+{
+	"Nothing happens."
+	"But nobody comes."
+	"Nothing changes."
+	"There is no response."
+	"Nobody replies."
+	"It is quiet."
+	"The wind is howling..."
+	"It is raining."
+}
+
+
+factuni
+{
+	"NEUTRON STARS ARE SO DENSE THAT A SPOONFUL OF THEIR MATTER CAN WEIGH MILLIONS OF TONS?"
+	"NOTHING CAN ESCAPE THE PULL OF A BLACK HOLE, NOT EVEN LIGHT? \w8THAT'S WHY IT IS CALLED A BLACK HOLE, BECAUSE IF IT PASSES IN FRONT OF A STAR, WE WON'T SEE ANYTHING."
+	"NEUTRON STARS CAN SPIN UP TO 500 TIMES A SECOND?"
+	"VENUS IS THE ONLY PLANET IN SOLAR SYSTEM TO SPIN BACKWARDS ON ITS AXIS COMPARED TO OTHER PLANETS?"
+	"THE NEAREST GALAXY IS ABOUT 2.5 MILLION LIGHT-YEARS AWAY, SO WE SEE IT AS IT WAS 2.5 MILLION YEARS AGO? \w8IN FACT, NOTHING IN THE SKY LOOKS AS IT IS IN THIS VERY MOMENT. \w8WE SEE THE HISTORY OF THE UNIVERSE UNRAVELING."
+	"OVER THE COURSE OF TIME, SOME OLDER GALAXIES HAVE BEEN CANNIBALIZED BY YOUNGER ONES? \w8FOR EXAMPLE, THE WHIRLPOOL GALAXY IS MOST LIKELY AN EX CANNIBAL."
+	"THE MOST DISTANT GALAXIES ARE MOVING AWAY FROM US AT MORE THAN 90 PERCENT OF THE SPEED OF LIGHT?"
+	"NEPTUNE TAKES NEARLY 165 EARTH YEARS TO ORBIT THE SUN ONCE?"
+	"MOST OF THE UNIVERSE IS MADE OF DARK MATTER THAT HUMANS CAN'T REALLY DETECT? \w8OR SO THEY SAY TO EXPLAIN STUFF ABOUT IT THAT CANNOT BE EXPLAINED OTHERWISE."
+
+}
+
+facthuman
+{
+	"\w8\s[24]DID YOU KNOW THAT YOU ARE REALLY BAD AT NAMING CONSTELLATIONS? \w8\s[8]I CAN UNDERSTAND THE DRAGON, OR THE TRIANGLE, BUT HAVE YOU SEEN URSA MAJOR? \w8IT LOOKS NOTHING LIKE A BEAR. \w8HMPH."
+	"\w8\s[24]DID YOU KNOW YOU HAVE SKELETONS INSIDE YOU??? \w8\s[6]I HOPE YOU ARE TAKING CARE OF YOURS! \w8WITH TIME AND CARE, \w8IT CAN GROW TO BE AS AMAZING AS I AM!"
+	"\w8\s[24]DID YOU KNOW THAT MANY PEOPLE REALLY BELIEVE THAT MONSTER SKELETONS EVOLVED FROM HUMANS? \w8\s[6]NONSENSE! \w8WE EVOLVED FROM MONSTER SKELETON MONKEYS."
+	"\w8\s[24]DID YOU KNOW THAT THE ONLY PARTS OF YOU THAT DON'T HAVE HAIR ARE PALMS, LIPS AND THE BOTTOMS OF YOUR FEET? \w8I WONDER IF IT EVER ITCHES!"
+	"\w8\s[24]DID YOU KNOW THAT YOU HAVE LITTLE TAILS, TOO? \w8THEY ARE HIDDEN UNDER THAT FLESH JUNK YOU HAVE, BUT THEY ARE THERE! \w8\s[6]MAYBE YOU CAN LEARN TO WAG THEM, TOO, WITH TIME AND PATIENCE!"
+	"\w8\s[24]DID YOU KNOW THAT TECNHICALLY, YOU ARE MADE OF THE SAME STUFF THE STARS ARE MADE FROM? \w8\s[5]IN FACT! \w8WE ALL ARE! \w8I THINK IT IS A NEAT FACT TO THINK ABOUT."
+	"\w8\s[24]DID YOU KNOW THAT, IF A HUMAN BABY IS RAISED BY SOME OTHER ANIMAL, THEY WILL BEHAVE LIKE THAT ANIMAL? \w8\s[8]I THINK IT IS INTERESTING! \w8\s[4]BUT I ALSO WONDER HOW DID HUMANS FIND THAT OUT. \w8\w8\w8\w8...HOW CAN YOU LOSE THAT MANY BABIES?"
+	
+}
+
+
+usersfolder
+{
+	"Recycle Bin"
+	"Document folder"
+	"hidden folder"
+	"Downloads folder"
+	"Desktop folders"
+	"open tabs"
+}
+
+
+punny 
+{
+	"skeletons"
+	"monsters"
+	"humans"
+	"flowers"
+	"magic"
+	"the space"
+	
+	
+}
+
+
+goodboyreact1
+{
+	
+	"\w8\s[28]He is surprised by the sudden praise. \w8\s[20]In a good way."
+	"\w8\s[28]He is confused, \s[20]but decides to soak up the praise."
+	"\w8\s[28]He is startled... Did he expect something else?.."
+	"\w8\s[28]He stares at you for a few seconds disbelievingly \s[20]before finally smiling."
+	"\w8\s[28]He does not know what to make of it, \s[20]but he decides to take it as it goes."
+	
+	
+}
+
+goodboyreact2
+{
+	
+	"\w8\s[28]He does not know how to react... \w8\s[29]he settles on unease."
+	"\w8\s[28]He is slightly startled by that..."
+	"\w8\s[29]...He has no idea if this is a good thing or not."
+	"\w8\s[28]\n\nOH. \w8\s[29]OH, UM... \w8THANK YOU?.."
+	"\w8\s[28]\n\nOH, UM... \w8\s[29]THANK? \w8YOU?"
+	
+}
+
+goodboyreact3
+{
+	
+	"\w8\s[20]He chirps, excited! \w8Seems like the praise hit right where it counts."
+	"\w8\s[21]He is overjoyed!"
+	"\w8\s[22]\n\n%(username), REALLY??? \w8AM I REALLY A GOOD BOY???"
+	"\w8\s[21]\n\nOH!!! \w8AM I??? \w8WHAT A TURN OF EVENTS!!!"
+	"\w8\s[20]He revels in the knowledge!"
+	"\w8\s[22]\n\nI AM A GOOD BOY??? \w8\s[5]I AM A GOOD BOY!!!"
+	
+}
+
+
+badboyreact1
+{
+	"\w8\s[29]He fidgets, wondering if this is true..."
+	"\w8\s[29]He whimpers. \w8How cruel..."
+	"\w8\s[29]He glances at you sadly. \w8Is this why?.."
+	"\w8\s[28]He gasps. \w8Is he really a bad boy? \w8Oh no..."
+	"\w8\s[29]\n\nI'M... \w8SORRY..."
+}
+
+badboyreact2 
+{
+	"\w8\s[29]He whines, but does not protest..."
+	"\w8\s[29]He looks away in shame..."
+	"\w8\s[29]He winces, but does not seem surprised."
+	"\w8\s[29]He shrinks onto himself..."
+	"\w8\s[29]He can barely whisper something resembling an apology."
+}
+
+badboyreact3 
+{
+	"\w8\s[28]He is shocked and saddened by this observation..."
+	"\w8\s[25]He gasps. \w8\s[29]What a horrifying revelation..."
+	"\w8\s[28]\n\nOH NO... \w8\s[29]AM I?.."
+	"\w8\s[25]Is he, really? \w8Such a tragic turn of events."
+	"\w8\s[28]\n\nWHAT??? \w8AM I? \w8\s[29]BUT... \w8WHY?"
+	"\w8\s[28]He could not have predicted this..."
+
+}
+
+goodie
+{
+	"he is the best"
+	"he is the bestest"
+	"he is the bestestest"
+	"he is great"
+	"he is cool"
+	"he is awesome"
+	"he is amazing"
+	"he is the coolest guy"
+	"he is a star"
+}
+
+meanie
+{
+	"he is, like, totally uncool"
+	"his socks suck"
+	"his vibes don't check"
+	"his moves aren't sick"
+	"his tail is small"
+	"he is a loser"
+	"you don't like his shoelaces"
+	"he has a stupid face"
+}
+
+
+meanreact1
+{
+	"\w8\s[28]He gasps in horror..."
+	"\w8\s[4]He is saddened, but not surprised..."
+	"\w8\s[25]Nothing could have prepared him for such a terrifying revelation."
+	"\w8\s[29]He is left silent, pressed down by the weight of his awful image."
+	"\w8\s[4]\n\nNOOOOOOOOOOOO..."
+	"\w8\s[28]\n\nWHY ME?! \w8O CRUEL FATE..."
+	"\w8\s[4]He sniffles... \w8Oh no."
+	
+}
+
+meanreact2
+{
+	"\w8\s[4]He glances at you in sad confusion... \w8He does not seem to get the joke."
+	"\w8\s[4]He seems to take it at face value and winces."
+	"\w8\s[4]He simply looks away. \w8Did he not get the joke?"
+}
+
+meanreact3
+{
+	"\w8\s[28]\n\n%(username), HOW COULD YOU SAY SOMETHING LIKE THIS ABOUT A GOOD FRIEND LIKE ME?!"
+	"\w8\s[28]\n\nGASP?! \w8OH NOOOOOOOOOO..."
+	"\w8\s[28]He gasps in horror..."
+	"\w8\s[25]Nothing could have prepared him for such a terrifying revelation."
+	"\w8\s[29]He is left silent, pressed down by the weight of his awful image."
+	"\w8\s[4]\n\nNOOOOOOOOOOOO..."
+	"\w8\s[28]\n\nWHY ME?! \w8O CRUEL FATE..."
+	"\w8\s[4]He sniffles... \w8Oh no."
+}
+
+
+
+greatreact1
+{
+	
+	"\w8\s[22]He is caught unaware, but the praise hits the right spot."
+	"\w8\s[21]He soaks it right in, wondering where it is coming from..."
+	"\w8\s[22]He does not look a gift horse in the mouth and accepts the compliment."
+	"\w8\n\n\s[22]WOWIE?! \w8THAT IS SUDDEN!!! \w8BUT NOT IN A BAD WAY!!!"
+	"\w8\s[25]He is shocked... \w8\s[21]but cautiously optimistic!"
+	"\w8\s[25]He does not know how to react, \w8\s[21]but soon settles on taking it as a compliment!"
+	"\w8\s[25]\n\nOH! \w8\s[21]OH! \w8THANK YOU, %(username)! \w8IT IS VERY NICE OF YOU TO SAY! \w8\s[6]PLEASE REMEMBER THIS (HOPEFULY POSITIVE) EXPERIENCE WITH BEING A GOOD PERSON AND TRY TO REPEAT IT IN FUTURE."
+	"\w8\s[25]\n\nOH, GOLLY... \w8\s[37]THAT IS UNEXPECTED, BUT THANK YOU! \w8\w8\w8\s[29]...PERHAPS YOU COULD TRY TO MAKE THIS... \w8SLIGHTLY MORE EXPECTABLE? \w8PLEASE?"
+	"\w8\s[25]He is thoroughly confused... \w8and perhaps a little bit wondering where's the catch."
+	"\w8\s[25]He couldn't have predicted this! \w8Especially given your track record."
+	"\w8\s[25]He is bonedoggled! \w8Thoroughly flabbergastered. \w8Completely bamboozled."
+	"\w8\s[25]It is a pleasant surprise!"
+}
+
+greatreact2
+{
+	"\w8\s[4]\w8\w8...He does not seem entirely convinced."
+	"\w8\s[29]He looks away..."
+	"\w8\s[29]...He waits for the punchline."
+	"\w8\s[4]He wonders where the catch is."
+	"\w8\s[4]He wrings his hands..."
+	"\w8\s[29]He is not sure if he should feel flattered."
+	"\w8\s[4]He winces... \w8Did he think you were mocking him?"
+	"\w8\s[29]\n\n%(username), I DON'T... \w8UNDERSTAND."
+	
+}
+
+
+greatreact3
+{
+	"\w8\s[20]He gasps, amazed! \w8\n\n\s[21]%(username)!!! \w8YOU ARE GREAT TOO!!! \w8IT TAKES ONE TO KNOW ONE, AFTER ALL!!!"
+	"\w8\s[22]He wiggles in place, so hard that he nearly topples over! \w8You would see that too if not for the medium restrictions."
+	"\w8\s[21]\n\n%(username), DO YOU REALLY THINK SO?? \w8IT MEANS A LOT FOR ME TO KNOW THAT SOMEONE GREAT THINKS THAT I AM GREAT!"
+	"\w8\s[22]\n\nGASP!!! \w8THANK YOU! \w8\s[5]I'M GREAT! \w8I'M GREAT!!!"
+	"\w8\s[20]He flaps his hands in joy! \w8Looks like you have made him very happy."
+	"\w8\s[20]\n\n%(username)... \w8THANK YOU FOR CONFIRMING SOMETHING I HAVE DEFINITELY TOTALLY SURELY KNOWN ALREADY!!!"
+	"\w8\s[22]\n\nREALLY?? \w8\s[5]%(username), THANK YOU!!! \w8YOU ARE GREAT TOO!!!"
+	"\w8\s[22]He is unable to say anything except for an upbeat 'THANK YOU!'"
+}
+
+
+lovie
+{
+	"you love him"
+	"he is a sweetie-cutie sugarpie"
+	"you wuvvv him"
+	"his smile is blessed"
+	"you swoon at the sight of his amazing bone structure"
+	"you just want to smooch his face"
+	"you really, really love him"
+	"he's a very loveable skeleton"
+	"you love loving him"
+}
+
+lovereact1
+{
+	"\w8\s[3]He seems to beg to differ, if you have read his expression right."
+	"\w8\s[5]\n\nI-I AM GLAD TO HEAR THAT! \w8HOWEVER!!! \w8\s[1]MAYBE YOU COULD SHOW IT TOO, ASIDE FROM TELLING?.."
+	"\w8\s[8]He seems... slightly disturbed, for some reason."
+	"\w8\s[8]\n\nREALLY? \w8I'D NEVER TELL, HONESTLY..."
+	"\w8\s[5]THANK YOU!!! \w8\s[40]UM. \w8YOU ARE WELCOME?.. \w8I HOPE IT IS A GOOD SIGN TO BE LIKED BY YOU."
+	"\w8\s[3]He wonders what this entails for him, specifically."
+	"\w8\s[8]He's unsure what to say to this..."
+	"\w8\s[1]\n\nTHANK??? \w8YOU???"
+}
+
+lovereact2
+{
+	"\w8\s[4]He winces... \w8Did he think you were mocking him?"
+	"\w8\s[29]\n\n%(username), I DON'T... \w8UNDERSTAND."
+	"\w8\s[4]\w8\w8...He does not seem entirely convinced."
+	"\w8\s[29]He looks away..."
+	"\w8\s[29]...He waits for the punchline."
+	"\w8\s[4]He wonders where the catch is."
+	"\w8\s[4]He wrings his hands..."
+	"\w8\s[29]He is not sure if he should feel flattered."
+}
+
+lovereact3
+{
+	"\w8\s[3]\n\nTHANKS? \w8I MEAN, LOTS OF PEOPLE SHARE THE OPINION! \w8\s[6]BUT THAT IS POPULARITY FOR YOU. \w8THE AMAZING JAZZ... \w8EVERYONE WOULD LOVE TO BE HIM. \w8\s[22]I'D LOVE TO BE HIM!"
+	"\w8\s[5]\n\nTHANK! \w8YOU!! \w8\s[6]I KNOW I AM VERY 'ANIME' AS SOME PEOPLE WOULD PUT IT. \w8A HANDSOME SOLITARY SKELETON WITH A DARK PAST. \w8\s[24]I WOULD NOT FAULT YOU FOR DEVELOPING FEELINGS FOR AN IMAGINARY CHARACTER IF THAT CHARACTER WAS SIMILAR TO ME! \w8FORTUNATELY, THOUGH, YOU HAVE THE VERY REAL EXISTING JAZZ INSTEAD."
+    "\w8\s[8]...He is confused. \w8Flattered! \w8But confused."
+	"\w8\s[23]He is too embarrassed to speak!"
+	"\w8\s[23]\n\nHHHHHHHHHHHHHHHHH\s[32]HARDLY! \w8AM!! \w8I!!! \w8SURPRISED!!!! \w8\s[40]AND DEFINITELY NOT CONFUSED AT ALL."
+	"\w8\s[23]He hides from your affections..."
+	"\w8\s[23]He needs a moment to process that!"
+	"\w8\s[22]OH NO!!! \w8%(username), YOU HAVE FALLEN FOR ME SO HARD... \w8\s[4]PLEASE APPLY SOME PAINKILLER TO YOUR ACHING HUMAN HEART!!!"
+	"\w8\s[6]\n\nOF COURSE, %(username)! \w8I UNDERSTAND YOUR STRUGGLE. \w8ONLY THE HARDEST SOUL WOULD WITHSTAND MY BONELY CHARMS. \w8\s[24]YOU ARE NOT TO BLAME FOR FALLING FOR THEM HEAD FIRST."
+	"\w8\s[8]I GUESS THAT WAS IMMINENT... \w8\s[22]%(username), I AM SORRY!!! \w8I DID NOT MEAN TO MAKE YOU FALL IN LOVE WITH ME SO HARD!!! \w8IT IS ALL MY ACCURSED IRRESISTIBILITY. \w8\w8\w8...\s[40]IRRESISTIBlENESS????"
+}
+
+
+tsundere 
+{
+	"you are TOTALLY not into him"
+	"he is a b-baka.."
+	"it's not like you LIKE him or anything"
+	"you love him but, like, he shouldn't let it go to his head"
+	"you like him. \w8But not LIKE like him"
+	"the way you stare at him really means nothing"
+	"you might be nice to him, but it is not for some special reason"
+	"even if you sigh really dreamily while looking at him, it's not like it is meant for him"
+}
+
+tsunreact1
+{
+	"\w8\s[3]He is confused, but... \w8this is about what he'd expect."
+	"\w8\s[8]\n\n...OKAY???"
+	"\w8\s[3]This is actually something he can get behind, given all your... \w8interactions."
+	"\w8\s[3]Given everything, this might as well be true to him."
+	"\w8\s[8]\n\nI SUSPECTED AS MUCH, SO... \w8OKAY???"
+	"\w8\s[8]\n\nAAAAAAALRIGHT? \w8%(username), I KNOW THAT ALREADY."
+	"\w8\s[3]\n\n...OKAY. \w8THOUGH I AM NOT SURE WHY YOU TELL ME THAT."
+	"\w8\s[8]He's not quite sure why you are saying mean things to him. \w8Though he is not too surprised, either."
+}
+
+
+tsunreact2
+{
+	"\w8\s[4]...He whimpers."
+	"\w8\s[4]He seems to believe your words."
+	"\w8\s[3]He believes you wholeheartedly..."
+	"\w8\s[3]He is confused. \w8Why would you remind him of something he already knows?.."
+}
+
+
+tsunreact3
+{
+	"\w8\s[28]\n\nGASP?!?! \w8%(username), WHY DIDN'T YOU TELL ME EARLIER???"
+	"\w8\s[28]He gasps, struck down by your cruelty..."
+	"\w8\s[25]He is soul-crushed..."
+	"\w8\s[29]\n\nOH NO... \w8BUT YOU SAID YOU LOVED ME?? \w8WAS THAT A LIE??? \w8\s[4]WAS THAT A LIE, %(username)???"
+	"\w8\s[4]\n\nOH, DEAR..."
+	"\w8\s[28]\n\nBUT YOU SAID... \w8WHY WOULD YOU BE SO MEAN TO SOMEONE YOU LOVE???"
+	"\w8\s[4]He sniffles... \w8Oh no."
+}
+
+
+easybook
+
+{
+	easybookgiven += 1
+	"little sentient animals"
+    "fairies"
+	"spooky scary skeletons"
+	"a fluffy bunny" 
+	"riddles"
+	"jokes and puns"
+	"dogs"
+}
+
+hardbook
+{
+	hardbookgiven += 1
+	"astronomy"
+	"physics"
+	"human biology"
+	"advanced puzzle calibration"
+	"human psychology"
+	"dichotomy of good and evil"
+}
+
+
+funbook 
+{
+	funbookgiven += 1
+    "adventures"
+    "friendship"
+    "space exploration"
+	"fighting evil"
+	"being a hero"
+}
+
+
+bookpool1
+{
+	if funbookgiven == 1
+	{
+		"\s[53]"
+	}
+	
+	if funbookgiven > 1 
+	{
+		"\s[53]"
+		"\s[54]"
+		"\s[55]"
+		"\s[56]"
+		"\s[57]"
+		"\s[58]"
+		"\s[59]"
+		"\s[60]"
+	}
+}
+
+bookpool2
+{
+	if boringbookgiven == 1
+	{
+		"\s[61]"
+	}
+	
+	if boringbookgiven > 1 
+	{
+		"\s[62]"
+		"\s[63]"
+		"\s[64]"
+		"\s[65]"
+		"\s[66]"
+		"\s[67]"
+		"\s[68]"
+		"\s[61]"
+	}
+}
+
+bookpool3
+{
+	if hardbookgiven == 1
+	{
+		"\s[69]"
+	}
+	
+	if hardbookgiven > 1 
+	{
+		"\s[69]"
+		"\s[70]"
+		"\s[71]"
+		"\s[72]"
+		"\s[73]"
+		"\s[74]"
+		"\s[75]"
+		"\s[76]"
+	}
+	
+}
+
+
+jazzreact
+{
+	"He has no idea what he has just seen..."
+	"He glances at you in confusion."
+	"..........He quietly judges you."
+	"He raises a bone brow at you..."
+	"He nods to himself. \w8That is about what he expected."
+	"He tries to make sense of what he saw..."
+	"He promptly closes it and moves away."
+	"He hums, seeing something he likes."
+}
+
+
+object
+{
+	"candle wax"
+	"salsa sauce"
+	"cologne"
+	"disinfectant"
+	"fabric freshener"
+	"cream cheese"
+	"hand lotion"
+	"dish soap"
+	"apple juice"
+	"purple paint"
+
+}
+
+object2
+{
+	"dogs"
+	"small puppies"
+	"long naps"
+	"colorful scarves"
+	"umbrellas"
+	"rain puddles"
+	"songs"
+	"small skeletons"
+	"the color blue"
+	"annoying jokes"
+	"the sea"
+	"robots"
+}
+
+reaction
+{
+	"He sighs..."
+	"He frowns."
+	"He seems happy."
+	"He seems sad."
+	"He looks confused..."
+	"He ponders the meaning of it."
+	"He looks dreamy."
+	"He shakes off the thought."
+	"He mumbles something."
+}
+
+timeper 
+{
+	"SECOND"
+	"JIFFY"
+	"MOMENT"
+	"SEC"
+	"BLINK"
+}
+
+terrified
+{
+	"..."
+	"...I'M SORRY."
+	"*Jazz does not say anything, wincing."
+	"*Jazz sadly nods, but does not say a word."
+	"*Jazz opens his mouth, but can't make a sound."
+	"*Jazz presses his hand to his chest for a second."
+	"I DON'T THINK I... \w8SORRY."
+	"*He sends you an apologetic glance. \n\n\w8SORRY, I DON'T KNOW..."
+	"*He cannot think of anything to say."
+	"*He wrings his hands, but he does not speak up."
+	"*Jazz winces, trying to think of something to say. \w8\w8\w8...there is nothing."
+	"*Jazz cannot think of anything. \w8He only watches your hands."
+	"I... \w8UM... \w8I THINK YOU NEED TO ASK SOMEONE ELSE. \w8I THOUGHT I UNDERSTOOD, BUT..."
+	
+	
+}
+
+jazzlife
+{
+	"\n\n\w8\s[6]I ACTUALLY DO SLEEP, IN SHORT NAPS! \w8SOMETIMES I FALL ASLEEP WHILE STANDING, SO IT IS HARD TO CATCH."
+	"\n\n\w8\s[8]I AM A MAGIC SKELETON, SIMPLE AS THAT? \w8I AM NOT TOO MYSTERIOUS." 
+	"\n\n\w8\s[5]I AM A GOOD BOY! \w8AND IT IS VERY IMPORTANT." 
+	"\n\n\w8\s[8]I AM JAZZ? \w8IT SAYS THAT RIGHT IN MY INTRO SEQUENCE! \w8HUMAN, YOU MUST HAVE FORGOT." 
+	"\n\n\w8\s[8]I AM NINETEEN, I LIKE CHASING CARS, AND MY FAVORITE COLOR IS ORANGE?"
+	"\n\n\w8\s[5]I LOVE DOGS! \w8AND I CAN SPEAK DOG LANGUAGE, BY THE WAY." 
+	"\n\n\w8\s[6]I USED TO LIKE READING, BUT NOW IT JUST MAKES MY EYES HURT. \w8BUT I LOVE BEING READ TO!" 
+	"\n\n\w8\s[24]I HAVE A BROTHER! \w8HE TOOK THE NICKNAME 'BLUES.' \w8I COME TO VISIT HIM SOMETIMES. \w8HE DOES NOT LIKE TRAVELLING, HIMSELF." 
+	"\n\n\w8\s[5]I LOVE THE OUTSIDE WORLD! \w8IT IS SO BEAUTIFUL AND BRIGHT AND FULL OF COLOR!!! \w8AND I LOVE BEING A PART OF IT! \w8I AM A HAPPY SKELETON." 
+	"\n\n\w8\s[6]I LIKE ACTIVE GAMES, BUT SADLY THIS PLACE IS NOT IDEAL FOR THOSE."
+	"\n\n\w8\s[24]I PERSONALLY THINK EVERYONE HAS THE POTENTIAL TO BE EITHER GOOD OR BAD. \w8NO ONE IS BORN, OR MADE, EITHER WAY. \w8IT TAKES WORK."
+    "\n\n\w8\s[24]I CAN HEAR, SMELL AND SEE THINGS REALLY WELL! \w8IT CAN BE BOTH A CURSE AND A BLESSING."  
+
+
+	
+}
+
+jazzlife2
+{
+	 "\n\n\w8\s[5]I AM YOUR FRIEND!!!" 
+	 "\n\n\w8\s[6]I AM A GOOD BOY! \w8AND IT IS VERY IMPORTANT." 
+	 "\n\n\w8\s[8]I AM... ME? \w8UM, I'M NOT SURE WHAT DO YOU WANT ME TO SAY? \w8SURELY THERE IS NO PARTICULAR BIT OF INFORMATION YOU ARE INTERESTED IN?" 
+     "\n\n\w8\s[8]UM... \w8MY NAME IS JAZZ, I AM A MONSTER SKELETON, I AM NINETEEN YEARS OLD, I HAVE A BROTHER WHO CALLS HIMSELF BLUES... \w8\s[3]I LIKE TO TRAVEL PLACES AND MAKING FRIENDS, I LOVE JAZZ MUSIC, MEAT IS MY FAVORITE FOOD, AND I ENJOY PETS. \w8I THINK YOU MIGHT HAVE KNOWN MOST OF IT ANYWAY." 
+     "\n\n\w8\s[1]........... SOMEONE WITH NO SECRETS OR MYSTERIES WHATSOEVER?.." 
+     "\n\n\w8\s[6]I AM SOMEONE WHO REALLY LIKES BEING HERE WITH YOU!" 
+
+
+}
+
+postapology
+{
+	"He looks away, wincing."
+	"He presses a hand to his chest."
+	"He nods, silent."
+	"He sighs."
+	"He looks uncomfortable..."
+	"He gulps, nodding."
+	"\n\nOF COURSE..."
+	"\n\n...DON'T MENTION IT."
+	"\n\nI, UM... \w8OF COURSE."
+	"\n\nRIGHT..."
+}
+
+
+numberp
+{
+	"66"
+	"100"
+	"200"
+	"250"
+	"420"
+	"600"
+	"1000"
+}
+
+
+cubeg
+{
+	cubegiven = 1
+}
+
+plushg
+
+{
+	plushgiven += 1
+}
+
+figg
+{
+	figgiven += 1
+}
+
+puzg
+{
+	puzzlegiven = 1
+}
+
+rockg
+{
+	rocketgiven = 1
+}
+
+trurockg
+{
+	rockgiven = 1
+}
+
+
+ebookreact1
+{
+	"\w8\s[33]He takes it \s[0]without further ado."
+	"\w8\s[33]He raises a bony brow \s[0]but takes it."
+	"\w8\s[33]He takes it, \s[0]nodding to you in gratitude."
+	"\w8\s[33]He takes it \s[0]even though it seems a little... \w8childish."
+	"\w8\s[33]He picks it, \s[0]thinking it might be a good read before bed."
+	"\w8\s[33]He takes it \s[0]and puts it away for later reading."
+}
+
+ebookreact2
+{
+	"\w8\s[33]He takes it \s[0]with a nod. \n\n\w8THAT IS A LITTLE TOO EASY FOR ME, EVEN..."
+	"\w8\s[33]He takes it \s[0]almost without squinting."
+	"\w8\s[33]He picks it, \s[0]not complaining much."
+	"\w8\s[33]He nods and takes it. \s[0]\n\n\w8AT LEAST THE LETTERS ARE BIG IN THIS ONE."
+	"\w8\s[33]He takes it, \s[0]wondering if you are robbing your local library for him."
+	"\w8\s[33]He picks it. \s[0]\n\n\w8I GUESS I CAN READ IT BEFORE SLEEP OR SOMETHING. \w8IN CASE I EVER SLEEP!"
+}
+
+ebookreact3
+{
+	"\w8\s[52]He takes it \s[1]before you can think twice and take it away."
+	"\w8\s[52]He takes it \s[1]without complaining."
+	"\w8\s[52]He picks it, \s[1]just barely glancing at the cover."
+	"\w8\s[52]He picks it \s[1]even though he would not pick it that genre, himself."
+	"\w8\s[52]He takes it \s[1]with a furtive glance at your expression."
+	"\w8\s[52]He takes it, \s[1]wondering why you would pick it..."
+}
+
+hbookreact1
+{
+	"\w8\s[33]He takes it, \s[0]quietly weighing it in his hand. \w8That seems like a hard read..."
+	"\w8\s[52]He is intimidated, \s[1]but takes it anyway. \w8That might take some work to get through..."
+	"\w8\s[33]He takes it \s[0]without further ado."
+	"\w8\s[33]He takes it \s[0]without further ado."
+	"\w8\s[33]He takes it \s[0]without further ado."
+	"\w8\s[33]He takes it \s[0]without further ado."
+}
+
+hbookreact2
+{
+	"\w8\s[52]He takes it, \s[1]considering its size. \w8\n\n%(username), THANKS, BUT... \w8I-I GUESS I'LL TRY TO READ IT!"
+	"\w8\s[33]He takes it \s[0]without further ado."
+	"\w8\s[33]He takes it \s[0]without further ado."
+	"\w8\s[33]He takes it \s[0]without further ado."
+	"\w8\s[33]He takes it \s[0]without further ado."
+	"\w8\s[33]He takes it \s[0]without further ado."
+}
+
+hbookreact3
+{
+	"\w8\s[52]He takes it, \s[1]wondering if such a hard book is a hidden sneer..."
+	"\w8\s[33]He takes it \s[0]without further ado."
+	"\w8\s[33]He takes it \s[0]without further ado."
+	"\w8\s[33]He takes it \s[0]without further ado."
+	"\w8\s[33]He takes it \s[0]without further ado."
+	"\w8\s[33]He takes it \s[0]without further ado."
+}
+fbookreact1
+{
+	"\w8\s[33]He takes it \s[0]really eagerly!"
+	"\w8\s[33]He takes it \s[37]with a happy smile!"
+	"\w8\s[33]He takes it \s[0]without further ado."
+	"\w8\s[33]He takes it \s[0]without further ado."
+	"\w8\s[33]He takes it \s[0]without further ado."
+	"\w8\s[33]He takes it \s[0]without further ado."
+}
+
+fbookreact2
+{
+	"\w8\s[33]He almost grabs it \s[37]out of your hands! \w8\n\n\s[5]THANKS!!! \w8I CAN TELL THAT IT WILL BE FUN FROM THE COVER ART ALREADY!!!"
+}
+
+fbookreact3
+{
+	"\w8\s[33]He takes it \s[0]with a genuine smile. \w8Maybe there is no catch, even..."
+}
+
+
+ //**** Don't touch this ***************************************************************
+ //This is code stuff and nothing for you to worry about, just save the .dic and move on! You're done!
+ 
+ On_\person
+{
+ 	person
+}

@@ -1,0 +1,737 @@
+//---------------------------Surfaces.txt--------------------------
+
+
+
+surface.append500-590 
+{
+collision0,15,16,111,48,Face
+collision1,40,50,102,84,Point
+
+}
+
+
+//--The Main Character's Poses---------------------------------------------------------
+
+surface0
+{
+collision0,109,8,151,23,Head
+collision1,107,90,153,132,Chest
+collision3,113,23,143,63,Face
+element0,overlay,surface0.png,0,0
+
+0interval,random,4
+0pattern0,-1,10,overlay,0,0
+0pattern1,1002,5,overlayfast,0,0
+0pattern2,1001,10,overlayfast,0,0
+0pattern3,-1,3,overlay,0,0
+
+}
+
+
+//Main Character Embarrassed pose
+surface1
+{
+element0,overlay,surface1501.png,0,0
+collision0,109,8,151,23,Head
+collision1,107,90,153,132,Chest
+collision3,113,23,143,63,Face
+
+}
+
+//Main Character Surprised pose
+surface2
+{
+element0,overlay,surface1502.png,0,0
+collision0,109,8,151,23,Head
+collision1,107,90,153,132,Chest
+collision3,113,23,143,63,Face
+
+}
+
+//Main Character Worried pose
+surface3
+{
+element0,overlay,surface1503.png,0,0
+collision0,109,8,151,23,Head
+collision1,107,90,153,132,Chest
+collision3,113,23,143,63,Face
+
+}
+
+//Main Character Sad/Disappointed pose
+surface4
+{
+element0,overlay,surface1504.png,0,0
+collision0,109,8,151,23,Head
+collision1,107,90,153,132,Chest
+collision3,113,23,143,63,Face
+
+}
+
+//Main Character Smiling pose
+surface5
+{
+element0,overlay,surface1505.png,0,0
+collision0,109,8,151,23,Head
+collision1,107,90,153,132,Chest
+collision3,113,23,143,63,Face
+
+}
+
+//Main Character Contented pose
+surface6
+{
+element0,overlay,surface1506.png,0,0
+collision0,109,8,151,23,Head
+collision1,107,90,153,132,Chest
+collision3,113,23,143,63,Face
+}
+
+//Main Character Angry pose
+surface7
+{
+element1,overlay,surface1507.png,0,0
+collision0,109,8,151,23,Head
+collision1,107,90,153,132,Chest
+collision3,113,23,143,63,Face
+
+}
+
+//Main Character Thoughtful Pose
+surface8
+{
+element1,overlay,surface1508.png,0,0
+collision0,109,8,151,23,Head
+collision1,107,90,153,132,Chest
+collision3,113,23,143,63,Face
+
+}
+
+//Main Character Bored pose
+surface9
+{
+element1,overlay,surface1509.png,0,0
+collision0,109,8,151,23,Head
+collision1,107,90,153,132,Chest
+collision3,113,23,143,63,Face
+
+}
+
+//Main Character Pet Pose
+surface20
+{
+element1,overlay,surface1510.png,0,0	
+collision0,109,8,151,23,Head
+collision1,107,90,153,132,Chest
+collision3,113,23,143,63,Face
+}
+
+//Main Character PostPet Pose
+surface21
+{
+element1,overlay,surface1511.png,0,0	
+collision0,109,8,151,23,Head
+collision1,107,90,153,132,Chest
+collision3,113,23,143,63,Face
+
+}
+
+//Main Character Excited Pose
+surface22
+{
+element1,overlay,surface1512.png,0,0	
+collision0,109,8,151,23,Head
+collision1,107,90,153,132,Chest
+collision3,113,23,143,63,Face
+
+}
+
+//Main Character Blushing Pose
+surface23
+{
+element1,overlay,surface1513.png,0,0	
+collision0,109,8,151,23,Head
+collision1,107,90,153,132,Chest
+collision3,113,23,143,63,Face
+}
+
+//Main Character Teaching Pose
+surface24
+{
+element1,overlay,surface1514.png,0,0	
+collision0,109,8,151,23,Head
+collision1,107,90,153,132,Chest
+collision3,113,23,143,63,Face
+
+}
+
+//Main Character Shock Pose
+surface25
+{
+element1,overlay,surface1515.png,0,0	
+collision0,109,8,151,23,Head
+collision1,107,90,153,132,Chest
+collision3,113,23,143,63,Face
+}
+
+//Main Character PostBeat Pose
+surface26
+{
+element1,overlay,surface1516.png,0,0	
+collision0,109,8,151,23,Head
+collision1,107,90,153,132,Chest
+collision3,113,23,143,63,Face
+}
+
+//Main Character Blissful Pose
+surface27
+{
+element1,overlay,surface1517.png,0,0	
+collision0,109,8,151,23,Head
+collision1,107,90,153,132,Chest
+collision3,113,23,143,63,Face
+}
+
+//Main Character Caught Pose
+surface28
+{
+element1,overlay,surface1518.png,0,0	
+collision0,109,8,151,23,Head
+collision1,107,90,153,132,Chest
+collision3,113,23,143,63,Face
+}
+
+//Main Character Wary Pose
+surface29
+{
+element1,overlay,surface1519.png,0,0	
+collision0,109,8,151,23,Head
+collision1,107,90,153,132,Chest
+collision3,113,23,143,63,Face
+
+}
+
+//Main Character Hiding Pose
+surface30
+{
+element1,overlay,surface1520.png,0,0	
+collision0,109,8,151,23,Head
+collision1,107,90,153,132,Chest
+collision3,113,23,143,63,Face
+}
+
+//Main Character Wave Pose
+surface31
+{
+element1,overlay,surface1521.png,0,0	
+collision0,109,8,151,23,Head
+collision1,107,90,153,132,Chest
+collision3,113,23,143,63,Face
+
+}
+
+//Main Character What Pose
+surface32
+{
+element1,overlay,surface1522.png,0,0	
+collision0,109,8,151,23,Head
+collision1,107,90,153,132,Chest
+collision3,113,23,143,63,Face
+
+}
+
+//Main Character Taking Pose
+surface33
+{
+element1,overlay,surface1523.png,0,0	
+collision0,109,8,151,23,Head
+collision1,107,90,153,132,Chest
+collision3,113,23,143,63,Face
+
+}
+
+//Main Character Hugging Pose
+surface34
+{
+element1,overlay,surface1524.png,0,0	
+collision0,109,8,151,23,Head
+collision1,107,90,153,132,Chest
+collision3,113,23,143,63,Face
+
+}
+
+//Main Character Come For A Hug Pose
+surface35
+{
+element1,overlay,surface1525.png,0,0	
+collision0,109,8,151,23,Head
+collision1,107,90,153,132,Chest
+collision3,113,23,143,63,Face
+
+}
+
+//Main Character Googly Pose
+surface36
+{
+element1,overlay,surface1526.png,0,0	
+collision0,109,8,151,23,Head
+collision1,107,90,153,132,Chest
+collision3,113,23,143,63,Face
+}
+
+//Main Character Content Pose
+surface37
+{
+element1,overlay,surface1527.png,0,0	
+collision0,109,8,151,23,Head
+collision1,107,90,153,132,Chest
+collision3,113,23,143,63,Face
+
+}
+
+//Main Character Sleep? Pose
+surface38
+{
+element1,overlay,surface1528.png,0,0	
+collision0,109,8,151,23,Head
+collision1,107,90,153,132,Chest
+collision3,113,23,143,63,Face
+
+
+}
+
+//Main Character Sleep??? Pose
+surface39
+{
+element1,overlay,surface1529.png,0,0	
+collision0,109,8,151,23,Head
+collision1,107,90,153,132,Chest
+collision3,113,23,143,63,Face
+}
+
+//Main Character Awkward Pose
+surface40
+{
+element1,overlay,surface1530.png,0,0	
+collision0,109,8,151,23,Head
+collision1,107,90,153,132,Chest
+collision3,113,23,143,63,Face
+
+}
+
+//Main Character oUCH Pose
+surface41
+{
+element1,overlay,surface1531.png,0,0	
+collision0,109,8,151,23,Head
+collision1,107,90,153,132,Chest
+collision3,113,23,143,63,Face
+
+}
+
+//Main Character ZEST Pose
+surface42
+{
+element1,overlay,surface1532.png,0,0	
+collision0,109,8,151,23,Head
+collision1,107,90,153,132,Chest
+collision3,113,23,143,63,Face
+
+}
+
+//Main Character ohmy Pose
+surface43
+{
+element1,overlay,surface1533.png,0,0	
+collision0,109,8,151,23,Head
+collision1,107,90,153,132,Chest
+collision3,113,23,143,63,Face
+
+}
+
+//Main Character sssssmile?? Pose
+surface44
+{
+element1,overlay,surface1534.png,0,0	
+collision0,109,8,151,23,Head
+collision1,107,90,153,132,Chest
+collision3,113,23,143,63,Face
+
+}
+
+//Main Character scarf1 Pose
+surface45
+{
+element1,overlay,surface1535.png,0,0	
+
+}
+
+
+//Main Character scarf2 Pose
+surface46
+{
+element1,overlay,surface1536.png,0,0	
+
+} 
+
+//Main Character scarf3 Pose
+surface47
+{
+element1,overlay,surface1537.png,0,0	
+
+} 
+
+//Main Character scarf4 Pose
+surface48
+{
+element1,overlay,surface1538.png,0,0	
+
+} 
+
+
+//Main Character scarf5 Pose
+surface49
+{
+element1,overlay,surface1539.png,0,0
+
+} 
+
+//Main Character gone Pose
+surface50
+{
+element1,overlay,surface1540.png,0,0
+collision0,101,309,172,328,Head
+
+} 
+
+
+//Main Character scared hug pose
+surface51
+{
+element0,overlay,surface1541.png,0,0
+collision0,109,8,151,23,Head
+collision1,107,90,153,132,Chest
+collision3,113,23,143,63,Face
+
+}
+
+
+//Main Character scared take pose
+surface52
+{
+element0,overlay,surface1542.png,0,0
+collision0,109,8,151,23,Head
+collision1,107,90,153,132,Chest
+collision3,113,23,143,63,Face
+
+}
+
+
+//Main Character goodbook1 pose
+surface53
+{
+element0,overlay,surface1543.png,0,0
+collision0,109,8,151,23,Head
+collision1,107,90,153,132,Chest
+collision3,113,23,143,63,Face
+
+}
+
+//Main Character goodbook2 pose
+surface54
+{
+element0,overlay,surface1544.png,0,0
+collision0,109,8,151,23,Head
+collision1,107,90,153,132,Chest
+collision3,113,23,143,63,Face
+
+}
+
+//Main Character goodbook3 pose
+surface55
+{
+element0,overlay,surface1545.png,0,0
+collision0,109,8,151,23,Head
+collision1,107,90,153,132,Chest
+collision3,113,23,143,63,Face
+
+}
+
+//Main Character goodbook4 pose
+surface56
+{
+element0,overlay,surface1546.png,0,0
+collision0,109,8,151,23,Head
+collision1,107,90,153,132,Chest
+collision3,113,23,143,63,Face
+
+}
+
+//Main Character goodbook5 pose
+surface57
+{
+element0,overlay,surface1547.png,0,0
+collision0,109,8,151,23,Head
+collision1,107,90,153,132,Chest
+collision3,113,23,143,63,Face
+
+}
+
+//Main Character goodbook6 pose
+surface58
+{
+element0,overlay,surface1548.png,0,0
+collision0,109,8,151,23,Head
+collision1,107,90,153,132,Chest
+collision3,113,23,143,63,Face
+
+}
+
+//Main Character goodbook7 pose
+surface59
+{
+element0,overlay,surface1549.png,0,0
+collision0,109,8,151,23,Head
+collision1,107,90,153,132,Chest
+collision3,113,23,143,63,Face
+
+}
+
+//Main Character goodbook8 pose
+surface60
+{
+element0,overlay,surface1550.png,0,0
+collision0,109,8,151,23,Head
+collision1,107,90,153,132,Chest
+collision3,113,23,143,63,Face
+
+}
+
+//Main Character boringbook1 pose
+surface61
+{
+element0,overlay,surface1551.png,0,0
+collision0,109,8,151,23,Head
+collision1,107,90,153,132,Chest
+collision3,113,23,143,63,Face
+
+}
+
+//Main Character boringbook2 pose
+surface62
+{
+element0,overlay,surface1552.png,0,0
+collision0,109,8,151,23,Head
+collision1,107,90,153,132,Chest
+collision3,113,23,143,63,Face
+
+}
+
+//Main Character boringbook3 pose
+surface63
+{
+element0,overlay,surface1553.png,0,0
+collision0,109,8,151,23,Head
+collision1,107,90,153,132,Chest
+collision3,113,23,143,63,Face
+
+}
+
+//Main Character boringbook4 pose
+surface64
+{
+element0,overlay,surface1554.png,0,0
+collision0,109,8,151,23,Head
+collision1,107,90,153,132,Chest
+collision3,113,23,143,63,Face
+
+}
+
+//Main Character boringbook5 pose
+surface65
+{
+element0,overlay,surface1555.png,0,0
+collision0,109,8,151,23,Head
+collision1,107,90,153,132,Chest
+collision3,113,23,143,63,Face
+
+}
+
+//Main Character boringbook6 pose
+surface66
+{
+element0,overlay,surface1556.png,0,0
+collision0,109,8,151,23,Head
+collision1,107,90,153,132,Chest
+collision3,113,23,143,63,Face
+
+}
+
+//Main Character boringbook7 pose
+surface67
+{
+element0,overlay,surface1557.png,0,0
+collision0,109,8,151,23,Head
+collision1,107,90,153,132,Chest
+collision3,113,23,143,63,Face
+
+}
+
+//Main Character boringbook8 pose
+surface68
+{
+element0,overlay,surface1558.png,0,0
+collision0,109,8,151,23,Head
+collision1,107,90,153,132,Chest
+collision3,113,23,143,63,Face
+
+}
+
+//Main Character hardbook1 pose
+surface69
+{
+element0,overlay,surface1559.png,0,0
+collision0,109,8,151,23,Head
+collision1,107,90,153,132,Chest
+collision3,113,23,143,63,Face
+
+}
+
+//Main Character hardbook2 pose
+surface70
+{
+element0,overlay,surface1560.png,0,0
+collision0,109,8,151,23,Head
+collision1,107,90,153,132,Chest
+collision3,113,23,143,63,Face
+
+}
+
+//Main Character hardbook3 pose
+surface71
+{
+element0,overlay,surface1561.png,0,0
+collision0,109,8,151,23,Head
+collision1,107,90,153,132,Chest
+collision3,113,23,143,63,Face
+
+}
+
+//Main Character hardbook4 pose
+surface72
+{
+element0,overlay,surface1562.png,0,0
+collision0,109,8,151,23,Head
+collision1,107,90,153,132,Chest
+collision3,113,23,143,63,Face
+
+}
+
+//Main Character hardbook5 pose
+surface73
+{
+element0,overlay,surface1563.png,0,0
+collision0,109,8,151,23,Head
+collision1,107,90,153,132,Chest
+collision3,113,23,143,63,Face
+
+}
+
+//Main Character hardbook6 pose
+surface74
+{
+element0,overlay,surface1564.png,0,0
+collision0,109,8,151,23,Head
+collision1,107,90,153,132,Chest
+collision3,113,23,143,63,Face
+
+}
+
+//Main Character hardbook7 pose
+surface75
+{
+element0,overlay,surface1566.png,0,0
+collision0,109,8,151,23,Head
+collision1,107,90,153,132,Chest
+collision3,113,23,143,63,Face
+
+}
+
+//Main Character hardbook8 pose
+surface76
+{
+element0,overlay,surface1567.png,0,0
+collision0,109,8,151,23,Head
+collision1,107,90,153,132,Chest
+collision3,113,23,143,63,Face
+
+}
+
+
+//-------------------------------------------------------The Side Character's poses------------------------------------------------------
+
+surface10
+{
+collision0,58,199,85,218,Face
+collision1,96,128,140,162,Point
+
+
+element0,overlay,surface10.png,0,0
+
+}
+
+
+//Side Character Embarrassed pose
+surface11
+{
+element1,overlay,surface2501.png,0,0
+}
+
+//Side Character Surprised pose
+surface12
+{
+element1,overlay,surface2502.png,0,0
+}
+
+//Side Character Worried pose
+surface13
+{
+element1,overlay,surface2503.png,0,0
+}
+
+//Side Character Sad/Disappointed pose
+surface14
+{
+element1,overlay,surface2504.png,0,0
+}
+
+//Side Character Smiling pose
+surface15
+{
+element1,overlay,surface2505.png,0,0
+}
+
+//Side Character Contented pose
+surface16
+{
+element1,overlay,surface2506.png,0,0
+}
+
+//Side Character Angry pose
+surface17
+{
+element1,overlay,surface2507.png,0,0
+}
+
+//Side Character Thoughtful pose
+surface18
+{
+element1,overlay,surface2508.png,0,0
+}
+
+//Side Character Bored pose
+surface19
+{
+element1,overlay,surface2509.png,0,0
+}
+

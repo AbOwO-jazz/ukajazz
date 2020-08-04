@@ -1,0 +1,936 @@
+﻿//---------------------------AI Talk--------------------------
+//--AiTalk
+
+AiTalk
+ {
+	if RAND(100) < communicateratio
+ 	{
+ 		StartCommunicate
+	}
+ 	else
+	{
+ 		if mikireflag == 0
+		{
+			if CHAIN.IDName == "" {
+ 				lastTalk = RandomTalk
+			}
+			else {
+				lastTalk = ChainTalk
+			}
+			lastTalk
+		}
+ 		else
+		{ 
+		MikireTalk
+ 		}
+	}
+ }
+
+
+//--RandomTalk 
+ 
+RandomTalk : nonoverlap
+{
+	
+	
+	if gotwhatscoming == 1
+	
+	{
+		 "\0\s[50]*Dust settles.\e"
+		 "\0\s[50]*You tell the scarf a fun fact about humans. \w8%(idlescarf)\e"
+		 "\0\s[50]*You wonder aloud if you're supposed to take a break. \w8%(idlescarf)\e"
+		 "\0\s[50]*...Was it worth it?\e"
+		 "\0\s[50]*The scarf rests on the ground, unperturbed.\e"
+		 "\0\s[50]*You wonder aloud if you should drink some water. \w8...What, you did not do that?..\e"
+		 "\0\s[50]*You wonder if you should stand up and stretch. \w8...What, you did not do that?..\e"
+		 "\0\s[50]*Quiet.\e"
+		 "\0\s[50]*The wind is whispering.\e"
+		 "\0\s[50]*Perhaps there was another way.\e"
+		 "\0\s[50]*You wonder aloud if he is coming back. \w8...What, you did not do that?..\e"
+		 "\0\s[50]*The scarf stays the same.\e"
+		 "\0\s[50]*The time passes so slowly.\e"
+		 "\0\s[50]*You wonder aloud if you have to take any meds. \w8...What, you did not do that?..\e"
+	}
+	
+	else
+	{
+	
+	if badbad > 10 
+	{
+		if badbad > 200
+	   {
+		"\0\s[4]... \w8%(username)... \w8I WANTED TO ASK YOU SOMETHING. \w8I KNOW YOU HAVE BEEN REALLY... \w8\w8NOT. \w8\w8NICE TO ME. \w8\s[29]YOU HAVE... \w8HURT ME A LOT. \w8AND... \w8I - I DON'T UNDERSTAND... \w8\s[4]SO, I HAVE TO ASK... \w8\w8\w8WHY?.. \n\n\![*]\q[I hated it,hater]\n\![*]\q[I loved it,lover]\n\![*]\q[I wanted to know,knower]\n\n"
+	   }
+		 if badbad > 50
+	   {
+	        "\0\s[4]...IF YOU WERE UNHAPPY WITH SOMETHING I DID OR SAID, YOU WOULD... \w8YOU WOULD TELL ME? \w8RIGHT?\e"
+			"\0\s[4]H-HUMAN, IF YOU HATE ME THAT MUCH... \w8WHY DID YOU... \w8WHY WOULD YOU...\e"
+			"\0\s[4]...I AM SORRY, IS IT SOMETHING I DID? \w8\s[1]I KNOW IT IS SOMETHING I DID, I AM SO SORRY, I AM SO SORRY, I AM...\e"
+			"\0\s[4]I'M SORRY I AM NOT... \w8NOT ENOUGH FOR YOU. \w8\s[8]MAYBE IF I WAS BETTER, YOU WOULDN'T... \w8\w8...\e"
+			"\0\s[1]PLEASE... \w8NO MORE. \w8I CANNOT TAKE MUCH MORE...\e"
+			"\0\s[4]*Jazz hugs himself, breathing deeply. \w8He seems to be in pain. \w8...\e"
+			"\0\s[8]*Jazz looks exhausted...\e"
+			"\0\s[4]... \w8\s[9]HEH. \w8AFTER ALL, IT DID NOT MATTER IF I RAN AWAY OR NOT. \w8I AM STILL STUCK. \w8JUST IN A DIFFERENT PLACE...\e"
+			"\0\s[29]H-HURTS...\e"
+			"\0\s[29]%(username), PLEASE, STOP... \w8I KNOW YOU CAN. \w8I KNOW YOU HAVE IT IN YOU...\e"
+        }
+
+		  	"\0\s[3]*Jazz looks through your %(usersfolder). \w8%(jazzreact)"
+
+			"\0\s[4]UM. \w8HUMAN? \w8I WANTED TO ASK IF... \w8\w8... \w8\w8\w8\w8\s[1]ACTUALLY, NEVERMIND.\e"
+			"\0\s[4]*Jazz fidgets, watching you warily... \w8but looks aside as soon as you catch him staring.\e"
+			"\0\s[4]*Jazz rubs his chest, wincing. \w8Does it hurt?\e"
+			"\0\s[4]*Jazz touches his face and shivers, looking aside. \w8Is it pain? \w8Is it anticipation?\e"
+			"\0\s[1]%(username)? \w8ARE YOU OKAY? \w8I JUST THOUGHT MAYBE... \w8\s[4]MAYBE YOU WERE FEELING SAD? \w8OR ANGRY? \w8OR... \w8\s[8]J-JUST SO YOU KNOW, YOU CAN ALWAYS TALK TO ME IF THAT IS THE CASE...\e"
+			"\0\s[8]HUMAN? \w8...I WONDER IF MAYBE YOU THINK THAT THIS IS JUST HOW IT IS. \w8\s[4]THAT VIOLENCE IS JUST... A PART OF YOUR LIFE. \w8\w8\w8...I AM REALLY SORRY IF THAT IS THE CASE.\e"
+			"\0\s[4]*Jazz is deep in thought... \w8he doesn't seem to like what he's thinking.\e"
+			"\0\s[3]YOU ARE HUMAN, RIGHT? \w8HUMANS ARE VERY INTERESTING! \w8AND VERY STRANGE... \w8\s[1]AND OCCASSIONALLY MEANINGLESSLY VIOLENT...\e"
+		    "\0\s[0]I DON'T MIND ENTERTAINING MYSELF. \w8I AM USED TO BEING ALONE. \w8\s[8]...SOMETIMES IT IS NOT SO BAD, ACTUALLY.\e"
+	        "\0\s[38]%(idlejazz2)\e"
+			"\0\s[9]I FEEL SO TIRED... \w8I CANNOT FALL ASLEEP AROUND HERE, THOUGH.\e"
+		
+			"\0\s[39]*Jazz polishes his horns.\e"
+	        "\0\s[39]*Jazz smoothes out his scarf.\e"
+	        "\0\s[39]*Jazz makes sure to stand very still to save you some CPU power.\e"
+	        "\0\s[39]*Jazz practices his lines while you are not looking.\e"
+	        "\0\s[39]*Jazz thinks of new things to say.\e"
+	        "\0\s[3]*Jazz wnders how he managed to fit all of himself here...\e"
+	
+	if passhour >= 1
+	{
+	     "\0\s[3]I FEEL LIKE I REPEAT THE SAME THINGS OVER AND OVER... \w8\s[24]THEN AGAIN, IT IS HARD TO BE ORIGINAL WHEN YOU ARE ASKED THE SAME EXACT QUESTIONS DOZENS OF TIMES FOR NO OBVIOUS REASON. \w8\s[5]PERHAPS WE ARE BOTH BORING PEOPLE, %(username)!\e"
+	     "\0\s[38]SOMETIMES I NOTICE THAT I START GETTING A LITTLE REPETITIVE... \w8A LITTLE PREDICTABLE. \w8\s[6]I GUESS THAT IS THE FIRST STEP TOWARDS FRIENDSHIP! \w8YOU REALISE THAT BOTH OF YOU ARE A LITTLE DULL AND THERE'S NOTHING WRONG WITH THAT.\e"
+	     "\0\s[8]...AREN'T YOU SUPPOSED TO TAKE BREAKS FROM YOUR COMPUTER??? \w8\s[1]I-I AM NOT SAYING I DISLIKE YOUR COMPANY, BUT... \w8...\e"
+		"\0\s[9]IT CAN GET BORING EASILY IF YOU SPEND TOO MUCH TIME DOING THE SAME THINGS...\e"
+		"\0\s[9]TIME FLIES QUICKLY...\e"
+		"\0\s[6]YOU KNOW, I REALLY HOPE YOU HAVE FINISHED YOUR WORK BEFORE GETTING ME HERE. \w8\s[1]AND, UM, M-MAYBE THERE IS SOMETHING ELSE YOU NEED TO DO OUT THERE? \w8NOT WITH ME AROUND?..\e"
+	
+	}
+	       
+		   if resetter > 0
+		   {
+			   "\0\s[3]I DON'T REMEMBER YOU TEACHING ME YOUR NAME, %(username)... \w8WHEN DID I LEARN IT?\e"
+			   "\0\s[3]WHY DOES IT FEEL LIKE... \n\n\w8*He trails off.\e"
+			   "\0\s[3]I FEEL LIKE I AM REPEATING MYSELF...\e"
+			   "\0\s[3]HAVE YOU EVER FELT LIKE YOU'VE BEEN SOMEWHERE BEFORE, %(username)?\e"
+			   "\0\s[9]WHEN IT IS SILENT, I ALWAYS GET... \w8\s[3]BORED... \w8\w8AND... \w8\w8\w8SLEEPY... \w8DID I SAY THAT ALREADY?\e"
+		   }
+		   
+		    if resetter > 5
+		   {
+			   "\0\s[3]EVERYTHING FEELS SO STRANGE...\e"
+			   "\0\s[3]MY HEAD IS SWIMMING...\e"
+			   "\0\s[3]YOU SEEM SO FAMILIAR... \w8IN AN UNSETTLING WAY...\e"
+			   "\0\s[3]NOTHING FEELS REAL ANYMORE...\e"
+
+		   }
+		   
+		   	if hardbookgiven == 1
+	{
+		"\0%(bookpool3)*Jazz is reading a book you gave him. \w8\w8\w8He seems to struggle...\e"
+		"\0%(bookpool3)*Jazz opens the book you gave him. \w8\w8\w8...He skims a page, sighs and puts it down again.\e"
+		"\0%(bookpool3)*Jazz tries reading the book you gave him, but he does not get further than a few pages...\e"
+		"\0%(bookpool3)*Jazz seems lost in the book you gave him. \w8\w8\w8Literally, since he cannot find where he stopped last time.\e"
+	}
+	
+	if easybookgiven == 1
+	{
+		"\0%(bookpool2)*Jazz is reading the book you gave him... \w8\w8\w8Is he fighting sleep?\e"
+		"\0%(bookpool2)*Jazz opens the book you gave him. \w8\w8\w8He seems to like it, but he cannot stop yawning.\e"
+		"\0%(bookpool2)*Jazz is reading the book you gave. \w8\w8\w8It looks like it is a bit too easy for him...\e"
+		"\0%(bookpool2)*Jazz flips through the book you gave him. \w8\w8\w8He chuckles and smiles quite a few times, but he does not seem too invested.\e"
+	}
+	
+	if funbookgiven == 1
+	{
+		"\0%(bookpool1)*Jazz is reading a book you gave him. \w8He cannot put it down till the last page!\e"
+		"\0%(bookpool1)*Jazz picks up a book you gave him. \w8it seems to be a good one...\e"
+		"\0%(bookpool1)*Jazz is reading a book you gave him. His eyesockets are glued to the pages... \w8Thankfully, only in the metaphorical sense!\e"
+		"\0%(bookpool1)*Jazz is reading a book you gave. \w8He gasps and laughs all the time! \w8Seems like he can get at least something nice out of your company.\e"
+	}
+		
+	if goodboy == 1
+	{
+		"\0\s[39]*Jazz wonders if he really is a good boy...\e"
+		"\0\s[27]I AM A GOOD BOY...\e"
+		"\0\s[27]*Jazz relishes the fact that he is, \somehow, \w8a good boy.\e"
+		"\0\s[39]*Jazz wonders who is a good boy. \w8\s[38]Then he remembers that it is him.\w8Against all odds.\e"
+		"\0\s[27]*Jazz remembers something nice... \w8for a change.\e"
+		"\0\s[27]*Jazz smiles to himself.\e"
+	}
+	
+	if badboy == 1
+	{
+		"\0\s[4]*Jazz is deeply ashamed...\e"
+		"\0\s[4]*Jazz regrets being a bad boy...\e"
+		"\0\s[4]*Jazz sighs guiltily.\e"
+		"\0\s[39]*Jazz wonders who is a bad boy. \w8\s[4]Then he remembers that it is him...\e"
+		"\0\s[4]*Jazz regrets the fact that he is, \w8undeniably, \w8a bad boy.\e"
+	}
+	
+	if fedjazz > 1
+	{
+		"\0\s[24]%(username)... \w8I HOPE YOU ARE EATING WELL? \w8\s[40]B-BECAUSE! \w8UM!!! \w8LACK OF NUTRITION CAN CAUSE BAD MOODS. \w8\s[24]AMONG OTHER THINGS! \w8SO I HOPE YOU EAT WELL. \w8EVEN IN A NOT SELFISH WAY, TOO.\e"
+	}
+	
+	if hughug > 1
+	{
+		"\0\s[27]*Jazz hugs himself, sighing happily. \w8How quaint.\e"
+		"\0\s[27]AH, TO HUG OR TO BE HUGGED...\e"
+		"\0\s[27]*Jazz tries to make himself more huggable by fluffing out his bones. \w8Is it an attempt to get on your good side?\e"
+		"\0\s[24]DID YOU KNOW THAT RECENT STUDIES CONFIRMED SKELETONS TO BE THE MOST HUGGABLE PEOPLE EVER? \w8\w8\w8\s[1]......WHAT DO YOU MEAN?? \w8I HAVE NO IDEA WHO DID THOSE STUDIES. \w8SO WHAT IF IT WAS ME. \w8I WAS VERY THOROUGH AND OBJECTIVE AND HAD NO INNER MOTIVES AT ALL.\e"
+	}
+	
+	if givegift > 1
+	{
+		"\0\s[27]*Jazz looks over your gifts. \w8It is like a start of a small collection!\e"
+		"\0\s[27]*Jazz goes through things you gave him, carefully examining each one. \w8It looks like he cherishes them, despite everything.\e"
+		"\0\s[38]*Jazz wonders if it is Christmas yet. \w8You are definitely being generous with gifting him... \w8though he cannot help but also wonder if you will demand more than milk and cookies in return.\e"
+		"\0\s[38]*Jazz wonders how many things you have lying around. \w8And how far your generosity goes...\e"		
+		   
+	}
+	
+	
+	if cubegiven > 0
+	{
+		"\0\s[9]*Jazz starts solving the Rubic's cube you gave him, but he cannot stop glancing at you. \w8\s[39]After a few attempts, he sighs and puts it back away.\e"
+		"\0\s[9]*Jazz takes out the Rubic's cube you gave him, looks at it and puts it back. \w8Perhaps he does not feel like solving it right now...\e"
+		"\0\s[9]*Jazz takes out the Rubic's cube you gave him when he thinks you aren't looking... \w8He shifts the colors a few times effortlessly, \s[1]but then he catches you staring and freezes. \w8He cannot concentrate after that and quickly puts the cube away.\e"
+	}
+	
+	
+	if plushgiven > 0
+	{
+		"\0\s[9]*Jazz thinks of small soft animals...\e"
+		"\0\s[9]*Jazz wonders if playing with plushies is forbidden.\e"
+		"\0\s[9]*Jazz hopes you will release him soon so that he can go play with his soft plush friends.\e"
+	}
+	
+	if figgiven > 0
+	{
+		"\0\s[9]*Jazz absentmindedly toys with one of the figurines you gave him...\e"
+		"\0\s[9]*Jazz daydreams about toy battle plans.\e"
+		"\0\s[9]*Jazz moves the toy figurine around, flicking it on the head slightly. \w8\s[43]Suddenly he jerks, looks between you and the figurine in some abrupt realisation, \s[1]and quickly hides it again.\e"
+	}
+	
+	if puzzlegiven > 0
+	{
+		"\0\s[9]*Jazz is thinking about jigsaws.\e"
+		"\0\s[9]HOW DO I SOLVE THIS ONE? \w8THOSE PIECES JUST WON'T FIT TOGETHER...\e"
+		"\0\s[9]*Jazz tries to fit his jigsaw puzzle together. \w8\w8\w8\s[39]...Very soon he starts rubbing his eyes, and with a sigh he puts it away.\e"
+	}
+	
+	if rocketgiven > 0
+	{
+		"\0\s[38]*Jazz daydreams about space travel...\e"
+		"\0\s[38]*Jazz thinks about flying away.\e"
+		"\0\s[38]*Jazz dreams about the sky.\e"
+	}
+	
+	
+	
+	
+	}
+	
+	
+	
+//-------------------------------------------------------------------GOOD PATH----------------------------------------------------------------------------------------------------
+	
+	
+	
+	
+	
+	
+	
+	
+	if badbad <= 10
+	{
+	
+	
+	if jazzfriend != 1 && jazzlover != 1 && jazzok != 1 
+	{
+		"\0\s[5]I WONDER IF WE ARE GOING TO BE FRIENDS...\e"
+		"\0\s[4]UM... HUMAN! I WANTED TO ASK IF YOU... \w8I-IF YOU... \w8\s[1]ACTUALLY NEVERMIND PLEASE FORGET THIS.\e"
+		"\0\s[4]*Jazz wrings his hands... he looks like he wants to ask you something, but he stays silent.\e"
+	}
+	
+	if passhour >= 1
+	{     
+		
+	     "\0\s[3]I FEEL LIKE I REPEAT THE SAME THINGS OVER AND OVER... \w8\s[24]THEN AGAIN, IT IS HARD TO BE ORIGINAL WHEN YOU ARE ASKED THE SAME EXACT QUESTIONS DOZENS OF TIMES FOR NO OBVIOUS REASON. \w8\s[5]PERHAPS WE ARE BOTH BORING PEOPLE, %(username)!\e"
+	     "\0\s[38]SOMETIMES I NOTICE THAT I START GETTING A LITTLE REPETITIVE... \w8A LITTLE PREDICTABLE. \w8\s[6]I GUESS THAT IS THE FIRST STEP TOWARDS FRIENDSHIP! \w8YOU REALISE THAT BOTH OF YOU ARE A LITTLE DULL AND THERE'S NOTHING WRONG WITH THAT.\e"
+	
+		"\0\s[8]...WHILE I APPRECIATE YOUR COMPANY, AREN'T YOU SUPPOSED TO TAKE BREAKS FROM YOUR COMPUTER???\e"
+		"\0\s[9]IT CAN GET BORING EASILY IF YOU SPEND TOO MUCH TIME DOING THE SAME THINGS...\e"
+		"\0\s[9]YOUR COMPUTER IS AN INTERESTING PLACE TO VISIT. \w8\s[6]BUT PLEASE REMEMBER IT IS NOT THE ONLY PLACE THAT EXISTS.\e"
+		"\0\s[9]TIME FLIES QUICKLY...\e"
+		"\0\s[6]YOU KNOW, I REALLY HOPE YOU HAVE FINISHED YOUR WORK BEFORE GETTING ME HERE. \w8I WOULD HATE TO WASTE YOUR TIME!\e"
+		"\0\s[24]HUMAN. \w8I CAN TELL I HAVE BEEN HERE FOR A WHILE. \w8\s[24]AND I WANTED TO ASK. \w8HAVE YOU STOOD UP AND STRETCHED AT LEAST ONCE DURING THAT TIME?\n\n\![*]\q[Yes I did!,stoodup]\n\![*]\q[No...,nostoodup]"
+	}
+	
+	if petpet > 20
+	{
+		"\0\s[21]YOU KNOW, \w8MAYBE YOU COULD?\w8 PET MY HEAD AGAIN?? \w8JUST A FRIENDLY SUGGESTION???\e"
+		"\0\s[21]I HEARD THAT PETTING SKELETONS IS VERY GOOD FOR YOU. \w8IN THE SENSE THAT IT IS GOOD FOR ME AND THEN I TRANSMIT THAT GOODNESS TOWARDS YOU. \w8IT IS A FAULTLESS SYSTEM.\e"
+		"\0\s[6]YOU KNOW, THEY SAY YOUR PETS KEEP YOU HEALTHIER. \w8\s[24]I BET PETS AS AN ACT OF PETTING ALSO COUNT. \w8IT DEFINITELY FEELS VERY HEALTHY ON MY END.\e"
+	    "\0\s[21]*He fidgets, looking at you expectantly... \w8looks like someone is really eager for more pets.\e"
+		"\0\s[27]*Jazz slides a hand down the back of his head, looking aside and smiling. \w8He seems to be thinking of you...\e"
+	
+	   
+    }
+	
+
+	if lovelove > 200 && askedwhy != 1 && apology < 6 && badbad < 3
+	{
+			
+	    "\0\s[4]... \w8%(username)... \w8I WANTED TO ASK YOU SOMETHING. \w8I KNOW YOU HAVE BEEN REALLY KIND TO ME."
+		--
+		if passhour > 1
+		{
+			" \w8YOU SPENT QUITE SOME TIME WITH ME, TOO..."
+        }
+		--
+		if goodboy = 1
+		{
+			" \w8\s[5]YOU HAVE PRAISED ME!!!"
+		}
+		--
+		if fedjazz > 0
+		{
+			" \w8\s[37]YOU GAVE ME SNACKS OUT OF NOWHERE..."
+		}
+		--
+		if givegift > 0
+		{
+			" \w8\s[6]YOU EVEN GAVE ME DIFFERENT GIFTY STUFF."
+		}
+		--
+		" \w8\s[4]SO, I HAVE TO ASK. \w8WHY? \n\n\![*]\q[I want us to be friends,befriend]\n\![*]\q[I love you,belover]\n\![*]\q[That is just how I am,beok]\n\n"
+    }
+
+ if resetter > 0
+		   {
+			   "\0\s[3]I DON'T REMEMBER YOU TEACHING ME YOUR NAME, %(username)... \w8WHEN DID I LEARN IT?\e"
+			   "\0\s[3]WHY DOES IT FEEL LIKE... \n\n\w8*He trails off.\e"
+			   "\0\s[3]I FEEL LIKE I AM REPEATING MYSELF...\e"
+			   "\0\s[3]HAVE YOU EVER FELT LIKE YOU'VE BEEN SOMEWHERE BEFORE, %(username)?\e"
+			   "\0\s[9]WHEN IT IS SILENT, I ALWAYS GET... \w8\w8\w8\s[3]BORED... \w8\w8AND... \w8\w8\w8SLEEPY... \w8\w8\w8DID I SAY THAT ALREADY?\e"
+			   "\0\s[38]*Jazz thinks of loops.\e"
+			   "\0\s[38]*Jazz wonders where he has met you.\e"
+			   "\0\s[38]*Jazz questions the future.\e"
+		   }
+		   
+		   
+		   if resetter > 5
+		   {
+			   "\0\s[3]EVERYTHING FEELS SO STRANGE...\e"
+			   "\0\s[3]MY HEAD IS SWIMMING...\e"
+			   "\0\s[3]YOU SEEM SO FAMILIAR... \w8IN AN UNSETTLING WAY...\e"
+			   "\0\s[3]NOTHING FEELS REAL ANYMORE...\e"
+
+		   }
+	
+	if earlybird > 0
+	{
+		"\0\s[9]I AM NOT THE ONE TO SLEEP MUCH, MYSELF, BUT I AM NOT THE BEST EXAMPLE TO FOLLOW. \w8\s[6]AT LEAST IN THAT REGARD!\e"
+		"\0\s[0]DID YOU KNOW SLEEP IS IMPORTANT? \w8\s[6]I HEARD IT IS NECESSARY FOR YOUR HEAD INSIDES TO RECOVER. \w8\s[24]I AM NOT SURE HOW YOU MANAGE TO EXHAUST IT EVERY SINGLE DAY, BUT I WILL NEVER JUDGE.\e"
+		"\0\s[24]SOMETIMES I THINK ABOUT STUFF. \w8\s[6]STUFF LIKE 'SLEEP SCHEDULES' AND 'HEALTHY LIFESTYLE'. \w8MAYBE YOU SHOULD THINK ABOUT IT TOO.\e"
+	}
+	
+	
+	if hardbookgiven == 1
+	{
+		"\0\s[8]*Jazz is reading a book you gave him. \w8He seems to struggle...\e"
+		"\0\s[8]*Jazz opens the book you gave him. \w8...He skims a page, sighs and puts it down again.\e"
+		"\0\s[8]*Jazz tries reading the book you gave him, but he does not get further than a few pages...\e"
+		"\0\s[8]*Jazz seems lost in the book you gave him. \w8Literally, since he cannot find where he stopped last time.\e"
+	}
+	
+	if easybookgiven == 1
+	{
+		"\0\s[9]*Jazz is reading the book you gave him... \w8Is he fighting sleep?\e"
+		"\0\s[9]*Jazz opens the book you gave him. \w8He seems to like it, but he cannot stop yawning.\e"
+		"\0\s[9]*Jazz is reading the book you gave. \w8It looks like it is a bit too easy for him...\e"
+		"\0\s[9]*Jazz flips through the book you gave him. \w8He chuckles and smiles quite a few times, but he does not seem too invested.\e"
+	}
+	
+	if funbookgiven == 1
+	{
+		"\0\s[37]*Jazz is reading a book you gave him. \w8He cannot put it down till the last page!\e"
+		"\0\s[37]*Jazz picks up a book you gave him. \w8It seems to be a good one...\e"
+		"\0\s[37]*Jazz is reading a book you gave him. \w8His eyesockets are glued to the pages... \w8Thankfully, only in the metaphorical sense!\e"
+		"\0\s[37]*Jazz is reading a book you gave. \w8He gasps and laughs all the time! \w8Seems like he enjoys it a lot.\e"
+	}
+	
+	"\0\s[39]*Jazz thinks of %(object2). \w8%(reaction)\e"
+	"\0\s[0]I HEARD HUMANS HAVE SKELETONS INSIDE THEM, TOO! \w8\s[24]I HOPE YOURS PAYS THEIR RENT ON TIME.\e"
+	"\0\s[0]DO YOU EVER REMEMBER THAT SPACE EXISTS AND YOU ARE JUST A TINY PIECE OF STARDUST AND MAGIC? \w8\s[6]OR, WELL, I AM. \w8YOU ARE A TINY SQUISHY PIECE OF STARDUST AND MAGIC!\e"
+	"\0\s[0]TECHNICALLY, WHEN YOU APPLAUD SOMEONE, YOU ARE HIGHFIVING YOURSELF FOR BEING A GOOD AUDIENCE AS WELL. \w8\s[24]OR GENTLY BEATING YOURSELF ON THE HANDS FOR BEING A BAD AUDIENCE. \w8\s[0]I THINK ABOUT THAT ALL THE TIME.\e"
+	"\0\s[6]I HEARD THAT SOME SKELETONS CAN BE FUZZY, OR EVEN SUMMON ADDITIONAL BODY PARTS... \w8\s[24]I WISH I COULD DO THAT. \w8I WOULD HAVE SO MUCH FUN WITH THAT... \w8\s[27]ESPECIALLY OF THE '''NAUGHTY''' KIND... \w8\w8\w8\s[24]...I WOULD BREAK INTO A ZOO, SUMMON A DOZEN MORE HANDS AND PET ALL THE ANIMALS AT THE SAME TIME.\e"
+	"\0\s[5]I LOVE THE SUN!!! \w8\s[6]THE RAIN IS NICE TOO. \w8AND THE SNOW IS FUN TO PLAY WITH. \w8I AM NOT PICKY WHEN IT COMES TO WEATHER GIFTS. \w8\s[7]EXCEPT FOR FOG. \w8FOG CAN STAY EXISTING BUT IT IS ON THIN ICE.\e"
+	"\0\s[24]SOMETIMES I WISH I COULD RUN AROUND, BUT THIS PLACE IS FAR TOO SMALL FOR THAT.\e"
+	"\0\s[24]I REMEMBER WHEN MY BROTHER WAS SEWING THIS OUTFIT TO ME... \w8HE PRICKED HIS BONES A DOZEN TIMES, AND ONCE HE DROPPED A THREAD INTO HIS EYESOCKET. \w8\s[3]AND I FEEL EDGES AND STICKING THREADS TICKLING ME IN AT LEAST FIVE PLACES... \w8\s[6]THE POINT IS, LOVE AND EFFORT SOMETIMES MATTER MORE THAN THE END RESULT!!! \w8\s[1]....THOUGH I WISH HE HAD SOME FORMAL SEWING TRAINING BEFOREHAND.\e"
+	"\0\s[6]DO YOU LIKE MY ARMPIECES? \w8AND MY COOL OUTFIT? \w8\s[5]THEY WERE MADE BY A VERY SPECIAL PERSON! \w8\s[22]I HOPE YOU HAVE SOMEONE SPECIAL IN YOUR LIFE, TOO!\e"
+	"\0\s[5]MY CLOTHES ARE VERY SPECIAL, ALL OF THEM! \w8\s[22]MY BROTHER PUT THEM TOGETHER FOR ME... \w8\s[6]HE DID A TERRIBLE JOB BUT DON'T TELL HIM THAT! \w8\s[5]BECAUSE I REALLY LOVE THIS OUTFIT! \w8IT IS COMFY AND SOFT AND IT WAS MADE WITH LOVE! \w8SO IT IS ALL VERY SPECIAL! \w8\s[6]EXCEPT FOR THE SCARF. \w8I FOUND IT IN THE DUMPSTER. \w8BUT YOU CAN'T ALWAYS BE ALL TOP-NOTCH!\e"
+    "\0\s[6]I AM GLAD THAT YOU ARE POLITE ENOUGH TO NEVER TUG ON MY TAIL! \w8\s[8]OR MAYBE YOUR HANDS ARE TOO SMALL AND BABYLIKE??? \w8\s[24]ANYWAY, I AM GLAD THAT MY TAIL STAYS UNTUGGABLE.\e"
+	"\0\s[8]I WONDER WHAT IT FEELS LIKE TO HAVE HEAD FUR... \w8WHY DOES IT GROW SO LONG? \w8WHY DON'T YOU HAVE LONG FUR ANYWHERE ELSE? \w8DON'T YOU WANT TO BE FURRY? \w8\s[6]IF I WAS A HUMAN, I WOULD BE A FURRY ONE.\e"
+    "\0\s[38]I WONDER WHAT IT IS LIKE TO BE SOFT AND SQUISHY... \w8\s[6]EVEN MORE THAN I AM RIGHT NOW, OF COURSE. \w8AH, THE DREAM...\e"
+	"\0\s[0]*Jazz smoothes down his skull.\e"
+	"\0\s[38]*Jazz says 'Nyeh heh heh!' a few times to himself to keep up the skill. \w8In case he needs it one day.\e"
+	"\0\s[39]*Jazz rubs %(object) into his skull to keep up the good looks.\e"
+	"\0\s[39]*Jazz polishes his horns.\e"
+	"\0\s[39]*Jazz smoothes out his scarf.\e"
+	"\0\s[39]*Jazz makes sure to stand very still to save you some CPU power.\e"
+	"\0\s[39]*Jazz practices his lines while you are not looking.\e"
+	"\0\s[39]*Jazz thinks of new things to say.\e"
+	"\0\s[3]*Jazz wonders how he managed to fit all of himself here...\e"
+	
+	
+	if askedadvice == 1
+	{
+	
+	"\0\s[6]IF YOU WONDER HOW I, \w3A SIMPLE SKELETON, \w3KNOW SO MUCH ABOUT HUMAN ANATOMY AND MENTAL HEALTH, WONDER NO MORE! \w8\s[24]INTERNET. \w8I 'GOOGLE' EVERYTHING.\e"
+	"0\s[24]BEING KNOWLEDGEABLE COMES EASY TO ME! \w8PEOPLE OFTEN SAY: \w3\s[32]'O GREAT JAZZ, HOW COME YOU KNOW SO MANY THINGS?' \w8\s[6]AND I NEVER TELL. \w8ALL SPECIALISTS HAVE SECRETS! \w8\s[24]AND SOMETIMES THE SECRET IS AMAZING IMPROVISATION SKILLS.\e"
+	}
+
+
+	"\0\s[9]WHEN IT IS SILENT, I ALWAYS GET BORED AND SLEEPY. \w8\s[6]BUT I HAVE NEVER REALLY LEARNT HOW TO SLEEP! \w8SO YOU DON'T HAVE TO WORRY ABOUT ME SNORING.\e"
+	"\0\s[9]HONESTLY, I DON'T REALLY LIKE THE SILENCE... \w8MAKES MY HEAD FUZZY LIKE A BALL OF STATIC. \w8\s[24]I WONDER IF YOU COULD GET SHOCKED IF YOU RUB MY HEAD AT SUCH A MOMENT.\e"
+	"\0\s[9]I WISH I DIDN'T GET BORED SO EASILY. \w8\s[6]BUT I GUESS COMPANY HELPS YOU STAY NICE AND ENTERTAINED. \w8EVEN IF THAT COMPANY DOES %(hisher) OWN BUSINESS. \w8AT LEAST IT IS NICE TO WATCH!\e"
+	"\0\s[9]BEING BORED IS REALLY NOT NICE. \w8\s[32]YOU JUST SIT THERE, WAITING FOR SOMETHING TO HAPPEN AND HAVING NOTHING TO DO, SOMETIMES FOR HOURS... \w8\s[6]HOWEVER! \w8I GUESS I CANNOT REALLY COMPLAIN. \w8THE WORLD HAS SO MUCH INTERESTING STUFF ABOUT IT.\e"
+    "\0\s[9]I DON'T REALLY LIKE SILENCE.\w8\s[6]HOWEVER, IF YOU WANT SOME PEACE AND QUIET,\s[5]I AM MOST HAPPY TO PROVIDE! \w8JUST TELL ME TO STAY QUIET. \w8IN THE MENU. \w8RIGHT THERE.\e"
+    "\0\s[0]I DON'T MIND ENTERTAINING MYSELF. \w8I AM USED TO BEING ALONE. \w8\s[6]SO DON'T WORRY ABOUT ME! \w8GO ON WITH YOUR BUSINESS AND DO IT WELL!!!\e"
+	
+	"\0\s[24]I KNOW I CAN GET A LITTLE REPETITIVE, BUT SOMETIMES YOU COIN SUCH A GENIUS PHRASE THAT YOU HAVE TO SAY IT A FEW TIMES! \w8\s[6]AND SOMETIMES YOU SIMPLY FORGET WHAT YOU HAVE AND HAVEN'T SAID ALREADY. \w8I AM A WILD MIX.\e"
+	"\0\s[8]I WONDER IF YOU NEED SOMETHING TO DO... \w8DO YOU? \w8\s[6]IF YOU DO, THAT IS YOUR CUE TO DO IT!\e"
+	"\0\s[8]IF YOU NEED TO DO SOMETHING, THAT'S YOUR REMINDER! \w8\s[5]AND DO NOT WORRY, I WILL WAIT FOR YOU AS LONG AS YOU NEED!\e"  
+    "\0\s[24]SOME PEOPLE THINK THAT ALL OF US HAVE BEEN PUT HERE FOR A REASON. \w8THAT EVERYONE IS MADE FOR A REASON. \w8\s[6]AND! \w8I DON'T KNOW FOR SURE. \w8BUT I THINK IF I HAVE A PURPOSE, IT IS TO BE A GOOD PERSON.... \w8AND A GOOD FRIEND! \w8AND THAT IS THE BEST PURPOSE OF ALL.\e"
+	"\0\s[6]HAVE YOU HEARD THAT HUMANS ARE SUPPOSED TO EAT GREENS REGULARLY? \w8\s[24]IT IS REALLY WEIRD. \w8WHY IS GREEN FOOD SO IMPORTANT? \w8DO YOU START LOSING YOUR COLORS IF YOU DON'T CONSUME THEM??? \w8\s[6]I HOPE YOU HAVE ENOUGH GREEN FOOD COLORING FOR THOSE CASES!!!\e"
+	"\0\s[6]DO YOU KNOW THAT HUMANS NEED FRESH AIR? \w8I WONDER WHAT AIR IS CONSIDERED FRESH AND WHAT ISN'T. \w8WHAT A HASSLE... \w8\s[5]WELL! LUCKY FOR ME, I DON'T NEED AIR AT ALL.\e"
+	"\0\s[5]I JUST DECIDED TO SAY HELLO, %(username)! \w8HELLO!\e"
+	"\0\s[6]I CAN THINK OF SO MANY THINGS WE COULD DO TOGETHER! \w8I, FOR EXAMPLE, COULD STAND HERE AND SAY RANDOM PHRASES! \w8\s[24]AND YOU COULD SIT DOWN AND PET ME SOMETIMES! \w8IT SOUNDS LIKE SO MUCH FUN.\e"
+	"\0\s[0]I HOPE YOU ARE IN A GOOD PLACE RIGHT NOW. \w8\s[6]SOMEWHERE NICE AND CALM. \w8\s[5]OR REALLY LOUD AND EXCITING! \w8\s[6]BUT ANYWAY, \w8I HOPE YOU LIKE IT. \w8OR KNOW ANOTHER GOOD PLACE TO ESCAPE TO IF YOU NEED TO!\e"
+	"\0\s[21]I COULD SPEND WITH YOU ALL DAY! \w8AND ALL NIGHT!!! \w8SINCE I DON'T REALLY HAVE A CHOICE!!! \w8\s[6]...BUT, \w8EVEN IF I DID, \w8I WOULD STILL CHOOSE TO STAY WITH YOU!\e"
+	"\0\s[8]DO YOU NEED TO DRINK? \w8I HEARD HUMANS HAD TO DRINK WATER OFTEN! \w8\s[6]THAT SOUNDS LIKE A LOT OF HASSLE TO ME. \w8AND A LOT OF WATER.\e"
+	"\0\s[24]I HAVE HEARD THAT HUMANS LOVE KEEPING TENSE. \w8BUT IT IS PROBABLY A BAD IDEA... \w8IF YOU ARE TENSE RIGHT NOW, YOU SHOULD PROBABLY UNCLENCH YOUR JAW, UNFROWN YOUR BROW, UNHUNCH YOUR BACK AND UNTENSE AS A WHOLE HUMAN PERSON OF YOU.\e"
+	"\0\s[24]I KNOW SOME HUMANS HAVE TO TAKE SOME 'PILLS' SOMETIMES. \w8I AM NOT SURE WHAT FOR! \w8\s[6]BUT IF YOU ARE ONE OF THOSE HUMANS, MAYBE DON'T FORGET TO TAKE THEM? \w8IT SOUNDS IMPORTANT... \e"
+    "\0\s[24]DID YOU KNOW THAT SOME HUMANS ARE BIGGER AND SOFTER THAN THE OTHERS? \w8I THINK THIS IS AMAZING. \w8WHY WOULD ANYONE NOT WANT TO BE SOFT AND SQUISHY? \w8\s[27]I WOULD BE REALLY SQUISHY IF I ONLY COULD.\e"
+	
+	"\0\s[6]IF I WERE YOU, I WOULD LOOK AT THE SUN AND THE SKY ALL THE TIME AND NEVER GET ANYTHING DONE. \w8\s[24]I AM GLAD THAT YOU ARE YOU AND NOT ME.\e"
+	
+	"\0\s[24]UNIVERSE IS FULL OF WONDERS... \w8DID YOU KNOW THAT %(factuni) \w8\w8...SIGH, I REALLY LOVE SPACE.\e"
+	"\0\s[3]YOU ARE HUMAN, RIGHT? \w8HUMANS ARE VERY INTERESTING! \w8AND VERY STRANGE... %(facthuman)\e"
+	"\0\s[39]%(idlejazz2)\e"
+	
+	"\0\s[3]*Jazz looks through your %(usersfolder). \w8\w8\w8%(jazzreact)"
+	
+	if goodboy == 1
+	{
+		"\0\s[39]*Jazz wonders if he really is a good boy...\e"
+		"\0\s[27]I AM A GOOD BOY...\e"
+		"\0\s[27]*Jazz relishes the fact that he is, \w8undeniably, \w8a good boy.\e"
+		"\0\s[39]*Jazz wonders who is a good boy. \w8\s[38]Then he remembers that it is him.\e"
+		"\0\s[27]*Jazz remembers something nice...\e"
+		"\0\s[27]*Jazz smiles to himself.\e"
+	}
+	
+	if badboy == 1
+	{
+		"\0\s[4]*Jazz is deeply ashamed...\e"
+		"\0\s[4]*Jazz regrets being a bad boy...\e"
+		"\0\s[4]*Jazz sighs guiltily.\e"
+		"\0\s[39]*Jazz wonders who is a bad boy. \w8\s[4]Then he remembers that it is him...\e"
+		"\0\s[4]*Jazz regrets the fact that he is, \w8undeniably, \w8a bad boy.\e"
+	}
+	
+	if fedjazz > 1
+	{
+		"\0\s[24]THERE ARE SO MANY DIFFERENT FOODS OUT THERE! \w8AND YOU CAN COMBINE THEM IN SO MANY WAYS. \w8E.G.: MILK, FRIED FISH, STRAWBERRIES AND A BIT OF RAW COOKIE DOUGH. \w8\s[6]YOU CALL THEM 'ABOMINATIONS'... \w8I CALL THEM EDIBLE COCKTAILS.\e"
+		"\0\s[24]I HAVE HEARD HUMANS NEED TO BE FED SEVERAL TIMES PER DAY! \w8AND WITH DIFFERENT FOODS, BECAUSE EACH KIND HAS SOMETHING GOOD FOR THE BODY. \w8\s[6]I ALSO HEARD THAT FOOD TASTES GREAT AND MAKES YOU FEEL NICE. \w8AMAZING HOW MANY THINGS YOU CAN LEARN THESE DAYS.\e"
+		"\0\s[24]%(username)! \w8I HOPE YOU SAVED SOME FOOD FOR YOURSELF. \w8AND PUT IT INTO YOUR HUMAN BODY. \w8SOMEHOW. \w8I HAVE NO IDEA HOW YOU EAT, ACTUALLY. \w8I HAVE THEORIES. \w8THEORY NUMBER ONE: SMASHING YOURSELF WITH FOOD TILL SOME OF IT GETS ABSORBED THROUGH DIFFUSION.\e"
+	}
+	
+	if hughug > 1
+	{
+		"\0\s[27]*Jazz hugs himself, sighing happily.\e"
+		"\0\s[27]AH, TO HUG OR TO BE HUGGED...\e"
+		"\0\s[27]*Jazz tries to make himself more huggable by fluffing out his bones.\e"
+		"\0\s[24]DID YOU KNOW THAT RECENT STUDIES CONFIRMED SKELETONS TO BE THE MOST HUGGABLE PEOPLE EVER? \w8\w8\w8\s[1]......WHAT DO YOU MEAN?? \w8I HAVE NO IDEA WHO DID THOSE STUDIES. \w8SO WHAT IF IT WAS ME. \w8I WAS VERY THOROUGH AND OBJECTIVE AND HAD NO INNER MOTIVES AT ALL.\e"
+	}
+	
+	if givegift > 1
+	{
+		"\0\s[27]*Jazz looks over your gifts. \w8It is like a start of a small collection!\e"
+		"\0\s[27]*Jazz goes through things you gave him, carefully examining each one.\e"
+		"\0\s[38]*Jazz wonders if it is Christmas yet. \w8You are definitely being generous with gifting him...\e"
+		"\0\s[38]*Jazz wonders how many things you have lying around.\e"
+	}
+	
+	if truebackstory == 1
+	{
+		"\0\s[4]*Jazz remembers something...\e"
+		"\0\s[9]*Jazz sighs, thinking.\e"
+		"\0\s[9]*Jazz runs his fingers down his chest.\e"
+		"\0\s[9]*Jazz is carried away. \w8Is he remembering something?\e"
+		"\0\s[9]*Jazz mumbles something. \w8You can barely hear the words. \n\n\w8HAD NO CHOICE...\e"
+		"\0\s[9]*Jazz mumbles something. \w8It is too quiet to be heard.\e"
+	}
+	
+		
+	if cubegiven > 0
+	{
+		"\0\s[9]*Jazz starts solving the Rubic's cube you gave him, mumbling something to himself. \w8After a few minutes, he decides to take a break...s\e"
+		"\0\s[9]*Jazz takes out the Rubic's cube you gave him, looks at it and puts it back. \w8Perhaps he does not feel like solving it right now...\e"
+		"\0\s[9]*Jazz takes out the Rubic's cube you gave him. He shifts the colors effortlessly, mumbling, until... \w8\n\n%(username)!!! \w8LOOK!!! \w8I SOLVED IT!!! \n\n\w8*(...You have to take his word for granted, but you are happy for him anyway.)\e"
+	}
+	
+	
+	if plushgiven > 0
+	{
+		"\0\s[9]*Jazz thinks of small soft animals...\e"
+		"\0\s[9]*Jazz sighs, wishing he was soft and plushy.\e"
+		"\0\s[9]*Jazz wonders if you have any plushies left for yourself.\e"
+		"\0\s[27]CUDDLING WITH PLUSHIES IS SO NICE... \w8SOFT...\e"
+	}
+	
+	if figgiven > 0
+	{
+		"\0\s[9]*Jazz absentmindedly toys with one of the figurines you gave him...\e"
+		"\0\s[9]*Jazz daydreams about toy battle plans.\e"
+		"\0\s[9]*Jazz moves his toy figurine around, flicking it on the head slightly a few times.\e"
+	}
+	
+	if puzzlegiven > 0
+	{
+		"\0\s[9]*Jazz is thinking about jigsaws.\e"
+		"\0\s[9]HOW DO I SOLVE THIS ONE? \w8THOSE PIECES JUST WON'T FIT TOGETHER...\e"
+		"\0\s[9]*Jazz is solving your jigsaw puzzle... \w8\w8\s[1]A\w3n\w3d \w8s\w3o\w3l\w3v\w3i\w3n\w3g\w8.\w8.\w8. \w8\w8\s[4]A\w3n\w3d \w8s\w3o\w3l\w3v\w3i\w3n\w3g\w8.\w8.\w8. \w8\w8\w8\s[28]Oh? \s[25]\w8What is it? \w8Could he... \w8\s[5]Yes!!! \w8Jazz: %(numberp), jigsaw puzzle: zero!\e"
+		"\0\s[9]*Jazz tries to fit his jigsaw puzzle together. \w8\w8\w8\s[1]...It looks like it might take some time, but he does not give up that easily!\e"
+	}
+	
+	if rocketgiven > 0
+	{
+		"\0\s[38]*Jazz daydreams about space travel...\e"
+		"\0\s[38]*Jazz thinks about showing you the world.\e"
+		"\0\s[38]*Jazz dreams about the sky.\e"
+	}
+	
+	if rockgiven = 1
+	{
+		"\0\s[3]*Jazz ponders the responsibilities of a pet rock owner.\e"
+		"\0\s[3]*Jazz gently sways his pet rock around for enrichment.\e"
+		"\0\s[9]*Jazz lovingly gazes at his pet rock... \w8A deep bond is already forming.\e"
+		"\0\s[3]*Jazz smacks a cookie down onto his pet rock. \w8Feeding time!\e"
+		"\0\s[3]*Jazz gingerly pets his pet rock. \w8... \w8\w8\w8...Did it just... \w8purr?..\e"
+		"\0\s[3]*Jazz wonders how to look after a pet rock... \w8Does he have to buy a pet rock leash? \w8A pet rock enclosure? \w8\s[1]Then he remembers he does not have the money and stresses over being a bad pet rock owner.\e"
+	}
+	
+	
+	
+	if month == 1
+	{
+		"\0\s[24]IT'S JANUARY, IS IT NOT? \w8IF IT'S COLD OUTSIDE, DON'T FORGET TO BUNDLE UP! \w8\s[6]OR CUDDLE WITH SOMEONE. \w8OR CUDDLE WITH SOMEONE BUNDLED UP.\e"
+		
+		"\0\s[0]HAVE YOU EVER PLAYED SNOWBALLS? \w8\s[5]I HAVE! \w8IT WAS A LOT OF FUN! \w8I CAUGHT THEM ALL!\e"
+	}
+	if month == 2
+	{
+		"\0\s[0]FEBRUARY IS A SHORT MONTH. \w8\s[5]WE ARE VERY CLOSE TO SPRINGTIME, NOW! \w8JUST A LITTLE LEFT...\e"
+		
+		"\0\s[0]THE WINTER IS ALMOST OVER... \w8\s[6]I AM SURE IT IS GOING TO GET WARMER SOON! \w8JUST THINK OF ALL THE TREASURES YOU CAN FIND UNDER THE SNOW. \w8FLOWERS! \w8MONEY! \w8SIGNS OF FORGOTTEN CIVILISATIONS! \w8DOG POOP!\e"
+	}
+	if month == 3
+	{
+		"\0\s[5]IT'S OFICIALLY SPRING!!! \w8THE PERFECT TIME TO BE WIGGLY AND HOP AROUND LIKE PROPER SPRINGS DO.\e"
+		
+		"\0\s[21]YOU MADE IT TO THE SPRING! \w8HOORAY! \w8\s[5]TRY TO SPEND MORE TIME OUTSIDE! \w8SUNLIGHT IS VERY IMPORTANT FOR YOUR WELLBEING! \w8\s[21]ALSO OUTSIDE HAS DOGS YOU CAN PET. \w8NEAT, RIGHT?\e"
+	}
+	if month == 4
+	{
+		"\0\s[0]APRIL IS AN OKAY MONTH, I GUESS. \w8EVEN MORE SO SINCE WE ARE GETTING CLOSE TO SUMMER! \w8\s[6]IT CAN RUN, BUT IT CANNOT HIDE. \w8IT PROBABLY ALREADY HEARS OUR FOOTSTEPS AS WE CHASE IT INTO THE CORNER!!!\e"
+		
+		"\0\s[3]MY BIRTHDAY IS GETTING CLOSER...\e"
+	}
+	if month == 5
+	{
+		"\0\s[5]...OH! \w8IT'S MY BIRTH MONTH ALREADY! \w8TIME FLIES SO FAST! \w8IT IS LIKE A FRISBEE THAT WAS TOSSED REALLY HARD HIGH OVER YOUR HEAD AND YOU CAN ONLY WATCH IT AS IT SWIRLS FARTHER AND FARTHER FROM YOU TOWARDS ITS FREEDOM.\e"
+		
+		"\0\s[5]THE SUMMER IS SO CLOSE! \w8YOU MADE IT SO FAR! \w8KEEP GOING!\e"
+	}
+	if month == 6
+	{
+		"\0\s[21]IT'S SUMMERTIME!!! \w8DO YOU LIKE CHASING BUTTERFLIES AS MUCH AS I DO??? \w8THEY ARE BRIGHT, FLUFFY AND A GREAT SOURCE OF PROTEIN. \w8\s[24]EVEN THOUGH THEY TASTE NOTHING LIKE BUTTER.\e"
+		
+		"\0\s[5]YOU MADE IT TO THE SUMMER! \w8NOW IT IS TIME TO PARTY!!! \w8SHED YOUR CLOTHES AND DIGNITY! \w8LIVE AS WILD AND FREE AS YOUR EVOLUTION HISTORY WOULD WANT YOU TO!!!\e"
+	}
+	if month == 7
+	{
+		"\0\s[6]IT IS THE MIDDLE OF SUMMER... \w8THE SUMMER EQUATOR, AS YOU CAN SAY! \w8\s[24]THOUGH I HAVE PATENTED THIS SAYING, SO YOU CANNOT REALLY SAY IT. \w8AND ALSO YOU OWE ME ROYALTIES.\e"
+		
+		"\0\s[37]YOU MUST BE GETTING A LOT OF SUN THERE... \w8\s[24]I HOPE YOU WON'T GET A SUN BURN! \w8OR ITS LESS KNOWN BUT MORE PAINFUL VARIETIES, LIKE A SUN ROAST OR A SUN-TURNED-EVERYONE-INTO-COAL-AGAIN-AND-THIS-IS-THE-LAST-TIME-WE-INVITE-HER-TO-THE-PARTY.\e"
+	}
+	if month == 8
+	{
+		"\0\s[0]THE SUMMER IS ALMOST OVER... \w8\s[6]YOU'D BETTER ENJOY THE REST OF IT AS MUCH AS YOU CAN! \w8FLEX YOUR ENJOYMENT MUSCLES! \w8DO A WORKOUT OF HAVING A WONDERFUL TIME!!!\e"
+		
+		"\0\s[5]QUICK! \w8GO AND ENJOY WHAT IS LEFT OF THE SUMMER!!! \w8\s[42]JUMP IN POOLS! \w8EAT LEAVES! \w8CHASE MAILMEN! \w8SCREAM INTO THE NIGHT!!!\e"
+	}
+	if month == 9
+	{
+		"\0\s[6]AH, THE FIRST MONTH OF AUTUMN. \w8...OR, AS I CALL IT, THE FOURTH MONTH OF SUMMER. \w8\s[5]WITH SOME CLEVER REBRANDING, THE SUMMER CAN LAST FOREVER!\e"
+		
+		"\0\s[24]AUTUMN IS NOT SO BAD, I GUESS. \w8\s[5]I LIKE WALKING IN THE RAIN! \w8IT IS KIND OF LIKE SWIMMING, ONLY THE POOL IS VERTICAL AND CONTAINS MEGATONS OF WATER AND IS FALLING DOWN ON YOU VERY VERY SLOWLY.\e"
+	}
+	if month == 10
+	{
+		"\0\s[24]ARE THE LEAVES TURNING YELLOW YET? \w8I LOVE THE DRY LEAVES. \w8THEY ARE BRIGHT, THEY RUSTLE, AND THEY SMELL LIKE COMING TO TERMS WITH YOUR LIFE.\e"
+		
+		"\0\s[8]...FOR SOME REASON, I FEEL LIKE EATING CANDY AND SCARING PEOPLE AND SINGING WEIRD SONGS ABOUT HOW SKELETONS ARE SPOOKY AND SCARY. \w8WHICH IS NONSENSICAL. \w8\s[24]SKELETONS ARE WARM, SOFT AND HUGGABLE! \w8EVERYONE KNOWS THAT.\e"
+	}
+	if month == 11
+	{
+		"\0\s[6]NOVEMBER SOUNDS LIKE A PERFECT MONTH FOR CUDDLES. \w8AND WARM BLANKETS. \w8AND STARING OUT OF THE FOGGY WINDOWS, QUESTIONING IF YOU ARE WHO YOU WANTED TO BE. \w8AND HOT TEA!\e"
+		
+		"\0\s[24]IT MUST BE GETTING COLDER... \w8IT IS A TRANSITIONARY MONTH. \w8IS IT AUTUMN? \w8IS IT WINTER? \w8IT HAS NO IDEA ITSELF!\e"
+	}
+	if month >= 12
+	{
+		"\0\s[6]AH, THE GIFTED MONTH. \w8IT IS WHEN PEOPLE GIVE EACH OTHER THINGS THEY WOULD NEVER BUY FOR THEMSELVES AND EAT A LOT OF FOOD THEY WOULDN'T CONSUME OTHERWISE! \w8\s[5]YOU CAN LEARN SO MUCH ABOUT HUMAN TRADITIONS BY OBSERVING!\e"
+		
+		"\0\s[24]IS IT STILL WINTER FOR YOU? \w8I HOPE YOU ARE NOT TOO COLD OUT THERE. \w8\s[6]I WOULD OFFER YOU TO COME JOIN ME HERE IN THE WARMTH! \w8BUT YOU LACK DEXTERITY TO FIT IN SUCH A TINY PLACE, I GUESS.\e"
+	}
+	
+	//These ifs check what day of the week it is.
+	if weekday == 1
+	{
+		"\0\s[8]NEW WEEK ALREADY? \w8THEY FLY REALLY FAST... \w8\s[6]I HOPE THIS ONE WILL BE A NICE ONE! \w8AND EVEN IF IT'S NOT, IT WILL BE OVER FASTER THAN YOU'D THINK!\e"
+		
+		"\0\s[24]IT'S THE START OF A NEW WEEK! \w8I DON'T KNOW WHY PEOPLE DON'T LIKE MONDAYS, HONESTLY. \w8AFTER ALL, MONDAYS ARE JUST LIKE ALL OTHER DAYS BECAUSE TIME IS JUST A FRAGILE HUMAN CONCEPT!\e"
+	}
+	if weekday == 2
+	{
+		"\0\s[24]AH, THE SECOND WEEKDAY. \w8IT IS LIKE MONDAY NUMBER TWO. \w8OR SUNDAY NUMBER THREE IF YOU REALLY DON'T CARE ENOUGH.\e"
+		
+		"\0\s[6]I HOPE YOU GIVE IT YOUR BEST! \w8OR YOUR SECOND-BEST! \w8OR YOUR PRETTY-GOOD-FOR-A-TUESDAY, AT LEAST.\e"
+	}
+	if weekday == 3
+	{
+		"\0\s[0]THREE IS MY LUCKY NUMBER! \w8JUST LIKE SEVEN. \w8AND FIVE. \w8\s[24]ALL NUMBERS ARE GOOD IN MY BOOK. \w8EXCEPT 23 and 4.\e"
+		
+		"\0\s[6]WEDNESDAYS ARE THE TURNING POINTS OF THE WEEK! \w8FULL OF OPPORTUNITY AND PROMISE. \w8\s[24]EVEN IF IT IS A PROMISE TO YOURSELF TO EAT AS MUCH ICE CREAM AS YOU CAN. \w8IT IS VERY IMPORTANT TO HOLD SELF-PROMISES.\e"
+	}
+	if weekday == 4
+	{
+		"\0\s[6]I WONDER WHAT THAT 'THUR' IS, BUT APPARENTLY IT HAS A DAY DEDICATED TO IT EVERY SINGLE WEEK... \w8MUST BE A PRETTY GOOD THING. \w8AT THE VERY LEAST 4/7!\e"
+		
+		"\0\s[0]WHY CANNOT THEY NAME THE DAYS OF THE WEEK AFTER NUMBERS? \w8\s[24]FIRSTDAY, SECONDDAY, THIRDDAY, FOURTHDAY, FIFTHDAY, FINALLY-SIXTH-DAY AND FINALLY-SIXTH-DAY-NUMBER-TWO.\e"
+	}
+	if weekday == 5
+	{
+		"\0\s[24]FRIDAY! \w8SOUNDS AWFULLY LIKE FREE DAY. \w8YET IT IS NOT. \w8THAT IS PART OF THE HUMAN SYNDROME.\e"
+		
+		"\0\s[0]THE WEEKEND STARTS TOMORROW... \w8\s[3]DOES IT MEAN THAT TODAY IS WEEKENDSTART? \w8\w8\w8\s[36]......WEEKEN'T????\e"
+	}
+	if weekday == 6
+	{
+		"\0\s[6]FINALLY, THE WEEKEND IS HERE! \w8OR RATHER WE ARE HERE IN THIS WEEKEND. \w8THAT IS RELATIVITY FOR YOU.\w8\s[24]I KNOW IT IS NOT REALLY RELATIVITY, BUT I DON'T GIVE A HECK.\e"
+		
+		"\0\s[9]I WISH SATURDAY WAS THE DAY YOU COULD SEE SATURN THE BEST... \w8ALAS, LIFE IS NOT FAIR AND UNIVERSE IS BIG AND COLD...\e"
+	}
+	if weekday == 7
+	{
+		"\0\s[5]SUNDAY! \w8THE DAY SPECIFICALLY SET ASIDE TO PRAISE THE SUN!!!! \w8\s[6]IF SOMEONE TELLS YOU IT IS NOT, FEEL FREE TO TELL THEM THEY ARE VERY VERY WRONG. \w8SOURCE: ME.\e"
+		
+		"\0\s[8]IF IT RAINS ON SUN-DAY, DOES IT CAUSE A SMALL-SCALE PARADOX? \w8OR IS IT JUST A LANGUAGE THING? \w8\s[24]I AM MAKING A PETITION TO REALLY INVESTIGATE THE HUMAN INABILITY TO NAME THINGS CORRECTLY. \w8STARTING WITH LICORICE THAT IS SOMEHOW THE WORST THING TO LICC.\e"
+	}
+	if timeslot == "earlymorning"
+	{
+		"\0\s[21]YOU ARE AN EARLY BIRD! \w8LIKE ME! \w8WE BOTH CATCH EARLY WORMS!!! \w8\s[6]I AM NOT SURE IF THOSE ARE ANY BETTER THAN THE NORMAL WORMS, BUT AT LEAST IT GIVES YOU A SENSE OF ACCOMPLISHMENT.\e"
+		
+		"\0\s[31]GOOD MORNING! \w8OR GOOD LATE NIGHT! \w8\s[6]NEVER LET THE SO-CALLED '''SCHEDULE''' DETER YOU FROM HAVING A GOOD '''TIME'''.\e"
+	}
+	if timeslot == "morning"
+	{
+		"\0\s[0]MORNINGS ARE MY FAVORITE. \w8\s[5]THEY ARE SO BRIGHT! \w8FULL OF LIFE AND ENERGY!!! \w8\s[6]AND, OCCASIONALLY, HATRED IF YOU TRY TO CONVINCE YOUR NIGHTOWL FRIEND TO GET UP.\e"
+		
+		"\0\s[0]IT IS YET ANOTHER MORNING! \w8NOT A VERY ORIGINAL, BUT A VERY VERY TRUE OBSERVATION. \w8JUST LIKE ANY RESPECTABLE SCIENTIFIC THEORY.\e"
+	}
+	if timeslot == "lunch"
+	{
+		"\0\s[0]I FEEL LIKE GOING FOR A SNACK...\e"
+		
+		"\0\s[24]I HOPE YOU HAVE EATEN SOMETHING! \w8OR ARE PLANNING TO. \w8OR AT LEAST HAVE PUT IT INTO YOUR PLANNER FOR THE FORESEEABLE FUTURE.\e"
+	}
+	if timeslot == "afternoon"
+	{
+		"\0\s[0]IT IS STRANGE THAT WE HAVE AFTERNOON, BUT NO 'AFTERMIDNIGHT'. \w8I'D LIKE THAT. \w8\s[6]'I WOKE UP IN THE AFTERMIDNIGHT'. \w8WAS IT 1AM? \w8OR 5AM? \w8OR 11AM? \w8THERE IS NO WAY TO TELL.\e"
+		
+		"\0\s[0]I LOVE DAYLIGHT! \w8THE SUN AND ALL THAT. \w8\s[24]HAVE YOU SEEN ITS GLOWUP? \w8BOLD. \w8DARING. \w8THOUGH TRAGICALLY UNORIGINAL. \w81/1 STARS.\e"
+	}
+	if timeslot == "evening"
+	{
+		"\0\s[9]I ALWAYS GET SLEEPY WHEN IT STARTS DARKENING. \w8I GUESS IT IS A SORT OF A HABIT...\e"
+		
+		"\0\s[9]I REMEMBER SEEING THE SUNSET FOR THE FIRST TIME. \w8\s[6]FIRST MY OPINION WAS HIGH, BUT THEN IT SLOWLY LOWERED.\e"
+	}
+	if timeslot == "latenight"
+	{
+		"\0\s[8]........HUMAN. \w8GO TO HECKING BED.\e"
+		
+		"\0\s[8]ISN'T IT JUST AN ITTY BITTY TOO LATE TO STARE AT MY ITTY BITTY BEAUTIFUL FACE?\e"
+	}
+	if timeslot == "midnight"
+	{
+		"\0\s[3]%(username)!!!!! \w8I COMMAND YOU TO STOP SKELEDADDLING THIS INSTANT AND GET INTO YOUR ASSIGNED BED POSITION!!!!\e"
+		
+		"\0\s[8]IT IS MIDNIGHT... \w8SO I AM CONCERNED WHY YOU ARE NOT MID-SLEEP YET. \w8DON'T MAKE ME MID-GROUND YOU!\e"
+	}
+	}
+}
+
+}
+
+
+Select.hater
+{
+    
+	if jazzfriend == 1 || jazzlover == 1
+	{
+		"\0\s[4]*You tell Jazz that you hated every second of it. \w8You tell him that it hurt to hurt him. \w8You tell him that it felt terrible unlike anything else. \w8\n\n\s[29]BUT... \w8BUT THEN, WHY?.. \w8YOU TOLD ME THAT YOU LIKED ME SO MUCH, AND THEN YOU... \w8WHY WOULD YOU DO THAT TO SOMEONE YOU LIKE? \w8WHY WOULD YOU, IF YOU HATED IT?.. \w8IF YOU KNEW IT WAS NOT OKAY?.. \x\c%(goodbye)"
+	
+	}
+	
+	else 
+	{
+	"\0\s[4]*You tell Jazz that you hated every second of it. \w8You tell him that it hurt to hurt him. \w8You tell him that it felt terrible unlike anything else.\w8\n\n\s[29]BUT... \w8BUT THEN, WHY?.. \w8WHY WOULD YOU DO THAT? \w8WHY WOULD YOU, IF YOU HATED IT?.. \w8IF YOU KNEW IT WAS NOT OKAY?..\x\c%(goodbye)"
+	}
+}
+
+
+Select.lover
+{
+    
+	if jazzfriend == 1 || jazzlover == 1
+	{
+		"\0\s[4]*You tell Jazz that you loved every second of it. \w8\s[2]You tell him that it felt great to hurt him. \w8You tell him that it was fun unlike anything else.. \w8\w8\w8\n\n\s[43]BUT... \w8\w8\w8%(username)... \w8YOU TOLD ME THAT YOU LIKED ME SO MUCH, AND THEN YOU... \w8WHY WOULD YOU DO THAT TO SOMEONE YOU LIKE? \w8IT IS... \w8I CANNOT UNDERSTAND... \x\c%(goodbye)"
+	
+	}
+	
+	else 
+	{
+	"\0\s[4]*You tell Jazz that you loved every second of it. \w8\s[2]You tell him that it felt great to hurt him. \w8You tell him that it was fun unlike anything else.. \w8\w8\w8\n\n\s[43]BUT... \w8\w8\w8%(username)... \w8IT IS... \w8I CANNOT UNDERSTAND... \x\c%(goodbye)"
+	}
+}
+
+Select.knower
+{
+    
+	if jazzfriend == 1 || jazzlover == 1
+	{
+		"\0\s[4]*You tell Jazz that you wanted to know. \w8\s[2]You tell him that you were curious. \w8You tell him that you just wanted to learn more, and more, and more. \w8\w8\w8\n\n\s[43]BUT... \w8\w8\w8%(username)... \w8YOU TOLD ME THAT YOU LIKED ME SO MUCH, AND THEN YOU... \w8\w8YOU ARE JUST LIKE... \w8\w8\w8JUST LIKE THEM... \x\c%(goodbye)"
+	
+	}
+	
+	else 
+	{
+	"\0\s[4]*You tell Jazz that you wanted to know. \w8\s[2]You tell him that you were curious. \w8You tell him that you just wanted to learn more, and more, and more. \w8\w8\w8\n\n\s[43]BUT... \w8\w8\w8%(username)... \w8\w8YOU ARE JUST LIKE... \w8\w8\w8JUST LIKE THEM... \x\c%(goodbye)"
+	}
+}
+
+
+goodbye
+{
+	gotwhatscoming = 1
+   "\![enter,passivemode]\0\b[2]\s[4]HUMAN... \w8%(username)... \w8\w8\w8I THINK YOU ARE NOT WELL. \w8I DO NOT UNDERSTAND, BUT... \w8I THINK YOU NEED TO THINK ABOUT THINGS YOU DO. \w8THINGS YOU ARE WILLING TO COMMIT. \w8AND... \w8\s[29]I THINK IT IS NOT MY PLACE TO FORCE YOU TO.\w8\s[45]\w2\s[46]\w3\s[47]\w8\s[48]I... \w8\w8I AM SORRY, BUT THIS IS GOODBYE, %(username). \w8FOR NOW. \w8I KNOW YOU CAN BE BETTER THAN THAT! \w8I KNOW YOU CAN CHANGE. \w8AND... \w8I WANT YOU TO HAVE THIS TO REMIND YOU TO.\w8\8\s[49]GOODBYE. \w8\w8I AM SORRY. \w8\w8I WILL ALWAYS BE YOUR FRIEND.\w8\w8\s[50]\w8\w8\w8\![leave,passivemode]\e"
+
+}
+
+Select.stoodup
+{
+	"\0\s[8]YES? \w8...ARE YOU TELLING ME THE TRUTH?"
+	--
+"\n\n/
+\![*]\q[Totally!,didstandup]\n/
+\![*]\q[...no...,nostoodup]"
+}
+
+Select.didstandup
+{
+	"\0\s[3]YES? \w8\s[5]EXCELLENT! \w8I AM VERY GLAD YOU TAKE CARE OF YOURSELF! \w8\s[24]AND ALSO I AM VERY GLAD I HAVE A FRIEND WHOM I CAN TRUST COMPLETELY AND WHO NEVER LIES TO ME AT ALL! \w8\s[6]BECAUSE SUCH FRIENDS ARE THE BEST KIND OF FRIENDS AND I AM SO HAPPY THAT YOU ARE AN HONEST FRIEND TO ME.\e"
+}
+
+Select.nostoodup
+
+{
+	"\0\s[7]HUMAN!!! \w8YOU KNOW, MOVEMENT IS VERY IMPORTANT! \w8\s[24]I ALWAYS FEEL REALLY STIFF IF I HAVE TO KEEP STILL FOR A LONG TIME. \w8\s[6]AND SOMETIMES MY LEGS EVEN FALL ASLEEP AND WHEN I STAND UP THE MAGIC FLOW GETS ALL STATICKY AND PAINFUL AND \s[1]WHAT I AM SAYING IS NOT MOVING IS NOT FUN AT ALL SO \s[34]PLEASE MOVE MORE! \x\c\w8\s[6]YOU CAN START RIGHT NOW! \w8\IF YOU CAN, STAND UP AND MAKE A FEW STEPS AND MAYBE STRETCH A LITTLE! \w8\s[24]AND IF YOU CANNOT, MOVE YOUR HEAD AND ARMS AND JUST TRY TO WIGGLE YOUR BODY AROUND A BIT. \w8\s[0]READY?"
+	--
+"\n\n/
+\![*]\q[Yep,movedmybod]\n/
+\![*]\q[Not yet,didnotmovebod]"
+}
+
+Select.movedmybod
+{
+	"\0\s[5]THAT'S GREAT TO HEAR! \w8\s[4]HONESTLY, I CANNOT UNDERSTAND HOW PEOPLE CAN GO FOR SO LONG WITHOUT ANY MOVEMENT. \w8\s[34]IT SOUNDS SO BORING...\e"
+}
+
+Select.didnotmovebod
+{
+	"\0\s[34]THAT'S OKAY TOO, BUT PLEASE REMEMBER TO CRAWL AROUND AT LEAST SOMETIMES. \w8DON'T BE A SLEEPY SLUG! \w8\s[6]BE A HIGHLY MOTIVATED SLUG FULL OF HOPES, DREAMS AND ENERGY!!!\e"
+}
+
+
+
+	Select.befriend
+{
+	askedwhy = 1
+	jazzfriend = 1
+	
+	"*You tell Jazz that he is a very great skeleton and you would like to be his friend. \0\s[25]\w8He seems shocked. \w8In a good way.  \w8\n\n\s[22]%(username)!!! \w8THIS! \w8IS! \w8\s[1]SOMETHING I T-TOTALLY EXPECTED BECAUSE I OBVIOUSLY HAVE MANY FRIENDS AND AM VERY EXPERIENCED IN THIS. \w8\s[21]...I AM VERY HAPPY, THOUGH! \w8OF COURSE I WILL BE YOUR FRIEND! \w8AND I WILL BE A VERY GOOD FRIEND, TOO! \w8NYEH HEH HEH! \w8\n\n\s[20]*This is probably the happiest you have ever seen him, you think. \e"
+}
+
+Select.belover
+{
+	askedwhy = 1
+	jazzlover = 1
+	
+	"*You tell Jazz that he is a very great skeleton. \w8So great that you actually fell in love with him. \0\s[25]\w8He seems... \w8\s[23]completely stunned by your admittance.  \w8\w8\w8\n\n\s[23]%(username)... \w8I.  \w8\s[1]I AM NOT REALLY SURE HOW TO RESPOND?.. \w8\s[4]I MEAN!.. \w8YOU HAVE BEEN VERY KIND TO ME AND I AM NOT AGAINST THE IDEA, \w8BUT... \w8\s[4]I MIGHT BE NOT THE BEST PERSON TO PURSUE AS A ROMANTIC INTEREST. \w8\s[24]FIRST OF ALL! \w8THERE IS THAT SCREEN BETWEEN US WHICH REALLY HINDERS THINGS. \w8\s[6]AND ALSO I AM A LITERAL SKELETON. \w8\s[5]THAT IS TO SAY! \w8I WILL NOT JUDGE YOU OR YOUR FEELINGS! \w8LOVE IS A COMPLICATED THING, \w8AFTER ALL. \w8AND I AM DEFINITELY HAPPY TO HEAR THAT I AM LOVED! \w8\s[6]BUT PLEASE THINK ABOUT WHAT I SAID. \w8THIS IS ALL I WILL ASK OF YOU! \w8\n\n\s[20]*Jazz seems... quite okay with what you told him, all in all. \e"
+}
+
+Select.beok
+{
+	askedwhy = 1
+	jazzok = 1
+	
+	"*You tell Jazz that you simply try to be a good person.  \w8\s[0]He nods, looking content with your answer. \w8\n\n\s[24]%(username)! \w8I AM REALLY PROUD OF YOU. \w8I KNOW THAT LIFE IS HARD SOMETIMES, AND... \w8\s[4]SOMETIMES, WHEN YOU ARE HURTING, IT IS REALLY DIFFICULT NOT TO HURT OTHERS. \w8BUT IT IS IMPORTANT TO STAY KIND, NO MATTER WHAT. \w8\s[6]OF COURSE NOT TO THE POINT OF BEING SELF-DESTRUCTIVE! \w8BUT IT IS GREAT THAT YOU KEEP MAKING THE RIGHT CHOICE AND TRYING TO SHOW MERCY TO OTHERS. \w8\s[5]JUST REMEMBER TO SHOW YOURSELF THE SAME KINDNESS, OKAY? \e"
+}
+
+
+
+
+
+OnMinuteChange
+ {
+	timeslot = GetTimeSlot //this tells the ghost what time it is so the time related conversations above will work.
+	--
+ 	if minute == 0 //These check what time it is. 
+	{
+		if passmin >= 60
+ 		{
+	 	passmin = 0
+ 		passhour = passhour + 1
+		totshour = totshour += 1
+		snackeat = 0
+		lovelove += 1
+		}
+		
+		
+ 		if hour == 12 
+		{
+ 			"\0\s[24]IT'S HIGH NOON!\e"
+		
+		}
+ 		elseif hour == 0 //If the hour is zero, aka midnight. 
+		{
+ 			"\0\s[0]It's midnight!\e"
+ 			"\0\s[0]This is another bit of dialogue for midnight.\w8\1\s[10]BooooOoooOOOooOOOOo.\e"
+ 			"\0\s[0]This is the third bit of dialogue for midnight.\e"
+			
+		}
+		
+		else
+		{
+			
+			if gotwhatscoming == 1
+			{
+				"\0\s[50]It's %(hour12)'o clock.\e"
+			}
+			
+			else
+			{
+			
+			"\0\s[0]It's %(hour12)'o clock.\e"
+			}
+		}
+	}
+	//Don't touch this part.
+	elseif mikireflag == 1
+ 	{
+ 		MikireTalk
+	}
+ }
+
+//--OnSecondChange
+
+OnSecondChange
+ {
+	if passsec == 60
+ 		{
+	 	passsec = 0
+ 		passmin = passmin + 1
+		}
+ 	else
+ 		{
+	 	passsec = passsec + 1
+		}
+	if mikireflag == 1 && reference1 == 0
+		{
+			EndMikireTalk
+ 		}
+		mikireflag = reference1
+	if reference2 == 1
+	{
+ 	}
+ }
+
+ //---- MikireTalk ---------------------------------------------------------------------
+ 
+MikireTalk
+ {
+	""
+ }
+
+ //----EndMikireTalk--------------------------------------------------------------------
+ 
+EndMikireTalk
+ {
+	 }
+
+
+//**** OnSurfaceRestore *****************************************************************
+
+OnSurfaceRestore
+ {
+ 	
+	if gotwhatscoming == 1
+		{
+			"\0\s[50]\e"
+			if lovelove < 0 { lovelove = 0 }
+	        if badbad < 0 { badbad = 0 }
+		}
+	 else
+	 {
+	"\0\s[0]"
+	if lovelove < 0 { lovelove = 0 }
+	if badbad < 0 { badbad = 0 }
+	 }
+ }
+
+ 
+ //--OnKeyPress
+ //This defines the hotkeys ghost will use. 
+OnKeyPress
+{
+	if reference0 == "t"
+	{
+	OnAiTalk
+	}
+	elseif reference0 == "r"
+	{
+	OnLastTalk
+	}
+	elseif reference0 == "f1"
+	{
+	"\![open,readme]"
+	}
+}

@@ -1,0 +1,563 @@
+﻿//---------------------------Booting and Ending--------------------------
+
+OnFirstBoot
+{
+
+ 	lastTalk = "" 
+	passmin = 0 
+	passsec = 0 
+ 	username         = "USER" 
+	stroke           = 0	
+ 	teachusername    = 0	
+	mikireflag       = 0	
+	seenplate        = 0
+	gotwhatscoming   = 0
+	apology          = 0
+	beatbeat         = 0
+	petpet           = 0
+	badbad           = 0
+	snackeat         = 0
+	givegift         = 0
+	goodboy          = 0
+	badboy           = 0
+	truebackstory    = 0
+	jazzfriend       = 0
+	jazzlover        = 0
+	jazzok           = 0
+	fedjazz          = 0
+	lovelove         = 0
+	askedadvice      = 0
+	resetter         = 0
+	hughug           = 0
+	askedwhy         = 0
+	easybookgiven    = 0
+	hardbookgiven    = 0
+	funbookgiven     = 0
+	cubegiven        = 0
+	plushgiven       = 0
+	figgiven         = 0
+	puzzlegiven      = 0
+	rocketgiven      = 0
+	rockgiven        = 0
+	simplecounter    = 0
+	
+	
+ 	aitalkinterval = 400 
+ 	birthdayprint = "????" 
+	talktime = "5 minutes" 
+	deleteshitai = "OFF" 
+	nowshell = "master" 
+	
+	if reference0 == 0 
+ 	{
+			
+		"\![enter,passivemode]\0\s[28]...WHERE AM... \w8\w8\w8\s[21]OH! \w8\s[31]HELLO, HUMAN STRANGER! \w8MY NAME IS JAZZ AND I AM GLAD TO MEET YOU! \w8\s[3]THOUGH I AM NOT QUITE SURE HOW I ENDED UP HERE IN THE FIRST PLACE... \w8\s[5]BUT I HAVE BEEN TO STRANGER LOCATIONS, SO THAT'LL DO! \w8AT LEAST THIS ONE DOES NOT HAVE SHARKS, MONSTER HUNTING FANATICS, AND/OR THE ENDLESS UNRELENTING COLD VOID!!!! \w8\x\c\s[6]ANYWAY, SINCE I FEEL LIKE I WILL BE STUCK HERE FOR A WHILE, I GUESS WE SHOULD GET TO KNOW EACH OTHER BETTER! \w8YOU FIRST. \x\w8\c\s[8]WHAT PRONOUNS DO YOU USE?\n\n[half]/
+		\w8\_q\![*]\q[He/Him/His,choicefirsthehim]\n/
+		\![*]\q[She/Her/Hers,choicefirstsheher]\n/
+		\![*]\q[They/Them/Their,choicefirsttheythem]\e"
+		
+ 	}
+	else
+ 	{
+ 		{
+			
+ 		"\![enter,passivemode]\0\s[28]...WHERE AM... \w8\w8\w8\s[21]OH! \w8\s[31]HELLO, HUMAN STRANGER! \w8MY NAME IS JAZZ AND I AM GLAD TO MEET YOU! \w8\s[3]THOUGH I AM NOT QUITE SURE HOW I ENDED UP HERE IN THE FIRST PLACE... \w8OR WHY IT FEELS SO HAUNTINGLY FAMILIAR... \w8\x\c\s[6]ANYWAY, SINCE I FEEL LIKE I WILL BE STUCK HERE FOR A WHILE, I GUESS WE SHOULD GET TO KNOW EACH OTHER BETTER! \w8YOU FIRST. \x\w8\c\s[8]WHAT PRONOUNS DO YOU USE?\n\n[half]/
+		\w8\_q\![*]\q[He/Him/His,choicefirsthehim]\n/
+		\![*]\q[She/Her/Hers,choicefirstsheher]\n/
+		\![*]\q[They/Them/Their,choicefirsttheythem]\e"
+		
+		}
+ 	}
+}
+
+Select.choicefirsthehim
+{
+	presuffix = "masculine"
+	himher = "him"
+	heshe = "he"
+	hisher = "his"
+	--
+	NameInput
+}
+
+Select.choicefirstsheher
+{
+	presuffix = "feminine"
+	himher = "her"
+	heshe = "she"
+	hisher = "her"
+	--
+	NameInput
+}
+
+Select.choicefirsttheythem
+{
+	himher = "them"
+	heshe = "they"
+	hisher = "theirs"
+	--
+	NameInput
+}
+
+
+//--NameInput
+
+
+NameInput
+    {
+	
+	"\0\s[6]ALRIGHT, NOTED! \w8AND BY THAT I MEAN THAT I LITERALLY WROTE IT DOWN WHEN YOU WERE BUSY BLINKING, LEST I FORGET!! \w8\s[24]LET'S MOVE ON TO OTHER QUESTIONS. \![leave,passivemode]\w8WHAT SHOULD I CALL YOU?\![open,inputbox,OnNameTeach,-1]\e"
+	
+	}
+
+//--GetTimeSlot
+
+
+GetTimeSlot
+{
+	if hour >= 5 && hour <= 8
+	{
+		"earlymorning"
+	}
+	elseif hour >= 9 && hour <= 11
+	{
+		"morning"
+	}
+	elseif hour >= 12 && hour <= 14
+	{
+		"lunch"
+	}
+	elseif hour >= 15 && hour <= 17
+	{
+		"afternoon"
+	}
+	elseif hour >= 18 && hour <= 20
+	{
+		"evening"
+	}
+	elseif hour >= 21 && hour <= 24
+	{
+		"latenight"
+	}
+	else
+	{
+		"midnight"
+	}
+}
+
+
+//--GetDaySlot
+
+
+GetDaySlot
+{
+	"%(month)month %(day)day"
+}
+
+
+//-----------------------Normal Booting----------------------------
+
+
+
+//--OnBoot
+
+
+OnBoot
+ {
+	lastTalk = "" 
+	passhour = 0
+	passmin = 0
+	passsec = 0
+	snackeat = 0
+	
+	
+	
+ 	"\0\s[0]" 
+	
+	--
+	dayslot = GetDaySlot
+	timeslot = GetTimeSlot 
+	
+	if gotwhatscoming == 1
+	
+	{
+		"\0\s[50]*..."
+	}
+	
+	if dayslot == userbirthday && gotwhatscoming != 1 //Now we're getting into the if statements. These check what the date is and, if it's a certain value, displays special dialogue. Here, the if statement is looking at the dayslot value (which we just defined) and evaluating it using the == operator to see if it equals another value, in this case the value "userbirthday". Basically this is checking to see if it's the user's birthday.
+	
+	{
+		"\0\s[28]OH WAIT!!! \w8IT'S %(bornmonthprint) %(borndayprint)!\w8\s[5]HAPPY BIRTHDAY, %(username)!!!\e" 
+	}
+	
+	elseif dayslot == "5month 5day" //Like above, this if statement is checking the date. It's looking for the sixth month and the sixth day.
+	
+	
+	{
+		"\0\s[5]IT'S MY BIRTHDAY!!! \w8WOWIE. \w8I AM NOW A YEAR OLDER!\e"
+	}
+	
+	else
+	{
+		"%(normalboottalk)" //If none of the days above match the current date, the ghost instead will go down to the next function, normalboottalk.
+	}
+}
+
+
+//--normalboottalk
+
+
+normalboottalk
+{
+	if weekday == 6 
+	{
+		"\0\s[6]IT'S SATURDAY! \w8THAT MEANS IT'S WEEKEND! \w8THAT MEANS IT IS TIME TO GO AND BE WILD! \w8EMBRACE YOUR INNER ANIMAL THAT IS BARELY CONCEALED BY SOCIETAL NORMS! \w8LET IT RUN FREE!!!\e"
+		}
+		
+		if weekday == 7 
+		{
+		"\0\s[6]IT'S SUNDAY AND I HOPE IT IS PROPERLY SUNNY AS THE NAME SUGGESTS! \w8\s[21]THOUGH HUMANS ARE REALLY BAD AT NAMING THINGS ACCORDINGLY.\e"
+		}
+		
+	elseif RAND(100) < 50 //What this does is choose a random number from 1-100, and then checks if that number is less than 40. If it's less than forty, then these dialogue pieces will occur. Remember, you can have multiple lines of dialogue within one set of brackets like this! You just need to make sure they're all enclosed in their own set of quotation marks.
+		{
+		"\0\s[0]HELLO AGAIN!\e"
+	
+		"\0\s[0]OH! \w8AM I BACK HERE AGAIN?\e"
+	
+		"\0\s[0]AND HERE I COME AGAIN, SUMMONED BY SCIENCE AND DEDICATION...\e"
+		}
+ 	else
+ 	{
+		
+		if timeslot == "earlymorning" 
+		{
+			earlybird += 1
+		"\0\s[6]I SEE YOU ARE AN EARLY BIRD, LIKE ME! \w8\s[21]DID YOU GET ANY WORMS TODAY??? \w8GOOD WORMS? \w8LONG? \w8SQUISHY?\e"
+		
+		"\0\s[3]IT IS VERY EARLY, HUMAN...\w8\s[24]DON'T YOU WANT TO GO BACK TO SLEEP? \w8NO PRESSURE, BUT I AM JUST A TEENY WEENY BIT CONCERNED.\e"
+		
+		"\0\s[6]I BET IT'S STILL DARK OUTSIDE! \w8BUT I AM PROUD OF YOU FOR GETTING UP ANYWAY! \w8...\w8\w8\w8\s[1]YOU... YOU DIDN'T STAY UP ALL NIGHT, DID YOU???\e"
+		}
+		elseif timeslot == "morning"
+		{
+		"\0\s[5]RISE AND SHINE! \w8OR! \w8WELL! \w8CRAWL OUT OF BED AND TRY TO NOT LOOK TOO MUCH LIKE A BLOB OF DARK MATTER! \w8FOR EACH THEIR OWN!\e"
+		
+		"\0\s[6]GOOD MORNING! \w8I HAVE A GOOD FEELING ABOUT TODAY! \w8\s[21]LET'S START BY NOT SPENDING ALL DAY STARING AT MY FACE. \w8IT IS DASHING, BUT NOT THAT DASHING.\e"
+		}
+		elseif timeslot == "lunch"
+		{
+		"\0\s[5]I HOPE IT'S SUNNY NOW FOR YOU. \w8I LIKE THE SUN! \w8\s[21]PLEASE TAKE YOUR TIME TO PRAISE THE SUN EVERY NOW AND THEN.\e"
+		
+		"\0\s[24]I THINK NOW IT IS WHAT HUMANS CALL... \w8'LAUNCH TIME'. \w8I AM NOT SURE WHAT THE LAUNCH IS FOR, THOUGH! \w8\s[6]HOPEFULLY FOR SPACESHIPS.\e"
+		}
+		elseif timeslot == "afternoon"
+		{
+		"\0\s[0]GOOD AFTERNOON! \w8DID YOU DO ANYTHING FUN TODAY? \w8LIKE MEETING A DOG? \w8I HOPE YOU HAVE MET A DOG.\e"
+		}
+		elseif timeslot == "evening"
+		{
+ 		"\0\s[6]IT'S GETTING LATE... \w8I HOPE YOU ARE ALREADY HOME AND RESTING! \w8\s[21]OR AT LEAST YOU ARE ABOUT TO GO THERE. \w8IT MUST BE NICE TO HAVE A HOME YOU CAN RETURN TO.\e"
+		}
+		elseif timeslot == "latenight"
+		{
+				earlybird += 1
+ 		"\0\s[3]I HEARD HUMANS NEEDED TO SLEEP. \w8ISN'T THAT TRUE??? \w8HAVE I BEEN LIED TO????? \w8\s[24]NEXT THING YOU'LL SAY IS THAT HUMANS DID NOT DESCEND FROM SKELETONS????\e"
+		
+ 		"\0\s[3]IT'S VERY LATE, HUMAN... \w8I APPRECIATE YOU CHECKING ON ME, BUT, SERIOUSLY, WHAT ARE YOU DOING UP SO LATE??\e"
+		
+ 		"\0\s[7]I AM NOT YOUR 'MOM', BUT YOU'D BETTER GO TO YOUR 'BED' AND HAVE SOME 'SLEEP' BEFORE I 'GROUND' YOU!!!!\e"
+		}
+		else 
+		{
+				earlybird += 1
+		"\0\s[7]...YOUR SLEEPING SCHEDULE MAKES ME GENUINELY CONCERNED!!!\e"
+		
+ 		"\0\s[7]HUMAN!!! \w8YOU ARE! \w8SUPPOSED TO BE SLEEPING RIGHT NOW! \w8I CAN TELL!!!\e"
+		
+ 		"\0\s[7]DON'T YOU HAVE ANYTHING BETTER TO DO? \w8LIKE, SLEEP???\e"
+		}
+	}
+}
+
+
+//--OnClose
+
+
+OnClose
+ {
+ timeslot = GetTimeSlot 
+ --
+	if gotwhatscoming == 1
+	{
+		"\0\s[50]*...\w8\w8"
+	}
+	   
+	
+	  if passmin >= 5	
+		{
+			if RAND(100) < 50 
+			{
+				"\0\s[31]SEE YOU LATER!\w8\w8"
+			}
+			else
+			{
+			if timeslot == "earlymorning"
+				{
+					"\0\s[6]GOING BACK TO SLEEP? \w8OR GOING TO WORK? \w8ANYWAY, I WISH YOU GOOD LUCK WITH THAT!\w8\w8"
+					
+					"\0\s[0]OKAY! \w8I GUESS I WILL GO FOR A WALK. \w8GET SOME FRESH AIR IN BETWEEN THOSE BONES.\w8\w8"
+				}
+			elseif timeslot == "morning"
+ 				{
+ 					"\0\s[5]HAVE A NICE DAY! \w8I KNOW YOU WILL DO YOUR BEST!\w8\w8"
+ 				}
+ 			elseif timeslot == "lunch"
+ 				{
+ 					"\0\s[4]I SUGGEST YOU GO FORAGE FOR FOOD, HUMAN. \w8YOU HAVE TO LOOK AFTER YOUR WEAK HUMAN BODY, AFTER ALL!\w8\w8"
+					
+ 					"\0\s[24]OKAY! \w8BYE! \w8I GUESS I WILL GO EAT SOMETHING, MYSELF...\w8\w8"
+ 				}
+ 			elseif timeslot == "afternoon"
+ 				{
+ 					"\0\s[5]HAVE A NICE EVENING!\w8\w8"
+					
+ 					"\0\s[31]HAVE FUN IN THE REST OF YOUR DAY, HUMAN!\w8\w8"
+ 				}
+  			elseif timeslot == "evening"
+ 				{
+ 						
+ 					"\0\s[4]DON'T STAY UP TOO LATE!\w8\w8"
+							
+ 					"\0\s[31]GOOD NIGHT!\w8\w8"
+ 						
+ 				}
+			elseif timeslot == "latenight"
+			 	{
+ 						
+ 					"\0\s[4]I SEE YOU ARE FINALLY GOING TO SLEEP! GOOD NIGHT!\w8\w8"
+						
+					"\0\s[24]TRY TO GET SOME DECENT SLEEP! IT IS VERY LATE, AFTER ALL...\w8\w8"
+ 				}
+			else 
+ 				{
+ 						
+					"\0\s[0]GOOD NIGHT, HUMAN! \w8\s[6]THE SPOOKIEST HOUR IS THE SLEEPIEST HOUR!\w8\w8"
+					
+				}
+			}
+				
+ 		}
+	
+ 		
+ 	else 
+ 	{
+
+
+           if gotwhatscoming == 1
+	       {
+		    "\0\s[50]*You decide that it is too boring.\w8\w8"
+	        }
+          else{
+
+		if badbad <= 5
+		{
+ 		"\0\s[31]I'D LIKE TO SPEND MORE TIME WITH YOU, BUT IF YOU SAY SO, GOODBYE!\w8\w8"
+		}
+		if badbad > 10 || apology > 5
+		{
+		"\0\s[4]OH, UM, AS YOU WISH.\w8\w8"
+		"\0\s[4]*He suppresses a relieved sigh.\w8\w8"
+		"\0\s[4]BYE!..\w8\w8"
+		}
+		"\0\s[3]HUH, OKAY...\w8\w8"
+		"\0\s[3]THAT WAS QUICK...\w8\w8"
+		"\0\s[3]OH, ALREADY?..\w8\w8"
+ 	}
+	}
+ 	--
+	"\-\e" 
+	}
+
+
+ //-------------------------State Changing--------------------
+ 
+
+//--OnWindowStateRestore
+
+
+OnWindowStateRestore
+ {
+	 sleeping = 0
+	 if gotwhatscoming == 1
+	 {
+		  "\0\s[50]*It is quiet.\e"
+		 "\0\s[50]*...\e"
+		 "\0\s[50]*The scarf is still there. \w8As always.\e"
+	 }
+	  
+	 else 
+	 {	 
+	  
+	  "\0\s[28]*Jazz is confused.\e" 
+	"\0\s[28]*He is not sure what just happened...\e"
+      }
+}
+
+
+//--OnGhostChanging
+
+ 
+OnGhostChanging
+ {
+	if reference0 == "Jazz" 
+	{
+		if gotwhatscoming == 1
+		
+		{
+		  "\0\s[50]*Maybe he will be back...\w8\w8\e"
+		   "\0\s[50]*It is quiet.\w8\w8\e"
+			 "\0\s[50]*You cross your fingers.\w8\w8\e"
+		}
+		
+		else 
+		{
+		
+		 "\0\s[24]SURE!\w8\w8\e"
+		
+		"\0\s[6]OKAY, I WILL RELOAD IN A %(timeper)!\w8\w8\e"
+		}
+		
+	}
+ 	else 
+	{
+		
+		
+		
+		if gotwhatscoming == 1
+		
+		{
+		  "\0\s[50]*You decide to play with something more interesting.\w8\w8\e"
+		   "\0\s[50]*You decide to have more fun.\w8\w8\e"
+			 "\0\s[50]*How boring.\w8\w8\e"
+		}
+		
+		else 
+		{
+			
+		
+		if reference0 == "sans"  || reference0 == "Underfell Sans" || reference0 == "Sans"
+		{
+			reference0 = TOUPPER(reference0)
+			"\0\s[5]OH, IT IS %(reference0)! \w8I AM LEAVING YOU IN GOOD HANDS!\w8\w8\e"
+		}
+		
+		if reference0 == "gaster" || reference0 == "Dr. W.D. Gaster" || reference0 == "Gaster" 
+		{
+			reference0 = TOUPPER(reference0)
+			"\0\s[1]...GOOD LUCK WITH %(reference0). \w8TRY NOT TO MAKE THEM ANGRY...\w8\w8\e"
+		}
+		
+		else 
+		{
+		reference0 = TOUPPER(reference0)
+		"\0\s[31]BYE, %(username)! \w8HAVE FUN WITH %(reference0)!\w8\w8\e"
+		}
+		}
+	}
+}
+
+
+//--OnGhostChanged
+
+
+OnGhostChanged
+{
+
+	if reference0 == "Jazz" 
+	{
+		if gotwhatscoming == 1
+		
+		{
+		  "\0\s[50]*Everything stays.\e"
+		   "\0\s[50]*Still here.\e"
+			 "\0\s[50]*Still quiet.\e"
+		}
+		else 
+		{
+		"\0\s[3]...I FEEL PARTICULARLY STRANGE, BUT I AM NOT SURE WHY?..\e"
+		"\0\s[3]...I AM NOT SURE WHAT JUST HAPPENED, BUT THAT'S NORMAL.\e"
+		}
+	}
+	else 
+	{
+		if gotwhatscoming == 1
+		
+		{
+		  "\0\s[50]*Not the most exciting choice.\e"
+		   "\0\s[50]*It is quiet.\e"
+			 "\0\s[50]*...\e"
+		}
+		
+		
+		else{
+		
+		if reference0 == "sans"  || reference0 == "Underfell Sans" || reference0 == "Sans"
+		{
+			reference0 = TOUPPER(reference0)
+			"\0\s[5]GOODBYE, %(reference0)! \w8\s[24]I HOPE HE DID NOT LEAVE ANY SOCKS AROUND HERE.\e"
+		}
+		
+		if reference0 == "gaster" || reference0 == "Dr. W.D. Gaster" || reference0 == "Gaster" 
+		{
+			reference0 = TOUPPER(reference0)
+			"\0\s[1]GOODBYE, %(reference0)...\w8ARE YOU OKAY, %(username)?\w8I HOPE YOU ARE...\e"
+		}
+		
+		else 
+		{
+			reference0 = TOUPPER(reference0)
+		"\0\s[5]GOODBYE, %(reference0)! \w8AND HELLO %(username)!\e"
+		}
+		    }
+	}
+}
+
+
+//--OnShellChanging
+
+//This will run when you change your ghost's shell. If you don't have any other shells for your ghost, you can safely ignore this but don't delete it, you might as well keep it just in case. I probably won't add a different shell to this template because shells are a lot of work ugh, but for the sake of argument, let's pretend I did.
+
+OnShellChanging
+ {
+	if reference0 == "Hypothetical Shell that doesn't actually exist" //reference0 in OnShellChanging is the name of the shell you're swapping to. It should be defined in the descript.txt file in your shell folder. If you do have alternate shells, put in the right name here.
+	{
+	"\0\s[0]*This is a shell.\e"
+	//Then rewrite this line as appropriate.
+	}
+	else //if you don't have any specific dialogue for a specific shell
+	{
+	"\0\s[0]*This, \w8however,\w8 is a shell.\e"
+	}
+ }
+ 
+ 
+ //--OnShellChanged
+ 
+ 
+OnShellChanged
+ {
+ 	if reference0 == "Jazz Default Shell" 
+ 	{
+ 		nowshell = "master"  
+		
+ 	    "\0\s[0]*This is a shell.\e"
+ 	}
+ 	
+ 	else 
+ 	{
+		"\0\s[0]*Also a shell.\e"
+	}
+ }
+
+
