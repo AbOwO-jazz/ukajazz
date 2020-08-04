@@ -1740,7 +1740,7 @@ Select.givehug
 {
 	hughug += 1
 	lovelove += 1
-	badbad - 1
+	
 	
 	if jazzfriend == 1 || jazzlover == 1
 	{
@@ -1853,9 +1853,8 @@ Select.hchoice
 
 Select.fchoice
 {
-	givegift += 1
-	lovelove += 1
-	badbad - 1
+	givegift +=1
+	lovelove +=1
 	
 	"\0\s[0]*You give him a book about %(funbook). %(fbookreact1)%(ConvCancel)\e"
 
@@ -1921,7 +1920,7 @@ Select.trckt
 {
 	givegift += 1
 	lovelove += 2
-	badbad - 2
+
 	
 	 if rocketgiven != 1
 	{
@@ -1970,7 +1969,7 @@ Select.plsh
 {
 	givegift += 1
 	lovelove += 1
-	 badbad - 1
+	
 	
 	"\0\s[0]*You give Jazz a stuffed plushie. \w8\s[33]He takes it with \s[37]a sigh. \w8\s[22]\n\nI WILL TAKE GOOD CARE OF THEM, PROMISE!%(plushg)%(ConvCancel)\e"
 	"\0\s[0]*You give Jazz a stuffed plushie. \w8\s[33]He takes it with \s[37]a smile. \w8\s[22]\n\nTHANKS!!! \w8I WILL LOVE THEM, CHERISH THEM, AND POSSIBLY CHEW ON THEM AS A SIGN OF AFFECTION! \w8\s[5]LOVE CAN BE TOUGH!!!%(plushg)%(ConvCancel)\e"
@@ -2014,7 +2013,7 @@ Select.fgrn
 	
 	givegift += 1
 	lovelove += 1
-	badbad - 1
+	
 	
 	    "\0\s[0]*You hand Jazz a plastic figurine. \w8\s[33]He takes it, \s[37]moves its arms and legs a little and puts it away with a grateful nod.%(figg)%(ConvCancel)\e"
 	    "\0\s[0]*You hand Jazz a plastic figurine. \w8\s[33]He takes it, \s[42]immediately starts making battle noises and swings its arms and legs around. \w8Looks like he is having a good time!%(figg)%(ConvCancel)\e"
