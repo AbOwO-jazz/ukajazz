@@ -385,7 +385,7 @@ MouseMoveKero
 OnMouseDoubleClick
  {
 	
- 	if reference3 == 0 
+ 	if reference3 == 0 && reference5 == 0
 	{
 		MouseDoubleClickSakura
  	}
@@ -401,7 +401,16 @@ MouseDoubleClickSakura
  {
  	if reference4 == "Face" || reference4 == "Chest" //here, this is checking to see if the user is double clicking on either the character's head OR their face, which for our purposes means they're hitting the ghost. More about operators at the walkthrough.
 	{
+		simplecounter += 1
 		
+		
+		if simplecounter == 1 
+		{
+			"\0\s[0]*Do you really want to hit him? \w8Clicking his head or chest will hurt him. \w8If you want to see his menu, try double-clicking on his legs.\e"
+		}
+		
+		
+		else{
 		
 		//if gotwhatscoming == 1
 		//{
@@ -420,6 +429,10 @@ MouseDoubleClickSakura
 			
 		//}
 
+		
+		
+		
+		
 		beatbeat += 1
 		badbad += 1
 		
@@ -520,7 +533,7 @@ MouseDoubleClickSakura
 		}
 		
 		}
-		
+	}
 		
  	
 	else

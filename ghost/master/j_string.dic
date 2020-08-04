@@ -26,7 +26,7 @@ On_username
 
 On_homeurl
 {
-	"https://raw.githubusercontent.com/AbOwO-jazz/ukajazz/"
+	"https://abowo-jazz.github.io/ukajazz/"
 }
 
 
@@ -82,7 +82,7 @@ On_sakura.recommendsites
 
 On_portalrootbutton.caption
  {
-	""
+	"Home Page"
  }
 
  //---- Websites in the Second Option --------------------------------------------------
@@ -120,7 +120,7 @@ On_kero.recommendsites
  
 On_updatebutton.caption
  {
-	"Update Menu Caption"
+	"Update Check"
 }
 
 //---- Dress-up Menu Caption ----------------------------------------------------------
@@ -128,7 +128,7 @@ On_updatebutton.caption
 
 On_dressuprootbutton.caption
 {
-	"Dress-Up Caption"
+	"Dress-Up"
 }
 
 //---- Headlines and RSS Feeds ---------------------------------------------------------

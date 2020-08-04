@@ -33,6 +33,14 @@ OnFirstBoot
 	easybookgiven    = 0
 	hardbookgiven    = 0
 	funbookgiven     = 0
+	cubegiven        = 0
+	plushgiven       = 0
+	figgiven         = 0
+	puzzlegiven      = 0
+	rocketgiven      = 0
+	rockgiven        = 0
+	simplecounter    = 0
+	
 	
  	aitalkinterval = 400 
  	birthdayprint = "????" 
@@ -98,7 +106,7 @@ Select.choicefirsttheythem
 NameInput
     {
 	
-	"\0\s[6]ALRIGHT, NOTED! \w8AND BY THAT I MEAN THAT I LITERALLY WROTE IT DOWN WHEN YOU WERE BUSY BLINKING, LEAST I FORGOT!! \w8\s[24]LET'S MOVE ON TO OTHER QUESTIONS. \![leave,passivemode]\w8WHAT SHOULD I CALL YOU?\![open,inputbox,OnNameTeach,-1]\e"
+	"\0\s[6]ALRIGHT, NOTED! \w8AND BY THAT I MEAN THAT I LITERALLY WROTE IT DOWN WHEN YOU WERE BUSY BLINKING, LEST I FORGET!! \w8\s[24]LET'S MOVE ON TO OTHER QUESTIONS. \![leave,passivemode]\w8WHAT SHOULD I CALL YOU?\![open,inputbox,OnNameTeach,-1]\e"
 	
 	}
 
