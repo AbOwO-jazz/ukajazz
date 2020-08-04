@@ -32,9 +32,9 @@ element0,overlay,surface0.png,0,0
 surface1
 {
 element0,overlay,surface1501.png,0,0
-collision0,109,8,151,23,Head
+collision0,107,4,152,26,Head
 collision1,107,90,153,132,Chest
-collision3,113,23,143,63,Face
+collision3,110,26,150,68,Face
 
 }
 
@@ -42,9 +42,9 @@ collision3,113,23,143,63,Face
 surface2
 {
 element0,overlay,surface1502.png,0,0
-collision0,109,8,151,23,Head
+collision0,107,4,152,26,Head
 collision1,107,90,153,132,Chest
-collision3,113,23,143,63,Face
+collision3,110,26,150,68,Face
 
 }
 
@@ -52,9 +52,9 @@ collision3,113,23,143,63,Face
 surface3
 {
 element0,overlay,surface1503.png,0,0
-collision0,109,8,151,23,Head
+collision0,107,4,152,26,Head
 collision1,107,90,153,132,Chest
-collision3,113,23,143,63,Face
+collision3,110,26,150,68,Face
 
 }
 
@@ -62,9 +62,9 @@ collision3,113,23,143,63,Face
 surface4
 {
 element0,overlay,surface1504.png,0,0
-collision0,109,8,151,23,Head
+collision0,107,4,152,26,Head
 collision1,107,90,153,132,Chest
-collision3,113,23,143,63,Face
+collision3,110,26,150,68,Face
 
 }
 
@@ -72,9 +72,9 @@ collision3,113,23,143,63,Face
 surface5
 {
 element0,overlay,surface1505.png,0,0
-collision0,109,8,151,23,Head
+collision0,107,4,152,26,Head
 collision1,107,90,153,132,Chest
-collision3,113,23,143,63,Face
+collision3,110,26,150,68,Face
 
 }
 
@@ -82,18 +82,18 @@ collision3,113,23,143,63,Face
 surface6
 {
 element0,overlay,surface1506.png,0,0
-collision0,109,8,151,23,Head
+collision0,107,4,152,26,Head
 collision1,107,90,153,132,Chest
-collision3,113,23,143,63,Face
+collision3,110,26,150,68,Face
 }
 
 //Main Character Angry pose
 surface7
 {
 element1,overlay,surface1507.png,0,0
-collision0,109,8,151,23,Head
+collision0,107,4,152,26,Head
 collision1,107,90,153,132,Chest
-collision3,113,23,143,63,Face
+collision3,110,26,150,68,Face
 
 }
 
@@ -101,9 +101,9 @@ collision3,113,23,143,63,Face
 surface8
 {
 element1,overlay,surface1508.png,0,0
-collision0,109,8,151,23,Head
+collision0,107,4,152,26,Head
 collision1,107,90,153,132,Chest
-collision3,113,23,143,63,Face
+collision3,110,26,150,68,Face
 
 }
 
@@ -111,9 +111,9 @@ collision3,113,23,143,63,Face
 surface9
 {
 element1,overlay,surface1509.png,0,0
-collision0,109,8,151,23,Head
+collision0,107,4,152,26,Head
 collision1,107,90,153,132,Chest
-collision3,113,23,143,63,Face
+collision3,110,26,150,68,Face
 
 }
 
@@ -121,18 +121,18 @@ collision3,113,23,143,63,Face
 surface20
 {
 element1,overlay,surface1510.png,0,0	
-collision0,109,8,151,23,Head
+collision0,107,4,152,26,Head
 collision1,107,90,153,132,Chest
-collision3,113,23,143,63,Face
+collision3,110,26,150,68,Face
 }
 
 //Main Character PostPet Pose
 surface21
 {
 element1,overlay,surface1511.png,0,0	
-collision0,109,8,151,23,Head
+collision0,107,4,152,26,Head
 collision1,107,90,153,132,Chest
-collision3,113,23,143,63,Face
+collision3,110,26,150,68,Face
 
 }
 
@@ -140,9 +140,9 @@ collision3,113,23,143,63,Face
 surface22
 {
 element1,overlay,surface1512.png,0,0	
-collision0,109,8,151,23,Head
+collision0,107,4,152,26,Head
 collision1,107,90,153,132,Chest
-collision3,113,23,143,63,Face
+collision3,110,26,150,68,Face
 
 }
 
@@ -150,18 +150,18 @@ collision3,113,23,143,63,Face
 surface23
 {
 element1,overlay,surface1513.png,0,0	
-collision0,109,8,151,23,Head
+collision0,107,4,152,26,Head
 collision1,107,90,153,132,Chest
-collision3,113,23,143,63,Face
+collision3,110,26,150,68,Face
 }
 
 //Main Character Teaching Pose
 surface24
 {
 element1,overlay,surface1514.png,0,0	
-collision0,109,8,151,23,Head
+collision0,107,4,152,26,Head
 collision1,107,90,153,132,Chest
-collision3,113,23,143,63,Face
+collision3,110,26,150,68,Face
 
 }
 
@@ -169,45 +169,45 @@ collision3,113,23,143,63,Face
 surface25
 {
 element1,overlay,surface1515.png,0,0	
-collision0,109,8,151,23,Head
+collision0,107,4,152,26,Head
 collision1,107,90,153,132,Chest
-collision3,113,23,143,63,Face
+collision3,110,26,150,68,Face
 }
 
 //Main Character PostBeat Pose
 surface26
 {
 element1,overlay,surface1516.png,0,0	
-collision0,109,8,151,23,Head
+collision0,107,4,152,26,Head
 collision1,107,90,153,132,Chest
-collision3,113,23,143,63,Face
+collision3,110,26,150,68,Face
 }
 
 //Main Character Blissful Pose
 surface27
 {
 element1,overlay,surface1517.png,0,0	
-collision0,109,8,151,23,Head
+collision0,107,4,152,26,Head
 collision1,107,90,153,132,Chest
-collision3,113,23,143,63,Face
+collision3,110,26,150,68,Face
 }
 
 //Main Character Caught Pose
 surface28
 {
 element1,overlay,surface1518.png,0,0	
-collision0,109,8,151,23,Head
+collision0,107,4,152,26,Head
 collision1,107,90,153,132,Chest
-collision3,113,23,143,63,Face
+collision3,110,26,150,68,Face
 }
 
 //Main Character Wary Pose
 surface29
 {
 element1,overlay,surface1519.png,0,0	
-collision0,109,8,151,23,Head
+collision0,107,4,152,26,Head
 collision1,107,90,153,132,Chest
-collision3,113,23,143,63,Face
+collision3,110,26,150,68,Face
 
 }
 
@@ -215,18 +215,18 @@ collision3,113,23,143,63,Face
 surface30
 {
 element1,overlay,surface1520.png,0,0	
-collision0,109,8,151,23,Head
+collision0,107,4,152,26,Head
 collision1,107,90,153,132,Chest
-collision3,113,23,143,63,Face
+collision3,110,26,150,68,Face
 }
 
 //Main Character Wave Pose
 surface31
 {
 element1,overlay,surface1521.png,0,0	
-collision0,109,8,151,23,Head
+collision0,107,4,152,26,Head
 collision1,107,90,153,132,Chest
-collision3,113,23,143,63,Face
+collision3,110,26,150,68,Face
 
 }
 
@@ -234,9 +234,9 @@ collision3,113,23,143,63,Face
 surface32
 {
 element1,overlay,surface1522.png,0,0	
-collision0,109,8,151,23,Head
+collision0,107,4,152,26,Head
 collision1,107,90,153,132,Chest
-collision3,113,23,143,63,Face
+collision3,110,26,150,68,Face
 
 }
 
@@ -244,9 +244,9 @@ collision3,113,23,143,63,Face
 surface33
 {
 element1,overlay,surface1523.png,0,0	
-collision0,109,8,151,23,Head
+collision0,107,4,152,26,Head
 collision1,107,90,153,132,Chest
-collision3,113,23,143,63,Face
+collision3,110,26,150,68,Face
 
 }
 
@@ -254,9 +254,9 @@ collision3,113,23,143,63,Face
 surface34
 {
 element1,overlay,surface1524.png,0,0	
-collision0,109,8,151,23,Head
+collision0,107,4,152,26,Head
 collision1,107,90,153,132,Chest
-collision3,113,23,143,63,Face
+collision3,110,26,150,68,Face
 
 }
 
@@ -264,9 +264,9 @@ collision3,113,23,143,63,Face
 surface35
 {
 element1,overlay,surface1525.png,0,0	
-collision0,109,8,151,23,Head
+collision0,107,4,152,26,Head
 collision1,107,90,153,132,Chest
-collision3,113,23,143,63,Face
+collision3,110,26,150,68,Face
 
 }
 
@@ -274,18 +274,18 @@ collision3,113,23,143,63,Face
 surface36
 {
 element1,overlay,surface1526.png,0,0	
-collision0,109,8,151,23,Head
+collision0,107,4,152,26,Head
 collision1,107,90,153,132,Chest
-collision3,113,23,143,63,Face
+collision3,110,26,150,68,Face
 }
 
 //Main Character Content Pose
 surface37
 {
 element1,overlay,surface1527.png,0,0	
-collision0,109,8,151,23,Head
+collision0,107,4,152,26,Head
 collision1,107,90,153,132,Chest
-collision3,113,23,143,63,Face
+collision3,110,26,150,68,Face
 
 }
 
@@ -293,10 +293,9 @@ collision3,113,23,143,63,Face
 surface38
 {
 element1,overlay,surface1528.png,0,0	
-collision0,109,8,151,23,Head
+collision0,107,4,152,26,Head
 collision1,107,90,153,132,Chest
-collision3,113,23,143,63,Face
-
+collision3,110,26,150,68,Face
 
 }
 
@@ -304,18 +303,18 @@ collision3,113,23,143,63,Face
 surface39
 {
 element1,overlay,surface1529.png,0,0	
-collision0,109,8,151,23,Head
+collision0,107,4,152,26,Head
 collision1,107,90,153,132,Chest
-collision3,113,23,143,63,Face
+collision3,110,26,150,68,Face
 }
 
 //Main Character Awkward Pose
 surface40
 {
 element1,overlay,surface1530.png,0,0	
-collision0,109,8,151,23,Head
+collision0,107,4,152,26,Head
 collision1,107,90,153,132,Chest
-collision3,113,23,143,63,Face
+collision3,110,26,150,68,Face
 
 }
 
@@ -323,19 +322,18 @@ collision3,113,23,143,63,Face
 surface41
 {
 element1,overlay,surface1531.png,0,0	
-collision0,109,8,151,23,Head
+collision0,107,4,152,26,Head
 collision1,107,90,153,132,Chest
-collision3,113,23,143,63,Face
-
+collision3,110,26,150,68,Face
 }
 
 //Main Character ZEST Pose
 surface42
 {
 element1,overlay,surface1532.png,0,0	
-collision0,109,8,151,23,Head
+collision0,107,4,152,26,Head
 collision1,107,90,153,132,Chest
-collision3,113,23,143,63,Face
+collision3,110,26,150,68,Face
 
 }
 
@@ -343,9 +341,9 @@ collision3,113,23,143,63,Face
 surface43
 {
 element1,overlay,surface1533.png,0,0	
-collision0,109,8,151,23,Head
+collision0,107,4,152,26,Head
 collision1,107,90,153,132,Chest
-collision3,113,23,143,63,Face
+collision3,110,26,150,68,Face
 
 }
 
@@ -353,9 +351,9 @@ collision3,113,23,143,63,Face
 surface44
 {
 element1,overlay,surface1534.png,0,0	
-collision0,109,8,151,23,Head
+collision0,107,4,152,26,Head
 collision1,107,90,153,132,Chest
-collision3,113,23,143,63,Face
+collision3,110,26,150,68,Face
 
 }
 
@@ -409,9 +407,9 @@ collision0,101,309,172,328,Head
 surface51
 {
 element0,overlay,surface1541.png,0,0
-collision0,109,8,151,23,Head
+collision0,107,4,152,26,Head
 collision1,107,90,153,132,Chest
-collision3,113,23,143,63,Face
+collision3,110,26,150,68,Face
 
 }
 
@@ -420,9 +418,9 @@ collision3,113,23,143,63,Face
 surface52
 {
 element0,overlay,surface1542.png,0,0
-collision0,109,8,151,23,Head
+collision0,107,4,152,26,Head
 collision1,107,90,153,132,Chest
-collision3,113,23,143,63,Face
+collision3,110,26,150,68,Face
 
 }
 
@@ -431,9 +429,9 @@ collision3,113,23,143,63,Face
 surface53
 {
 element0,overlay,surface1543.png,0,0
-collision0,109,8,151,23,Head
+collision0,107,4,152,26,Head
 collision1,107,90,153,132,Chest
-collision3,113,23,143,63,Face
+collision3,110,26,150,68,Face
 
 }
 
@@ -441,9 +439,9 @@ collision3,113,23,143,63,Face
 surface54
 {
 element0,overlay,surface1544.png,0,0
-collision0,109,8,151,23,Head
+collision0,107,4,152,26,Head
 collision1,107,90,153,132,Chest
-collision3,113,23,143,63,Face
+collision3,110,26,150,68,Face
 
 }
 
@@ -451,9 +449,9 @@ collision3,113,23,143,63,Face
 surface55
 {
 element0,overlay,surface1545.png,0,0
-collision0,109,8,151,23,Head
+collision0,107,4,152,26,Head
 collision1,107,90,153,132,Chest
-collision3,113,23,143,63,Face
+collision3,110,26,150,68,Face
 
 }
 
@@ -461,9 +459,9 @@ collision3,113,23,143,63,Face
 surface56
 {
 element0,overlay,surface1546.png,0,0
-collision0,109,8,151,23,Head
+collision0,107,4,152,26,Head
 collision1,107,90,153,132,Chest
-collision3,113,23,143,63,Face
+collision3,110,26,150,68,Face
 
 }
 
@@ -471,9 +469,9 @@ collision3,113,23,143,63,Face
 surface57
 {
 element0,overlay,surface1547.png,0,0
-collision0,109,8,151,23,Head
+collision0,107,4,152,26,Head
 collision1,107,90,153,132,Chest
-collision3,113,23,143,63,Face
+collision3,110,26,150,68,Face
 
 }
 
@@ -481,9 +479,9 @@ collision3,113,23,143,63,Face
 surface58
 {
 element0,overlay,surface1548.png,0,0
-collision0,109,8,151,23,Head
+collision0,107,4,152,26,Head
 collision1,107,90,153,132,Chest
-collision3,113,23,143,63,Face
+collision3,110,26,150,68,Face
 
 }
 
@@ -491,9 +489,9 @@ collision3,113,23,143,63,Face
 surface59
 {
 element0,overlay,surface1549.png,0,0
-collision0,109,8,151,23,Head
+collision0,107,4,152,26,Head
 collision1,107,90,153,132,Chest
-collision3,113,23,143,63,Face
+collision3,110,26,150,68,Face
 
 }
 
@@ -501,9 +499,9 @@ collision3,113,23,143,63,Face
 surface60
 {
 element0,overlay,surface1550.png,0,0
-collision0,109,8,151,23,Head
+collision0,107,4,152,26,Head
 collision1,107,90,153,132,Chest
-collision3,113,23,143,63,Face
+collision3,110,26,150,68,Face
 
 }
 
@@ -511,9 +509,9 @@ collision3,113,23,143,63,Face
 surface61
 {
 element0,overlay,surface1551.png,0,0
-collision0,109,8,151,23,Head
+collision0,107,4,152,26,Head
 collision1,107,90,153,132,Chest
-collision3,113,23,143,63,Face
+collision3,110,26,150,68,Face
 
 }
 
@@ -521,19 +519,18 @@ collision3,113,23,143,63,Face
 surface62
 {
 element0,overlay,surface1552.png,0,0
-collision0,109,8,151,23,Head
+collision0,107,4,152,26,Head
 collision1,107,90,153,132,Chest
-collision3,113,23,143,63,Face
-
+collision3,110,26,150,68,Face
 }
 
 //Main Character boringbook3 pose
 surface63
 {
 element0,overlay,surface1553.png,0,0
-collision0,109,8,151,23,Head
+collision0,107,4,152,26,Head
 collision1,107,90,153,132,Chest
-collision3,113,23,143,63,Face
+collision3,110,26,150,68,Face
 
 }
 
@@ -541,9 +538,9 @@ collision3,113,23,143,63,Face
 surface64
 {
 element0,overlay,surface1554.png,0,0
-collision0,109,8,151,23,Head
+collision0,107,4,152,26,Head
 collision1,107,90,153,132,Chest
-collision3,113,23,143,63,Face
+collision3,110,26,150,68,Face
 
 }
 
@@ -551,9 +548,9 @@ collision3,113,23,143,63,Face
 surface65
 {
 element0,overlay,surface1555.png,0,0
-collision0,109,8,151,23,Head
+collision0,107,4,152,26,Head
 collision1,107,90,153,132,Chest
-collision3,113,23,143,63,Face
+collision3,110,26,150,68,Face
 
 }
 
@@ -561,9 +558,9 @@ collision3,113,23,143,63,Face
 surface66
 {
 element0,overlay,surface1556.png,0,0
-collision0,109,8,151,23,Head
+collision0,107,4,152,26,Head
 collision1,107,90,153,132,Chest
-collision3,113,23,143,63,Face
+collision3,110,26,150,68,Face
 
 }
 
@@ -571,9 +568,9 @@ collision3,113,23,143,63,Face
 surface67
 {
 element0,overlay,surface1557.png,0,0
-collision0,109,8,151,23,Head
+collision0,107,4,152,26,Head
 collision1,107,90,153,132,Chest
-collision3,113,23,143,63,Face
+collision3,110,26,150,68,Face
 
 }
 
@@ -581,9 +578,9 @@ collision3,113,23,143,63,Face
 surface68
 {
 element0,overlay,surface1558.png,0,0
-collision0,109,8,151,23,Head
+collision0,107,4,152,26,Head
 collision1,107,90,153,132,Chest
-collision3,113,23,143,63,Face
+collision3,110,26,150,68,Face
 
 }
 
@@ -591,9 +588,9 @@ collision3,113,23,143,63,Face
 surface69
 {
 element0,overlay,surface1559.png,0,0
-collision0,109,8,151,23,Head
+collision0,107,4,152,26,Head
 collision1,107,90,153,132,Chest
-collision3,113,23,143,63,Face
+collision3,110,26,150,68,Face
 
 }
 
@@ -601,9 +598,9 @@ collision3,113,23,143,63,Face
 surface70
 {
 element0,overlay,surface1560.png,0,0
-collision0,109,8,151,23,Head
+collision0,107,4,152,26,Head
 collision1,107,90,153,132,Chest
-collision3,113,23,143,63,Face
+collision3,110,26,150,68,Face
 
 }
 
@@ -611,9 +608,9 @@ collision3,113,23,143,63,Face
 surface71
 {
 element0,overlay,surface1561.png,0,0
-collision0,109,8,151,23,Head
+collision0,107,4,152,26,Head
 collision1,107,90,153,132,Chest
-collision3,113,23,143,63,Face
+collision3,110,26,150,68,Face
 
 }
 
@@ -621,9 +618,9 @@ collision3,113,23,143,63,Face
 surface72
 {
 element0,overlay,surface1562.png,0,0
-collision0,109,8,151,23,Head
+collision0,107,4,152,26,Head
 collision1,107,90,153,132,Chest
-collision3,113,23,143,63,Face
+collision3,110,26,150,68,Face
 
 }
 
@@ -631,9 +628,9 @@ collision3,113,23,143,63,Face
 surface73
 {
 element0,overlay,surface1563.png,0,0
-collision0,109,8,151,23,Head
+collision0,107,4,152,26,Head
 collision1,107,90,153,132,Chest
-collision3,113,23,143,63,Face
+collision3,110,26,150,68,Face
 
 }
 
@@ -641,19 +638,18 @@ collision3,113,23,143,63,Face
 surface74
 {
 element0,overlay,surface1564.png,0,0
-collision0,109,8,151,23,Head
+collision0,107,4,152,26,Head
 collision1,107,90,153,132,Chest
-collision3,113,23,143,63,Face
-
+collision3,110,26,150,68,Face
 }
 
 //Main Character hardbook7 pose
 surface75
 {
 element0,overlay,surface1566.png,0,0
-collision0,109,8,151,23,Head
+collision0,107,4,152,26,Head
 collision1,107,90,153,132,Chest
-collision3,113,23,143,63,Face
+collision3,110,26,150,68,Face
 
 }
 
@@ -661,9 +657,9 @@ collision3,113,23,143,63,Face
 surface76
 {
 element0,overlay,surface1567.png,0,0
-collision0,109,8,151,23,Head
+collision0,107,4,152,26,Head
 collision1,107,90,153,132,Chest
-collision3,113,23,143,63,Face
+collision3,110,26,150,68,Face
 
 }
 
