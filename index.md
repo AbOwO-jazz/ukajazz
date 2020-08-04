@@ -1,37 +1,26 @@
-## Welcome to GitHub Pages
+### Jazz the Skeleton
 
-You can use the [editor on GitHub](https://github.com/AbOwO-jazz/ukajazz/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+Jazz is a Gaster Blaster-ed Papyrus from Undertale!
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+He is meant to be a helper ghost, reminding you to take care of yourself. 
+He has all sorts of advice to offer, as well as options to cheer you up or suggest some helpful links. 
+He will also remind you to stand up or drink some water!
 
-```markdown
-Syntax highlighted code block
+Aside from that, you can build up a relationship with him, either positive or negative. 
+Depending on the path you take, he will treat you differently, and new options will be unlocked.
+To progress either way, you need to pile on enough positive or negative actions.
 
-# Header 1
-## Header 2
-### Header 3
+To unlock certain secrets, you might want to check his chest. It might even lead to learning his story. 
+However, this path might not be open from the start...
 
-- Bulleted
-- List
 
-1. Numbered
-2. List
+I strongly suggest you use the z_undertale balloon by Zarla-S for him! (Technically, you can use the default one as well, but it won't give you that natural feel,
+haha.)
 
-**Bold** and _Italic_ and `Code` text
 
-[Link](url) and ![Image](src)
-```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+If you encounter a bug, please tell me! 
+My Tumblr is https://closetdwellertales.tumblr.com/
 
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/AbOwO-jazz/ukajazz/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
