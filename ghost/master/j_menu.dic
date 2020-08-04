@@ -2327,7 +2327,7 @@ TalkConfig
 	 }
 	 --
 	 
-	"\n\n\![*]Do you want to Update him? \q[Update,updateconfirm]"
+	"\n\n\![*]Do you want to \q[Update,updateconfirm] him? "
 	--		
 	"\n\n\![*]Do you want to \q[RESET,resetconfirm]?"
 	--
