@@ -67,8 +67,8 @@ MenuRun
 	
 	"\![*]\q[Tell me something new,altalk]\n\n"
 	--
-    //\![*]\q[I want to try,testvariable]\n/
-	"\![*]\q[I want to talk,talk]\n/
+    "\![*]\q[I want to try,testvariable]\n/
+	\![*]\q[I want to talk,talk]\n/
 	\![*]\q[I want to give you something,gift]\n/
 	\![*]\q[I need some help,dosomething]\n\n/
 	\![*]\q[Show me the Config Menu,configmenu]\n\n\n/
