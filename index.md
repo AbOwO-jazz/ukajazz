@@ -16,8 +16,7 @@ To unlock certain secrets, you might want to check his chest. It might even lead
 However, this path might not be open from the start...
 
 
-I strongly suggest you use the z_undertale balloon by Zarla-S for him! (Technically, you can use the default one as well, but it won't give you that natural feel,
-haha.)
+I strongly suggest you use the z_undertale balloon by Zarla-S for him! 
 
 
 
