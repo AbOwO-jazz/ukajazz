@@ -270,7 +270,7 @@ OnVanishSelected
 	 
 	 else
 	 {
-		 "0\s[4]......OH. \w8\w8\s[5]I SEE! \w8GOOD LUCK, AND PLEASE STAY SAFE. \w8\w8I WILL ALWAYS REMEMBER YOU, %(username). \w8\w8\s[31]BYE!\w9\w9\e"
+		 "\0\s[4]......OH. \w8\w8\s[5]I SEE! \w8GOOD LUCK, AND PLEASE STAY SAFE. \w8\w8I WILL ALWAYS REMEMBER YOU, %(username). \w8\w8\s[31]BYE!\w9\w9\e"
 	
 	 }
 	 
