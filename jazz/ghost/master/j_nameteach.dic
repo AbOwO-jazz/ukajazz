@@ -23,7 +23,7 @@ OnTeachName
 	     } 
 		else {
 			
-		"\0\s[3]OH! \w8DO YOU WANT ME TO CALL YOU A DIFFERENT NAME? \w8\s[24]IT'S OKAY, I KNOW CHOOSING NAMES CAN BE HARD. \w8WHAT SHOULD IT BE? \![open,inputbox,OnNameTeach,-1]\e"
+		"\0\s[3]OH! \w8DO YOU WANT ME TO CALL YOU A DIFFERENT NAME? \w8\s[24]IT'S OKAY,\w4 I KNOW CHOOSING NAMES CAN BE HARD. \w8WHAT SHOULD IT BE? \![open,inputbox,OnNameTeach,-1]\e"
 		//This is the bit of dialogue you can rewrite if you want. Note that this line ends with \![open,inputbox,OnNameTeach,-1]. You may recognize this from bootend.dic. Essentially, this will lead to the next function. Make sure you don't delete that tag! The rest you can do whatever with though.
 		      }
 		}
@@ -40,20 +40,20 @@ OnNameTeach
 	
 	if reference0 == "Jazz" || reference0 == "jazz" || reference0 == "JAZZ" //this checks to see if the user input the name "Girl" OR (that's what || means) "girl". You may want to put in a check here if the user tries to name themselves the same name as your characters, since that could be confusing in dialogue. Or just a response to any kind of strange name, like Barack Obama or Cindy Crawford or Mike Nelson or Random Hajile. Or you can prevent certain offensive names if you don't want users using them. Really the power is yours here. The OR operator there with "Girl" and "girl" is to cover people using lowercase as well. More on operators in the walkthrough page on coding.
 	{
-		"\0\s[8]...I STRONGLY BELIEVE THIS ONE IS ALREADY TAKEN BY SOME OTHER PERSON IN THE ROOM THAT JUST HAPPENS TO BE ME. \w8\s[6]I KNOW IT IS A GOOD ONE, BUT, WELL, THERE'D BE MUCH CONFUSION! \w8HOW ABOUT YOU TRY A DIFFERENT ONE?\![open,inputbox,OnNameTeach,-1]"
+		"\0\s[8]...I STRONGLY BELIEVE THIS ONE IS ALREADY TAKEN BY SOME OTHER PERSON IN THE ROOM THAT JUST HAPPENS TO BE ME. \w8\s[6]I KNOW IT IS A GOOD ONE,\w4 BUT,\w4 WELL,\w4 THERE'D BE MUCH CONFUSION! \w8HOW ABOUT YOU TRY A DIFFERENT ONE?\![open,inputbox,OnNameTeach,-1]"
 		//Note here that it's using the same tag as above to reopen the text box to let the user put in another name. You can replace the dialogue with whatever as long as you keep the \![open,inputbox,OnNameTeach,-1] tag.
 	}
 	
 	elseif reference0 == "Blues" || reference0 == "blues" || reference0 == "BLUES" 
 	{
-		"\0\s[4]UM, THIS ONE IS KIND OF... \w8\w8\w8\w8\s[29]TAKEN. \w8\w8\w8\w8\s[24]YOU SHOULD PROBABLY PICK SOME OTHER ONE.\![open,inputbox,OnNameTeach,-1]"
+		"\0\s[4]UM,\w4 THIS ONE IS KIND OF... \w8\w8\w8\w8\s[29]TAKEN. \w8\w8\w8\w8\s[24]YOU SHOULD PROBABLY PICK SOME OTHER ONE.\![open,inputbox,OnNameTeach,-1]"
 		
 	}
 	
 	
 	elseif reference0 == "Papyrus" || reference0 == "papyrus" || reference0 == "PAPYRUS" 
 	{
-		"\0\s[4]... \w8\w8\w8\w8\s[9]SORRY, BUT... \w8\w8\w8\w8MAYBE DON'T? \w8THERE ARE MUCH BETTER NAMES YOU CAN PICK.\![open,inputbox,OnNameTeach,-1]"
+		"\0\s[4]... \w8\w8\w8\w8\s[9]SORRY,\w4 BUT... \w8\w8\w8\w8MAYBE DON'T? \w8THERE ARE MUCH BETTER NAMES YOU CAN PICK.\![open,inputbox,OnNameTeach,-1]"
 		
 	}
 	
@@ -71,13 +71,13 @@ OnNameTeach
 	
 	elseif reference0 == "R" || reference0 == "r" || reference0 == "p" || reference0 == "P" || reference0 == "s" || reference0 == "S" 
 	{
-		"\0\s[29]...THIS IS NOT A NAME. \w8THIS IS A LETTER. \w8\w8\w8\w8...AND IT IS NOT YOURS, ANYWAY. \w8PICK ANOTHER ONE.\![open,inputbox,OnNameTeach,-1]"
+		"\0\s[29]...THIS IS NOT A NAME. \w8THIS IS A LETTER. \w8\w8\w8\w8...AND IT IS NOT YOURS,\w4 ANYWAY. \w8PICK ANOTHER ONE.\![open,inputbox,OnNameTeach,-1]"
 		
 	}
 	
 	elseif reference0 == "name" || reference0 == "Name" || reference0 == "NAME" 
 	{
-		"\0\s[8]...I MEAN. \w8UM. \w8TECHNICALLY, YOU ARE NOT WRONG. \w8BUT REALISTICALLY, ISN'T THIS KIND OF CONFUSING? \w8\s[24]TRY AGAIN.\![open,inputbox,OnNameTeach,-1]"
+		"\0\s[8]...I MEAN. \w8UM. \w8TECHNICALLY,\w4 YOU ARE NOT WRONG. \w8BUT REALISTICALLY,\w4 ISN'T THIS KIND OF CONFUSING? \w8\s[24]TRY AGAIN.\![open,inputbox,OnNameTeach,-1]"
 		
 	}
 	
@@ -101,7 +101,7 @@ OnNameTeach
 	
 	elseif reference0 == "chara" || reference0 == "Chara" || reference0 == "CHARA" 
 	{
-		"\0\s[8]...OKAY. \w8I DON'T SEE ANYTHING WRONG WITH IT! \w8\s[24]IT SUITS YOU REALLY WELL... \w8LIKE A SECOND NATURE. \w8DO YOU WANT A TITLE, TOO?\w8\n\n[half]\![*]\q[Nope,titlenone]\n"
+		"\0\s[8]...OKAY. \w8I DON'T SEE ANYTHING WRONG WITH IT! \w8\s[24]IT SUITS YOU REALLY WELL... \w8LIKE A SECOND NATURE. \w8DO YOU WANT A TITLE,\w4 TOO?\w8\n\n[half]\![*]\q[Nope,titlenone]\n"
 		--
 		"\![*]\q[Mr.,titlemr]\n"
 		--
@@ -119,7 +119,7 @@ OnNameTeach
 	
 	elseif reference0 == "human" || reference0 == "Human" || reference0 == "HUMAN" 
 	{
-		"\0\s[8]...I DO NOT REALLY SEE THE APPEAL OF THIS?  \w8\s[24]I MEAN, I'D RATHER CALL YOU SOMETHING THAT SETS YOU APART!!! \w8INSTEAD OF MAKING YOU JUST LIKE EVERYONE ELSE AROUND YOU.\![open,inputbox,OnNameTeach,-1]"
+		"\0\s[8]...I DO NOT REALLY SEE THE APPEAL OF THIS?  \w8\s[24]I MEAN,\w4 I'D RATHER CALL YOU SOMETHING THAT SETS YOU APART!!! \w8INSTEAD OF MAKING YOU JUST LIKE EVERYONE ELSE AROUND YOU.\![open,inputbox,OnNameTeach,-1]"
 		
 	}
 	
@@ -129,7 +129,7 @@ OnNameTeach
 		{
 		tempname = "ANTARES" 
 		
-		"\0\s[8]YOU HAVEN'T PUT ANY NAME IN? \w8SO I GUESS I'LL HAVE TO GIVE YOU ONE. \w8\s[24]I'LL CALL YOU... 'ANTARES'. \w8I THINK IT IS A NICE NAME TO HAVE. \w8\x\cNOW, DO YOU WANT SOME FANCY TITLE WITH THAT? \w8I HAVE HEARD IT IS IMPORTANT FOR SOME HUMANS AS IT SIGNIFIES THEIR POSITION IN THEIR NEEDLESSLY COMPLICATED SOCIAL STRUCTURE.\w4\n\n[half]\![*]\q[Nope,titlenone]\n"
+		"\0\s[8]YOU HAVEN'T PUT ANY NAME IN? \w8SO I GUESS I'LL HAVE TO GIVE YOU ONE. \w8\s[24]I'LL CALL YOU... 'ANTARES'. \w8I THINK IT IS A NICE NAME TO HAVE. \w8\x\cNOW,\w4 DO YOU WANT SOME FANCY TITLE WITH THAT? \w8I HAVE HEARD IT IS IMPORTANT FOR SOME HUMANS AS IT SIGNIFIES THEIR POSITION IN THEIR NEEDLESSLY COMPLICATED SOCIAL STRUCTURE.\w4\n\n[half]\![*]\q[Nope,titlenone]\n"
 		--
 		"\![*]\q[Mr.,titlemr]\n"
 		--
@@ -167,7 +167,7 @@ OnNameTeach
 		{
 		tempname = "CARINA" 
 		
-		"\0\s[8]YOU HAVEN'T PUT ANY NAME IN? \w8SO I GUESS I'LL HAVE TO GIVE YOU ONE. \w8\s[24]I'LL CALL YOU... 'CARINA'. \w8I THINK IT IS A NICE NAME TO HAVE. \w8\x\cNOW, DO YOU WANT SOME FANCY TITLE WITH THAT? \w8I HAVE HEARD IT IS IMPORTANT FOR SOME HUMANS AS IT SIGNIFIES THEIR POSITION IN THEIR NEEDLESSLY COMPLICATED SOCIAL STRUCTURE.\w4\n\n[half]\![*]\q[Nope,titlenone]\n"
+		"\0\s[8]YOU HAVEN'T PUT ANY NAME IN? \w8SO I GUESS I'LL HAVE TO GIVE YOU ONE. \w8\s[24]I'LL CALL YOU... 'CARINA'. \w8I THINK IT IS A NICE NAME TO HAVE. \w8\x\cNOW,\w4 DO YOU WANT SOME FANCY TITLE WITH THAT? \w8I HAVE HEARD IT IS IMPORTANT FOR SOME HUMANS AS IT SIGNIFIES THEIR POSITION IN THEIR NEEDLESSLY COMPLICATED SOCIAL STRUCTURE.\w4\n\n[half]\![*]\q[Nope,titlenone]\n"
 		--
 		"\![*]\q[Mr.,titlemr]\n"
 		--
@@ -186,7 +186,7 @@ OnNameTeach
 		{
 		tempname = "SARGAS" 
 		
-		"\0\s[8]YOU HAVEN'T PUT ANY NAME IN? \w8SO I GUESS I'LL HAVE TO GIVE YOU ONE. \w8\s[24]I'LL CALL YOU... 'SARGAS'. \w8I THINK IT IS A NICE NAME TO HAVE. \w8\x\cNOW, DO YOU WANT SOME FANCY TITLE WITH THAT? \w8I HAVE HEARD IT IS IMPORTANT FOR SOME HUMANS AS IT SIGNIFIES THEIR POSITION IN THEIR NEEDLESSLY COMPLICATED SOCIAL STRUCTURE.\w4\n\n[half]\![*]\q[Nope,titlenone]\n"
+		"\0\s[8]YOU HAVEN'T PUT ANY NAME IN? \w8SO I GUESS I'LL HAVE TO GIVE YOU ONE. \w8\s[24]I'LL CALL YOU... 'SARGAS'. \w8I THINK IT IS A NICE NAME TO HAVE. \w8\x\cNOW,\w4 DO YOU WANT SOME FANCY TITLE WITH THAT? \w8I HAVE HEARD IT IS IMPORTANT FOR SOME HUMANS AS IT SIGNIFIES THEIR POSITION IN THEIR NEEDLESSLY COMPLICATED SOCIAL STRUCTURE.\w4\n\n[half]\![*]\q[Nope,titlenone]\n"
 		--
 		"\![*]\q[Mr.,titlemr]\n"
 		--
@@ -205,7 +205,7 @@ OnNameTeach
 		{
 		tempname = "ALDEBARAN" 
 		
-		"\0\s[8]YOU HAVEN'T PUT ANY NAME IN? \w8SO I GUESS I'LL HAVE TO GIVE YOU ONE. \w8\s[24]I'LL CALL YOU... 'ALDEBARAN'. \w8I THINK IT IS A NICE NAME TO HAVE. \w8\x\cNOW, DO YOU WANT SOME FANCY TITLE WITH THAT? \w8I HAVE HEARD IT IS IMPORTANT FOR SOME HUMANS AS IT SIGNIFIES THEIR POSITION IN THEIR NEEDLESSLY COMPLICATED SOCIAL STRUCTURE.\w4\n\n[half]\![*]\q[Nope,titlenone]\n"
+		"\0\s[8]YOU HAVEN'T PUT ANY NAME IN? \w8SO I GUESS I'LL HAVE TO GIVE YOU ONE. \w8\s[24]I'LL CALL YOU... 'ALDEBARAN'. \w8I THINK IT IS A NICE NAME TO HAVE. \w8\x\cNOW,\w4 DO YOU WANT SOME FANCY TITLE WITH THAT? \w8I HAVE HEARD IT IS IMPORTANT FOR SOME HUMANS AS IT SIGNIFIES THEIR POSITION IN THEIR NEEDLESSLY COMPLICATED SOCIAL STRUCTURE.\w4\n\n[half]\![*]\q[Nope,titlenone]\n"
 		--
 		"\![*]\q[Mr.,titlemr]\n"
 		--
@@ -223,7 +223,7 @@ OnNameTeach
 	}
 	else //if the user put in something not specified above, ie a proper name the ghost can use. 
 	{
-		"\0\s[24]ALRIGHT! \w8NOW, DO YOU WANT SOME FANCY TITLE WITH THAT? \w8I HAVE HEARD IT IS IMPORTANT FOR SOME HUMANS AS IT SIGNIFIES THEIR POSITION IN THEIR NEEDLESSLY COMPLICATED SOCIAL STRUCTURE.\w4\n\n[half]\![*]\q[Nope,titlenone]\n"
+		"\0\s[24]ALRIGHT! \w8NOW,\w4 DO YOU WANT SOME FANCY TITLE WITH THAT? \w8I HAVE HEARD IT IS IMPORTANT FOR SOME HUMANS AS IT SIGNIFIES THEIR POSITION IN THEIR NEEDLESSLY COMPLICATED SOCIAL STRUCTURE.\w4\n\n[half]\![*]\q[Nope,titlenone]\n"
 		--
 		"\![*]\q[Mr.,titlemr]\n"
 		--

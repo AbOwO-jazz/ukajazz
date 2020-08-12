@@ -57,7 +57,7 @@ MouseMoveSakura
 				{
 					petpet += 1
 					lovelove += 0.2
-					"\0\s[28]*Jazz freezes, staring at you a little warily... \w8\s[20]he smiles soon after, but you still pull your hand back.\e"
+					"\0\s[28]*Jazz freezes,\w4 staring at you a little warily... \w8\s[20]he smiles soon after,\w4 but you still pull your hand back.\e"
 					"\0\s[28]*Jazz seems confused by the sudden pet. \w8\s[20]But also a little bit... \w8relieved?\e"
 					"\0\s[28]O-OH? WHAT WAS... \w8THAT? \w8\s[20]YOU KNOW! \w8I LIKE IT MUCH MORE WHEN YOU ARE BEING SOFT AND CAREFUL. \w8MAYBE YOU SHOULD GO ON!\e"
 					
@@ -89,25 +89,25 @@ MouseMoveSakura
 					lovelove += 1
 				  "\0\s[20]*Jazz makes a surprised chirp. \w8\s[21]\n\nW-WOWIE! \w8YOU'VE PET ME?! \w8YOU'VE PET ME!\e"
 				  "\0\s[20]M-HM! \w8\s[21]THIS FEELS VERY VERY GOOD! \w8MAYBE YOU SHOULD REALLY REALLY CONSIDER DOING IT AGAIN!\e"
-				  "\0\s[20]OH! \w8\s[21]THAT'S NICE. \w8WAS IT AN ACCIDENT? \w8\s[5]IF YES, IT WAS A HAPPY ONE!\e"
+				  "\0\s[20]OH! \w8\s[21]THAT'S NICE. \w8WAS IT AN ACCIDENT? \w8\s[5]IF YES,\w4 IT WAS A HAPPY ONE!\e"
 				  "\0\s[20]WOWIE! \w8\s[21]YOU MANAGED TO FIND MY MOST PETTABLE PLACE! \w8IT IS RIGHT HERE. \w8GOOD JOB!\e"
 				  "\0\s[20]NYEH... \w8\s[21]I REALLY DON'T MIND IF YOU KEEP DOING THIS!\e"
 				  "\0\s[20]OH! \w8\s[21]I WOULD WAG MY TAIL! \w8IF NOT FOR MEDIUM RESTRICTIONS!!!\e"
-				  "\0\s[20]HUH! \w8\s[21]HUMAN, \w8ARE YOU TRYING TO GET ON MY GOOD SIDE? \w8\s[5]THERE IS NO NEED TO! \w8YOU ARE ALREADY THERE!!!\e"
-				  "\0\s[20]NYEH... \w8\s[21]DID YOUR HAND SLIP, HUMAN? \w8CAN IT SLIP ALONG THIS TRAJECTORY AGAIN??\e"
+				  "\0\s[20]HUH! \w8\s[21]HUMAN,\w4 ARE YOU TRYING TO GET ON MY GOOD SIDE? \w8\s[5]THERE IS NO NEED TO! \w8YOU ARE ALREADY THERE!!!\e"
+				  "\0\s[20]NYEH... \w8\s[21]DID YOUR HAND SLIP,\w4 HUMAN? \w8CAN IT SLIP ALONG THIS TRAJECTORY AGAIN??\e"
 				  }
 				
 			     if lovelove > 20 
  			     {
 				     petpet += 1
 					 lovelove += 1
-				  "\0\s[20]NYEH HEH! \w8\s[21]I KNEW I COULD COUNT ON YOUR PETTING SKILLS!!! \w8\s[5]YOU MUST HAVE BEEN TRAINING LOTS!!! \w8\s[8]I HOPE YOU REST YOUR HANDS EVERY NOW AND THEN, THOUGH. \w8THEY MUST BE SO SORE...\e"
-			  	  "\0\s[20]NYEH! \w8\s[21]YOUR HANDS JUST KEEP SLIPPING OVER MY HEAD, HUMAN! \w8\s[24]I THINK YOU SHOULD WORK ON YOUR EYE-HAND-MOUSE COORDINATION.\e"
+				  "\0\s[20]NYEH HEH! \w8\s[21]I KNEW I COULD COUNT ON YOUR PETTING SKILLS!!! \w8\s[5]YOU MUST HAVE BEEN TRAINING LOTS!!! \w8\s[8]I HOPE YOU REST YOUR HANDS EVERY NOW AND THEN,\w4 THOUGH. \w8THEY MUST BE SO SORE...\e"
+			  	  "\0\s[20]NYEH! \w8\s[21]YOUR HANDS JUST KEEP SLIPPING OVER MY HEAD,\w4 HUMAN! \w8\s[24]I THINK YOU SHOULD WORK ON YOUR EYE-HAND-MOUSE COORDINATION.\e"
 				  "\0\s[20]MMM... \w8\s[21]YOU ARE MAKING ME SLEEPY. \w8BUT NOT TOO MUCH! \w8\s[6]I AM OFFICIALLY UNALLOWED TO FALL ASLEEP AROUND THESE PARTS.\e"
 				  "\0\s[20]NYEH... \w8\s[28]EVEN MORE PETS??? \w8\s[36]HOW IS IT POSSIBLE???\e"
-				  "\0\s[20]NYEH HEH HEH! \w8\s[21]YOUR HANDS ARE REALLY SOFT, \w8YOU KNOW? \w8SOFT, SQUISHY AND WARM! \w8JUST LIKE YOUR HEART.\e"
-				  "\0\s[20]*Jazz experimentally presses into your palm, \w8watching you. \w8\s[21]Then he smiles.\e"
-				  "\0\s[20]MMM. \w8\s[21]A LITTLE TO THE LEFT, PLEASE! \w8\s[20]AND THEN ALL THE WAY TO THE MORNING...\e"
+				  "\0\s[20]NYEH HEH HEH! \w8\s[21]YOUR HANDS ARE REALLY SOFT,\w4 YOU KNOW? \w8SOFT,\w4 SQUISHY AND WARM! \w8JUST LIKE YOUR HEART.\e"
+				  "\0\s[20]*Jazz experimentally presses into your palm,\w4 watching you. \w8\s[21]Then he smiles.\e"
+				  "\0\s[20]MMM. \w8\s[21]A LITTLE TO THE LEFT,\w4 PLEASE! \w8\s[20]AND THEN ALL THE WAY TO THE MORNING...\e"
 	
  			      }
 				
@@ -124,7 +124,7 @@ MouseMoveSakura
 					"\0\s[20]*Jazz hesitantly leans into your touch. \w8He looks so relaxed... \w8\s[27]\n\nMMM... \w8WARM... \e"
 					"\0\s[20]*Jazz tilts his head a little to give you better access. \w8\s[21]\n\nYES... \w8RIGHT THERE... \w8\s[27]MMM... \w8YOU FOUND MY MOST PETTABLE SPOT-2000...\e"
 					"\0\s[20]SIGH... \w8\s[21]YOU ARE A VERY DEDICATED PET GIVER... \w8AND I RESPECT THAT! \w8\s[6]IT IS A VERY IMPORTANT PROJECT TO BE DETERMINED ABOUT.\e"
-					"\0\s[20]*Jazz sighs quietly as you rub his horns. \w8\s[21]\n\nI WISH THIS COULD LAST FOREVER... \w8%(username), PLEASE THINK ABOUT INVENTING A YOUTH FOUNTAIN... \w8OR A TIME MACHINE...\e"		
+					"\0\s[20]*Jazz sighs quietly as you rub his horns. \w8\s[21]\n\nI WISH THIS COULD LAST FOREVER... \w8%(username),\w4 PLEASE THINK ABOUT INVENTING A YOUTH FOUNTAIN... \w8OR A TIME MACHINE...\e"		
 					"\0\s[20]PURR... \w8\s[21]\n\n*He is vibrating softly under your palm. \w8\s[27]\n\nPURR... \e"	
 					"\0\s[20]PURR... \w8\s[27]\n\n*There is a quiet rumble in his chest. \w8It sounds weirdly comforting...\e"	
 					"\0\s[20]MRRR... \w8\s[27]\n\n*His purr is getting really thunderous... \w8he must really like being touched so softly. \e"
@@ -139,15 +139,15 @@ MouseMoveSakura
 				  {
 					petpet += 1
 					lovelove += 1
-					"\0\s[27]*Jazz melts under your hands. \w8Figuratively, to your relief.\e"
-					"\0\s[20]NYEH HEH... \w8\s[21]\n\n*Jazz looks happy. \w8You can feel tension leave his body. \w8He watches you with half-lidded eyesockets, \w8sighing in pleasure. \e"
+					"\0\s[27]*Jazz melts under your hands. \w8Figuratively,\w4 to your relief.\e"
+					"\0\s[20]NYEH HEH... \w8\s[21]\n\n*Jazz looks happy. \w8You can feel tension leave his body. \w8He watches you with half-lidded eyesockets,\w4 sighing in pleasure. \e"
 					"\0\s[20]HAH... \w8\s[21]I DIDN'T THINK SOMEONE WOULD PET ME FOR SUCH A LONG TIME! \w8\s[5]BUT I AM GLAD THAT MY HYPOTHESIS WAS PROVEN WRONG!!!\e"
-					"\0\s[20]*Jazz leans into your touch readily, \w8as if he was used to this now. \w8\s[21]\n\nM-HM... \w8MORE PETS... \e"
-					"\0\s[20]*Jazz makes a happy noise when your palm touches his head... \w8\s[21]\n\nTHIS IS SO NICE... \w8DON'T STOP, \w8PLEASE... \e"
-					"\0\s[20]NYEH... \w8\s[21]YOU KNOW, \w8I THINK YOU ARE A REALLY GOOD PERSON. \w8SOMEONE WHOSE HANDS ARE SO SOFT AND GENTLE... \w8\s[6]I DON'T THINK SOMEONE LIKE THIS CAN BE BAD.\e"
-					"\0\s[20]*Jazz lets out a little laugh. \w8He seems so happy... \w8\s[21]\n\nW-WOWIE. \w8I HAVEN'T RECEIVED THAT MANY PETS IN A LONG, LONG TIME! \w8IN FACT! \w8I HAVEN'T RECEIVED ANY PETS IN A LONG, LONG TIME! \w8\s[5]AND THIS IS A NICE CHANGE!\e"
-					"\0\s[20]M-HM... \w8\s[21]\n\n*He doesn't say anything, \w8but the way he beams at you says it all.\e"
-					"\0\s[20]HEH... \w8\s[21]... \w8\s[8]WHY DO YOU KEEP DOING THIS? \w8DON'T YOU HAVE ANYTHING BETTER TO DO? \w8\s[1]...I - I MEAN! \w8I DON'T MIND! \w8BUT, \w8\s[4]AREN'T YOU BUSY? \w8I AM SURE YOU CANNOT AFFORD SPENDING ALL DAY ON ME... \e"
+					"\0\s[20]*Jazz leans into your touch readily,\w4 as if he was used to this now. \w8\s[21]\n\nM-HM... \w8MORE PETS... \e"
+					"\0\s[20]*Jazz makes a happy noise when your palm touches his head... \w8\s[21]\n\nTHIS IS SO NICE... \w8DON'T STOP,\w4 \w8PLEASE... \e"
+					"\0\s[20]NYEH... \w8\s[21]YOU KNOW,\w4 I THINK YOU ARE A REALLY GOOD PERSON. \w8SOMEONE WHOSE HANDS ARE SO SOFT AND GENTLE... \w8\s[6]I DON'T THINK SOMEONE LIKE THIS CAN BE BAD.\e"
+					"\0\s[20]*Jazz lets out a little laugh. \w8He seems so happy... \w8\s[21]\n\nW-WOWIE. \w8I HAVEN'T RECEIVED THAT MANY PETS IN A LONG,\w4 LONG TIME! \w8IN FACT! \w8I HAVEN'T RECEIVED ANY PETS IN A LONG,\w4 LONG TIME! \w8\s[5]AND THIS IS A NICE CHANGE!\e"
+					"\0\s[20]M-HM... \w8\s[21]\n\n*He doesn't say anything,\w4 but the way he beams at you says it all.\e"
+					"\0\s[20]HEH... \w8\s[21]... \w8\s[8]WHY DO YOU KEEP DOING THIS? \w8DON'T YOU HAVE ANYTHING BETTER TO DO? \w8\s[1]...I - I MEAN! \w8I DON'T MIND! \w8BUT,\w4 \s[4]AREN'T YOU BUSY? \w8I AM SURE YOU CANNOT AFFORD SPENDING ALL DAY ON ME... \e"
 					"\0\s[20]MHM... \w8\s[21]...I LIKE THIS A LOT! \w8\s[8]BUT I HOPE I AM NOT DISTRACTING YOU FROM SOMETHING IMPORTANT... \e"
 				  }
 				
@@ -156,13 +156,13 @@ MouseMoveSakura
 				  {
 					petpet += 1
 					lovelove += 1
-					"\0\s[20]*Jazz presses into your hand, blinking at you slowly.\e"
-					"\0\s[20]*Jazz lets out a long sigh. \w8\s[27]He slumps a bit, looking completely blissful...\w8\n\n...SO WARM...\e"
-					"\0\s[20]*The skeleton nudges your hand, \w8smiling softly. \w8\s[21]\n\nWHY DID YOU STOP?? \w8YOU TRAINED SO HARD FOR THIS MOMENT!!!\e"
-					"\0\s[20]NYEH HEH... \w8\s[27]MMM... \w8\s[21]YOU KNOW, \w8I DID NOT EXPECT TO MEET SOMEONE SO NICE WHEN I CAME HERE! \w8AND... \w8\s[5]I REALLY LIKE SURPRISES LIKE THAT!\e"
+					"\0\s[20]*Jazz presses into your hand,\w4 blinking at you slowly.\e"
+					"\0\s[20]*Jazz lets out a long sigh. \w8\s[27]He slumps a bit,\w4 looking completely blissful...\w8\n\n...SO WARM...\e"
+					"\0\s[20]*The skeleton nudges your hand,\w4 smiling softly. \w8\s[21]\n\nWHY DID YOU STOP?? \w8YOU TRAINED SO HARD FOR THIS MOMENT!!!\e"
+					"\0\s[20]NYEH HEH... \w8\s[27]MMM... \w8\s[21]YOU KNOW,\w4 I DID NOT EXPECT TO MEET SOMEONE SO NICE WHEN I CAME HERE! \w8AND... \w8\s[5]I REALLY LIKE SURPRISES LIKE THAT!\e"
 					"\0\s[20]MPH! \w8\s[28]HUMAN! \w8\s[8]I HOPE YOU TAKE CARE OF YOUR POOR TIRED HANDS.\e"
 					"\0\s[20]NYEH!!! \w8\s[21]%(username)! \w8\s[5]WHILE I DEFINITELY ENJOY ALL THE ATTENTION YOU ARE GIVING ME... \w8\s[8]I CANNOT HELP BUT BE SURPRISED AT YOUR DEDICATION??? \e"
-					"\0\s[20]NYEH. \w8\s[28]HUMAN... \w8\s[4]...I THINK YOU SHOULD GO DO SOMETHING ELSE, PROBABLY. \w8\s[1]I M-MEAN! \w8I DON'T WANT YOU TO FALL BEHIND, AFTER ALL...\e"
+					"\0\s[20]NYEH. \w8\s[28]HUMAN... \w8\s[4]...I THINK YOU SHOULD GO DO SOMETHING ELSE,\w4 PROBABLY. \w8\s[1]I M-MEAN! \w8I DON'T WANT YOU TO FALL BEHIND,\w4 AFTER ALL...\e"
 					
 					
                   }
@@ -171,10 +171,10 @@ MouseMoveSakura
 					 {
 						petpet += 1
 						lovelove += 1
-						"\0\s[20]*You rub his head playfully, and he snickers. \w8\s[21]\n\nNYEH HEH HEH! \w8\s[35]COME HERE! \w8\n\n*He pulls you closer \s[34]and gently ruffles your hair. \w8How the tables have turned! \e"
+						"\0\s[20]*You rub his head playfully,\w4 and he snickers. \w8\s[21]\n\nNYEH HEH HEH! \w8\s[35]COME HERE! \w8\n\n*He pulls you closer \s[34]and gently ruffles your hair. \w8How the tables have turned! \e"
 						"\0\s[21]*You beckon him and, \w8\s[20]as he leans to you, \w8you noogie him. \w8\s[28]He does not look too amused... \w8\s[36]\n\nPLEASE DO NOT NOOGIE THE SKELETON!!!\e"
-						"\0\s[20]*You scratch under his chin as if he was a cat. \w8\s[21]It is surprisingly effective... \w8\s[27]he slumps over, eyes closed in pleasure. \w8\n\nW-WOWIE...\e"
-						"\0\s[20]*You flick his forehead lightly. \w8\s[28]Ouch! \w8He hides in his scarf in pretend-pain. \w8\s[30]\n\nOH NO! \w8I HAVE BEEN PLAYED! \w8PERPLEXED!! \w8PERCUSSED!!! \w8HOW DARE YOU, O %(username), DO THAT TO ME??? \w8\s[21]\n\n*He doesn't seem to mind it much, though.  \e"
+						"\0\s[20]*You scratch under his chin as if he was a cat. \w8\s[21]It is surprisingly effective... \w8\s[27]he slumps over,\w4 eyes closed in pleasure. \w8\n\nW-WOWIE...\e"
+						"\0\s[20]*You flick his forehead lightly. \w8\s[28]Ouch! \w8He hides in his scarf in pretend-pain. \w8\s[30]\n\nOH NO! \w8I HAVE BEEN PLAYED! \w8PERPLEXED!! \w8PERCUSSED!!! \w8HOW DARE YOU,\w4 O %(username),\w4 DO THAT TO ME??? \w8\s[21]\n\n*He doesn't seem to mind it much,\w4 though.  \e"
 					    "\0\s[0]*You reach out and, \w8as he leans towards you, \w8you press your forehead to his. \w8\s[28]He freezes for a moment... \w8\s[35]then pulls you closer, \w8\s[21]nuzzling you with a laugh. \w8He looks completely content with this.\e"
 					  }
 			 
@@ -203,26 +203,26 @@ MouseMoveSakura
 				if jazzfriend == 1 || jazzlover == 1 
 				{
 					
-					"\0\s[0]*You touch his chest. \w8\s[4]He seems uncomfortable... \w8\n\nYOU KNOW, I'D REALLY PREFER IF YOU DIDN'T...\e"
-					"\0\s[0]*You put your hand against his chest. \w8\s[4]He fidgets, but he doesn't speak up despite not enjoying this in the slightest.\e"
-					"\0\s[0]*You brush your fingers against his chest. \w8\s[1]\n\n%(username), THERE ARE BETTER PLACES TO TOUCH...\e"
+					"\0\s[0]*You touch his chest. \w8\s[4]He seems uncomfortable... \w8\n\nYOU KNOW,\w4 I'D REALLY PREFER IF YOU DIDN'T...\e"
+					"\0\s[0]*You put your hand against his chest. \w8\s[4]He fidgets,\w4 but he doesn't speak up despite not enjoying this in the slightest.\e"
+					"\0\s[0]*You brush your fingers against his chest. \w8\s[1]\n\n%(username),\w4 THERE ARE BETTER PLACES TO TOUCH...\e"
 				}
 				
 				  if lovelove > 50
 				  {
 					seenplate = 1
-				  "\0\s[0]*You lift his scarf to touch his chest right under his collarbones. \w8\s[1]Your fingers sense something under the fabric: a pattern etched into the bone. \w8Almost like... \w8a carving?.. \w8\s[2]You cannot find out more because Jazz jerks away in panic. \w8He looks close to hyperventilating. \w8\n\nP-PLEASE, NO, D-DON'T - PLEASE, N-NOT THERE, NO...\e"
+				  "\0\s[0]*You lift his scarf to touch his chest right under his collarbones. \w8\s[1]Your fingers sense something under the fabric: a pattern etched into the bone. \w8Almost like... \w8a carving?.. \w8\s[2]You cannot find out more because Jazz jerks away in panic. \w8He looks close to hyperventilating. \w8\n\nP-PLEASE,\w4 NO,\w4 D-DON'T - PLEASE,\w4 N-NOT THERE,\w4 NO...\e"
 				  
 				  }
 				  
 				  if badbad > 3 && badbad < 10
 				  {
-					  "\0\s[4]*You pet his chest. \w8Jazz winces hard. \w8It looks like your touch is unwelcome, but he does not say anything.\e"
+					  "\0\s[4]*You pet his chest. \w8Jazz winces hard. \w8It looks like your touch is unwelcome,\w4 but he does not say anything.\e"
 					  "\0\s[1]*You touch his chest. \w8Jazz whimpers and moves away. \w8What an overreaction.\e"
-					  "\0\s[4]MAYBE, UM... \w8MAYBE YOU COULD... \w8\n\n*He stops and sighs.\e"
+					  "\0\s[4]MAYBE,\w4 UM... \w8MAYBE YOU COULD... \w8\n\n*He stops and sighs.\e"
 					  "\0\s[4]*You rub his chest. \w8He tries to bear with it.\e"
 					  "\0\s[4]%(username)... \w8\n\n*He does not say anything else and looks away.\e"
-					  "\0\s[4]*You pet his chest. \w8Jazz winces, but it seems that he prefers this kind of touch, at least.\e"
+					  "\0\s[4]*You pet his chest. \w8Jazz winces,\w4 but it seems that he prefers this kind of touch,\w4 at least.\e"
 				  }
 				  
 				  if badbad > 10 || apology > 6
@@ -232,8 +232,8 @@ MouseMoveSakura
 					  "\0\s[4]*You pet his chest. \w8You can almost hear the tiniest crack.\e"
 					  "\0\s[4]*You press on his chest. \w8\s[43]Jazz gasps and tries to move your hands away.\e"
 					  "\0\s[4]*You poke his chest. \w8\s[26]Jazz whimpers.\e"
-					  "\0\s[4]*You try to touch his chest, but Jazz steps back at the last possible second. \w8How rude.\e"
-					  "\0\s[4]*You try to touch his chest. \w8He looks alarmed, but allows you to do that with a pained grimace.\e"
+					  "\0\s[4]*You try to touch his chest,\w4 but Jazz steps back at the last possible second. \w8How rude.\e"
+					  "\0\s[4]*You try to touch his chest. \w8He looks alarmed,\w4 but allows you to do that with a pained grimace.\e"
 				  }
 				
 				
@@ -251,7 +251,7 @@ MouseMoveSakura
 					"\0\s[26]*You reach for his face. \w8He avoids your hand...\e"
 					"\0\s[26]*You try to pet Jazz on the face.\w8"
 					--
-					"He cannot stop you, but he doesn't look too happy with this..."
+					"He cannot stop you,\w4 but he doesn't look too happy with this..."
 					"He moves away at the last moment..."
 					"He watches you in confusion."
 					"He sniffs..."
@@ -262,30 +262,30 @@ MouseMoveSakura
 				
 				if lovelove > 50 
 				{
-			      "\0\s[28]*You trace his cheekbones. \w8Jazz looks surprised, but he lets you study his face.\e"
-				  "\0\s[28]*You touch his fangs. \w8He stands very still, afraid of hurting you accidentally...\e"
+			      "\0\s[28]*You trace his cheekbones. \w8Jazz looks surprised,\w4 but he lets you study his face.\e"
+				  "\0\s[28]*You touch his fangs. \w8He stands very still,\w4 afraid of hurting you accidentally...\e"
 				  "\0\s[28]*You accidentally poke him in the eyesocket. \w8\s[26]Jazz lets out a surprised yelp and tries to move away from you...\e"
-				  "\0\s[28]*You cup his face, studying it. \w8\s[29]Jazz fidgets... \w8looks like he doesn't like the scrutiny, but he doesn't tell you to stop, for some reason?..\e"
+				  "\0\s[28]*You cup his face,\w4 studying it. \w8\s[29]Jazz fidgets... \w8looks like he doesn't like the scrutiny,\w4 but he doesn't tell you to stop,\w4 for some reason?..\e"
 				  
 				}
 				
 				if lovelove > 100 
 				{
-					"\0\s[0]*You reach out, cupping his face. \w8\s[28]Jazz stills for a moment, \w8\s[21]but then leans into the touch.\e"
+					"\0\s[0]*You reach out,\w4 cupping his face. \w8\s[28]Jazz stills for a moment,\w4 \w8\s[21]but then leans into the touch.\e"
 					"\0\s[28]*You put your hand to his forehead. \w8His bones are of room temperature. \w8This is the most important piece of information you have ever gathered. \w8Congratulations.\e"
 					"\0\s[28]*You flick his nosebone lightly. \w8\s[26]Jazz huffs \s[25]and makes sure to hide his poor nosebone from you. \w8How cruel.\e"
-					"\0\s[0]*You poke his forebrow with a finger, like an anime nerd. \w8\s[28]Jazz is unsure what to make of it. \w8Stupid little Jazz.\e"
-					"\0\s[28]*You peek into his mouth, trying to understand where the food goes and where the sound comes from. \w8Results are unclear. \w8You decide to write it off as magic.\e"
-					"\0\s[0]*You look into his eyesockets, wondering if you could see the insides of his skull. \w8\s[3]You cannot. \w8All you can see is darkness. \w8Is it because eyes are suppposed to be the windows of the soul? \w8\w8\w8...Or is it just because he is a magic skeleton? \w8Who knows.\e"
+					"\0\s[0]*You poke his forebrow with a finger,\w4 like an anime nerd. \w8\s[28]Jazz is unsure what to make of it. \w8Stupid little Jazz.\e"
+					"\0\s[28]*You peek into his mouth,\w4 trying to understand where the food goes and where the sound comes from. \w8Results are unclear. \w8You decide to write it off as magic.\e"
+					"\0\s[0]*You look into his eyesockets,\w4 wondering if you could see the insides of his skull. \w8\s[3]You cannot. \w8All you can see is darkness. \w8Is it because eyes are suppposed to be the windows of the soul? \w8\w8\w8...Or is it just because he is a magic skeleton? \w8Who knows.\e"
 				}
 				
 				if jazzfriend == 1 || jazzlover == 1
 				{
 					
-					"\0\s[28]*You squish his cheekbones. \w8For some reason, they are actually soft... \w8\n\n\s[25]PLEASE DON'T SQUISH MY FACE.\e"
+					"\0\s[28]*You squish his cheekbones. \w8For some reason,\w4 they are actually soft... \w8\n\n\s[25]PLEASE DON'T SQUISH MY FACE.\e"
 					"\0\s[28]*You trace his jawline. \w8\s[20]He looks like he actually does not mind that. \w8\n\nHM...\e"
 			
-					"\0\s[28]*You reach out, booping his nosebone. "
+					"\0\s[28]*You reach out,\w4 booping his nosebone. "
                      --
 					"\w8\s[25]He looks alarmed! \n\n\w8WHY WOULD YOU DO THAT???"
 					"\w8\s[25]...He bleps. \w8Oh dear. \w8\s[21]You feel accomplished."
@@ -300,28 +300,28 @@ MouseMoveSakura
 				{
 					if jazzfriend == 1 || jazzlover == 1
 				{
-					"\0\s[42]*You poke his cheek. \w8He jerks away. \w8\s[29]...Then slowly moves closer, looking at you warily.\e"
+					"\0\s[42]*You poke his cheek. \w8He jerks away. \w8\s[29]...Then slowly moves closer,\w4 looking at you warily.\e"
 					"\0\s[42]*You pet Jazz on the cheek. \w8\s[44]He tries to smile at you.\e"
 			
 					"\0\s[29]*You try to pet Jazz on the face.\w8"
 					--
 					"He looks at you hesitantly and allows it."
-					"He allows you to, but he doesn't look too happy..."
+					"He allows you to,\w4 but he doesn't look too happy..."
 					"He makes a little sad sound and closes his eyes in resignation."
 					"He sighs."
 					"He looks as if he was not sure whether you wanted to pet him or hit him."
-					"\s[26]He winces, as if hit."
-					"He lets you do it, but he looks away the entire time."
-					"He does not move away, but he does not enjoy it, either."
+					"\s[26]He winces,\w4 as if hit."
+					"He lets you do it,\w4 but he looks away the entire time."
+					"He does not move away,\w4 but he does not enjoy it,\w4 either."
 					--
 					"\e"
 				}
 				
 				if lovelove > 50
 				{
-					"\0\s[42]*You pet Jazz on the face. \w8He looks alarmed, but he still lets you do it.\e"
-					"\0\s[29]*You reach out for Jazz, trying to poke his face. \w8Whoops! \w8Looks like you missed.\e"
-					"\0\s[29]*You reach for his face. \w8He avoids your hand, trying to make it seem like he was simply stretching.\e"
+					"\0\s[42]*You pet Jazz on the face. \w8He looks alarmed,\w4 but he still lets you do it.\e"
+					"\0\s[29]*You reach out for Jazz,\w4 trying to poke his face. \w8Whoops! \w8Looks like you missed.\e"
+					"\0\s[29]*You reach for his face. \w8He avoids your hand,\w4 trying to make it seem like he was simply stretching.\e"
 				}
 				
 				else 
@@ -329,14 +329,14 @@ MouseMoveSakura
 					lovelove -= 2
 						"\0\s[29]*You pet Jazz on the face. \w8\s[26]He squints and shivers.\e"
 						"\0\s[28]*You poke Jazz in the eyesocket. \w8\s[26]He yelps and promptly moves away fom you.\e"
-						"\0\s[42]*You cup the skeleton's face. \w8\s[43]Jazz looks uneasy, but he stands very still. \w8Perhaps he hopes that this way he won't get hurt.\e"
+						"\0\s[42]*You cup the skeleton's face. \w8\s[43]Jazz looks uneasy,\w4 but he stands very still. \w8Perhaps he hopes that this way he won't get hurt.\e"
 				        "\0\s[29]*You try to pet Jazz on the face.\w8"
 						--
 						"...Is that the tiniest growl that you've heard?"
 						"He cowers."
-						"He whimpers, barely audible."
-						"He lets you do it, shivering."
-						"He braces himself, but does not move away."
+						"He whimpers,\w4 barely audible."
+						"He lets you do it,\w4 shivering."
+						"He braces himself,\w4 but does not move away."
 						--
 						"\e"
 				
@@ -395,6 +395,19 @@ OnMouseDoubleClick
 	}
  }
 
+
+Select.badchoice
+{
+	beatbeat += 1
+	lovelove -= 2
+	"\0\s[2]A-AH! \w8\w8\w8...WHY WOULD YOU DO THAT?!\e"
+}
+
+Select.openmenu
+{
+	OpenSakuraMenu
+}
+
  //---- MouseDoubleClickSakura ----------------------------------------------------------
  
 MouseDoubleClickSakura
@@ -403,14 +416,45 @@ MouseDoubleClickSakura
 	{
 		simplecounter += 1
 		
+		if beatbeat == 0
+		{
 		
 		if simplecounter == 1 
 		{
-			"\0\s[0]*Do you really want to hit him? \w8Clicking his head or chest will hurt him. \w8If you want to see his menu, try double-clicking on his legs.\e"
+			"\0\s[0]*Do you really want to hit him? \w8Clicking his head or chest will hurt him. \w8If you want to see his menu,\w4 try double-clicking on his legs.\n\n\![*]\q[Menu please,openmenu]\n\![*]\q[Punch him,badchoice]\e"
+		}
+		
+		if simplecounter == 2 
+		{
+			"\0\s[0]*I think you missed the spot again. \w8It's okay. \w8Remember: the legs.\n\n\![*]\q[Menu please,openmenu]\n\![*]\q[Punch him,badchoice]\e"
 		}
 		
 		
-		else{
+		if simplecounter == 3 
+		{
+			"\0\s[0]*...Ah. \w8You missed it again. \w8Here.\n\n\![*]\q[Menu please,openmenu]\n\![*]\q[Punch him,badchoice]\e"
+		}
+		
+		if simplecounter == 4 
+		{
+			"\0\s[0]*You seem to misclick a lot. \w8...Or maybe it is on purpose.\n\n\![*]\q[Menu please,openmenu]\n\![*]\q[Punch him,badchoice]\e"
+		}
+		
+		
+		if simplecounter == 5 
+		{
+			"\0\s[0]*... \w8Are you having fun with this?\n\n\![*]\q[Menu please,openmenu]\n\![*]\q[Punch him,badchoice]\e"
+		}
+		
+		
+		if simplecounter > 5 
+		{
+			"\0\s[0]*...\n\n\![*]\q[Menu please,openmenu]\n\![*]\q[Punch him,badchoice]\e"
+		}
+		
+		}
+		
+		else {
 		
 		//if gotwhatscoming == 1
 		//{
@@ -446,26 +490,26 @@ MouseDoubleClickSakura
 		if apology == 2
 		{
 			lovelove -= 2
-			"\0\s[2]-HRK! \w8\s[1]... \w8\s[4]...HUMAN! \w8I THINK YOU ARE MISSING THE POINT OF APOLOGIES!!! \w8\s[7]YOU ARE SUPPOSED TO LEARN FROM YOUR MISTAKES, NOT REPEAT THEM!\e"
+			"\0\s[2]-HRK! \w8\s[1]... \w8\s[4]...HUMAN! \w8I THINK YOU ARE MISSING THE POINT OF APOLOGIES!!! \w8\s[7]YOU ARE SUPPOSED TO LEARN FROM YOUR MISTAKES,\w4 NOT REPEAT THEM!\e"
 		}
 		
 		
 		if apology == 3
 		{
 			lovelove -= 5
-			"\0\s[2]-OUCH!!! \w8... \w8\s[7]HUMAN. \w8I THINK YOU REALLY SHOULD TRY HARDER THAN THAT. \w8\s[6]I AM SURE YOU CAN GET THE HANG OF IT EASILY, THOUGH! \w8I WILL BREAK IT DOWN FOR YOU, HERE. \w8\s[24]STEP ONE: STOP BEATING ME UP. \w8\s[6]STEP TWO: SUCCESS! \w8SEE, IT IS EASY.\e"
+			"\0\s[2]-OUCH!!! \w8... \w8\s[7]HUMAN. \w8I THINK YOU REALLY SHOULD TRY HARDER THAN THAT. \w8\s[6]I AM SURE YOU CAN GET THE HANG OF IT EASILY,\w4 THOUGH! \w8I WILL BREAK IT DOWN FOR YOU,\w4 HERE. \w8\s[24]STEP ONE: STOP BEATING ME UP. \w8\s[6]STEP TWO: SUCCESS! \w8SEE,\w4 IT IS EASY.\e"
 		}
 		
 		if apology == 4
 		{
 			lovelove -= 5
-			"\0\s[2]HHH... \w8\s[1]... \w8\w8... \w8\s[4]UM. \w8%(username)? \w8I, I UNDERSTAND THAT IT IS HARD TO CHANGE AT ONCE, BUT... \w8\s[8]...JUST. \w8JUST KEEP TRYING, OKAY? \w8I WILL ACCEPT YOUR APOLOGY, SO... \w8MAYBE YOU SHOULD TRY NOT TO BREAK IT THIS TIME... \w8\w8...\e"
+			"\0\s[2]HHH... \w8\s[1]... \w8\w8... \w8\s[4]UM. \w8%(username)? \w8I,\w4 I UNDERSTAND THAT IT IS HARD TO CHANGE AT ONCE,\w4 BUT... \w8\s[8]...JUST. \w8JUST KEEP TRYING,\w4 OKAY? \w8I WILL ACCEPT YOUR APOLOGY,\w4 SO... \w8MAYBE YOU SHOULD TRY NOT TO BREAK IT THIS TIME... \w8\w8...\e"
 		}
 		
 		if apology == 5
 		{
 			lovelove -= 5
-			"\0\s[2]AAAAH! \w8\s[1]... \w8... \w8\s[4]HUMAN, I... \w8I WONDER IF ANYTHING I COULD SAY OR DO WOULD EVER MAKE YOU STOP.\e"
+			"\0\s[2]AAAAH! \w8\s[1]... \w8... \w8\s[4]HUMAN,\w4 I... \w8I WONDER IF ANYTHING I COULD SAY OR DO WOULD EVER MAKE YOU STOP.\e"
 		}
 		
 		if apology > 5
@@ -479,9 +523,9 @@ MouseDoubleClickSakura
 			lovelove -= 2
 		"\0\s[2]A-AH! \w8\w8\w8...WHY WOULD YOU DO THAT?!\e"
 		"\0\s[2]NGHHH... \w8\s[1]H-HUMAN! I THINK YOUR HANDS JUST... \w8SLIPPED...\e"
-		"\0\s[2]NGHK! \w8\s[1]...PLEASE, BE MORE CAREFUL! WATCH WHERE YOU CLICK!\e"
+		"\0\s[2]NGHK! \w8\s[1]...PLEASE,\w4 BE MORE CAREFUL! WATCH WHERE YOU CLICK!\e"
 		"\0\s[2]OUCH! \w8\s[1]I'M AFRAID YOU MISSED THE RIGHT SPOT! I-IT MUST BE HARD TO ALWAYS PAY ATTENTION TO WHERE YOU CLICK...\e"
-		"\0\s[2]MPH-! \w8\s[1]PLEASE, DON'T DO THAT? I DON'T APPRECIATE FRIENDLY PUNCHES...\e"
+		"\0\s[2]MPH-! \w8\s[1]PLEASE,\w4 DON'T DO THAT? I DON'T APPRECIATE FRIENDLY PUNCHES...\e"
 		
 		}
 		
@@ -492,21 +536,21 @@ MouseDoubleClickSakura
 		lovelove -= 5
 		"\0\s[2]UGH! \w8\w8\w8\s[4]... \n\n*Jazz watches your face intently... is he trying to predict your next punch?\e"
 		"\0\s[2]NGHHH... \w8\w8\w8\s[1]UM... HUMAN... \w8\w8\s[4]I THINK YOU REALLY SHOULD STOP THIS! \w8THIS IS NOT... \w8\w8HEALTHY FOR YOU TO BE SO AGGRESSIVE.\e"
-		"\0\s[2]NGHK! \w8\w8\w8\s[1]WHY?.. \w8\w8\s[4]IS IT SOMETHING I SAID? \w8\w8SOMETHING I DID? \w8\w8I AM SO SORRY, IF THAT IS THE CASE...\e"
-		"\0\s[2]OUCH! \w8\w8\w8\s[4]...HUMAN! I THINK I... \w8\w8I THINK I UNDERSTAND YOU. \w8\w8I UNDERSTAND FEELING... ANGRY. FEELING LIKE YOU ARE... \w8\w8\s[1]STUCK. LIKE YOU CANNOT DO ANYTHING BUT... \w8\w8\s[4]TURN ON THE OTHERS, BECAUSE YOU DON'T KNOW HOW ELSE TO LET THESE FEELINGS OUT. \w8\w8IT MUST BE HARD ON YOU. \w8\w8REALLY HARD. \w8\w8\s[29]BUT... PLEASE. DON'T DO THIS. \w8IT IS NOT... \w8\w8GOOD FOR YOU, OR FOR THE OTHERS. \w8YOU CANNOT... \w8\w8YOU CANNOT KEEP DOING THIS. PLEASE... \w8\w8PLEASE, STOP.\e"
-		"\0\s[2]MPH-! \w8\w8\w8\s[1]YOU KNOW, I STAND BY THE OPINION THAT VIOLENCE IS UNNEEDED... AND MAYBE YOU SHOULD CONSIDER THIS OPINION TOO?\e"
+		"\0\s[2]NGHK! \w8\w8\w8\s[1]WHY?.. \w8\w8\s[4]IS IT SOMETHING I SAID? \w8\w8SOMETHING I DID? \w8\w8I AM SO SORRY,\w4 IF THAT IS THE CASE...\e"
+		"\0\s[2]OUCH! \w8\w8\w8\s[4]...HUMAN! I THINK I... \w8\w8I THINK I UNDERSTAND YOU. \w8\w8I UNDERSTAND FEELING... ANGRY. FEELING LIKE YOU ARE... \w8\w8\s[1]STUCK. LIKE YOU CANNOT DO ANYTHING BUT... \w8\w8\s[4]TURN ON THE OTHERS,\w4 BECAUSE YOU DON'T KNOW HOW ELSE TO LET THESE FEELINGS OUT. \w8\w8IT MUST BE HARD ON YOU. \w8\w8REALLY HARD. \w8\w8\s[29]BUT... PLEASE. DON'T DO THIS. \w8IT IS NOT... \w8\w8GOOD FOR YOU,\w4 OR FOR THE OTHERS. \w8YOU CANNOT... \w8\w8YOU CANNOT KEEP DOING THIS. PLEASE... \w8\w8PLEASE,\w4 STOP.\e"
+		"\0\s[2]MPH-! \w8\w8\w8\s[1]YOU KNOW,\w4 I STAND BY THE OPINION THAT VIOLENCE IS UNNEEDED... AND MAYBE YOU SHOULD CONSIDER THIS OPINION TOO?\e"
 		
 		}
 		
 		if lovelove > 50
 		{
 			lovelove -= 2
-			"\0\s[2]MPH-! \w8\w8\w8\s[4]%(username), WHY... WHY DID YOU... WHY WOULD YOU...\e"
+			"\0\s[2]MPH-! \w8\w8\w8\s[4]%(username),\w4 WHY... WHY DID YOU... WHY WOULD YOU...\e"
 			"\0\s[2]UGH! \w8\w8\w8\s[1]...WHAT DID I DO WRONG?..\e"
 			"\0\s[2]OUCH! \w8\w8\w8\s[4]H-HURTS...\e"
 			"\0\s[2]HHHH... \w8\w8\w8\s[4]THIS HURTS... WHY WOULD YOU HURT ME?\e"
 			"\0\s[2]MPH-! \w8\w8\w8\s[4]... %(username)... \w8\n\n*He does not say anything... but his face says it all.\e"
-			"\0\s[2]UGH! \w8\n\n*Jazz doubles over in pain, wheezing and coughing. \w8\s[4]He needs a moment to pull himself back up... \w8he glances at you with an undescribable expression.\e"
+			"\0\s[2]UGH! \w8\n\n*Jazz doubles over in pain,\w4 wheezing and coughing. \w8\s[4]He needs a moment to pull himself back up... \w8he glances at you with an undescribable expression.\e"
 			"\0\s[2]OUCH! \w8\w8\w8\s[4]H-HURTS...\e"
 			"\0\s[2]HHHH... \w8\w8\w8\s[4]THIS HURTS... WHY WOULD YOU HURT ME?\e"
 		}
@@ -515,8 +559,8 @@ MouseDoubleClickSakura
 		if jazzfriend == 1 || jazzlover == 1
 		{
 			lovelove -= 2
-			"\0\s[2]-GHK! \n\n\w8*Jazz seems caught off guard. \n\n\w8\w8\w8\s[1]HHHH... \w8\w8\s[40]I'M FINE! I'M FINE. YOU D-DON'T HAVE TO WORRY ABOUT ME! IT'S ALL IN GOOD HUMOR, RIGHT? \w8\w8\w8\w8\s[1]...RIGHT?..\e"
-			"\0\s[2]ARGH! \w8\s[1]... \w8\w8\w8\w8\s[40]I-IT'S OKAY! I KNOW YOU DID NOT MEAN THIS! I KNOW YOU WOULD NOT HURT ME ON PURPOSE, RIGHT? \w8\s[1]I-IN FACT! \w8\s[6]I HAVE ALMOST FORGOTTEN ABOUT IT ALREADY!!! \w8\w8\w8\w8... \w8\w8\w8\w8... \w8\w8\w8\w8\s[4]...\e"
+			"\0\s[2]-GHK! \n\n\w8*Jazz seems caught off guard. \n\n\w8\w8\w8\s[1]HHHH... \w8\w8\s[40]I'M FINE! I'M FINE. YOU D-DON'T HAVE TO WORRY ABOUT ME! IT'S ALL IN GOOD HUMOR,\w4 RIGHT? \w8\w8\w8\w8\s[1]...RIGHT?..\e"
+			"\0\s[2]ARGH! \w8\s[1]... \w8\w8\w8\w8\s[40]I-IT'S OKAY! I KNOW YOU DID NOT MEAN THIS! I KNOW YOU WOULD NOT HURT ME ON PURPOSE,\w4 RIGHT? \w8\s[1]I-IN FACT! \w8\s[6]I HAVE ALMOST FORGOTTEN ABOUT IT ALREADY!!! \w8\w8\w8\w8... \w8\w8\w8\w8... \w8\w8\w8\w8\s[4]...\e"
 		}
 		
 
@@ -527,7 +571,7 @@ MouseDoubleClickSakura
 			
 			lovelove -= 10
 			"\0\s[2]HRK... \w8\w8\w8\s[4]HHHHHH...\e"
-			"\0\s[2]GHHH... \n\n\w8\w8\w8\s[4]*Jazz inhales sharply, bracing himself. \w8He needs a moment to remember how to breathe again.\e"
+			"\0\s[2]GHHH... \n\n\w8\w8\w8\s[4]*Jazz inhales sharply,\w4 bracing himself. \w8He needs a moment to remember how to breathe again.\e"
 			"\0\s[2]HRK... \n\n\w8\w8\w8\s[4]*Is it a crack you have heard?\e"
 			"\0\s[2]HRK... \n\n\w8\w8\w8\s[4]*Jazz winces. \w8You are almost sure you have heard a whimper.\e"
 		}
