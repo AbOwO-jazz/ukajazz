@@ -474,7 +474,7 @@ OnUpdateReady
 	
 	else 
 	{
-	"\0\s[0]LET ME SEE... \w8\s[5]THERE ARE %(reference[0]) NEW FILES! \w8NICE.\w8\e"
+	"\0\s[0]LET ME SEE... \w8\s[5]THERE ARE %(reference0) NEW FILES! \w8NICE.\w8\e"
 	
  }
  }

@@ -556,6 +556,29 @@ terrified
 	
 }
 
+badapology1
+{
+	"He makes a small nod, \w4looking away."
+	"\n\nI... \w8AT LEAST YOU FEEL BAD ABOUT IT, \w4RIGHT? \w8RIGHT..."
+	"He winces, \w4but nods in acknowledgement."
+	"He is not sure if you are being sincere... \w8but he accepts it, \w4anyway."
+	"\n\n...ALRIGHT. \w8I... \w8ALRIGHT."
+	"\n\n...I HOPE YOU REALLY MEAN IT."
+	"He gives you the smallest of smiles, \w4but still refuses to meet your gaze."
+	"\n\n%(username)... \w8..."
+	
+}
+
+worstapology
+{
+	"He cannot find it in himself to say anything... \w8but he still forgives you."
+	"Nothing happens. \w8But still, \w4you are forgiven."
+	"...You can feel the sins on your back being lifted."
+	"He is quiet. \w8Yet, \despite everything, \w4you feel as if you have been forgiven."
+	"He does not say anything, \w4and yet you feel your apology accepted."
+	"He looks away with a tiny nod, \w4granting you your forgiveness."
+}
+
 jazzlife
 {
 	"\n\n\w8\s[6]I ACTUALLY DO SLEEP,\w4 IN SHORT NAPS! \w8SOMETIMES I FALL ASLEEP WHILE STANDING,\w4 SO IT IS HARD TO CATCH."

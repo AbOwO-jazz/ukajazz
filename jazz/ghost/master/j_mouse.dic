@@ -416,7 +416,7 @@ MouseDoubleClickSakura
 	{
 		simplecounter += 1
 		
-		if beatbeat == 0
+		if punchpoints == 0
 		{
 		
 		if simplecounter == 1 
@@ -478,6 +478,7 @@ MouseDoubleClickSakura
 		
 		
 		beatbeat += 1
+		punchpoints += 1
 		badbad += 1
 		
 		if apology == 1
