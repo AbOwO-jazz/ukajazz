@@ -2411,7 +2411,7 @@ TalkConfig
 	--
 	"\f[bold,1]*Talk Rate:\f[bold,0] - every %(talktime) \f[sup,1](\q[Change it,talkinter])\f[sup,0]\n\n"
 	--
-	"\f[bold,1]%(jf)PAPYRUS:\f[bold,0] %(ifpapyrus) \f[sup,1](\q[Change it?,turnpapyrus])\f[sup,0]\n\n"
+	"\f[bold,1]PAPYRUS:\f[bold,0] %(ifpapyrus) \f[sup,1](\q[Change it?,turnpapyrus])\f[sup,0]\n\n"
 	--
 	"* %(petpet) times pet. %(beatbeat) times punched."
 	--
