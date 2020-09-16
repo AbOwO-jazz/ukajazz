@@ -40,6 +40,7 @@ OnFirstBoot
 	rocketgiven      = 0
 	rockgiven        = 0
 	simplecounter    = 0
+	ifpapyrus        = "OFF"
 	
 	
  	aitalkinterval = 400 
@@ -188,15 +189,15 @@ OnBoot
 	if dayslot == userbirthday && gotwhatscoming != 1 //Now we're getting into the if statements. These check what the date is and, if it's a certain value, displays special dialogue. Here, the if statement is looking at the dayslot value (which we just defined) and evaluating it using the == operator to see if it equals another value, in this case the value "userbirthday". Basically this is checking to see if it's the user's birthday.
 	
 	{
-		"\0\s[28]OH WAIT!!! \w8IT'S %(bornmonthprint) %(borndayprint)!\w8\s[5]HAPPY BIRTHDAY,\w4 %(username)!!!\e" 
+		"\0\s[28]%(jf)OH WAIT!!! \w8IT'S %(bornmonthprint) %(borndayprint)!\w8\s[5]HAPPY BIRTHDAY,\w4 %(username)!!!\e" 
 	}
 	
 	elseif dayslot == "5month 5day" //Like above, this if statement is checking the date. It's looking for the sixth month and the sixth day.
 	
 	
 	{
-		"\0\s[5]IT'S MY BIRTHDAY!!! \w8WOWIE. \w8HOW THE TIME FLIES!\e"
-		"\0\s[5]IT'S MY BIRTHDAY!!! \w8\s[24]I WOULD OFFER YOU A PIECE OF MY BIRTHDAY CAKE,\w4 BUT I HAVE NONE,\w4 SO THE CAKE WOULD BE A LIE.\e"
+		"\0\s[5]%(jf)IT'S MY BIRTHDAY!!! \w8WOWIE. \w8HOW THE TIME FLIES!\e"
+		"\0\s[5]%(jf)IT'S MY BIRTHDAY!!! \w8\s[24]I WOULD OFFER YOU A PIECE OF MY BIRTHDAY CAKE,\w4 BUT I HAVE NONE,\w4 SO THE CAKE WOULD BE A LIE.\e"
 
 	}
 	
@@ -214,21 +215,21 @@ normalboottalk
 {
 	if weekday == 6 
 	{
-		"\0\s[6]IT'S SATURDAY! \w8THAT MEANS IT'S WEEKEND! \w8THAT MEANS IT IS TIME TO GO AND BE WILD! \w8EMBRACE YOUR INNER ANIMAL THAT IS BARELY CONCEALED BY SOCIETAL NORMS! \w8LET IT RUN FREE!!!\e"
+		"\0\s[6]%(jf)IT'S SATURDAY! \w8THAT MEANS IT'S WEEKEND! \w8THAT MEANS IT IS TIME TO GO AND BE WILD! \w8EMBRACE YOUR INNER ANIMAL THAT IS BARELY CONCEALED BY SOCIETAL NORMS! \w8LET IT RUN FREE!!!\e"
 		}
 		
 		if weekday == 7 
 		{
-		"\0\s[6]IT'S SUNDAY AND I HOPE IT IS PROPERLY SUNNY AS THE NAME SUGGESTS! \w8\s[21]THOUGH HUMANS ARE REALLY BAD AT NAMING THINGS ACCORDINGLY.\e"
+		"\0\s[6]%(jf)IT'S SUNDAY AND I HOPE IT IS PROPERLY SUNNY AS THE NAME SUGGESTS! \w8\s[21]THOUGH HUMANS ARE REALLY BAD AT NAMING THINGS ACCORDINGLY.\e"
 		}
 		
 	elseif RAND(100) < 50 //What this does is choose a random number from 1-100, and then checks if that number is less than 40. If it's less than forty, then these dialogue pieces will occur. Remember, you can have multiple lines of dialogue within one set of brackets like this! You just need to make sure they're all enclosed in their own set of quotation marks.
 		{
-		"\0\s[0]HELLO AGAIN!\e"
+		"\0\s[0]%(jf)HELLO AGAIN!\e"
 	
-		"\0\s[0]OH! \w8AM I BACK HERE AGAIN?\e"
+		"\0\s[0]%(jf)OH! \w8AM I BACK HERE AGAIN?\e"
 	
-		"\0\s[0]AND HERE I COME AGAIN,\w4 SUMMONED BY SCIENCE AND DEDICATION...\e"
+		"\0\s[0]%(jf)AND HERE I COME AGAIN,\w4 SUMMONED BY SCIENCE AND DEDICATION...\e"
 		}
  	else
  	{
@@ -236,49 +237,49 @@ normalboottalk
 		if timeslot == "earlymorning" 
 		{
 			earlybird += 1
-		"\0\s[6]I SEE YOU ARE AN EARLY BIRD,\w4 LIKE ME! \w8\s[21]DID YOU GET ANY WORMS TODAY??? \w8GOOD WORMS? \w8LONG? \w8SQUISHY?\e"
+		"\0\s[6]%(jf)I SEE YOU ARE AN EARLY BIRD,\w4 LIKE ME! \w8\s[21]DID YOU GET ANY WORMS TODAY??? \w8GOOD WORMS? \w8LONG? \w8SQUISHY?\e"
 		
-		"\0\s[3]IT IS VERY EARLY,\w4 HUMAN...\w8\s[24]DON'T YOU WANT TO GO BACK TO SLEEP? \w8NO PRESSURE,\w4 BUT I AM JUST A TEENY WEENY BIT CONCERNED.\e"
+		"\0\s[3]%(jf)IT IS VERY EARLY,\w4 HUMAN...\w8\s[24]DON'T YOU WANT TO GO BACK TO SLEEP? \w8NO PRESSURE,\w4 BUT I AM JUST A TEENY WEENY BIT CONCERNED.\e"
 		
-		"\0\s[6]I BET IT'S STILL DARK OUTSIDE! \w8BUT I AM PROUD OF YOU FOR GETTING UP ANYWAY! \w8...\w8\w8\w8\s[1]YOU... YOU DIDN'T STAY UP ALL NIGHT,\w4 DID YOU???\e"
+		"\0\s[6]%(jf)I BET IT'S STILL DARK OUTSIDE! \w8BUT I AM PROUD OF YOU FOR GETTING UP ANYWAY! \w8...\w8\w8\w8\s[1]YOU... YOU DIDN'T STAY UP ALL NIGHT,\w4 DID YOU???\e"
 		}
 		elseif timeslot == "morning"
 		{
-		"\0\s[5]RISE AND SHINE! \w8OR! \w8WELL! \w8CRAWL OUT OF BED AND TRY TO NOT LOOK TOO MUCH LIKE A BLOB OF DARK MATTER! \w8FOR EACH THEIR OWN!\e"
+		"\0\s[5]%(jf)RISE AND SHINE! \w8OR! \w8WELL! \w8CRAWL OUT OF BED AND TRY TO NOT LOOK TOO MUCH LIKE A BLOB OF DARK MATTER! \w8FOR EACH THEIR OWN!\e"
 		
-		"\0\s[6]GOOD MORNING! \w8I HAVE A GOOD FEELING ABOUT TODAY! \w8\s[21]LET'S START BY NOT SPENDING ALL DAY STARING AT MY FACE. \w8IT IS DASHING,\w4 BUT NOT THAT DASHING.\e"
+		"\0\s[6]%(jf)GOOD MORNING! \w8I HAVE A GOOD FEELING ABOUT TODAY! \w8\s[21]LET'S START BY NOT SPENDING ALL DAY STARING AT MY FACE. \w8IT IS DASHING,\w4 BUT NOT THAT DASHING.\e"
 		}
 		elseif timeslot == "lunch"
 		{
-		"\0\s[5]I HOPE IT'S SUNNY NOW FOR YOU. \w8I LIKE THE SUN! \w8\s[21]PLEASE TAKE YOUR TIME TO PRAISE THE SUN EVERY NOW AND THEN.\e"
+		"\0\s[5]%(jf)I HOPE IT'S SUNNY NOW FOR YOU. \w8I LIKE THE SUN! \w8\s[21]PLEASE TAKE YOUR TIME TO PRAISE THE SUN EVERY NOW AND THEN.\e"
 		
-		"\0\s[24]I THINK NOW IT IS WHAT HUMANS CALL... \w8'LAUNCH TIME'. \w8I AM NOT SURE WHAT THE LAUNCH IS FOR,\w4 THOUGH! \w8\s[6]HOPEFULLY FOR SPACESHIPS.\e"
+		"\0\s[24]%(jf)I THINK NOW IT IS WHAT HUMANS CALL... \w8'LAUNCH TIME'. \w8I AM NOT SURE WHAT THE LAUNCH IS FOR,\w4 THOUGH! \w8\s[6]HOPEFULLY FOR SPACESHIPS.\e"
 		}
 		elseif timeslot == "afternoon"
 		{
-		"\0\s[0]GOOD AFTERNOON! \w8DID YOU DO ANYTHING FUN TODAY? \w8LIKE MEETING A DOG? \w8I HOPE YOU HAVE MET A DOG.\e"
+		"\0\s[0]%(jf)GOOD AFTERNOON! \w8DID YOU DO ANYTHING FUN TODAY? \w8LIKE MEETING A DOG? \w8I HOPE YOU HAVE MET A DOG.\e"
 		}
 		elseif timeslot == "evening"
 		{
- 		"\0\s[6]IT'S GETTING LATE... \w8I HOPE YOU ARE ALREADY HOME AND RESTING! \w8\s[21]OR AT LEAST YOU ARE ABOUT TO GO THERE. \w8IT MUST BE NICE TO HAVE A HOME YOU CAN RETURN TO.\e"
+ 		"\0\s[6]%(jf)IT'S GETTING LATE... \w8I HOPE YOU ARE ALREADY HOME AND RESTING! \w8\s[21]OR AT LEAST YOU ARE ABOUT TO GO THERE. \w8IT MUST BE NICE TO HAVE A HOME YOU CAN RETURN TO.\e"
 		}
 		elseif timeslot == "latenight"
 		{
 				earlybird += 1
- 		"\0\s[3]I HEARD HUMANS NEEDED TO SLEEP. \w8ISN'T THAT TRUE??? \w8HAVE I BEEN LIED TO????? \w8\s[24]NEXT THING YOU'LL SAY IS THAT HUMANS DID NOT DESCEND FROM SKELETONS????\e"
+ 		"\0\s[3]%(jf)I HEARD HUMANS NEEDED TO SLEEP. \w8ISN'T THAT TRUE??? \w8HAVE I BEEN LIED TO????? \w8\s[24]NEXT THING YOU'LL SAY IS THAT HUMANS DID NOT DESCEND FROM SKELETONS????\e"
 		
- 		"\0\s[3]IT'S VERY LATE,\w4 HUMAN... \w8I APPRECIATE YOU CHECKING ON ME,\w4 BUT,\w4 SERIOUSLY,\w4 WHAT ARE YOU DOING UP SO LATE??\e"
+ 		"\0\s[3]%(jf)IT'S VERY LATE,\w4 HUMAN... \w8I APPRECIATE YOU CHECKING ON ME,\w4 BUT,\w4 SERIOUSLY,\w4 WHAT ARE YOU DOING UP SO LATE??\e"
 		
- 		"\0\s[7]I AM NOT YOUR 'MOM',\w4 BUT YOU'D BETTER GO TO YOUR 'BED' AND HAVE SOME 'SLEEP' BEFORE I 'GROUND' YOU!!!!\e"
+ 		"\0\s[7]%(jf)I AM NOT YOUR 'MOM',\w4 BUT YOU'D BETTER GO TO YOUR 'BED' AND HAVE SOME 'SLEEP' BEFORE I 'GROUND' YOU!!!!\e"
 		}
 		else 
 		{
 				earlybird += 1
-		"\0\s[7]...YOUR SLEEPING SCHEDULE MAKES ME GENUINELY CONCERNED!!!\e"
+		"\0\s[7]%(jf)...YOUR SLEEPING SCHEDULE MAKES ME GENUINELY CONCERNED!!!\e"
 		
- 		"\0\s[7]HUMAN!!! \w8YOU ARE! \w8SUPPOSED TO BE SLEEPING RIGHT NOW! \w8I CAN TELL!!!\e"
+ 		"\0\s[7]%(jf)HUMAN!!! \w8YOU ARE! \w8SUPPOSED TO BE SLEEPING RIGHT NOW! \w8I CAN TELL!!!\e"
 		
- 		"\0\s[7]DON'T YOU HAVE ANYTHING BETTER TO DO? \w8LIKE,\w4 SLEEP???\e"
+ 		"\0\s[7]%(jf)DON'T YOU HAVE ANYTHING BETTER TO DO? \w8LIKE,\w4 SLEEP???\e"
 		}
 	}
 }
@@ -301,51 +302,51 @@ OnClose
 		{
 			if RAND(100) < 50 
 			{
-				"\0\s[31]SEE YOU LATER!\w8\w8"
+				"\0\s[31]%(jf)SEE YOU LATER!\w8\w8"
 			}
 			else
 			{
 			if timeslot == "earlymorning"
 				{
-					"\0\s[6]GOING BACK TO SLEEP? \w8OR GOING TO WORK? \w8ANYWAY,\w4 I WISH YOU GOOD LUCK WITH THAT!\w8\w8"
+					"\0\s[6]%(jf)GOING BACK TO SLEEP? \w8OR GOING TO WORK? \w8ANYWAY,\w4 I WISH YOU GOOD LUCK WITH THAT!\w8\w8"
 					
-					"\0\s[0]OKAY! \w8I GUESS I WILL GO FOR A WALK. \w8GET SOME FRESH AIR IN BETWEEN THOSE BONES.\w8\w8"
+					"\0\s[0]%(jf)OKAY! \w8I GUESS I WILL GO FOR A WALK. \w8GET SOME FRESH AIR IN BETWEEN THOSE BONES.\w8\w8"
 				}
 			elseif timeslot == "morning"
  				{
- 					"\0\s[5]HAVE A NICE DAY! \w8I KNOW YOU WILL DO YOUR BEST!\w8\w8"
+ 					"\0\s[5]%(jf)HAVE A NICE DAY! \w8I KNOW YOU WILL DO YOUR BEST!\w8\w8"
  				}
  			elseif timeslot == "lunch"
  				{
- 					"\0\s[4]I SUGGEST YOU GO FORAGE FOR FOOD,\w4 HUMAN. \w8YOU HAVE TO LOOK AFTER YOUR WEAK HUMAN BODY,\w4 AFTER ALL!\w8\w8"
+ 					"\0\s[4]%(jf)I SUGGEST YOU GO FORAGE FOR FOOD,\w4 HUMAN. \w8YOU HAVE TO LOOK AFTER YOUR WEAK HUMAN BODY,\w4 AFTER ALL!\w8\w8"
 					
- 					"\0\s[24]OKAY! \w8BYE! \w8I GUESS I WILL GO EAT SOMETHING,\w4 MYSELF...\w8\w8"
+ 					"\0\s[24]%(jf)OKAY! \w8BYE! \w8I GUESS I WILL GO EAT SOMETHING,\w4 MYSELF...\w8\w8"
  				}
  			elseif timeslot == "afternoon"
  				{
- 					"\0\s[5]HAVE A NICE EVENING!\w8\w8"
+ 					"\0\s[5]%(jf)HAVE A NICE EVENING!\w8\w8"
 					
- 					"\0\s[31]HAVE FUN IN THE REST OF YOUR DAY,\w4 HUMAN!\w8\w8"
+ 					"\0\s[31]%(jf)HAVE FUN IN THE REST OF YOUR DAY!\w8\w8"
  				}
   			elseif timeslot == "evening"
  				{
  						
- 					"\0\s[4]DON'T STAY UP TOO LATE!\w8\w8"
+ 					"\0\s[4]%(jf)DON'T STAY UP TOO LATE!\w8\w8"
 							
- 					"\0\s[31]GOOD NIGHT!\w8\w8"
+ 					"\0\s[31]%(jf)GOOD NIGHT!\w8\w8"
  						
  				}
 			elseif timeslot == "latenight"
 			 	{
  						
- 					"\0\s[4]I SEE YOU ARE FINALLY GOING TO SLEEP! GOOD NIGHT!\w8\w8"
+ 					"\0\s[4]%(jf)I SEE YOU ARE FINALLY GOING TO SLEEP! GOOD NIGHT!\w8\w8"
 						
-					"\0\s[24]TRY TO GET SOME DECENT SLEEP! IT IS VERY LATE,\w4 AFTER ALL...\w8\w8"
+					"\0\s[24]%(jf)TRY TO GET SOME DECENT SLEEP! IT IS VERY LATE,\w4 AFTER ALL...\w8\w8"
  				}
 			else 
  				{
  						
-					"\0\s[0]GOOD NIGHT,\w4 HUMAN! \w8\s[6]THE SPOOKIEST HOUR IS THE SLEEPIEST HOUR!\w8\w8"
+					"\0\s[0]%(jf)GOOD NIGHT! \w8\s[6]THE SPOOKIEST HOUR IS THE SLEEPIEST HOUR!\w8\w8"
 					
 				}
 			}
@@ -365,17 +366,17 @@ OnClose
 
 		if badbad <= 5
 		{
- 		"\0\s[31]I'D LIKE TO SPEND MORE TIME WITH YOU,\w4 BUT IF YOU SAY SO,\w4 GOODBYE!\w8\w8"
+ 		"\0\s[31]%(jf)I'D LIKE TO SPEND MORE TIME WITH YOU,\w4 BUT IF YOU SAY SO,\w4 GOODBYE!\w8\w8"
 		}
-		if badbad > 10 || apology > 5
+		if badbad > 20 
 		{
-		"\0\s[4]OH,\w4 UM,\w4 AS YOU WISH.\w8\w8"
+		"\0\s[4]%(jf)OH,\w4 UM,\w4 AS YOU WISH.\w8\w8"
 		"\0\s[4]*He suppresses a relieved sigh.\w8\w8"
-		"\0\s[4]BYE!..\w8\w8"
+		"\0\s[4]%(jf)BYE!..\w8\w8"
 		}
-		"\0\s[3]HUH,\w4 OKAY...\w8\w8"
-		"\0\s[3]THAT WAS QUICK...\w8\w8"
-		"\0\s[3]OH,\w4 ALREADY?..\w8\w8"
+		"\0\s[3]%(jf)HUH,\w4 OKAY...\w8\w8"
+		"\0\s[3]%(jf)THAT WAS QUICK...\w8\w8"
+		"\0\s[3]%(jf)OH,\w4 ALREADY?..\w8\w8"
  	}
 	}
  	--
@@ -426,9 +427,9 @@ OnGhostChanging
 		else 
 		{
 		
-		 "\0\s[24]SURE!\w8\w8\e"
+		 "\0\s[24]%(jf)SURE!\w8\w8\e"
 		
-		"\0\s[6]OKAY,\w4 I WILL RELOAD IN A %(timeper)!\w8\w8\e"
+		"\0\s[6]%(jf)OKAY,\w4 I WILL RELOAD IN A %(timeper)!\w8\w8\e"
 		}
 		
 	}
@@ -452,19 +453,19 @@ OnGhostChanging
 		if reference0 == "sans"  || reference0 == "Underfell Sans" || reference0 == "Sans"
 		{
 			reference0 = TOUPPER(reference0)
-			"\0\s[5]OH,\w4 IT IS %(reference0)! \w8I AM LEAVING YOU IN GOOD HANDS!\w8\w8\e"
+			"\0\s[5]%(jf)OH,\w4 IT IS %(reference0)! \w8I AM LEAVING YOU IN GOOD HANDS!\w8\w8\e"
 		}
 		
 		if reference0 == "gaster" || reference0 == "Dr. W.D. Gaster" || reference0 == "Gaster" 
 		{
 			reference0 = TOUPPER(reference0)
-			"\0\s[1]...GOOD LUCK WITH %(reference0). \w8TRY NOT TO MAKE THEM ANGRY...\w8\w8\e"
+			"\0\s[1]%(jf)...GOOD LUCK WITH %(reference0). \w8TRY NOT TO MAKE THEM ANGRY...\w8\w8\e"
 		}
 		
 		else 
 		{
 		reference0 = TOUPPER(reference0)
-		"\0\s[31]BYE,\w4 %(username)! \w8HAVE FUN WITH %(reference0)!\w8\w8\e"
+		"\0\s[31]%(jf)BYE,\w4 %(username)! \w8HAVE FUN WITH %(reference0)!\w8\w8\e"
 		}
 		}
 	}
@@ -488,8 +489,8 @@ OnGhostChanged
 		}
 		else 
 		{
-		"\0\s[3]...I FEEL PARTICULARLY STRANGE,\w4 BUT I AM NOT SURE WHY?..\e"
-		"\0\s[3]...I AM NOT SURE WHAT JUST HAPPENED,\w4 BUT THAT'S NORMAL.\e"
+		"\0\s[3]%(jf)...I FEEL PARTICULARLY STRANGE,\w4 BUT I AM NOT SURE WHY?..\e"
+		"\0\s[3]%(jf)...I AM NOT SURE WHAT JUST HAPPENED,\w4 BUT THAT'S NORMAL.\e"
 		}
 	}
 	else 
@@ -508,19 +509,19 @@ OnGhostChanged
 		if reference0 == "sans"  || reference0 == "Underfell Sans" || reference0 == "Sans"
 		{
 			reference0 = TOUPPER(reference0)
-			"\0\s[5]GOODBYE,\w4 %(reference0)! \w8\s[24]I HOPE HE DID NOT LEAVE ANY SOCKS AROUND HERE.\e"
+			"\0\s[5]%(jf)GOODBYE,\w4 %(reference0)! \w8\s[24]I HOPE HE DID NOT LEAVE ANY SOCKS AROUND HERE.\e"
 		}
 		
 		if reference0 == "gaster" || reference0 == "Dr. W.D. Gaster" || reference0 == "Gaster" 
 		{
 			reference0 = TOUPPER(reference0)
-			"\0\s[1]GOODBYE,\w4 %(reference0)...\w8ARE YOU OKAY,\w4 %(username)?\w8I HOPE YOU ARE...\e"
+			"\0\s[1]%(jf)GOODBYE,\w4 %(reference0)...\w8ARE YOU OKAY,\w4 %(username)?\w8I HOPE YOU ARE...\e"
 		}
 		
 		else 
 		{
 			reference0 = TOUPPER(reference0)
-		"\0\s[5]GOODBYE,\w4 %(reference0)! \w8AND HELLO %(username)!\e"
+		"\0\s[5]%(jf)GOODBYE,\w4 %(reference0)! \w8AND HELLO %(username)!\e"
 		}
 		    }
 	}

@@ -17,29 +17,29 @@ OpenSakuraMenu
 			
 		if totappoints > 30 || badbad > 10 
 		{
-			"\0\s[4]\b2...DO YOU NEED SOMETHING?"
-			"\0\s[4]\b2...I'LL BE RIGHT AT IT."
-			"\0\s[4]\b2OH,\w4 UM... CAN I HELP YOU?"
-			"\0\s[4]\b2OKAY?.."
+			"\0\s[4]\b2%(jf)...DO YOU NEED SOMETHING?%(df)"
+			"\0\s[4]\b2%(jf)...I'LL BE RIGHT AT IT.%(df)"
+			"\0\s[4]\b2%(jf)OH,\w4 UM... CAN I HELP YOU?%(df)"
+			"\0\s[4]\b2%(jf)OKAY?..%(df)"
 		}
 		
 		
 		if jazzlover == 1 || jazzfriend == 1 && badbad < 3
 		{
-			"\0\s[5]\b2HI!!! CAN I HELP?"
-			"\0\s[5]\b2I'LL BE RIGHT AT IT!!!"
-			"\0\s[5]\b2I'LL BE HAPPY TO HELP YOU!!!"
-			"\0\s[5]\b2I'LL DO MY BEST FOR YOU!!!"
+			"\0\s[5]\b2%(jf)HI!!! CAN I HELP?%(df)"
+			"\0\s[5]\b2%(jf)I'LL BE RIGHT AT IT!!!%(df)"
+			"\0\s[5]\b2%(jf)I'LL BE HAPPY TO HELP YOU!!!%(df)"
+			"\0\s[5]\b2%(jf)I'LL DO MY BEST FOR YOU!!!%(df)"
 			
 		}
 		
 		
-		"\0\s[0]\b2DID YOU WANT SOMETHING?"
-		"\0\s[0]\b2JUST TELL ME IF YOU NEED ANY HELP!"
-		"\0\s[0]\b2DON'T HESITATE TO ASK ME IF YOU NEED ANYTHING!"
-		"\0\s[0]\b2I CAN DO MANY THINGS! PROMISE!"
-		"\0\s[0]\b2ASK,\w4 AND YOU SHALL RECEIVE!"
-		"\0\s[0]\b2HELLO! WHAT DO YOU WANT?"
+		"\0\s[0]\b2%(jf)DID YOU WANT SOMETHING?%(df)"
+		"\0\s[0]\b2%(jf)JUST TELL ME IF YOU NEED ANY HELP!%(df)"
+		"\0\s[0]\b2%(jf)DON'T HESITATE TO ASK ME IF YOU NEED ANYTHING!%(df)"
+		"\0\s[0]\b2%(jf)I CAN DO MANY THINGS! PROMISE!%(df)"
+		"\0\s[0]\b2%(jf)ASK, AND YOU SHALL RECEIVE!%(df)"
+		"\0\s[0]\b2%(jf)HELLO! WHAT DO YOU WANT?%(df)"
 		
 		}
 		--
@@ -186,15 +186,15 @@ Select.inputsmth
 	}
 	if badbad > 6 || totappoints > 30
 	{
-		"\w8\s[4]\n\nUM... \w8AND WHAT IS IT?"
+		"\w8\s[4]%(jf)\n\nUM... \w8AND WHAT IS IT?%(df)"
 	}
 	if lovelove > 50
 	{
-		"\w8\n\n\s[22]OH? \w8AND WHAT IS IT?"
+		"\w8\n\n\s[22]%(jf)OH? \w8AND WHAT IS IT?%(df)"
 	}
 	if jazzfriend == 1 || jazzlover == 1
 	{
-		"\w8\n\n\s[22]OH!!! I AM ALL EARS! \w8BONEY, BONEY EARS!!!"
+		"\w8\n\n\s[22]%(jf)OH!!! I AM ALL EARS! \w8BONEY, BONEY EARS!!!%(df)"
 	}
 	else
 	{
@@ -215,32 +215,32 @@ OnChatterbox
 		{
 			lovelove += 1
 			badbad -= 1
-			"\0\s[21]OH!!! \w8\s[6]BUT THEN AGAIN,\w4 WHO DOESN'T? \w8IT IS VERY SWEET OF YOU,\w4 THOUGH!%(ConvCancel)\e"
-			"\0\s[21]AW!!! \w8THANK YOU!!! \w8YOU ARE SO SWEET!!! \w8\s[5]AND ALSO YOU HAVE A VERY GOOD TASTE,\w4 %(username)!%(ConvCancel)\e"
+			"\0\s[21]%(jf)OH!!! \w8\s[6]BUT THEN AGAIN,\w4 WHO DOESN'T? \w8IT IS VERY SWEET OF YOU,\w4 THOUGH!%(ConvCancel)\e"
+			"\0\s[21]%(jf)AW!!! \w8THANK YOU!!! \w8YOU ARE SO SWEET!!! \w8\s[5]AND ALSO YOU HAVE A VERY GOOD TASTE,\w4 %(username)!%(ConvCancel)\e"
 		}
 		
 		if badbad > 6 || totappoints > 30
 		{
 			lovelove += 1
 			badbad -= 1
-			"\0\s[25]OH! \w8\s[1]THANK YOU??? \w8I GUESS???%(ConvCancel)\e"
-			"\0\s[25]OH MY... \w8\s[1]UM,\w4 THANK YOU!%(ConvCancel)\e"
+			"\0\s[25]%(jf)OH! \w8\s[1]THANK YOU??? \w8I GUESS???%(ConvCancel)\e"
+			"\0\s[25]%(jf)OH MY... \w8\s[1]UM,\w4 THANK YOU!%(ConvCancel)\e"
 		}
 		
 		if badbad > 50 || totappoints > 50
 		{
-			"\0\s[4]UM... \w8ARE YOU SURE?%(ConvCancel)\e"
-			"\0\s[4]...%(ConvCancel)\e"
-			"\0\s[4]*He looks away.%(ConvCancel)\e"
+			"\0\s[4]%(jf)UM... \w8ARE YOU SURE?%(ConvCancel)\e"
+			"\0\s[4]%(jf)...%(ConvCancel)\e"
+			"\0\s[4]%(jf)*He looks away.%(ConvCancel)\e"
 		}
 		
 		if jazzfriend == 1 || jazzlover == 1
 		{
 			lovelove += 1
 			badbad -= 1
-			"\0\s[5]I LOVE YOU TOO,\w4 %(username)!%(ConvCancel)\e"
-			"\0\s[5]RIGHT BACK AT YOU,\w4 %(username)!%(ConvCancel)\e"
-			"\0\s[5]%(username)! \w8THANK YOU!!! \w8I LOVE YOU TOO!!!%(ConvCancel)\e"
+			"\0\s[5]%(jf)I LOVE YOU TOO,\w4 %(username)!%(ConvCancel)\e"
+			"\0\s[5]%(jf)RIGHT BACK AT YOU,\w4 %(username)!%(ConvCancel)\e"
+			"\0\s[5]%(jf)%(username)! \w8THANK YOU!!! \w8I LOVE YOU TOO!!!%(ConvCancel)\e"
 		}
 				
 	}
@@ -253,18 +253,18 @@ OnChatterbox
 		{
 			
 			badbad += 1
-			"\0\s[8]...SORRY? \w8DID I DO SOMETHING WRONG?%(ConvCancel)\e"
-			"\0\s[3]I,\w4 UM... \w8I AM NOT SURE... \w8WHY?%(ConvCancel)\e"
-			"\0\s[8]I'M,\w4 UM,\w4 I'M SORRY? \w8THOUGH I'M NOT SURE WHAT I DID WRONG...%(ConvCancel)\e"
-			"\0\s[3].....ARE YOU SPEAKING TO ME???%(ConvCancel)\e"
+			"\0\s[8]%(jf)...SORRY? \w8DID I DO SOMETHING WRONG?%(ConvCancel)\e"
+			"\0\s[3]%(jf)I,\w4 UM... \w8I AM NOT SURE... \w8WHY?%(ConvCancel)\e"
+			"\0\s[8]%(jf)I'M,\w4 UM,\w4 I'M SORRY? \w8THOUGH I'M NOT SURE WHAT I DID WRONG...%(ConvCancel)\e"
+			"\0\s[3]%(jf).....ARE YOU SPEAKING TO ME???%(ConvCancel)\e"
 		}
 		
 		if badbad > 6 || totappoints > 30
 		{
 			
 			badbad += 1
-			"\0\s[29]............SORRY?..%(ConvCancel)\e"
-			"\0\s[4]...THAT WOULD EXPLAIN THINGS,\w4 YES.%(ConvCancel)\e"
+			"\0\s[29]%(jf)............SORRY?..%(ConvCancel)\e"
+			"\0\s[4]%(jf)...THAT WOULD EXPLAIN THINGS,\w4 YES.%(ConvCancel)\e"
 		}
 		
 		if badbad > 50 || totappoints > 50
@@ -280,9 +280,9 @@ OnChatterbox
 		{
 			
 			badbad += 1
-			"\0\s[1]......WHAT.%(ConvCancel)\e"
-			"\0\s[1]...IS IT A SLANG FOR 'I LOVE YOU VERY MUCH'??%(ConvCancel)\e"
-			"\0\s[1]...HUMAN. \w8I THINK YOU MISSPELLED 'LOVE'. \w8YOU MADE THREE MISTAKES. \w8YOU SHOULD REALLY WORK ON YOUR SPELLING.%(ConvCancel)\e"
+			"\0\s[1]%(jf)......WHAT.%(ConvCancel)\e"
+			"\0\s[1]%(jf)...IS IT A SLANG FOR 'I LOVE YOU VERY MUCH'??%(ConvCancel)\e"
+			"\0\s[1]%(jf)...HUMAN. \w8I THINK YOU MISSPELLED 'LOVE'. \w8YOU MADE THREE MISTAKES. \w8YOU SHOULD REALLY WORK ON YOUR SPELLING.%(ConvCancel)\e"
 		}
 		
 		
@@ -296,23 +296,23 @@ OnChatterbox
 		{
 			lovelove += 1
 			badbad -= 1
-			"\0\s[5]RIGHT BACK AT YOU,\w4 %(username)!!! \w8IN FACT!!! \w8\s[6]IF I DID NOT HAVE SUCH AMAZING PEOPLE SKILLS,\w4 I WOULD THINK THAT YOU WERE GIVING A PEP TALK TO A MIRROR!%(ConvCancel)\e"
-			"\0\s[21]AW,\w4 THANK YOU!!! \w8\s[6]I GUESS I HAVEN'T BEEN UPKEEPING MY PERSONALITY ALL FOR NOTHING.%(ConvCancel)\e"
-			"\0\s[20]%(username),\w4 %(reference0) TOO!%(ConvCancel)\e"
+			"\0\s[5]%(jf)RIGHT BACK AT YOU,\w4 %(username)!!! \w8IN FACT!!! \w8\s[6]IF I DID NOT HAVE SUCH AMAZING PEOPLE SKILLS,\w4 I WOULD THINK THAT YOU WERE GIVING A PEP TALK TO A MIRROR!%(ConvCancel)\e"
+			"\0\s[21]%(jf)AW,\w4 THANK YOU!!! \w8\s[6]I GUESS I HAVEN'T BEEN UPKEEPING MY PERSONALITY ALL FOR NOTHING.%(ConvCancel)\e"
+			"\0\s[20]%(jf)%(username),\w4 %(reference0) TOO!%(ConvCancel)\e"
 		}
 		
 		if badbad > 6 || apology > 6
 		{
 			lovelove += 1
 			badbad -= 1
-			"\0\s[25]OH! \w8\s[32]IT IS SURPRISING TO HEAR,\w4 BUT THANK YOU!%(ConvCancel)\e"
-			"\0\s[28]...WOW. \w8THANKS?..%(ConvCancel)\e"
-			"\0\s[28]OH... \w8\s[1]UM,\w4 THANK YOU? \w8\s[32]SORRY,\w4 I DID NOT EXPECT TO HEAR THIS FROM YOU.%(ConvCancel)\e"
+			"\0\s[25]%(jf)OH! \w8\s[32]IT IS SURPRISING TO HEAR,\w4 BUT THANK YOU!%(ConvCancel)\e"
+			"\0\s[28]%(jf)...WOW. \w8THANKS?..%(ConvCancel)\e"
+			"\0\s[28]%(jf)OH... \w8\s[1]UM,\w4 THANK YOU? \w8\s[32]SORRY,\w4 I DID NOT EXPECT TO HEAR THIS FROM YOU.%(ConvCancel)\e"
 		}
 		
 		if badbad > 50 
 		{
-			"\0\s[4]OH. \w8UM...%(ConvCancel)\e"
+			"\0\s[4]%(jf)OH. \w8UM...%(ConvCancel)\e"
 			"\0\s[4]...%(ConvCancel)\e"
 			"\0\s[4]*He winces...%(ConvCancel)\e"
 			"\0\s[4]*He does not seem to agree with the sentiment.%(ConvCancel)\e"
@@ -322,8 +322,8 @@ OnChatterbox
 		{
 			lovelove += 1
 			badbad -= 1
-			"\0\s[5]%(reference0) TOO! \w8BUT A HUNDRED TIMES MORE!!!%(ConvCancel)\e"
-			"\0\s[5]OH!! \w8THANK YOU,\w4 %(username)! \w8\s[6]AND,\w4 SINCE YOU ARE MY FRIEND,\w4 AND MY FRIENDS CANNOT BE WORSE THAN ME,\w4 YOU ARE JUST THE SAME!!!%(ConvCancel)\e"
+			"\0\s[5]%(jf)%(reference0) TOO! \w8BUT A HUNDRED TIMES MORE!!!%(ConvCancel)\e"
+			"\0\s[5]%(jf)OH!! \w8THANK YOU,\w4 %(username)! \w8\s[6]AND,\w4 SINCE YOU ARE MY FRIEND,\w4 AND MY FRIENDS CANNOT BE WORSE THAN ME,\w4 YOU ARE JUST THE SAME!!!%(ConvCancel)\e"
 			"\0\s[20]*Jazz nods so furiously that his skull almost comes undone.%(ConvCancel)\e"
 		}
 				
@@ -336,16 +336,17 @@ OnChatterbox
 		{
 			
 			badbad += 1
-			"\0\s[3]...HUMAN,\w4 I THINK YOU NEED TO HAVE YOUR HUMAN EYESIGHT CHECKED. \w8I THINK SOMETHING WENT WRONG WITH IT SOMEWHERE AT SOME POINT.%(ConvCancel)\e"
-			"\0\s[8]...I GUESS WE CAN AGREE TO DISAGREE IF YOU AGREE TO AGREE THAT YOU ARE REALLY REALLY WRONG.%(ConvCancel)\e"
+			"\0\s[3]%(jf)...I THINK YOU NEED TO HAVE YOUR HUMAN EYESIGHT CHECKED. \w8I THINK SOMETHING WENT WRONG WITH IT SOMEWHERE AT SOME POINT.%(ConvCancel)\e"
+			"\0\s[8]%(jf)...I GUESS WE CAN AGREE TO DISAGREE IF YOU AGREE TO AGREE THAT YOU ARE REALLY REALLY WRONG.%(ConvCancel)\e"
+			"\0\s[3]%(jf)...EITHER YOU HAVE AN AWFUL SELF ESTEEM, \w4\s[6]OR YOU HAVE AN AWFUL EYESIGHT \s[3]AND BOTH ARE KIND OF SAD.%(ConvCancel)\e"
 		}
 		
 		if badbad > 6 || totappoints > 30
 		{
 			
 			badbad += 1
-			"\0\s[3]...%(ConvCancel)\e"
-			"\0\s[8]IS THAT... \w8WHAT YOU REALLY THINK ABOUT ME?%(ConvCancel)\e"
+			"\0\s[3]%(jf)...%(ConvCancel)\e"
+			"\0\s[8]%(jf)IS THAT... \w8WHAT YOU REALLY THINK ABOUT ME?%(ConvCancel)\e"
 		}
 		
 		if badbad > 50 || totappoints > 50 
@@ -354,7 +355,7 @@ OnChatterbox
 			badbad += 1
 			"\0\s[4]*Jazz winces,\w4 as if hit,\w4 and his head lowers just a little.%(ConvCancel)\e"
 			"\0\s[4]*Jazz whimpers...%(ConvCancel)\e"
-			"\0\s[4]I,\w4 UM... \w8BUT... \w8WHY?...%(ConvCancel)\e"
+			"\0\s[4]%(jf)I,\w4 UM... \w8BUT... \w8WHY?...%(ConvCancel)\e"
 		}
 		
 		if jazzfriend == 1 || jazzlover == 1
@@ -362,8 +363,8 @@ OnChatterbox
 			
 			badbad += 1
 			"\0\s[3]*Jazz seems genuinely confused... \w8if not a little shocked.%(ConvCancel)\e"
-			"\0\s[8]...WOW. \w8YOU CHANGE YOUR MIND FAST...%(ConvCancel)\e"
-			"\0\s[3]...WHY? \w8WHAT DID I DO WRONG?%(ConvCancel)\e"
+			"\0\s[8]%(jf)...WOW. \w8YOU CHANGE YOUR MIND FAST...%(ConvCancel)\e"
+			"\0\s[3]%(jf)...WHY? \w8WHAT DID I DO WRONG?%(ConvCancel)\e"
 		}
 				
 	}
@@ -373,13 +374,13 @@ OnChatterbox
 		
 			
 			badbad += 5
-			"\0\s[43]!!! \w8\w8\w8\s[1]...I HAVE NO IDEA WHO IT IS.%(ConvCancel)\e"
-			"\0\s[43]! \w8\w8\w8\s[1]...%(ConvCancel)\e"
-			"\0\s[43]!! \w8\w8\w8\s[1]...I,\w4 UM,\w4 I DON'T KNOW WHAT YOU ARE TALKING ABOUT.%(ConvCancel)\e"
-			"\0\s[43]!!! \w8\w8\w8\s[1]NO...%(ConvCancel)\e"
-			"\0\s[43]! \w8\w8\w8\s[1]PLEASE... \w8\w8\w8STOP...%(ConvCancel)\e"
-			"\0\s[43]!!! \w8\w8\w8\s[1]NO,\w4 IT'S... \w8\w8\w8NO...%(ConvCancel)\e"
-			"\0\s[43]!! \w8\w8\w8\s[1]\n\n*He whimpers,\w4 terrified for some reason.%(ConvCancel)\e"
+			"\0\s[43]%(jf)!!! \w8\w8\w8\s[1]...I HAVE NO IDEA WHO IT IS.%(ConvCancel)\e"
+			"\0\s[43]%(jf)! \w8\w8\w8\s[1]...%(ConvCancel)\e"
+			"\0\s[43]%(jf)!! \w8\w8\w8\s[1]...I,\w4 UM,\w4 I DON'T KNOW WHAT YOU ARE TALKING ABOUT.%(ConvCancel)\e"
+			"\0\s[43]%(jf)!!! \w8\w8\w8\s[1]NO...%(ConvCancel)\e"
+			"\0\s[43]%(jf)! \w8\w8\w8\s[1]PLEASE... \w8\w8\w8STOP...%(ConvCancel)\e"
+			"\0\s[43]%(jf)!!! \w8\w8\w8\s[1]NO,\w4 IT'S... \w8\w8\w8NO...%(ConvCancel)\e"
+			"\0\s[43]%(jf)!! \w8\w8\w8\s[1]\n\n%(df)*He whimpers,\w4 terrified for some reason.%(ConvCancel)\e"
 						
 	}
 	
@@ -395,18 +396,18 @@ OnChatterbox
 	elseif reference0 == "HELLO" || reference0 == "HI"
 	{
 		
-		"\0\s[31]HI!%(ConvCancel)\e"
-		"\0\s[31]HELLO!%(ConvCancel)\e"
-		"\0\s[31]%(reference0) TO YOU TOO!%(ConvCancel)\e"
+		"\0\s[31]%(jf)HI!%(ConvCancel)\e"
+		"\0\s[31]%(jf)HELLO!%(ConvCancel)\e"
+		"\0\s[31]%(jf)%(reference0) TO YOU TOO!%(ConvCancel)\e"
 				
 	}
 	
 	elseif reference0 == "BYE" || reference0 == "GOODBYE"
 	{
 		
-		"\0\s[31]BYE!%(ConvCancel)\e"
-		"\0\s[31]BYE-BYE!%(ConvCancel)\e"
-		"\0\s[31]%(reference0) TO YOU TOO!%(ConvCancel)\e"
+		"\0\s[31]%(jf)BYE!%(ConvCancel)\e"
+		"\0\s[31]%(jf)BYE-BYE!%(ConvCancel)\e"
+		"\0\s[31]%(jf)%(reference0) TO YOU TOO!%(ConvCancel)\e"
 				
 	}
 	
@@ -488,7 +489,7 @@ Select.backstory
 	if badbad <= 6
 	{
 		
-		"\0\s[0]*You ask Jazz to talk about himself. \w8%(idlejazz) %(jazzlife)\n\n\w8*Curious.%(ConvCancel)\e"
+		"\0\s[0]*You ask Jazz to talk about himself. \w8%(idlejazz) %(jf)%(jazzlife)\n\n\w8%(df)*Curious.%(ConvCancel)\e"
 		
 		if jazzlover == 1 || jazzfriend == 1 
 	   {
@@ -496,15 +497,15 @@ Select.backstory
 		{
 		truebackstory = 1
 		badbad += 1
-		"\0\s[0]*You ask Jazz to talk about himself. \w8You tell him you know about his letter. \w8He tries to ignore you. \w8You ask Jazz if there is something he is not telling you about it. \w8\s[1]He fidgets. \w8You tell him that you understand that it is private,\w4 but if he wants to talk about it,\w4 you are here to listen.. \w8\w8\w8\s[29]... \w8\w8\w8He sighs. \w8He seems resolved... \x\c\s[4]I... \w8OKAY. \w8I'VE BEEN GIVEN IT IN THE LAB. \w8ME AND MY BROTHER. \w8WE LOOKED MORE ALIKE WHEN WE WERE LITTLE,\w4 SO THEY GAVE US LETTERS TO DIFFERENTIATE. \w8THEY NEEDED US FOR... \w8\s[1]TESTING. \w8MOSTLY. \w8MANY... \w8KINDS OF TESTING. \w8\s[9]BUT WE RAN AWAY. \w8\w8\w8TOGETHER. \w8\w8\w8... \w8\w8\w8I HOPE THAT WAS ENOUGH. \w8I DON'T LIKE REMEMBERING.%(ConvCancel)\e"
+		"\0\s[0]*You ask Jazz to talk about himself. \w8You tell him you know about his letter. \w8He tries to ignore you. \w8You ask Jazz if there is something he is not telling you about it. \w8\s[1]He fidgets. \w8You tell him that you understand that it is private,\w4 but if he wants to talk about it,\w4 you are here to listen.. \w8\w8\w8\s[29]... \w8\w8\w8He sighs. \w8He seems resolved... \x\c\s[4]%(jf)I... \w8OKAY. \w8I'VE BEEN GIVEN IT IN THE LAB. \w8ME AND MY BROTHER. \w8WE LOOKED MORE ALIKE WHEN WE WERE LITTLE,\w4 SO THEY GAVE US LETTERS TO DIFFERENTIATE. \w8THEY NEEDED US FOR... \w8\s[1]TESTING. \w8MOSTLY. \w8MANY... \w8KINDS OF TESTING. \w8\s[9]BUT WE RAN AWAY. \w8\w8\w8TOGETHER. \w8\w8\w8... \w8\w8\w8I HOPE THAT WAS ENOUGH. \w8I DON'T LIKE REMEMBERING.%(ConvCancel)\e"
 	    }
 			
 		
-	    "\0\s[0]*You ask Jazz to talk about himself. \w8%(idlejazz) %(jazzlife2)\n\n\w8*Curious...%(ConvCancel)\e"
+	    "\0\s[0]*You ask Jazz to talk about himself. \w8%(idlejazz) %(jf)%(jazzlife2)\n\n\w8%(df)*Curious...%(ConvCancel)\e"
 			
 		if truebackstory == 1
 	    {
-		"\0\s[0]*You ask Jazz to talk about himself. \w8He takes a breath and smiles. \n\n\w8\w8I... \w8\w8\s[37]I AM JAZZ! \w8I AM JAZZ. \w8\s[38]SIMPLE AS THAT. %(ConvCancel)\e"
+		"\0\s[0]*You ask Jazz to talk about himself. \w8He takes a breath and smiles. \n\n\w8\w8%(jf)I... \w8\w8\s[37]I AM JAZZ! \w8I AM JAZZ. \w8\s[38]SIMPLE AS THAT. %(ConvCancel)\e"
 	    }
 		
 	   }
@@ -515,7 +516,7 @@ Select.backstory
 	if badbad > 6 || totappoints > 30
 	{
 		
-	     "\0\s[0]*You tell Jazz to talk about himself. \w8%(idlejazz)"
+	     "\0\s[0]*You tell Jazz to talk about himself. \w8%(idlejazz) %(jf)"
 			--
 		    "\n\n\w8\s[8]I'M... JAZZ. \w8I'M NOT SURE WHAT..." 
 			"\n\n\w8\s[4]IS THERE A RIGHT ANSWER? \w8DO I HAVE TO GET IT RIGHT FOR YOU NOT TO... \w8\w8\w8\w8\s[1]..." 
@@ -525,7 +526,7 @@ Select.backstory
 			"\n\n\w8\s[29]I... \w8I'M NOT SURE I KNOW THE RIGHT ANSWER FOR YOU. \w8I THINK I FAILED THE TEST..."
 		 --
 		    
-		    "\n\n\w8*You are dissatisfied with that answer.%(ConvCancel)\e"
+		    "\n\n\w8%(df)*You are dissatisfied with that answer.%(ConvCancel)\e"
 			
 			
 	}
@@ -553,16 +554,16 @@ Select.platewhat
 if jazzlover == 1 || jazzfriend == 1
 	{
 		badbad += 1
-		"\0\s[0]You ask Jazz about the strange thing on his chest. \w8\s[1]He looks away. \w8\n\n\s[4]IT IS... MY LETTER. \w8JUST THIS. \w8IT IS NOT INTERESTING AT ALL. \w8CAN WE PLEASE TALK ABOUT SOMETHING ELSE?%(ConvCancel)\e"
-		"\0\s[0]You ask Jazz what that thing on his chest was. \w8\s[1]He fidgets... \w8\s[4]\n\nYOU KNOW... \w8I DON'T REALLY LIKE TALKING ABOUT THIS,\w4 BUT... \w8IT IS AN IDENTIFICATION LETTER. \w8\w8\w8...SORRY,\w4 I. \w8I TRY NOT TO THINK ABOUT IT MUCH.%(ConvCancel)\e"
-		"\0\s[0]You ask Jazz about the thing you have felt on his chest. \w8\s[1]He looks uneasy... \w8\s[4]\n\nIT IS... A MARKING. \w8NOTHING MORE. \w8IT DOES NOT HURT,\w4 IF THAT IS WHAT YOU WANTED TO KNOW. \w8IT IS JUST ALWAYS THERE.%(ConvCancel)\e"
+		"\0\s[0]You ask Jazz about the strange thing on his chest. \w8\s[1]He looks away. \w8\n\n\s[4]%(jf)IT IS... MY LETTER. \w8JUST THIS. \w8IT IS NOT INTERESTING AT ALL. \w8CAN WE PLEASE TALK ABOUT SOMETHING ELSE?%(ConvCancel)\e"
+		"\0\s[0]You ask Jazz what that thing on his chest was. \w8\s[1]He fidgets... \w8\s[4]\n\n%(jf)YOU KNOW... \w8I DON'T REALLY LIKE TALKING ABOUT THIS,\w4 BUT... \w8IT IS AN IDENTIFICATION LETTER. \w8\w8\w8...SORRY,\w4 I. \w8I TRY NOT TO THINK ABOUT IT MUCH.%(ConvCancel)\e"
+		"\0\s[0]You ask Jazz about the thing you have felt on his chest. \w8\s[1]He looks uneasy... \w8\s[4]\n\n%(jf)IT IS... A MARKING. \w8NOTHING MORE. \w8IT DOES NOT HURT,\w4 IF THAT IS WHAT YOU WANTED TO KNOW. \w8IT IS JUST ALWAYS THERE.%(ConvCancel)\e"
 	}
 	
 	if badbad > 6 || totappoints > 30
 	{
 		badbad += 10
-	"\0\s[0]You ask Jazz about the strange thing on his chest. \w8\s[1]He is extremely uncomfortable. \w8\n\n\s[4]W-WHY ARE YOU ASKING ME? \w8...DO YOU WANT TO HIT ME THERE? \w8YOU WILL JUST SCRAPE YOUR HAND. \w8PLEASE DON'T.%(ConvCancel)\e"
-	"\0\s[4]You ask Jazz about the weird thing you have felt on his chest. \w8\s[1]He shivers and avoids looking at you. \w8\n\n...I. \w8I'M SORRY,\w4 IT'S. \w8IT'S A THING THEY GAVE US. \w8TO TELL US APART WHEN WE WERE SMALL. \w8...I AM SORRY I HAVE IT. \w3I AM SORRY IT IS WEIRD. \w3PLEASE DO NOT HURT ME FOR HAVING IT.%(ConvCancel)\e"
+	"\0\s[0]You ask Jazz about the strange thing on his chest. \w8\s[1]He is extremely uncomfortable. \w8\n\n\s[4]%(jf)W-WHY ARE YOU ASKING ME? \w8...DO YOU WANT TO HIT ME THERE? \w8YOU WILL JUST SCRAPE YOUR HAND. \w8PLEASE DON'T.%(ConvCancel)\e"
+	"\0\s[4]You ask Jazz about the weird thing you have felt on his chest. \w8\s[1]He shivers and avoids looking at you. \w8\n\n%(jf)...I. \w8I'M SORRY,\w4 IT'S. \w8IT'S A THING THEY GAVE US. \w8TO TELL US APART WHEN WE WERE SMALL. \w8...I AM SORRY I HAVE IT. \w3I AM SORRY IT IS WEIRD. \w3PLEASE DO NOT HURT ME FOR HAVING IT.%(ConvCancel)\e"
 	"\0\s[0]You ask Jazz about the carving on his chest. \w8\s[1]He stutters and turns away from you,\w4 covering his chest with his hands. \w8He does not answer.%(ConvCancel)\e"
 	"\0\s[0]You ask Jazz about the carving on his chest. \w8\s[1]He falls completely still and silent. \w8Looks like you are not getting an answer out of him,\w4 after all.%(ConvCancel)\e"
 	
@@ -611,7 +612,7 @@ Select.needadvice
 	else
 	{
 	
-	"\0\s[3]\b2OH?? \w8WHAT DO YOU NEED HELP WITH?\w8\n\n\_q"
+	"\0\s[3]\b2%(jf)OH?? \w8WHAT DO YOU NEED HELP WITH?%(df)\w8\n\n\_q"
 	--
 	 "\![*]\q[Making friends,makefriend] \![*]\q[Keeping friends,keepfriend] \n"
 	 --
@@ -651,45 +652,45 @@ Select.needadvice
 Select.makefriend
 {
 	
-		"\0\s[24]OH! \w8WELL. \w8I THINK THE BEST WAY TO MAKE FRIENDS IS \s[42]TO SHOW THEM YOUR BEST SIDES ALL AT ONCE AND SCREAM AT THEM ABOUT HOW GREAT AND WONDERFUL YOU ARE \s[5]AND THEY WILL SURELY DEFINITELY ABSOLUTELY SEE YOUR BEFRIENDABILITINESS AND YOU WILL BE BESTIES AT ONCE \s[40]OR AT LEAST THAT IS THE PLAN THAT SURELY ABSOLUTELY DEFINITELY WORKS. \w8\w8\w8...%(ConvCancel)\e"
-		"\0\s[21]DO WHAT I WOULD DO!!! \w8\s[5]SNIFF THEM AND PLAYFIGHT THEM INTO FRIENDSHIP!!!! \w7\s[8]...OR DOES THAT ONLY WORK WITH DOGS??? \w8\s[40]ON SECOND THOUGHT,\w4 MAYBE DON'T DO WHAT I WOULD DO.%(ConvCancel)\e"
-        "\0\s[24]HONESTLY,\w4 I BET ALL YOU HAVE TO DO IS BE YOURSELF! \w8UNLESS YOU ARE AN ALIEN DISGUISING AS A HUMAN... \w8\s[6]THEN YOU NEED TO FIND OTHER ALIENS AND BE YOURSELF WITH THEM!%(ConvCancel)\e"
-		"\0\s[24]I'M NOT SURE MYSELF! \w8BUT SO FAR SIMPLY TALKING AND BEING NICE WITH NO STRINGS ATTACHED HAS WORKED RATHER WELL.%(ConvCancel)\e"
+		"\0\s[24]%(jf)OH! \w8WELL. \w8I THINK THE BEST WAY TO MAKE FRIENDS IS \s[42]TO SHOW THEM YOUR BEST SIDES ALL AT ONCE AND SCREAM AT THEM ABOUT HOW GREAT AND WONDERFUL YOU ARE \s[5]AND THEY WILL SURELY DEFINITELY ABSOLUTELY SEE YOUR BEFRIENDABILITINESS AND YOU WILL BE BESTIES AT ONCE \s[40]OR AT LEAST THAT IS THE PLAN THAT SURELY ABSOLUTELY DEFINITELY WORKS. \w8\w8\w8...%(ConvCancel)\e"
+		"\0\s[21]%(jf)DO WHAT I WOULD DO!!! \w8\s[5]SNIFF THEM AND PLAYFIGHT THEM INTO FRIENDSHIP!!!! \w7\s[8]...OR DOES THAT ONLY WORK WITH DOGS??? \w8\s[40]ON SECOND THOUGHT,\w4 MAYBE DON'T DO WHAT I WOULD DO.%(ConvCancel)\e"
+        "\0\s[24]%(jf)HONESTLY,\w4 I BET ALL YOU HAVE TO DO IS BE YOURSELF! \w8UNLESS YOU ARE AN ALIEN DISGUISING AS A HUMAN... \w8\s[6]THEN YOU NEED TO FIND OTHER ALIENS AND BE YOURSELF WITH THEM!%(ConvCancel)\e"
+		"\0\s[24]%(jf)I'M NOT SURE MYSELF! \w8BUT SO FAR SIMPLY TALKING AND BEING NICE WITH NO STRINGS ATTACHED HAS WORKED RATHER WELL.%(ConvCancel)\e"
 		
 		
 		if givegift > 0 
 		{
-		"\0\s[24]WELL!!! \w8YOU CAN ALWAYS TRY AND WIN YOUR FUTURE FRIEND OVER BY GIVING THEM NICE STUFF!! \w8JUST ALWAYS CHECK IF THEY REALLY LIKE IT,\w4 IN THE FIRST PLACE. \w8AND IF IT IS SOMETHING YOU BOTH LIKE,\w4 \s[5]VOILA! \w8NICE TOPIC FOR FUTURE TALKS OVER SOME NICE BARBEQUE IN YOUR BACKYARD!!! \w8\s[40]...JUST MAYBE DON'T RUSH IN TOO HARD.%(ConvCancel)\e"
+		"\0\s[24]%(jf)WELL!!! \w8YOU CAN ALWAYS TRY AND WIN YOUR FUTURE FRIEND OVER BY GIVING THEM NICE STUFF!! \w8JUST ALWAYS CHECK IF THEY REALLY LIKE IT,\w4 IN THE FIRST PLACE. \w8AND IF IT IS SOMETHING YOU BOTH LIKE,\w4 \s[5]VOILA! \w8NICE TOPIC FOR FUTURE TALKS OVER SOME NICE BARBEQUE IN YOUR BACKYARD!!! \w8\s[40]...JUST MAYBE DON'T RUSH IN TOO HARD.%(ConvCancel)\e"
 		}
 		
 		if fedjazz >= 1
 		{
-	    "\0\s[24]LET ME THINK... \w8I THINK FOOD IS A GOOD CHOICE!!! \w8A TREAT? \w8MORE LIKE A FRIENDSHIP TREATY. \w8\s[1]JUST MAYBE CHECK IF THEY HAVE ALLERGIES OR SOMETHING BECAUSE ACCIDENTALLY KILLING YOUR FRIENDS IS FROWNED UPON IN MANY CULTURES.%(ConvCancel)\e"
+	    "\0\s[24]%(jf)LET ME THINK... \w8I THINK FOOD IS A GOOD CHOICE!!! \w8A TREAT? \w8MORE LIKE A FRIENDSHIP TREATY. \w8\s[1]JUST MAYBE CHECK IF THEY HAVE ALLERGIES OR SOMETHING BECAUSE ACCIDENTALLY KILLING YOUR FRIENDS IS FROWNED UPON IN MANY CULTURES.%(ConvCancel)\e"
 		}
 		
 		if lovelove > 50
 		{
-		"\0\s[24]IT IS EASY. \w8COME TO THAT PERSON. \w8\s[6]PET THEM. \w8LONG. \w8HARD. \w8RELENTLESS. \w8DON'T STOP UNTIL THEY BEG FOR MERCY,\w4 TERRIFIED BY YOUR FRIENDSHIP SKILLS. \w8\s[42]RUB YOUR HAND INTO DUST OVER THEIR HEAD AS YOU SUBMERGE THEM INTO DEEP AGGRESSIVE COMFORT. \w8\w8\w8\s[5]WORKS EVERY TIME!!!!!%(ConvCancel)\e"
+		"\0\s[24]%(jf)IT IS EASY. \w8COME TO THAT PERSON. \w8\s[6]PET THEM. \w8LONG. \w8HARD. \w8RELENTLESS. \w8DON'T STOP UNTIL THEY BEG FOR MERCY,\w4 TERRIFIED BY YOUR FRIENDSHIP SKILLS. \w8\s[42]RUB YOUR HAND INTO DUST OVER THEIR HEAD AS YOU SUBMERGE THEM INTO DEEP AGGRESSIVE COMFORT. \w8\w8\w8\s[5]WORKS EVERY TIME!!!!!%(ConvCancel)\e"
 		}
 		
 		if apology > 0
 		{
-		"\0\s[24]BE HONEST WITH THEM. \w8OWN UP TO YOUR MISTAKES,\w4 AND TRY NOT TO MAKE NEW ONES IN THE FUTURE. \w8\s[6]AFTER ALL,\w4 NO ONE NEEDS PERFECT PEOPLE! \w8BUT EVERYONE NEEDS FRIENDS WHO WORK HARD AND TRY TO BE BETTER VERSIONS OF THEMSELVES. \w8YOU CAN ALWAYS BE %(username) 2.0.%(ConvCancel)\e"
+		"\0\s[24]%(jf)BE HONEST WITH THEM. \w8OWN UP TO YOUR MISTAKES,\w4 AND TRY NOT TO MAKE NEW ONES IN THE FUTURE. \w8\s[6]AFTER ALL,\w4 NO ONE NEEDS PERFECT PEOPLE! \w8BUT EVERYONE NEEDS FRIENDS WHO WORK HARD AND TRY TO BE BETTER VERSIONS OF THEMSELVES. \w8YOU CAN ALWAYS BE %(username) 2.0.%(ConvCancel)\e"
 		}
 		
 		if hughug > 10
 		{
-		"\0\s[24]THROW YOURSELF AT PEOPLE. \w8REPEATEDLY. \w8THAT IS ALL.%(ConvCancel)\e"
+		"\0\s[24]%(jf)THROW YOURSELF AT PEOPLE. \w8REPEATEDLY. \w8THAT IS ALL.%(ConvCancel)\e"
 		}
 		
 		if beatbeat > 3
 		{
-		"\0\s[24]IF YOU WANT TO MAKE FRIENDS,\w4 DO NOT BEAT THEM. \w8UNLESS YOU ARE A FUN OF FRIENDSHIP PUNCHES. \w8\s[6]BUT EVEN SO,\w4 PLEASE MEASURE YOUR FRIENDSHIP PUNCHES SO THEY DON'T LEAD TO FRIENDSHIP FIGHTING,\w4 FRIENDSHIP CONCUSSION,\w4 OR FRIENDSHIP HOSPITAL FEES.%(ConvCancel)\e"
+		"\0\s[24]%(jf)IF YOU WANT TO MAKE FRIENDS,\w4 DO NOT BEAT THEM. \w8UNLESS YOU ARE A FUN OF FRIENDSHIP PUNCHES. \w8\s[6]BUT EVEN SO,\w4 PLEASE MEASURE YOUR FRIENDSHIP PUNCHES SO THEY DON'T LEAD TO FRIENDSHIP FIGHTING,\w4 FRIENDSHIP CONCUSSION,\w4 OR FRIENDSHIP HOSPITAL FEES.%(ConvCancel)\e"
 		}
 	
 		if badbad > 3
 		{
-		"\0\s[24]TO MAKE FRIENDS,\w4 DO NOT BE A JERK TO PEOPLE. \w8\w8\w8\s[32]...SCANDALOUS.%(ConvCancel)\e"
+		"\0\s[24]%(jf)TO MAKE FRIENDS,\w4 DO NOT BE A JERK TO PEOPLE. \w8\w8\w8\s[32]...SCANDALOUS.%(ConvCancel)\e"
 		}
 		
 		
@@ -703,8 +704,8 @@ Select.keepfriend
 	if badbad > 6 || totappoints > 30
 
 	  {
-		  "\0\s[3]I... \w8SEE WHY YOU'D ASK... \w8\s[1]I-I MEAN!!! \w8JUST TRY TO TREAT THEM WITH KINDNESS!!!! \w8LOTS OF IT!!!%(ConvCancel)\e"
-		  "\0\s[3]MAYBE YOU SHOULD... \w8RETHINK YOUR LIFE CHOICES A BIT? \w8JUST A SUGGESTION.%(ConvCancel)\e"
+		  "\0\s[3]%(jf)I... \w8SEE WHY YOU'D ASK... \w8\s[1]I-I MEAN!!! \w8JUST TRY TO TREAT THEM WITH KINDNESS!!!! \w8LOTS OF IT!!!%(ConvCancel)\e"
+		  "\0\s[3]%(jf)MAYBE YOU SHOULD... \w8RETHINK YOUR LIFE CHOICES A BIT? \w8JUST A SUGGESTION.%(ConvCancel)\e"
 	  }
 	  
 	  if badbad > 50 ||  totappoints > 50
@@ -714,20 +715,20 @@ Select.keepfriend
 	}
 	
 	
-	"\0\s[24]KEEPING YOUR FRIENDS IS EASY. \w8YOU ONLY NEED A GOOD LEASH AND A COLLAR!!! \w8\w8\w8\w8... \w8\w8\w8\s[40]WHAT?!?!?!?! \w8DOGS CAN BE FRIENDS,\w4 TOO!!!!%(ConvCancel)\e"
-	"\0\s[24]TO KEEP YOUR FRIENDS AS FRIENDS,\w4 YOU SHOULD TRY BEING A GOOD FRIEND TO THEM! \w8HOWEVER,\w4 IF YOU GIVE MORE THAN YOU RECEIVE AND YOU NEED TO DO SOMETHING CONSTANTLY TO KEEP THEM CLOSE AND EARN THEIR FAVOR,\w4 MAYBE YOU DO NOT NEED THEM AS YOUR FRIENDS. \w8A GOOD FRIENDSHIP IS TWO-SIDED!%(ConvCancel)\e"
-	"\0\s[24]THAT DEPENDS ON THE CONTEXT. \w8\s[6]IF YOU WANT TO KEEP YOUR FRIENDS HAPPY,\w4 SUPPORT THEM! \w8IF YOU WANT TO KEEP YOUR FRIENDS CLOSE,\w4 USE A HUG! \w8IF YOU WANT TO KEEP YOUR FRIENDS IN YOUR BASEMENT,\w4 RETHINK YOUR LIFE CHOICES!!!%(ConvCancel)\e"
-	"\0\s[24]THERE ARE MANY THINGS YOU CAN DO WITH YOUR FRIENDS. \w8AS LONG AS YOU SPEND TIME TOGETHER DOING STUFF YOU LIKE,\w4 YOU ARE DOING GREAT AT KEEPING THAT RELATIONSHIP THRIVING!%(ConvCancel)\e"
-	"\0\s[24]THE KEY TO KEEPING YOUR FRIENDS HAPPY IS PETS. \w8MANY PETS. \w8AS MANY AS POSSIBLE. \w8\w8\s[3]OR IS IT THE KEY TO KEEPING PETS HAPPY? \w8SHOULD YOU FRIEND YOUR PETS??? \w8PLEASE ASK LATER I AM CONFUSED.%(ConvCancel)\e"
-	"\0\s[24]WHEN IT COMES TO KEEPING FRIENDS CLOSE TO YOU,\w4 HUGS ARE ALWAYS NICE. \w8UNLESS YOUR FRIENDS DO NOT LIKE EITHER HUGS OR BEING OVERLY LITERAL. \w8THEN YOU MAY SETTLE ON SINCERE COMPLIMENTS! \w8THOSE ARE GOOD,\w4 TOO.%(ConvCancel)\e"
-	"\0\s[24]YOU SHOULD REMEMEMBER THAT,\w4 EVEN IF YOU REALLY WANT TO KEEP YOUR FRIENDSHIPS,\w4 SOMETIMES THEY STILL FALL APART. \w8AND THAT IS SAD,\w4 BUT NORMAL! \w8AFTER ALL,\w4 EVERYONE CHANGES! \w8SOMETIMES YOU HAVE AN ARGUEMENT,\w4 SOMETIMES YOU JUST DRIFT APART,\w4 SOMETIMES THE CIRCUMSTANCES CHANGE TOO MUCH FOR YOU TO KEEP UP! \w8AND IT IS NOT YOUR FAULT. \w8AFTER ALL,\w4 IF YOU CAN STILL TALK AND REMEMBER EACH OTHER WARMLY,\w4 YOUR FRIENDSHIP WAS NOT IN VAIN!!!%(ConvCancel)\e"
-	"\0\s[24]WELL,\w4 I SUPPOSE YOU SHOULD BE CONSIDERATE! \w8IF YOU THINK SOMETHING YOU ARE PLANNING TO DO CAN HURT OR UPSET THEM,\w4 ALWAYS ASK FIRST! \w8AND IF YOU DO END UP HURTING THEM,\w4 ALWAYS APOLOGISE! \w8WE CANNOT KNOW EVERYTHING ABOUT OUR FRIENDS,\w4 SO MISTAKES ARE INEVITABLE,\w4 BUT IT IS OKAY! \w8YOU ONLY HAVE TO OWN THEM AND AVOID THEM AS MUCH AS YOU CAN.%(ConvCancel)\e"
-	"\0\s[24]IF YOU WANT TO KEEP YOUR FRIENDSHIP FRESH AND HEALTHY,\w4 YOU SHOULD WATER IT WITH LOVE AND CARE!!! \w8BUT YOU SHOULDN'T DO IT TOO OFTEN OR IT WILL WILT,\w4 BECAUSE EVERYONE NEEDS SPACE AND ALONE TIME,\w4 AND IT DOESN'T MEAN THEY DISLIKE YOU! \w8AND ALSO YOU NEED TO SHOO THE CATERPILLARS OF ENVY OR ANGER,\w4 ADD THE FERTILISER OF KINDNESS,\w4 AND REGULARLY PUT IT UNDER THE LIGHT OF... \w8\s[3]UM... \w8POLITE COMMUNICATION THAT HAPPENS AT A PACE WHICH IS COMFORTABLE FOR EVERYONE?.. \w8\w8... \w8\w8\w8\s[1]...I FEEL LIKE THE METAPHOR KIND OF DROPPED DEAD JUST NOW.%(ConvCancel)\e"
-	"\0\s[24]TO BE HONEST,\w4 KEEPING FRIENDS IS SOMETIMES HARDER THAN MAKING THEM BECAUSE IT IS A PROCESS,\w4 NOT A ONE-TIME ACTION!! \w8BUT I GUESS SPENDING TIME WITH THEM,\w4 DOING YOUR FAVORITE ACTIVITIES TOGETHER,\w4 AND SUPPORTING THEM WHEN THEY NEED IS A GOOD START! \w8\s[6]THOUGH FRIENDSHIP IS NOT SUPPOSED TO BE ONE-SIDED. \w8YOUR FRIENDS SHOULD PUT IN AS MUCH EFFORT AS YOU DO! \w8OR IT WILL FALL DOWN LIKE A BOX THAT MUST BE CARRIED BY SEVERAL PEOPLE BUT IS ONLY BALANCED ON ONE PAIR OF SHOULDERS.%(ConvCancel)\e"
+	"\0\s[24]%(jf)KEEPING YOUR FRIENDS IS EASY. \w8YOU ONLY NEED A GOOD LEASH AND A COLLAR!!! \w8\w8\w8\w8... \w8\w8\w8\s[40]WHAT?!?!?!?! \w8DOGS CAN BE FRIENDS,\w4 TOO!!!!%(ConvCancel)\e"
+	"\0\s[24]%(jf)TO KEEP YOUR FRIENDS AS FRIENDS,\w4 YOU SHOULD TRY BEING A GOOD FRIEND TO THEM! \w8HOWEVER,\w4 IF YOU GIVE MORE THAN YOU RECEIVE AND YOU NEED TO DO SOMETHING CONSTANTLY TO KEEP THEM CLOSE AND EARN THEIR FAVOR,\w4 MAYBE YOU DO NOT NEED THEM AS YOUR FRIENDS. \w8A GOOD FRIENDSHIP IS TWO-SIDED!%(ConvCancel)\e"
+	"\0\s[24]%(jf)THAT DEPENDS ON THE CONTEXT. \w8\s[6]IF YOU WANT TO KEEP YOUR FRIENDS HAPPY,\w4 SUPPORT THEM! \w8IF YOU WANT TO KEEP YOUR FRIENDS CLOSE,\w4 USE A HUG! \w8IF YOU WANT TO KEEP YOUR FRIENDS IN YOUR BASEMENT,\w4 RETHINK YOUR LIFE CHOICES!!!%(ConvCancel)\e"
+	"\0\s[24]%(jf)THERE ARE MANY THINGS YOU CAN DO WITH YOUR FRIENDS. \w8AS LONG AS YOU SPEND TIME TOGETHER DOING STUFF YOU LIKE,\w4 YOU ARE DOING GREAT AT KEEPING THAT RELATIONSHIP THRIVING!%(ConvCancel)\e"
+	"\0\s[24]%(jf)THE KEY TO KEEPING YOUR FRIENDS HAPPY IS PETS. \w8MANY PETS. \w8AS MANY AS POSSIBLE. \w8\w8\s[3]OR IS IT THE KEY TO KEEPING PETS HAPPY? \w8SHOULD YOU FRIEND YOUR PETS??? \w8PLEASE ASK LATER I AM CONFUSED.%(ConvCancel)\e"
+	"\0\s[24]%(jf)WHEN IT COMES TO KEEPING FRIENDS CLOSE TO YOU,\w4 HUGS ARE ALWAYS NICE. \w8UNLESS YOUR FRIENDS DO NOT LIKE EITHER HUGS OR BEING OVERLY LITERAL. \w8THEN YOU MAY SETTLE ON SINCERE COMPLIMENTS! \w8THOSE ARE GOOD,\w4 TOO.%(ConvCancel)\e"
+	"\0\s[24]%(jf)YOU SHOULD REMEMEMBER THAT,\w4 EVEN IF YOU REALLY WANT TO KEEP YOUR FRIENDSHIPS,\w4 SOMETIMES THEY STILL FALL APART. \w8AND THAT IS SAD,\w4 BUT NORMAL! \w8AFTER ALL,\w4 EVERYONE CHANGES! \w8SOMETIMES YOU HAVE AN ARGUEMENT,\w4 SOMETIMES YOU JUST DRIFT APART,\w4 SOMETIMES THE CIRCUMSTANCES CHANGE TOO MUCH FOR YOU TO KEEP UP! \w8AND IT IS NOT YOUR FAULT. \w8AFTER ALL,\w4 IF YOU CAN STILL TALK AND REMEMBER EACH OTHER WARMLY,\w4 YOUR FRIENDSHIP WAS NOT IN VAIN!!!%(ConvCancel)\e"
+	"\0\s[24]%(jf)WELL,\w4 I SUPPOSE YOU SHOULD BE CONSIDERATE! \w8IF YOU THINK SOMETHING YOU ARE PLANNING TO DO CAN HURT OR UPSET THEM,\w4 ALWAYS ASK FIRST! \w8AND IF YOU DO END UP HURTING THEM,\w4 ALWAYS APOLOGISE! \w8WE CANNOT KNOW EVERYTHING ABOUT OUR FRIENDS,\w4 SO MISTAKES ARE INEVITABLE,\w4 BUT IT IS OKAY! \w8YOU ONLY HAVE TO OWN THEM AND AVOID THEM AS MUCH AS YOU CAN.%(ConvCancel)\e"
+	"\0\s[24]%(jf)IF YOU WANT TO KEEP YOUR FRIENDSHIP FRESH AND HEALTHY,\w4 YOU SHOULD WATER IT WITH LOVE AND CARE!!! \w8BUT YOU SHOULDN'T DO IT TOO OFTEN OR IT WILL WILT,\w4 BECAUSE EVERYONE NEEDS SPACE AND ALONE TIME,\w4 AND IT DOESN'T MEAN THEY DISLIKE YOU! \w8AND ALSO YOU NEED TO SHOO THE CATERPILLARS OF ENVY OR ANGER,\w4 ADD THE FERTILISER OF KINDNESS,\w4 AND REGULARLY PUT IT UNDER THE LIGHT OF... \w8\s[3]UM... \w8POLITE COMMUNICATION THAT HAPPENS AT A PACE WHICH IS COMFORTABLE FOR EVERYONE?.. \w8\w8... \w8\w8\w8\s[1]...I FEEL LIKE THE METAPHOR KIND OF DROPPED DEAD JUST NOW.%(ConvCancel)\e"
+	"\0\s[24]%(jf)TO BE HONEST,\w4 KEEPING FRIENDS IS SOMETIMES HARDER THAN MAKING THEM BECAUSE IT IS A PROCESS,\w4 NOT A ONE-TIME ACTION!! \w8BUT I GUESS SPENDING TIME WITH THEM,\w4 DOING YOUR FAVORITE ACTIVITIES TOGETHER,\w4 AND SUPPORTING THEM WHEN THEY NEED IS A GOOD START! \w8\s[6]THOUGH FRIENDSHIP IS NOT SUPPOSED TO BE ONE-SIDED. \w8YOUR FRIENDS SHOULD PUT IN AS MUCH EFFORT AS YOU DO! \w8OR IT WILL FALL DOWN LIKE A BOX THAT MUST BE CARRIED BY SEVERAL PEOPLE BUT IS ONLY BALANCED ON ONE PAIR OF SHOULDERS.%(ConvCancel)\e"
       
 	  if jazzfriend == 1 || jazzlover == 1 
 	  {
-		  "\0\s[3]I AM A LITTLE SURPRISED THAT YOU ASK,\w4 SINCE YOU SEEM TO BE GOOD AT THAT! \w8\s[6]BUT I GUESS YOU CAN JUST BE YOURSELF! \w8THAT IS ALL YOU NEED.%(ConvCancel)\e"
+		  "\0\s[3]%(jf)I AM A LITTLE SURPRISED THAT YOU ASK,\w4 SINCE YOU SEEM TO BE GOOD AT THAT! \w8\s[6]BUT I GUESS YOU CAN JUST BE YOURSELF! \w8THAT IS ALL YOU NEED.%(ConvCancel)\e"
 		  
 	  }
 	  
@@ -743,12 +744,12 @@ Select.confess
 	if badbad > 6 ||  totappoints > 30
 	{
 		
-	"\0\s[1]OH. \w8UM. \w8I GUESS... \w8YOU... \w8SHOULD... \w8\s[40]BE POLITE AND CONSIDERATE AND MAYBE NOT HURT THE OTHER PERSON IF THEY REJECT YOUR CONFESSION??? \w8JUST A COOL IDEA.%(ConvCancel)\e"
+	"\0\s[1]%(jf)OH. \w8UM. \w8I GUESS... \w8YOU... \w8SHOULD... \w8\s[40]BE POLITE AND CONSIDERATE AND MAYBE NOT HURT THE OTHER PERSON IF THEY REJECT YOUR CONFESSION??? \w8JUST A COOL IDEA.%(ConvCancel)\e"
 	}
 	
 	if badbad > 50 ||  totappoints > 30
 	{
-		"\0\s[1]...I GUESS... \w8YOU SHOULD BE KIND TO THEM. \w8KINDER THAN... \w8\s[4]...%(ConvCancel)\e"
+		"\0\s[1]%(jf)...I GUESS... \w8YOU SHOULD BE KIND TO THEM. \w8KINDER THAN... \w8\s[4]...%(ConvCancel)\e"
 		"\0\s[4]%(terrified)%(ConvCancel)\e"
 		"\0\s[1]%(terrified)%(ConvCancel)\e"
 	
@@ -758,18 +759,18 @@ Select.confess
 	{
 	
 	
-	"\0\s[24]WELL! \w8IT DEPENDS ON THE KIND OF CONFESSION YOU HAVE IN MIND,\w4 OF COURSE. \w8BUT IN ANY CASE CONFESSIONS ARE DIFFICULT TO MAKE! \w8\s[6]SO REMEMBER THAT YOU ARE BEING BRAVE AND STRONG,\w4 REALLY.%(ConvCancel)\e"
-    "\0\s[24]IF YOU ARE TRYING TO CONFESS YOUR FEELINGS TO SOMEONE,\w4 TRY TO DO SOME RESEARCH,\w4 FIRST. \w8WHAT DO YOU THINK THEIR REACTION WILL BE? \w8WHAT CONSEQUENCES CAN IT HAVE? \w8\s[6]DO NOT PANIC OR EXAGERRATE THINGS,\w4 THOUGH. \w8TRY TO BE HONEST WITH YOURSELF ABOUT WHAT YOU THINK AND FEEL.%(ConvCancel)\e"
-	"\0\s[24]IF THE CONFESSION YOU ARE TRYING TO MAKE IS A BIG ONE,\w4 SOME PREPARATION IN ADVANCE SOUNDS LIKE A GOOD IDEA! \w8TRY TO HINT AT WHAT YOU WANT TO SAY OR GET THE OTHER PERSON COMFORTABLE WITH THAT IDEA. \w8OR YOU CAN ALWAYS TELL THEM THAT YOU WANT TO CONFESS SOMETHING BIG BUT ARE UNSURE OF THEIR REACTION. \w8I AM SURE THEY WILL TRY TO REASSURE YOU!%(ConvCancel)\e"	
-	"\0\s[24]SPEAKING OF CONFESSIONS,\w4 WE MOSTLY REGRET WHAT WE HAVEN'T DONE,\w4 NOT WHAT WE HAVE! \w8\s[6]SO I'D SAY TAKING CHANCES WITH CONFESSING YOUR FEELINGS TO OTHERS IS A BRAVE AND SENSIBLE THING TO DO.%(ConvCancel)\e"
-    "\0\s[24]UNFORTUNATELY,\w4 SOMETIMES CONFESSING YOUR LOVE FOR SOMEONE IS NOT A GOOD IDEA. \w8FOR EXAMPLE,\w4 IF THEY ARE TAKEN. \w8BUT YOU CAN STILL WAIT FOR A CHANCE TO TELL THEM HOW YOU FEEL! \w8JUST DO NOT PUSH THEM INTO THINGS THEY MIGHT NOT LIKE,\w4 AND IF THEY DO NOT RETURN YOUR FEELINGS,\w4 RESPECT THEIR ANSWER.%(ConvCancel)\e"
-	"\0\s[24]CONFESSING LOVE CAN BE REALLY SCARY! \w8BUT MOST PEOPLE WOULD PROBABLY BE GLAD TO HEAR THAT THEY HAVE ADMIRERS. \w8SO TAKE A DEEP BREATH AND FACE YOUR CONFESSION RECEIVER BRAVELY! \w8\s[5]I BELIEVE IN YOU!!!%(ConvCancel)\e"
-	"\0\s[24]CONFESSING CAN ALSO MEAN SAYING THINGS THAT THE OTHER PERSON WOULD NOT LIKE TO HEAR. \w8IN THAT CASE,\w4 TRY TO PREPARE THEM FOR THE NEWS GENTLY. \w8\s[8]AND IF YOU THINK THEY MIGHT REACT TOO BAD,\w4 PROBABLY PUT OFF YOUR CONFESSION. \w8HONESTY IS IMPORTANT,\w4 BUT NOT AS IMPORTANT AS SAFETY.%(ConvCancel)\e"
-    "\0\s[24]CONFESSING ANYTHING IS A VERY BRAVE THING TO DO! \w8\s[6]SO IF YOU NEED SOMEONE TO ROOT FOR YOU IN THOSE TRYING TIMES,\w4 I CAN! \w8\s[5]I AM REALLY GOOD AT BELIEVING THAT YOU CAN!!! DO!!! THIS!!!%(ConvCancel)\e"
+	"\0\s[24]%(jf)WELL! \w8IT DEPENDS ON THE KIND OF CONFESSION YOU HAVE IN MIND,\w4 OF COURSE. \w8BUT IN ANY CASE CONFESSIONS ARE DIFFICULT TO MAKE! \w8\s[6]SO REMEMBER THAT YOU ARE BEING BRAVE AND STRONG,\w4 REALLY.%(ConvCancel)\e"
+    "\0\s[24]%(jf)IF YOU ARE TRYING TO CONFESS YOUR FEELINGS TO SOMEONE,\w4 TRY TO DO SOME RESEARCH,\w4 FIRST. \w8WHAT DO YOU THINK THEIR REACTION WILL BE? \w8WHAT CONSEQUENCES CAN IT HAVE? \w8\s[6]DO NOT PANIC OR EXAGERRATE THINGS,\w4 THOUGH. \w8TRY TO BE HONEST WITH YOURSELF ABOUT WHAT YOU THINK AND FEEL.%(ConvCancel)\e"
+	"\0\s[24]%(jf)IF THE CONFESSION YOU ARE TRYING TO MAKE IS A BIG ONE,\w4 SOME PREPARATION IN ADVANCE SOUNDS LIKE A GOOD IDEA! \w8TRY TO HINT AT WHAT YOU WANT TO SAY OR GET THE OTHER PERSON COMFORTABLE WITH THAT IDEA. \w8OR YOU CAN ALWAYS TELL THEM THAT YOU WANT TO CONFESS SOMETHING BIG BUT ARE UNSURE OF THEIR REACTION. \w8I AM SURE THEY WILL TRY TO REASSURE YOU!%(ConvCancel)\e"	
+	"\0\s[24]%(jf)SPEAKING OF CONFESSIONS,\w4 WE MOSTLY REGRET WHAT WE HAVEN'T DONE,\w4 NOT WHAT WE HAVE! \w8\s[6]SO I'D SAY TAKING CHANCES WITH CONFESSING YOUR FEELINGS TO OTHERS IS A BRAVE AND SENSIBLE THING TO DO.%(ConvCancel)\e"
+    "\0\s[24]%(jf)UNFORTUNATELY,\w4 SOMETIMES CONFESSING YOUR LOVE FOR SOMEONE IS NOT A GOOD IDEA. \w8FOR EXAMPLE,\w4 IF THEY ARE TAKEN. \w8BUT YOU CAN STILL WAIT FOR A CHANCE TO TELL THEM HOW YOU FEEL! \w8JUST DO NOT PUSH THEM INTO THINGS THEY MIGHT NOT LIKE,\w4 AND IF THEY DO NOT RETURN YOUR FEELINGS,\w4 RESPECT THEIR ANSWER.%(ConvCancel)\e"
+	"\0\s[24]%(jf)CONFESSING LOVE CAN BE REALLY SCARY! \w8BUT MOST PEOPLE WOULD PROBABLY BE GLAD TO HEAR THAT THEY HAVE ADMIRERS. \w8SO TAKE A DEEP BREATH AND FACE YOUR CONFESSION RECEIVER BRAVELY! \w8\s[5]I BELIEVE IN YOU!!!%(ConvCancel)\e"
+	"\0\s[24]%(jf)CONFESSING CAN ALSO MEAN SAYING THINGS THAT THE OTHER PERSON WOULD NOT LIKE TO HEAR. \w8IN THAT CASE,\w4 TRY TO PREPARE THEM FOR THE NEWS GENTLY. \w8\s[8]AND IF YOU THINK THEY MIGHT REACT TOO BAD,\w4 PROBABLY PUT OFF YOUR CONFESSION. \w8HONESTY IS IMPORTANT,\w4 BUT NOT AS IMPORTANT AS SAFETY.%(ConvCancel)\e"
+    "\0\s[24]%(jf)CONFESSING ANYTHING IS A VERY BRAVE THING TO DO! \w8\s[6]SO IF YOU NEED SOMEONE TO ROOT FOR YOU IN THOSE TRYING TIMES,\w4 I CAN! \w8\s[5]I AM REALLY GOOD AT BELIEVING THAT YOU CAN!!! DO!!! THIS!!!%(ConvCancel)\e"
    
    if jazzlover == 1 || jazzfriend == 1 && badbad < 3
 	{
-		"\0\s[24]HM. \w8IF YOU WANT TO CONFESS TO SOMEONE,\w4 DO IT THE WAY YOU CONFESSED TO ME! \w8BE RESPECTFUL AND PROBABLY SAY SOMETHING NICE TO THAT OTHER PERSON! \w8\s[6]BUT AVOID BEING TOO PRESSING OR SELF-DEPRECATING,\w4 BECAUSE THAT CAN MAKE THE OTHER FEEL UNCOMFORTABLE! \w8\s[24]AND IF YOUR FEELINGS ARE NOT MUTUAL,\w4 BE NICE AND POLITE AND REMEMBER THAT IT IS NOT A SIGN YOU ARE BAD OR UNLOVABLE. \w8LOVE IS COMPLICATED!%(ConvCancel)\e"
+		"\0\s[24]%(jf)HM. \w8IF YOU WANT TO CONFESS TO SOMEONE,\w4 DO IT THE WAY YOU CONFESSED TO ME! \w8BE RESPECTFUL AND PROBABLY SAY SOMETHING NICE TO THAT OTHER PERSON! \w8\s[6]BUT AVOID BEING TOO PRESSING OR SELF-DEPRECATING,\w4 BECAUSE THAT CAN MAKE THE OTHER FEEL UNCOMFORTABLE! \w8\s[24]AND IF YOUR FEELINGS ARE NOT MUTUAL,\w4 BE NICE AND POLITE AND REMEMBER THAT IT IS NOT A SIGN YOU ARE BAD OR UNLOVABLE. \w8LOVE IS COMPLICATED!%(ConvCancel)\e"
 	}
 	
 	}
@@ -782,9 +783,9 @@ Select.breakup
 	if  totappoints > 30 || badbad > 6
 
 	  {
-		  "\0\s[3]I GUESS YOU COULD... \w8ASK SOMEONE ELSE? \w8\s[1]I,\w4 UM,\w4 I'M JUST NOT GOOD ENOUGH AT ADVICE...%(ConvCancel)\e"
-		  "\0\s[1]UM... \w8MAYBE YOU SHOULD JUST LET THEM GO? \w8JUST... JUST A THOUGHT.%(ConvCancel)\e"
-		  "\0\s[1]I'M NOT SURE,\w4 BUT... \w8I GUESS IF YOU REALLY HATE THEM,\w4 YOU COULD CUT THE TIES TO THEM? \w8LEAVE THEM BE? \w8\s[29]I - I'M NOT SURE WHY YOU'D KEEP SOMEONE YOU REALLY HATE AROUND...%(ConvCancel)\e"
+		  "\0\s[3]%(jf)I GUESS YOU COULD... \w8ASK SOMEONE ELSE? \w8\s[1]I,\w4 UM,\w4 I'M JUST NOT GOOD ENOUGH AT ADVICE...%(ConvCancel)\e"
+		  "\0\s[1]%(jf)UM... \w8MAYBE YOU SHOULD JUST LET THEM GO? \w8JUST... JUST A THOUGHT.%(ConvCancel)\e"
+		  "\0\s[1]%(jf)I'M NOT SURE,\w4 BUT... \w8I GUESS IF YOU REALLY HATE THEM,\w4 YOU COULD CUT THE TIES TO THEM? \w8LEAVE THEM BE? \w8\s[29]I - I'M NOT SURE WHY YOU'D KEEP SOMEONE YOU REALLY HATE AROUND...%(ConvCancel)\e"
 	  }
 
 	if badbad > 50 ||  totappoints > 50
@@ -797,17 +798,17 @@ Select.breakup
 	else 
 	{
 	
-	"\0\s[24]OH,\w4 YOU ARE THINKING OF BREAKING UP WITH SOMEONE? \w8THIS CAN BE HARD! \w8ANY SORT OF BREAK IS PAINFUL,\w4 NO MATTER WHAT EXACTLY IS BROKEN. \w8\s[6]MAKE SURE YOU TAKE CARE OF YOURSELF DURING THIS TIME! \w8LISTEN TO MUSIC,\w4 EAT MEAT,\w4 AND RUN LOTS!!!%(ConvCancel)\e"
-    "\0\s[24]IT IS HARD TO BREAK UP WITH SOMEONE YOU LIKE! \w8BUT IT ALSO CAN BE FOR THE BETTER FOR BOTH OF YOU. \w8JUST REMEMBER TO GET SOME SUPPORT FROM YOUR FRIENDS AND FAMILY! \w8\s[5]AND YOUR LOCAL FRIENDLY SKELETONS!!!%(ConvCancel)\e"
-    "\0\s[24]NO MATTER IF YOU ARE BREAKING UP OR YOU ARE BROKEN UP WITH,\w4 IT IS HARD ANYWAY! \w8SO BE KIND TO YOURSELF! \w8EVEN IF THAT IS THE HARDEST PART.%(ConvCancel)\e"
-    "\0\s[24]SOMETIMES... \w8\s[4]SOMETIMES YOU SPEND SO LONG WITH SOMEONE THAT YOU FORGET HOW TO BE YOURSELF WITHOUT THEM. \w8\s[8]AND THAT MEANS THAT YOU HAVE TO REMIND YOURSELF WHAT IT MEANS TO BE 'YOU'. \w8IT MAY TAKE SOME TIME,\w4 BUT EVENTUALLY YOU WILL REMEMBER. \w8\s[6]OR MAYBE REINVENT. \w8AND YOU WILL MEET YOURSELF AGAIN.%(ConvCancel)\e"
-    "\0\s[24]IF YOU ARE HIT HARD BY A BREAKUP,\w4 MAYBE YOU COULD ASK SOME EDUCATED PERSON FOR HELP INSTEAD? \w8SOME EMOTION SPECIALIST? \w8THERE IS NO SHAME IN DOING THAT! \w8\s[1]AND ALSO I AM JUST A SKELETON WHO IS NOT EXACTLY CERTIFIED TO GIVE MEDICAL ADVICE.%(ConvCancel)\e"
-    "\0\s[24]REMEMBER THAT EVEN IF IT HURTS TO GO THROUGH THAT,\w4 THE PAIN WILL GO AWAY EVENTUALLY! \w8JUST GIVE IT TIME AND PATIENCE! \w8HOPEFULLY YOUR SOUL IS CYAN...%(ConvCancel)\e"
-	"\0\s[24]I DON'T KNOW MUCH ABOUT BREAKUPS,\w4 BUT I CAN GUESS THAT YOU SHOULD BE CONSIDERATE TO THE OTHER PERSON! \w8EVERYONE DESERVES FAIR TREATMENT,\w4 EVEN IF THEY WERE MEAN. \w8\s[6]UNLESS THEY USED YOU FOR UNETHICAL EXPERIMENTATION. \w8OR SOMETHING LIKE THAT!%(ConvCancel)\e"
+	"\0\s[24]%(jf)OH,\w4 YOU ARE THINKING OF BREAKING UP WITH SOMEONE? \w8THIS CAN BE HARD! \w8ANY SORT OF BREAK IS PAINFUL,\w4 NO MATTER WHAT EXACTLY IS BROKEN. \w8\s[6]MAKE SURE YOU TAKE CARE OF YOURSELF DURING THIS TIME! \w8LISTEN TO MUSIC,\w4 EAT MEAT,\w4 AND RUN LOTS!!!%(ConvCancel)\e"
+    "\0\s[24]%(jf)IT IS HARD TO BREAK UP WITH SOMEONE YOU LIKE! \w8BUT IT ALSO CAN BE FOR THE BETTER FOR BOTH OF YOU. \w8JUST REMEMBER TO GET SOME SUPPORT FROM YOUR FRIENDS AND FAMILY! \w8\s[5]AND YOUR LOCAL FRIENDLY SKELETONS!!!%(ConvCancel)\e"
+    "\0\s[24]%(jf)NO MATTER IF YOU ARE BREAKING UP OR YOU ARE BROKEN UP WITH,\w4 IT IS HARD ANYWAY! \w8SO BE KIND TO YOURSELF! \w8EVEN IF THAT IS THE HARDEST PART.%(ConvCancel)\e"
+    "\0\s[24]%(jf)SOMETIMES... \w8\s[4]SOMETIMES YOU SPEND SO LONG WITH SOMEONE THAT YOU FORGET HOW TO BE YOURSELF WITHOUT THEM. \w8\s[8]AND THAT MEANS THAT YOU HAVE TO REMIND YOURSELF WHAT IT MEANS TO BE 'YOU'. \w8IT MAY TAKE SOME TIME,\w4 BUT EVENTUALLY YOU WILL REMEMBER. \w8\s[6]OR MAYBE REINVENT. \w8AND YOU WILL MEET YOURSELF AGAIN.%(ConvCancel)\e"
+    "\0\s[24]%(jf)IF YOU ARE HIT HARD BY A BREAKUP,\w4 MAYBE YOU COULD ASK SOME EDUCATED PERSON FOR HELP INSTEAD? \w8SOME EMOTION SPECIALIST? \w8THERE IS NO SHAME IN DOING THAT! \w8\s[1]AND ALSO I AM JUST A SKELETON WHO IS NOT EXACTLY CERTIFIED TO GIVE MEDICAL ADVICE.%(ConvCancel)\e"
+    "\0\s[24]%(jf)REMEMBER THAT EVEN IF IT HURTS TO GO THROUGH THAT,\w4 THE PAIN WILL GO AWAY EVENTUALLY! \w8JUST GIVE IT TIME AND PATIENCE! \w8HOPEFULLY YOUR SOUL IS CYAN...%(ConvCancel)\e"
+	"\0\s[24]%(jf)I DON'T KNOW MUCH ABOUT BREAKUPS,\w4 BUT I CAN GUESS THAT YOU SHOULD BE CONSIDERATE TO THE OTHER PERSON! \w8EVERYONE DESERVES FAIR TREATMENT,\w4 EVEN IF THEY WERE MEAN. \w8\s[6]UNLESS THEY USED YOU FOR UNETHICAL EXPERIMENTATION. \w8OR SOMETHING LIKE THAT!%(ConvCancel)\e"
 	
 	if jazzfriend == 1 || jazzlover == 1 
 	  {
-		  "\0\s[6]JUST BE YOUR KIND AND PATIENT SELF,\w4 AND ...\w7\s[1]UM... \w7IT'S NOT ME YOU ARE BREAKING WITH,\w4 RIGHT?%(ConvCancel)\e"
+		  "\0\s[6]%(jf)JUST BE YOUR KIND AND PATIENT SELF,\w4 AND ...\w7\s[1]UM... \w7IT'S NOT ME YOU ARE BREAKING WITH,\w4 RIGHT?%(ConvCancel)\e"
 		  
 	  }
 	
@@ -824,36 +825,36 @@ Select.didabad
 if  totappoints > 30 || badbad > 6
 	
 	{
-		"\0\s[3]I THINK,\w4 UM... \w8I THINK,\w4 IF YOU DO SOMETHING BAD,\w4 YOU SHOULD APOLOGISE AND... \w8NEVER DO IT AGAIN. \w8THAT'S THE POINT OF APOLOGIES. \w8USUALLY.%(ConvCancel)\e"
-	    "\0\s[4]EVEN GOOD PEOPLE DO BAD THINGS,\w4 SOMETIMES... \w8BUT,\w4 UM,\w4 MAYBE YOU SHOULD TRY BETTER TO BE BETTER?..%(ConvCancel)\e"
-		"\0\s[4]I - I DON'T WANT TO BE MEAN,\w4 BUT MAYBE YOU NEED TO STOP DOING BAD THINGS IF YOU FEEL BAD ABOUT THEM. \w8IF THEY MAKE YOU FEEL GUILTY,\w4 BUT YOU STILL KEEP DOING THEM... \w8\s[1]I - I DON'T KNOW WHAT TO SAY...%(ConvCancel)\e"
+		"\0\s[3]%(jf)I THINK,\w4 UM... \w8I THINK,\w4 IF YOU DO SOMETHING BAD,\w4 YOU SHOULD APOLOGISE AND... \w8NEVER DO IT AGAIN. \w8THAT'S THE POINT OF APOLOGIES. \w8USUALLY.%(ConvCancel)\e"
+	    "\0\s[4]%(jf)EVEN GOOD PEOPLE DO BAD THINGS,\w4 SOMETIMES... \w8BUT,\w4 UM,\w4 MAYBE YOU SHOULD TRY BETTER TO BE BETTER?..%(ConvCancel)\e"
+		"\0\s[4]%(jf)I - I DON'T WANT TO BE MEAN,\w4 BUT MAYBE YOU NEED TO STOP DOING BAD THINGS IF YOU FEEL BAD ABOUT THEM. \w8IF THEY MAKE YOU FEEL GUILTY,\w4 BUT YOU STILL KEEP DOING THEM... \w8\s[1]I - I DON'T KNOW WHAT TO SAY...%(ConvCancel)\e"
 	
 	}
 	
 	if badbad > 50 ||  totappoints > 50
 	{
-		"\0\s[4]...IS IT... \w8A TEST? \w8ARE YOU TESTING ME? \w8...I FEEL LIKE I AM NOT DOING WELL...%(ConvCancel)\e"
+		"\0\s[4]%(jf)...IS IT... \w8A TEST? \w8ARE YOU TESTING ME? \w8...I FEEL LIKE I AM NOT DOING WELL...%(ConvCancel)\e"
 		"\0\s[1]%(terrified)%(ConvCancel)\e"
-		"\0\s[1]I... \w8DID I DO SOMETHING WRONG TO MAKE YOU DO THAT?%(ConvCancel)\e"
-		"\0\s[1]IS IT A TEST? \w8%(username),\w4 IS IT ALL... \w8A TEST?%(ConvCancel)\e"
+		"\0\s[1]%(jf)I... \w8DID I DO SOMETHING WRONG TO MAKE YOU DO THAT?%(ConvCancel)\e"
+		"\0\s[1]%(jf)IS IT A TEST? \w8%(username),\w4 IS IT ALL... \w8A TEST?%(ConvCancel)\e"
 	}
 	
 else
 {
     
 	
-    "\0\s[24]OH? \w8YOU'VE DONE SOMETHING BAD? \w8I GUESS THE BEST THING TO DO IS TO OWN UP,\w4 APOLOGISE AND TRY TO DO BETTER IN FUTURE! \w8\s[6]UNLESS YOU HAVE A TIME MACHINE. \w8THEN THE BEST THING IS TO STOP THE BAD THING FROM HAPPENING.%(ConvCancel)\e"
-	"\0\s[24]IF YOU DID SOMETHING BAD,\w4 REMEMBER THE D.A.B. RULE! \w8D - \w8DON'T DO THAT AGAIN! \w8\s[6]A - \w8APOLOGISE! \w8\s[5]B - \w8\w8B... \w8\s[40]BECOME A BETTER PERSON AS A RESULT OF THIS CHARACTER-SHAPING ADVERSITY? \w8\w8\w8... \w8\w8\w8\s[3]... THE D.A.B. RULE IS WORK IN PROGRESS.%(ConvCancel)\e"
-    "\0\s[24]IT CAN FEEL REALLY BAD IF YOU DO SOMETHING WRONG! \w8AND YOU MIGHT WANT TO FIGHT THAT BAD FEELING! \w8\s[6]BUT IT'S LIKE TRYING TO BITE YOUR OWN TAIL! \w8\s[7]....POINTLESS AND PAINFUL,\w4 TRUST ME ON THAT. \w8\s[32]SO WATCH IT,\w4 BUT THEN LET IT GO! \w8DON'T REPEAT MY LIFE MISTAKES.%(ConvCancel)\e"
-    "\0\s[24]DON'T BE TOO HARSH ON YOURSELF,\w4 BUT DON'T MAKE EXCUSES! \w8DON'T TIP TOO HARD EITHER WAY. \w8IT'S LIKE WALKING A ROPE. \w8AND ON EITHER SIDE,\w4 THERE ARE FLAMES OF BAD.%(ConvCancel)\e"
-	"\0\s[24]SADLY,\w4 SOMETIMES THERE IS LITTLE YOU CAN DO AFTER YOU MAKE A MISTAKE! \w8AND EVEN IF YOU APOLOGISE,\w4 IT STILL DOES NOT MEAN YOU WILL BE FORGIVEN. \w8AND THAT CAN BE HARD TO SWALLOW. \w8\s[8]BUT EVEN SO,\w4 IT DOES NOT MAKE YOU AWFUL OR IRREDEMABLE! \w8EVEN GOOD PEOPLE DO BAD THINGS SOMETIMES! \w8JUST TRY TO DO BETTER NEXT TIME.%(ConvCancel)\e"
-	"\0\s[24]OH,\w4 I SEE... \w8IT'S OKAY,\w4 EVERYONE MAKES MISTAKES SOMETIMES! \w8\s[6]EVEN IF IT SEEMS REALLY BAD NOW,\w4 IT WILL PROBABLY FADE AWAY WITH TIME! \w8\s[8]UNLESS IT IS A GRADE-A SCIENTIFIC MISTAKE WORTH OF HIDING IN A BUNKER. \w8YOU PROBABLY DON'T WANT TO IGNORE THOSE.%(ConvCancel)\e"
-	"\0\s[24]WHEN YOU DO SOMETHING BAD,\w4 YOU FEEL GUILTY,\w4 AND THAT'S OKAY! \w8BUT DON'T LET IT SWALLOW YOU. \w8IT'S A HINT THAT YOU SHOULD TRY TO MAKE UP! \w8\s[6]NOT A PUNISHMENT TO MAKE YOU STOP TRYING.%(ConvCancel)\e"
-	"\0\s[0]I'M SORRY TO HEAR THAT! \w8IT MUST FEEL BAD... \w8\s[24]I MAKE MISTAKES,\w4 TOO! \w8EVERYONE DOES! \w8AND I KNOW IT CAN FEEL AWFUL. \w8BUT SOMETIMES MISTAKES THAT SEEM BIG AND INTIMIDATING ARE REALLY SMALL FOR EVERYONE ELSE! \w8THINK ABOUT IT.%(ConvCancel)\e"
+    "\0\s[24]%(jf)OH? \w8YOU'VE DONE SOMETHING BAD? \w8I GUESS THE BEST THING TO DO IS TO OWN UP,\w4 APOLOGISE AND TRY TO DO BETTER IN FUTURE! \w8\s[6]UNLESS YOU HAVE A TIME MACHINE. \w8THEN THE BEST THING IS TO STOP THE BAD THING FROM HAPPENING.%(ConvCancel)\e"
+	"\0\s[24]%(jf)IF YOU DID SOMETHING BAD,\w4 REMEMBER THE D.A.B. RULE! \w8D - \w8DON'T DO THAT AGAIN! \w8\s[6]A - \w8APOLOGISE! \w8\s[5]B - \w8\w8B... \w8\s[40]BECOME A BETTER PERSON AS A RESULT OF THIS CHARACTER-SHAPING ADVERSITY? \w8\w8\w8... \w8\w8\w8\s[3]... THE D.A.B. RULE IS WORK IN PROGRESS.%(ConvCancel)\e"
+    "\0\s[24]%(jf)IT CAN FEEL REALLY BAD IF YOU DO SOMETHING WRONG! \w8AND YOU MIGHT WANT TO FIGHT THAT BAD FEELING! \w8\s[6]BUT IT'S LIKE TRYING TO BITE YOUR OWN TAIL! \w8\s[7]....POINTLESS AND PAINFUL,\w4 TRUST ME ON THAT. \w8\s[32]SO WATCH IT,\w4 BUT THEN LET IT GO! \w8DON'T REPEAT MY LIFE MISTAKES.%(ConvCancel)\e"
+    "\0\s[24]%(jf)DON'T BE TOO HARSH ON YOURSELF,\w4 BUT DON'T MAKE EXCUSES! \w8DON'T TIP TOO HARD EITHER WAY. \w8IT'S LIKE WALKING A ROPE. \w8AND ON EITHER SIDE,\w4 THERE ARE FLAMES OF BAD.%(ConvCancel)\e"
+	"\0\s[24]%(jf)SADLY,\w4 SOMETIMES THERE IS LITTLE YOU CAN DO AFTER YOU MAKE A MISTAKE! \w8AND EVEN IF YOU APOLOGISE,\w4 IT STILL DOES NOT MEAN YOU WILL BE FORGIVEN. \w8AND THAT CAN BE HARD TO SWALLOW. \w8\s[8]BUT EVEN SO,\w4 IT DOES NOT MAKE YOU AWFUL OR IRREDEMABLE! \w8EVEN GOOD PEOPLE DO BAD THINGS SOMETIMES! \w8JUST TRY TO DO BETTER NEXT TIME.%(ConvCancel)\e"
+	"\0\s[24]%(jf)OH,\w4 I SEE... \w8IT'S OKAY,\w4 EVERYONE MAKES MISTAKES SOMETIMES! \w8\s[6]EVEN IF IT SEEMS REALLY BAD NOW,\w4 IT WILL PROBABLY FADE AWAY WITH TIME! \w8\s[8]UNLESS IT IS A GRADE-A SCIENTIFIC MISTAKE WORTH OF HIDING IN A BUNKER. \w8YOU PROBABLY DON'T WANT TO IGNORE THOSE.%(ConvCancel)\e"
+	"\0\s[24]%(jf)WHEN YOU DO SOMETHING BAD,\w4 YOU FEEL GUILTY,\w4 AND THAT'S OKAY! \w8BUT DON'T LET IT SWALLOW YOU. \w8IT'S A HINT THAT YOU SHOULD TRY TO MAKE UP! \w8\s[6]NOT A PUNISHMENT TO MAKE YOU STOP TRYING.%(ConvCancel)\e"
+	"\0\s[0]%(jf)I'M SORRY TO HEAR THAT! \w8IT MUST FEEL BAD... \w8\s[24]I MAKE MISTAKES,\w4 TOO! \w8EVERYONE DOES! \w8AND I KNOW IT CAN FEEL AWFUL. \w8BUT SOMETIMES MISTAKES THAT SEEM BIG AND INTIMIDATING ARE REALLY SMALL FOR EVERYONE ELSE! \w8THINK ABOUT IT.%(ConvCancel)\e"
 
    if jazzfriend == 1 || jazzlover == 1
 	{
-		"\0\s[24]OH! \w8SADLY,\w4 EVERYONE CAN MAKE MISTAKES. \w8AND THIS CAN BE PAINFUL... \w8\w8\w8\s[8]VERY PAINFUL. \w8\s[24]BUT! \w8UNLESS YOU CAN TIME-TRAVEL,\w4 THE ONLY THING YOU CAN DO IS LIVE ON. \w8\s[6]AND IF YOU NEED SUPPORT AS YOU DO,\w4 YOU'LL ALWAYS HAVE YOUR FRIENDS! \w8AND ME,\w4 NYEH HEH HEH!!!%(ConvCancel)\e"
+		"\0\s[24]%(jf)OH! \w8SADLY,\w4 EVERYONE CAN MAKE MISTAKES. \w8AND THIS CAN BE PAINFUL... \w8\w8\w8\s[8]VERY PAINFUL. \w8\s[24]BUT! \w8UNLESS YOU CAN TIME-TRAVEL,\w4 THE ONLY THING YOU CAN DO IS LIVE ON. \w8\s[6]AND IF YOU NEED SUPPORT AS YOU DO,\w4 YOU'LL ALWAYS HAVE YOUR FRIENDS! \w8AND ME,\w4 NYEH HEH HEH!!!%(ConvCancel)\e"
 	}
 	}
 }
@@ -865,10 +866,10 @@ Select.badpeeps
 	if  totappoints > 30 || badbad > 6
 
 	  {
-		  "\0\s[4]OH. \w8I'M SORRY. \w8IT IS AWFUL... \w8BUT... \w8IS THIS WHY?.. \w8\w8...%(ConvCancel)\e"
-		  "\0\s[4]...YOU NEED FRIENDS TO GET THROUGH IT. \w8REAL FRIENDS.%(ConvCancel)\e"
-		  "\0\s[4]...IT IS... \w8AWFUL. \w8I AM SORRY IF PEOPLE ARE BEING MEAN TO YOU. \w8\s[29]I HOPE YOU HAVE SOMEONE... \w8SOMETHING NICE IN YOUR LIFE. \w8SOMETIMES ITS THE ONLY THING THAT HELPS.%(ConvCancel)\e"
-		  "\0\s[8]...I AM SORRY. \w8NO ONE DESERVES TO BE TREATED BADLY. \w8NO ONE AT ALL. \w8\s[4]I HOPE YOU'LL MANAGE TO... \w8ESCAPE THAT SITUATION.%(ConvCancel)\e"
+		  "\0\s[4]%(jf)OH. \w8I'M SORRY. \w8IT IS AWFUL... \w8BUT... \w8IS THIS WHY?.. \w8\w8...%(ConvCancel)\e"
+		  "\0\s[4]%(jf)...YOU NEED FRIENDS TO GET THROUGH IT. \w8REAL FRIENDS.%(ConvCancel)\e"
+		  "\0\s[4]%(jf)...IT IS... \w8AWFUL. \w8I AM SORRY IF PEOPLE ARE BEING MEAN TO YOU. \w8\s[29]I HOPE YOU HAVE SOMEONE... \w8SOMETHING NICE IN YOUR LIFE. \w8SOMETIMES ITS THE ONLY THING THAT HELPS.%(ConvCancel)\e"
+		  "\0\s[8]%(jf)...I AM SORRY. \w8NO ONE DESERVES TO BE TREATED BADLY. \w8NO ONE AT ALL. \w8\s[4]I HOPE YOU'LL MANAGE TO... \w8ESCAPE THAT SITUATION.%(ConvCancel)\e"
 	  }
 
 	if badbad > 50 ||  totappoints > 30
@@ -880,14 +881,14 @@ Select.badpeeps
 	else 
 	{
 	
-	"\0\s[4]OH,\w4 I AM SO SORRY TO HEAR THIS! \w8IT IS HARD TO DEAL WITH PEOPLE BEING MEAN TO YOU,\w4 NO MATTER IF THEY DO IT ON PURPOSE OR NOT. \w8IT CAN TAKE A LOT OUT OF YOU. \w8\S[24]TRY BEING EXTRA NICE TO YOURSELF AFTER THIS. \w8TREAT YOURSELF TO SOME NICENESS TO SPITE THEM!!! \w8THAT WILL SHOW THEM FOR SURE.%(ConvCancel)\e"
-	"\0\s[8]...OH. \w8I AM REALLY SORRY THAT YOU DEAL WITH PEOPLE LIKE THAT,\w4 %(username)! \w8BUT SADLY,\w4 NOT EVERYONE IS AS GREAT AS I AM. \w8\s[24]I HOPE YOU HAVE BETTER PEOPLE WHO CAN SUPPORT AND HELP YOU! \w8\s[6]AND REMIND YOU THAT YOU ARE NOT ALONE!!%(ConvCancel)\e"
-	"\0\s[8]I SEE... \w8IT CAN BE VERY HARD TO DEAL WITH BAD PEOPLE,\w4 ESPECIALLY IF YOU ARE CLOSE! \w8IF YOU CANNOT GET AWAY OR GET THEM TO STOP TREATING YOU LIKE THAT,\w4 PLEASE TALK TO SOMEONE NICER! \w8\s[24]LIKE ME! \w8AND LIKE OTHER NICE HUMANS!!!%(ConvCancel)\e"
-	"\0\s[8]THAT'S VERY SAD... \w8YOU DESERVE MUCH BETTER THAN THAT! \w8NOBODY DESERVES TO BE TREATED BAD. \w8\s[5]NOBODY AT ALL. \w8\s[24]I HOPE YOU CAN STOP THEM. \w8MAYBE BY ASKING SOMEONE IN CHARGE TO GROUND THEM! \w8I HEARD IT IS A HUMAN DETENTION TECHNIQUE.%(ConvCancel)\e"
-	"\0\s[8]IT IS ESPECIALLY SAD IF PEOPLE WHO TREAT YOU BAD ARE CLOSE TO YOU... \w8OR HAVE SOME SORT OF POWER OVER YOU. \w8IF THAT'S THE CASE,\w4 TRY TO FIND ALLIES AROUND YOU. \w8\s[24]IT IS EASIER TO SURVIVE IF YOU ARE NOT ALONE.%(ConvCancel)\e"
-	"\0\s[8]I'M SORRY TO HEAR THAT... \w8\w8\s[24]SOMETIMES,\w4 IF YOU CANNOT MAKE THE PERSON GET BETTER,\w4 YOU SHOULD JUST KEEP YOUR DISTANCE. \w8AND MAYBE HOLD LONG CONVERSATIONS WITH THE IMAGINARY THEM IN THE SHOWER WHERE YOU WIN AND THEY ADMIT DEFEAT. \w8THAT MAY WORK.%(ConvCancel)\e"
-	"\0\s[8]OH,\w4 THIS IS NOT GOOD... \w8\s[24]HOWEVER!!! \w8AT LEAST YOU'VE GOT NICE PEOPLE IN YOUR LIFE TOO,\w4 RIGHT? \w8ME,\w4 FOR EXAMPLE. \w8DON'T BE AFRAID TO TURN TO THEM FOR HELP AND SUPPORT LIKE YOU ARE DOING RIGHT NOW!%(ConvCancel)\e"
-	"\0\s[8]I SEE... \w8\s[24]IT IS IMPORTANT TO REMEMBER THAT SOMEONE ELSE'S BAD ACTIONS DO NOT MEAN THAT YOU ARE BAD! \w8THEY DO NOT DEFINE YOU. \w8IF SOMEONE DOES NOT LIKE YOU,\w4 IT DOES NOT MEAN YOU SHOULD STOP LIKING YOURSELF. \w8IN FACT,\w4 IT MEANS THE EXACT OPPOSITE!!! \w8YOU SHOULD GIVE YOURSELF TWICE AS MANY LIKES.%(ConvCancel)\e"
+	"\0\s[4]%(jf)OH,\w4 I AM SO SORRY TO HEAR THIS! \w8IT IS HARD TO DEAL WITH PEOPLE BEING MEAN TO YOU,\w4 NO MATTER IF THEY DO IT ON PURPOSE OR NOT. \w8IT CAN TAKE A LOT OUT OF YOU. \w8\S[24]TRY BEING EXTRA NICE TO YOURSELF AFTER THIS. \w8TREAT YOURSELF TO SOME NICENESS TO SPITE THEM!!! \w8THAT WILL SHOW THEM FOR SURE.%(ConvCancel)\e"
+	"\0\s[8]%(jf)...OH. \w8I AM REALLY SORRY THAT YOU DEAL WITH PEOPLE LIKE THAT,\w4 %(username)! \w8BUT SADLY,\w4 NOT EVERYONE IS AS GREAT AS I AM. \w8\s[24]I HOPE YOU HAVE BETTER PEOPLE WHO CAN SUPPORT AND HELP YOU! \w8\s[6]AND REMIND YOU THAT YOU ARE NOT ALONE!!%(ConvCancel)\e"
+	"\0\s[8]%(jf)I SEE... \w8IT CAN BE VERY HARD TO DEAL WITH BAD PEOPLE,\w4 ESPECIALLY IF YOU ARE CLOSE! \w8IF YOU CANNOT GET AWAY OR GET THEM TO STOP TREATING YOU LIKE THAT,\w4 PLEASE TALK TO SOMEONE NICER! \w8\s[24]LIKE ME! \w8AND LIKE OTHER NICE HUMANS!!!%(ConvCancel)\e"
+	"\0\s[8]%(jf)THAT'S VERY SAD... \w8YOU DESERVE MUCH BETTER THAN THAT! \w8NOBODY DESERVES TO BE TREATED BAD. \w8\s[5]NOBODY AT ALL. \w8\s[24]I HOPE YOU CAN STOP THEM. \w8MAYBE BY ASKING SOMEONE IN CHARGE TO GROUND THEM! \w8I HEARD IT IS A HUMAN DETENTION TECHNIQUE.%(ConvCancel)\e"
+	"\0\s[8]%(jf)IT IS ESPECIALLY SAD IF PEOPLE WHO TREAT YOU BAD ARE CLOSE TO YOU... \w8OR HAVE SOME SORT OF POWER OVER YOU. \w8IF THAT'S THE CASE,\w4 TRY TO FIND ALLIES AROUND YOU. \w8\s[24]IT IS EASIER TO SURVIVE IF YOU ARE NOT ALONE.%(ConvCancel)\e"
+	"\0\s[8]%(jf)I'M SORRY TO HEAR THAT... \w8\w8\s[24]SOMETIMES,\w4 IF YOU CANNOT MAKE THE PERSON GET BETTER,\w4 YOU SHOULD JUST KEEP YOUR DISTANCE. \w8AND MAYBE HOLD LONG CONVERSATIONS WITH THE IMAGINARY THEM IN THE SHOWER WHERE YOU WIN AND THEY ADMIT DEFEAT. \w8THAT MAY WORK.%(ConvCancel)\e"
+	"\0\s[8]%(jf)OH,\w4 THIS IS NOT GOOD... \w8\s[24]HOWEVER!!! \w8AT LEAST YOU'VE GOT NICE PEOPLE IN YOUR LIFE TOO,\w4 RIGHT? \w8ME,\w4 FOR EXAMPLE. \w8DON'T BE AFRAID TO TURN TO THEM FOR HELP AND SUPPORT LIKE YOU ARE DOING RIGHT NOW!%(ConvCancel)\e"
+	"\0\s[8]%(jf)I SEE... \w8\s[24]IT IS IMPORTANT TO REMEMBER THAT SOMEONE ELSE'S BAD ACTIONS DO NOT MEAN THAT YOU ARE BAD! \w8THEY DO NOT DEFINE YOU. \w8IF SOMEONE DOES NOT LIKE YOU,\w4 IT DOES NOT MEAN YOU SHOULD STOP LIKING YOURSELF. \w8IN FACT,\w4 IT MEANS THE EXACT OPPOSITE!!! \w8YOU SHOULD GIVE YOURSELF TWICE AS MANY LIKES.%(ConvCancel)\e"
 	}
 	
 }
@@ -900,11 +901,11 @@ Select.doubt
 	if  totappoints > 30 || badbad > 6
 
 	  {
-		  "\0\s[4]I... \w8HONESTLY,\w4 I'D LIKE TO KNOW MYSELF...%(ConvCancel)\e"
-		  "\0\s[4]I,\w4 UM. \w8I GUESS YOU COULD... \w8YOU COULD REMIND YOURSELF THAT... \w8YOU ARE BETTER THAN THIS? \w8THAT YOU CAN BE...%(ConvCancel)\e"
-	      "\0\s[4]I,\w4 UM,\w4 I AM NOT SURE. \w8\s[1]M-MAYBE YOU CAN ASK SOMEONE ELSE? \w8I'M NOT SURE I AM QUALIFIED...%(ConvCancel)\e"
-          "\0\s[1].............BELIEVE? \w8IN?? \w8YOURSELF???%(ConvCancel)\e"
-          "\0\s[1]...I THINK YOU SHOULD. \w8THINK HIGHER OF YOURSELF... \w8I THINK...%(ConvCancel)\e"
+		  "\0\s[4]%(jf)I... \w8HONESTLY,\w4 I'D LIKE TO KNOW MYSELF...%(ConvCancel)\e"
+		  "\0\s[4]%(jf)I,\w4 UM. \w8I GUESS YOU COULD... \w8YOU COULD REMIND YOURSELF THAT... \w8YOU ARE BETTER THAN THIS? \w8THAT YOU CAN BE...%(ConvCancel)\e"
+	      "\0\s[4]%(jf)I,\w4 UM,\w4 I AM NOT SURE. \w8\s[1]M-MAYBE YOU CAN ASK SOMEONE ELSE? \w8I'M NOT SURE I AM QUALIFIED...%(ConvCancel)\e"
+          "\0\s[1]%(jf).............BELIEVE? \w8IN?? \w8YOURSELF???%(ConvCancel)\e"
+          "\0\s[1]%(jf)...I THINK YOU SHOULD. \w8THINK HIGHER OF YOURSELF... \w8I THINK...%(ConvCancel)\e"
           
 	 }
 
@@ -919,18 +920,18 @@ Select.doubt
 	{
 		
 		
-	"\0\s[24]SELF-DOUBT CAN BE A HARD THING TO COMBAT! \w8BUT YOU NEED TO UNDERSTAND THAT PEOPLE AROUND YOU ARE JUST THE SAME! \w8FEW PEOPLE ARE AS CONFIDENT AS WE SEE THEM. \w8THEY HAVE THE SAME DOUBTS! \w8YOU ARE NOT ALONE IN THAT. \w8AND YOU WILL BE OKAY.%(ConvCancel)\e"
-	"\0\s[24]IT IS TEMPTING TO BE PERFECTIONIST... \w8BUT PERFECTION DOES NOT EXIST! \w8\s[6]ALAS,\w4 EVEN THE IMPECCABLE JAZZ IS SOMETIMES A LITTLE PECCABLE! \w8AND THIS IS OKAY! \w8IT IS NOT BAD TO BE A LITTLE BAD AT SOMETHING. \w8IT DOES NOT MAKE YOU A BAD PERSON! \w8IT JUST MAKES YOU A PERSON.%(ConvCancel)\e"
-	"\0\s[24]IT IS HARD TO EVALUATE YOUR OWN SKILLS AND QUALITIES! \w8SOMETIMES WE CAN UNDERESTIMATE THEM! \w8ESPECIALLY IF WE COMPARE OURSELVES TO OTHERS A LITTLE TOO MUCH. \w8BUT THE ONLY PERSON YOU SHOULD COMPARE YOURSELF TO IS YOU,\w4 PREVIOUSLY! \w8\s[5]LOOK HOW MUCH YOU HAVE GROWN!!! \w8IT'S AMAZING!!! \w8PLEASE,\w4 DON'T FORGET THIS.%(ConvCancel)\e"
-	"\0\s[24]SOMETIMES YOU HAVE TO HEAR IT FROM YOUR FRIENDS,\w4 SO MAYBE YOU COULD ASK THEM TO HELP YOU WITH YOUR DOUBT! \w8I AM SURE THEY WILL NOT HESITATE TO LIFT YOUR SPIRITS. \w8GIVE THEM A LITTLE SHOVE UP TO THE SKY WHERE THEY BELONG.%(ConvCancel)\e"
-	"\0\s[24]SOMETIMES THE BAD THOUGHTS RUSH ON SO QUICK THAT THEY CAN CARRY YOU AWAY REALLY FAR! \w8TRY TO STOP THEM BEFORE THEY DO. \w8HOW? \w8WELL... \w8\s[6]YOU COULD IMAGINE A BLUE STOP SIGN!%(ConvCancel)\e"
-	"\0\s[24]IF YOU WORRY ABOUT PEOPLE JUDGING YOU,\w4 TRY TO REMEMBER THE LAST TIME SOMEONE DID SOMETHING EMBARRASSING OR LESS THAN PERFECT AROUND YOU! \w8YOU PROBABLY WON'T REMEMBER IT. \w8\s[6]BECAUSE PEOPLE CARE MUCH MORE ABOUT THEMSELVES. \w8\s[24]AND IT'S OKAY. \w8JUST REMEMBER NOT TO BE TOO JUDGY TOWARDS YOURSELF. \w8AND IF YOU DO,\w4 YOU WILL HAVE TO PAY A COURT FINE TO THE JUDGY CRIMES JAR. \w8LIKE SWEAR JAR,\w4 BUT FOR JUDGY CRIMES.%(ConvCancel)\e"
-	"\0\s[24]I CAN PROMISE YOU THAT YOU ARE BETTER THAN YOU THINK! \w8IN FACT! \w8ACCORDING TO A POLL AMONG LOCAL SKELETONS,\w4 \s[6]YOU ARE THE BEST HUMAN EVER AND DESERVE THE BEST THINGS IN LIFE. \w8YOU CANNOT FIGHT PUBLIC OPINION!%(ConvCancel)\e"
-	"\0\s[24]SOMETIMES DOUBT CAN BE A DRIVING FORCE TOWARDS GETTING BETTER AT SOMETHING! \w8\s[6]AFTER ALL,\w4 YOU CANNOT SPELL 'DOUBT' WITHOUT 'DO'! \w8AND ALSO 'DOT',\w4 AND 'BOT',\w4 AND 'BOD',\w4 \s[3]AND 3/4 OF 'TOAD',\w4 AND... \w8\w8\w8\s[1]... \w8\w8\w8... YOU GOT MY POINT,\w4 DIDN'T YOU??%(ConvCancel)\e"
+	"\0\s[24]%(jf)SELF-DOUBT CAN BE A HARD THING TO COMBAT! \w8BUT YOU NEED TO UNDERSTAND THAT PEOPLE AROUND YOU ARE JUST THE SAME! \w8FEW PEOPLE ARE AS CONFIDENT AS WE SEE THEM. \w8THEY HAVE THE SAME DOUBTS! \w8YOU ARE NOT ALONE IN THAT. \w8AND YOU WILL BE OKAY.%(ConvCancel)\e"
+	"\0\s[24]%(jf)IT IS TEMPTING TO BE PERFECTIONIST... \w8BUT PERFECTION DOES NOT EXIST! \w8\s[6]ALAS,\w4 EVEN THE IMPECCABLE JAZZ IS SOMETIMES A LITTLE PECCABLE! \w8AND THIS IS OKAY! \w8IT IS NOT BAD TO BE A LITTLE BAD AT SOMETHING. \w8IT DOES NOT MAKE YOU A BAD PERSON! \w8IT JUST MAKES YOU A PERSON.%(ConvCancel)\e"
+	"\0\s[24]%(jf)IT IS HARD TO EVALUATE YOUR OWN SKILLS AND QUALITIES! \w8SOMETIMES WE CAN UNDERESTIMATE THEM! \w8ESPECIALLY IF WE COMPARE OURSELVES TO OTHERS A LITTLE TOO MUCH. \w8BUT THE ONLY PERSON YOU SHOULD COMPARE YOURSELF TO IS YOU,\w4 PREVIOUSLY! \w8\s[5]LOOK HOW MUCH YOU HAVE GROWN!!! \w8IT'S AMAZING!!! \w8PLEASE,\w4 DON'T FORGET THIS.%(ConvCancel)\e"
+	"\0\s[24]%(jf)SOMETIMES YOU HAVE TO HEAR IT FROM YOUR FRIENDS,\w4 SO MAYBE YOU COULD ASK THEM TO HELP YOU WITH YOUR DOUBT! \w8I AM SURE THEY WILL NOT HESITATE TO LIFT YOUR SPIRITS. \w8GIVE THEM A LITTLE SHOVE UP TO THE SKY WHERE THEY BELONG.%(ConvCancel)\e"
+	"\0\s[24]%(jf)SOMETIMES THE BAD THOUGHTS RUSH ON SO QUICK THAT THEY CAN CARRY YOU AWAY REALLY FAR! \w8TRY TO STOP THEM BEFORE THEY DO. \w8HOW? \w8WELL... \w8\s[6]YOU COULD IMAGINE A BLUE STOP SIGN!%(ConvCancel)\e"
+	"\0\s[24]%(jf)IF YOU WORRY ABOUT PEOPLE JUDGING YOU,\w4 TRY TO REMEMBER THE LAST TIME SOMEONE DID SOMETHING EMBARRASSING OR LESS THAN PERFECT AROUND YOU! \w8YOU PROBABLY WON'T REMEMBER IT. \w8\s[6]BECAUSE PEOPLE CARE MUCH MORE ABOUT THEMSELVES. \w8\s[24]AND IT'S OKAY. \w8JUST REMEMBER NOT TO BE TOO JUDGY TOWARDS YOURSELF. \w8AND IF YOU DO,\w4 YOU WILL HAVE TO PAY A COURT FINE TO THE JUDGY CRIMES JAR. \w8LIKE SWEAR JAR,\w4 BUT FOR JUDGY CRIMES.%(ConvCancel)\e"
+	"\0\s[24]%(jf)I CAN PROMISE YOU THAT YOU ARE BETTER THAN YOU THINK! \w8IN FACT! \w8ACCORDING TO A POLL AMONG LOCAL SKELETONS,\w4 \s[6]YOU ARE THE BEST HUMAN EVER AND DESERVE THE BEST THINGS IN LIFE. \w8YOU CANNOT FIGHT PUBLIC OPINION!%(ConvCancel)\e"
+	"\0\s[24]%(jf)SOMETIMES DOUBT CAN BE A DRIVING FORCE TOWARDS GETTING BETTER AT SOMETHING! \w8\s[6]AFTER ALL,\w4 YOU CANNOT SPELL 'DOUBT' WITHOUT 'DO'! \w8AND ALSO 'DOT',\w4 AND 'BOT',\w4 AND 'BOD',\w4 \s[3]AND 3/4 OF 'TOAD',\w4 AND... \w8\w8\w8\s[1]... \w8\w8\w8... YOU GOT MY POINT,\w4 DIDN'T YOU??%(ConvCancel)\e"
 	
 	if jazzfriend == 1 || jazzlover == 1 && badbad < 3
 		{
-			"\0\s[25]GASP???? \w8\s[32]HOW COME MY FAVORITE HUMAN HAS FORGOTTEN %(himher) MULTIPLE GOOD QUALITIES AND TALENTS??? \w8\s[6]THIS CANNOT STAND. \w8I KNOW IT IS HARD TO SHED OLD HABITS,\w4 BUT YOU SHOULD TRY TO REMEMBER THAT YOU ARE AMAZING!!! \w8AFTER ALL!!!! \w8\s[5]EVEN IF YOU DON'T BELIEVE IN YOURSELF,\w4 I DO!!!! \w8YOU CAN BELIEVE IN ME BELIEVING IN YOU INSTEAD!!!%(ConvCancel)\e"
+			"\0\s[25]%(jf)GASP???? \w8\s[32]HOW COME MY FAVORITE HUMAN HAS FORGOTTEN %(himher) MULTIPLE GOOD QUALITIES AND TALENTS??? \w8\s[6]THIS CANNOT STAND. \w8I KNOW IT IS HARD TO SHED OLD HABITS,\w4 BUT YOU SHOULD TRY TO REMEMBER THAT YOU ARE AMAZING!!! \w8AFTER ALL!!!! \w8\s[5]EVEN IF YOU DON'T BELIEVE IN YOURSELF,\w4 I DO!!!! \w8YOU CAN BELIEVE IN ME BELIEVING IN YOU INSTEAD!!!%(ConvCancel)\e"
 		}
 		
 	}
@@ -947,12 +948,12 @@ Select.anxiety
 	if totappoints > 30 || badbad > 6
 
 	  {
-		  "\0\s[1]I COULD TELL YOU,\w4 BUT I AM WORRIED... \w8WILL YOU GET ANGRY IF IT DOES NOT WORK?%(ConvCancel)\e"
-		  "\0\s[40]TRY TO BREATHE SLOWLY? \w8I MEAN,\w4 UM,\w4 I AM NOT ORDERING YOU AROUND...%(ConvCancel)\e"
-		  "\0\s[1]I AM NOT SURE... \w8...MAYBE YOU COULD TELL ME YOURSELF?%(ConvCancel)\e"
-		  "\0\s[9]TRY TO... \w8BREATHE. \w8JUST BREATHE DEEPLY. \w8AND WAIT FOR IT TO BE OVER.%(ConvCancel)\e"
-		  "\0\s[1]THERE ARE GROUNDING TIPS ON THE INTERNET. \w8M-MAYBE YOU SHOULD READ THEM INSTEAD?%(ConvCancel)\e"
-		  "\0\s[1]UM... \w8I GUESS,\w4 UM... \w8TRY TO DISTRACT YOURSELF WITH SOMETHING! \w8\s[40]FOR EXAMPLE,\w4 SAYING THING AND GIVING ADVICE...%(ConvCancel)\e"
+		  "\0\s[1]%(jf)I COULD TELL YOU,\w4 BUT I AM WORRIED... \w8WILL YOU GET ANGRY IF IT DOES NOT WORK?%(ConvCancel)\e"
+		  "\0\s[40]%(jf)TRY TO BREATHE SLOWLY? \w8I MEAN,\w4 UM,\w4 I AM NOT ORDERING YOU AROUND...%(ConvCancel)\e"
+		  "\0\s[1]%(jf)I AM NOT SURE... \w8...MAYBE YOU COULD TELL ME YOURSELF?%(ConvCancel)\e"
+		  "\0\s[9]%(jf)TRY TO... \w8BREATHE. \w8JUST BREATHE DEEPLY. \w8AND WAIT FOR IT TO BE OVER.%(ConvCancel)\e"
+		  "\0\s[1]%(jf)THERE ARE GROUNDING TIPS ON THE INTERNET. \w8M-MAYBE YOU SHOULD READ THEM INSTEAD?%(ConvCancel)\e"
+		  "\0\s[1]%(jf)UM... \w8I GUESS,\w4 UM... \w8TRY TO DISTRACT YOURSELF WITH SOMETHING! \w8\s[40]FOR EXAMPLE,\w4 SAYING THING AND GIVING ADVICE...%(ConvCancel)\e"
 	  }
 
 	if badbad > 50 || totappoints > 50
@@ -964,15 +965,15 @@ Select.anxiety
 	
 	if badbad <= 6
 	{
-	"\0\s[24]WHEN YOU ARE WORRYING ABOUT SOMETHING,\w4 IT IS VERY EASY TO LET YOUR THOUGHTS SPIRAL OUT OF CONTROL... \w8AND IT IS NOT YOUR FAULT! \w8BUT TRY TO STAY PRESENT,\w4 INSTEAD OF LETTING THEM CARRY YOU AWAY. \w8CONCENTRATE ON WHAT YOUR BODY FEELS. \w8\s[6]OR WHAT YOU CAN HEAR,\w4 SEE AND SMELL AROUND YOU! \w8IT IS CALLED 'GROUNDING'. \w8PLANT YOURSEL FIRMLY AND GET A GOOD GULP OF OXYGEN,\w4 LIKE A LITTLE FLOWER TAKING ROOT.%(ConvCancel)\e"
-	"\0\s[24]THOUGHTS CAN BE LIARS. \w8OFTEN,\w4 THEY CAN BLOW LITTLE BAD THINGS OUT OF PROPORTION. \w8WHEN THAT HAPPENS,\w4 TRY TO THINK OF THREE THINGS: \w8THE BEST POSSIBLE OUTCOME,\w4 \w8THE WORST POSSIBLE OUTCOME \w8AND WHAT WILL MOST LIKELY HAPPEN. \w8AND THEN REMIND YOURSELF THAT,\w4 EVEN IF THINGS GO WRONG,\w4 YOU CAN HANDLE THIS!%(ConvCancel)\e"
-	"\0\s[24]SOMETIMES,\w4 WHEN YOU ARE ANXIOUS ABOUT SOMETHING,\w4 IT IS BEST TO ASK FOR SECOND OPINION! \w8ASK SOMEONE YOU TRUST TO REASSURE YOU. \w8I AM SURE THEY WILL BE MORE THAN HAPPY TO HELP YOU FEEL BETTER.%(ConvCancel)\e"
-	"\0\s[24]BREATHING IS THE KEY! \w8\s[6]WHEN YOU ARE ANXIOUS,\w4 YOU CAN SOMETIMES LOSE CONTROL OF HOW MUCH OF THE SWEET OXYGEN ENTERS YOUR BODY. \w8\s[24]TRY TO NOTICE HOW YOU BREATHE,\w4 AND DO IT SLOWLY AND EVENLY! \w8COUNT IF THAT HELPS YOU. \w8IT IS A SMALL THING,\w4 BUT IT CAN BE A GOOD WAY TO UNWIND A LITTLE.%(ConvCancel)\e"
-	"\0\s[24]TRY TO DISTRACT YOURSELF WITH A GOOD FEELING. \w8LIKE THE FEELING OF A WARM CUP OF TEA! \w8OR A SOFT BLANKET! \w8OR A NICE FLUFFY ANIMAL! \w8\s[6]OR A GREAT SMOOTH SKELETON YOU COULD PET AS WELL. \w8\s[24]TRY TO WATCH VERY CLOSELY HOW IT FEELS. \w8AND ENJOY IT AS MUCH AS YOU CAN!%(ConvCancel)\e"
-	"\0\s[24]SOME PEOPLE USE MEDITATION IN THEIR ANTIANXIETY COMBAT. \w8 THERE ARE DIFFERENT WAYS TO MEDITATE. \w8TRY AND LOOK INTO IT IF YOU ARE INTERESTED! \w8IF YOU NEED A STARTING POINT,\w4 OR PREFER GUIDED MEDITATIONS WHERE YOU ARE TALKED THROUGH THE PROCESS,\w4 I HAVE HEARD FROM A VERY NICE HUMAN THAT \_a[https://www.youtube.com/user/TheHonestGuys]RECORDINGS SUCH AS THESE\_a ARE NOT TOO BAD OF A RESOURCE.%(ConvCancel)\e"
-	"\0\s[24]ANXIETY CAN FEEL EXHAUSTING OR SILLY,\w4 IF IT IS SPARKED BY SMALL THINGS... \w8BUT THE WAY A MIND WORKS DOES NOT ALWAYS MAKE SENSE. \w8DON'T BE TOO HARSH WITH YOURSELF FOR WORRYING! \w8KINDNESS NEVER HURTS. \w8ESPECIALLY SELF-KINDNESS.%(ConvCancel)\e"
-	"\0\s[24]SOMETIMES YOU NEED TO GET THAT ANXIOUS ENERGY OUT BY DOING SOMETHING SWEAT-INDUCING! \w8IF YOUR BODY WANTS YOU TO FIGHT OR FLIGHT,\w4 GIVE IT WHAT IT WANTS! \w8GO FOR A RUN,\w4 HIT A FEW PILLOWS,\w4 EXERCISE! \w8BESIDES,\w4 IT CAN HELP YOU STAY FIT AND HEALTHY AS WELL.%(ConvCancel)\e"
-	"\0\s[24]TRY TO DISTRACT YOURSELF WITH SOMETHING THAT WILL KEEP YOUR MIND BUSY! \w8LIKE AN ACTION-PACKED FILM,\w4 OR A REALLY GOOD BOOK. \w8FIND A WAY TO KEEP YOUR HEAD OCCUPIED AND GO FOR IT!%(ConvCancel)\e"
+	"\0\s[24]%(jf)WHEN YOU ARE WORRYING ABOUT SOMETHING,\w4 IT IS VERY EASY TO LET YOUR THOUGHTS SPIRAL OUT OF CONTROL... \w8AND IT IS NOT YOUR FAULT! \w8BUT TRY TO STAY PRESENT,\w4 INSTEAD OF LETTING THEM CARRY YOU AWAY. \w8CONCENTRATE ON WHAT YOUR BODY FEELS. \w8\s[6]OR WHAT YOU CAN HEAR,\w4 SEE AND SMELL AROUND YOU! \w8IT IS CALLED 'GROUNDING'. \w8PLANT YOURSEL FIRMLY AND GET A GOOD GULP OF OXYGEN,\w4 LIKE A LITTLE FLOWER TAKING ROOT.%(ConvCancel)\e"
+	"\0\s[24]%(jf)THOUGHTS CAN BE LIARS. \w8OFTEN,\w4 THEY CAN BLOW LITTLE BAD THINGS OUT OF PROPORTION. \w8WHEN THAT HAPPENS,\w4 TRY TO THINK OF THREE THINGS: \w8THE BEST POSSIBLE OUTCOME,\w4 \w8THE WORST POSSIBLE OUTCOME \w8AND WHAT WILL MOST LIKELY HAPPEN. \w8AND THEN REMIND YOURSELF THAT,\w4 EVEN IF THINGS GO WRONG,\w4 YOU CAN HANDLE THIS!%(ConvCancel)\e"
+	"\0\s[24]%(jf)SOMETIMES,\w4 WHEN YOU ARE ANXIOUS ABOUT SOMETHING,\w4 IT IS BEST TO ASK FOR SECOND OPINION! \w8ASK SOMEONE YOU TRUST TO REASSURE YOU. \w8I AM SURE THEY WILL BE MORE THAN HAPPY TO HELP YOU FEEL BETTER.%(ConvCancel)\e"
+	"\0\s[24]%(jf)BREATHING IS THE KEY! \w8\s[6]WHEN YOU ARE ANXIOUS,\w4 YOU CAN SOMETIMES LOSE CONTROL OF HOW MUCH OF THE SWEET OXYGEN ENTERS YOUR BODY. \w8\s[24]TRY TO NOTICE HOW YOU BREATHE,\w4 AND DO IT SLOWLY AND EVENLY! \w8COUNT IF THAT HELPS YOU. \w8IT IS A SMALL THING,\w4 BUT IT CAN BE A GOOD WAY TO UNWIND A LITTLE.%(ConvCancel)\e"
+	"\0\s[24]%(jf)TRY TO DISTRACT YOURSELF WITH A GOOD FEELING. \w8LIKE THE FEELING OF A WARM CUP OF TEA! \w8OR A SOFT BLANKET! \w8OR A NICE FLUFFY ANIMAL! \w8\s[6]OR A GREAT SMOOTH SKELETON YOU COULD PET AS WELL. \w8\s[24]TRY TO WATCH VERY CLOSELY HOW IT FEELS. \w8AND ENJOY IT AS MUCH AS YOU CAN!%(ConvCancel)\e"
+	"\0\s[24]%(jf)SOME PEOPLE USE MEDITATION IN THEIR ANTIANXIETY COMBAT. \w8 THERE ARE DIFFERENT WAYS TO MEDITATE. \w8TRY AND LOOK INTO IT IF YOU ARE INTERESTED! \w8IF YOU NEED A STARTING POINT,\w4 OR PREFER GUIDED MEDITATIONS WHERE YOU ARE TALKED THROUGH THE PROCESS,\w4 I HAVE HEARD FROM A VERY NICE HUMAN THAT \_a[https://www.youtube.com/user/TheHonestGuys]RECORDINGS SUCH AS THESE\_a ARE NOT TOO BAD OF A RESOURCE.%(ConvCancel)\e"
+	"\0\s[24]%(jf)ANXIETY CAN FEEL EXHAUSTING OR SILLY,\w4 IF IT IS SPARKED BY SMALL THINGS... \w8BUT THE WAY A MIND WORKS DOES NOT ALWAYS MAKE SENSE. \w8DON'T BE TOO HARSH WITH YOURSELF FOR WORRYING! \w8KINDNESS NEVER HURTS. \w8ESPECIALLY SELF-KINDNESS.%(ConvCancel)\e"
+	"\0\s[24]%(jf)SOMETIMES YOU NEED TO GET THAT ANXIOUS ENERGY OUT BY DOING SOMETHING SWEAT-INDUCING! \w8IF YOUR BODY WANTS YOU TO FIGHT OR FLIGHT,\w4 GIVE IT WHAT IT WANTS! \w8GO FOR A RUN,\w4 HIT A FEW PILLOWS,\w4 EXERCISE! \w8BESIDES,\w4 IT CAN HELP YOU STAY FIT AND HEALTHY AS WELL.%(ConvCancel)\e"
+	"\0\s[24]%(jf)TRY TO DISTRACT YOURSELF WITH SOMETHING THAT WILL KEEP YOUR MIND BUSY! \w8LIKE AN ACTION-PACKED FILM,\w4 OR A REALLY GOOD BOOK. \w8FIND A WAY TO KEEP YOUR HEAD OCCUPIED AND GO FOR IT!%(ConvCancel)\e"
 	}
 	
 	}
@@ -984,12 +985,12 @@ Select.badstress
 	if totappoints > 30 || badbad > 6
 
 	  {
-		  "\0\s[1]UM... \w8STRESS CAN BE VERY... TIRING. \w8\w8\s[4]...VERY. \w8SO... TRY TO REST,\w4 AND GET SOME GOOD SLEEP.%(ConvCancel)\e"
-		  "\0\s[1]M-MAYBE YOU SHOULD ASK THE INTERNET? \w8IT'S PROBABLY MORE VERITABLE... \w8AND LESS BEATABLE...%(ConvCancel)\e"
-		  "\0\s[4]TRY TO... \w8CHANGE YOUR ROUTINE? \w8\s[6]FOR EXAVPLE,\w4 YOU COULD START BY BULLYING PEOPLE AROUND YOU LESS THAN YOU DO.%(ConvCancel)\e"
-		  "\0\s[4]TRY TO SPEND MORE TIME AROUND PEOPLE YOU GENUINELY LIKE. \w8JUST,\w4 UM... \w8MAYBE DON'T BE MEAN TO THEM,\w4 PLEASE.%(ConvCancel)\e"
-		  "\0\s[40]IF YOU ARE NOT TOO TIRED... \w8YOU COULD TRY AND PICK A NEW HOBBY? \w8A NEW HOBBY THAT IS NOT PUNCHING PEOPLE?%(ConvCancel)\e"
-		  "\0\s[1]I COULD TELL YOU BUT I FEEL REALLY STRESSED FOR SOME REASON LATELY AND I CANNOT REALLY THINK OF ANYTHING SORRY.%(ConvCancel)\e"
+		  "\0\s[1]%(jf)UM... \w8STRESS CAN BE VERY... TIRING. \w8\w8\s[4]...VERY. \w8SO... TRY TO REST,\w4 AND GET SOME GOOD SLEEP.%(ConvCancel)\e"
+		  "\0\s[1]%(jf)M-MAYBE YOU SHOULD ASK THE INTERNET? \w8IT'S PROBABLY MORE VERITABLE... \w8AND LESS BEATABLE...%(ConvCancel)\e"
+		  "\0\s[4]%(jf)TRY TO... \w8CHANGE YOUR ROUTINE? \w8\s[6]FOR EXAVPLE,\w4 YOU COULD START BY BULLYING PEOPLE AROUND YOU LESS THAN YOU DO.%(ConvCancel)\e"
+		  "\0\s[4]%(jf)TRY TO SPEND MORE TIME AROUND PEOPLE YOU GENUINELY LIKE. \w8JUST,\w4 UM... \w8MAYBE DON'T BE MEAN TO THEM,\w4 PLEASE.%(ConvCancel)\e"
+		  "\0\s[40]%(jf)IF YOU ARE NOT TOO TIRED... \w8YOU COULD TRY AND PICK A NEW HOBBY? \w8A NEW HOBBY THAT IS NOT PUNCHING PEOPLE?%(ConvCancel)\e"
+		  "\0\s[1]%(jf)I COULD TELL YOU BUT I FEEL REALLY STRESSED FOR SOME REASON LATELY AND I CANNOT REALLY THINK OF ANYTHING SORRY.%(ConvCancel)\e"
 	  }
 
 	if badbad > 50 || totappoints > 50
@@ -1000,15 +1001,15 @@ Select.badstress
 	
 	if badbad <= 6
 	{
-	 "\0\s[6]THERE ARE DIFFERENT WAYS TO FEEL BETTER... \w8WHEN YOU NEED A QUICK ONE,\w4 TRY TO IMAGINE YOURSELF IN A HAPPY PLACE! \w8\s[0]A PLACE FROM A NICE MEMORY,\w4 OR A DREAM PLACE YOU WOULD LIKE TO VISIT. \w8IMAGINE YOURSELF THERE,\w4 HAVING FUN,\w4 DOING WHATEVER YOU LIKE! \w8THINK OF HOW IT WOULD FEEL TO SMELL AND TOUCH ALL THE THINGS THERE. \w8\s[24]IT IS NOT A LONG-TERM SOLUTION,\w4 BUT IT CAN BE A GOOD FIRST STEP.%(ConvCancel)\e"
-	 "\0\s[24]IF YOU NEED A QUICK SOLUTION,\w4 TRY TENSING AND RELAXING YOUR MUSLES GROUP BY GROUP! \w8FIRST THE HANDS,\w4 THEN THE ARMS... \w8SHOULDERS... \w8BACK... \w8FEET,\w4 THEN LEGS,\w4 THEN THIGHS... \w8AND FINALLY,\w4 YOUR FACE.%(ConvCancel)\e"
-	 "\0\s[24]SOMETIMES YOU NEED A CHANGE OF SCENERY! \w8SOMETHING NEW TO DILUTE THE ROUTINE A BIT. \w8TAKE A WALK,\w4 OR DRIVE TO A NEW PLACE. \w8OR STAND UP AND STEP AROUND. \w8\s[0]YOU'LL SEE HOW THIS WILL HELP.%(ConvCancel)\e"
-	 "\0\s[6]HUGS ARE VERY HEALTHY! \w8\w8\w8\s[1]...AND I AM NOT SAYING THIS TO GET A HUG. \w8\s[24]GETTING ENOUGH GOOD PHYSICAL CONTACT IS VERY IMPORTANT! \w8AND IT WILL MAKE YOU FEEL SAFE AND LOVED AS WELL.%(ConvCancel)\e"
-	 "\0\s[24]GETTING EXERCISE IS IMPORTANT! \w8AND IT CAN ALSO EASE STRESS. \w8PICK SOMETHING YOU LIKE AND HAVE FUN! \w8THE KEY IS WORKING OUT AS MUCH AS YOU WANT AND THE WAY YOU WANT,\w4 NOT EXHAUSTING YOURSELF. \w8LISTEN TO YOUR BODY! \w8SOMETIMES IT KNOWS BEST.%(ConvCancel)\e"
-	 "\0\s[24]YOU NEED ENOUGH ENERGY TO DEAL WITH TROUBLES! \w8TRY TO GET A BALANCED DIET INSIDE YOUR ORGANISM. \w8OR AT LEAST REMEMBER TO GET SOME VITAMINS AND FIBERS WHEN YOU CAN! \w8AND DRINK ENOUGH WATER,\w4 AT LEAST FIVE GLASSES A DAY. \w8DON'T BE A DRY SHRIVELED RAISIN! \w8BE A WELL-NOURISHED HYDRATED GRAPE.%(ConvCancel)\e"
-	 "\0\s[6]IF YOU DON'T GET ENOUGH SLEEP,\w4 YOU WILL FEEL EVEN WORSE. \w8SO TRY TO GET AT LEAST EIGHT HOURS OF SLEEP EVERY NIGHT! \w8\s[24]EVEN LYING DOWN WITH YOUR EYES CLOSED AND RELAXING COUNTS AS REST. \w8AND IF YOU NEED A QUICK BURST OF ENERGY,\w4 20-MINUTE NAPS ARE REALLY NEAT.%(ConvCancel)\e"
-	 "\0\s[24]A ROUTINE CAN HELP YOU FEEL MORE IN CONTROL OF YOUR LIFE,\w4 BUT YOU CAN GET BORED EASILY IF YOU DON'T DO ANYTHING NEW! \w8TAKE WALKS,\w4 MAKE ART,\w4 TALK TO PEOPLE! \w8TRY TO FIND A BALANCE BETWEEN A PLAN AND AN IMPROVISATION.%(ConvCancel)\e"
-	 "\0\s[24]DON'T BE AFRAID TO PUT YOURSELF FIRST! \w8TO REST WHEN YOU NEED,\w4 OR SAY NO TO PEOPLE AND THINGS SOMETIMES. \w8IT IS NOT BAD OR WRONG TO TAKE CARE OF YOURSELF! \w8AND NEVER LISTEN TO PEOPLE WHO SAY OTHERWISE.%(ConvCancel)\e"
+	 "\0\s[6]%(jf)THERE ARE DIFFERENT WAYS TO FEEL BETTER... \w8WHEN YOU NEED A QUICK ONE,\w4 TRY TO IMAGINE YOURSELF IN A HAPPY PLACE! \w8\s[0]A PLACE FROM A NICE MEMORY,\w4 OR A DREAM PLACE YOU WOULD LIKE TO VISIT. \w8IMAGINE YOURSELF THERE,\w4 HAVING FUN,\w4 DOING WHATEVER YOU LIKE! \w8THINK OF HOW IT WOULD FEEL TO SMELL AND TOUCH ALL THE THINGS THERE. \w8\s[24]IT IS NOT A LONG-TERM SOLUTION,\w4 BUT IT CAN BE A GOOD FIRST STEP.%(ConvCancel)\e"
+	 "\0\s[24]%(jf)IF YOU NEED A QUICK SOLUTION,\w4 TRY TENSING AND RELAXING YOUR MUSLES GROUP BY GROUP! \w8FIRST THE HANDS,\w4 THEN THE ARMS... \w8SHOULDERS... \w8BACK... \w8FEET,\w4 THEN LEGS,\w4 THEN THIGHS... \w8AND FINALLY,\w4 YOUR FACE.%(ConvCancel)\e"
+	 "\0\s[24]%(jf)SOMETIMES YOU NEED A CHANGE OF SCENERY! \w8SOMETHING NEW TO DILUTE THE ROUTINE A BIT. \w8TAKE A WALK,\w4 OR DRIVE TO A NEW PLACE. \w8OR STAND UP AND STEP AROUND. \w8\s[0]YOU'LL SEE HOW THIS WILL HELP.%(ConvCancel)\e"
+	 "\0\s[6]%(jf)HUGS ARE VERY HEALTHY! \w8\w8\w8\s[1]...AND I AM NOT SAYING THIS TO GET A HUG. \w8\s[24]GETTING ENOUGH GOOD PHYSICAL CONTACT IS VERY IMPORTANT! \w8AND IT WILL MAKE YOU FEEL SAFE AND LOVED AS WELL.%(ConvCancel)\e"
+	 "\0\s[24]%(jf)GETTING EXERCISE IS IMPORTANT! \w8AND IT CAN ALSO EASE STRESS. \w8PICK SOMETHING YOU LIKE AND HAVE FUN! \w8THE KEY IS WORKING OUT AS MUCH AS YOU WANT AND THE WAY YOU WANT,\w4 NOT EXHAUSTING YOURSELF. \w8LISTEN TO YOUR BODY! \w8SOMETIMES IT KNOWS BEST.%(ConvCancel)\e"
+	 "\0\s[24]%(jf)YOU NEED ENOUGH ENERGY TO DEAL WITH TROUBLES! \w8TRY TO GET A BALANCED DIET INSIDE YOUR ORGANISM. \w8OR AT LEAST REMEMBER TO GET SOME VITAMINS AND FIBERS WHEN YOU CAN! \w8AND DRINK ENOUGH WATER,\w4 AT LEAST FIVE GLASSES A DAY. \w8DON'T BE A DRY SHRIVELED RAISIN! \w8BE A WELL-NOURISHED HYDRATED GRAPE.%(ConvCancel)\e"
+	 "\0\s[6]%(jf)IF YOU DON'T GET ENOUGH SLEEP,\w4 YOU WILL FEEL EVEN WORSE. \w8SO TRY TO GET AT LEAST EIGHT HOURS OF SLEEP EVERY NIGHT! \w8\s[24]EVEN LYING DOWN WITH YOUR EYES CLOSED AND RELAXING COUNTS AS REST. \w8AND IF YOU NEED A QUICK BURST OF ENERGY,\w4 20-MINUTE NAPS ARE REALLY NEAT.%(ConvCancel)\e"
+	 "\0\s[24]%(jf)A ROUTINE CAN HELP YOU FEEL MORE IN CONTROL OF YOUR LIFE,\w4 BUT YOU CAN GET BORED EASILY IF YOU DON'T DO ANYTHING NEW! \w8TAKE WALKS,\w4 MAKE ART,\w4 TALK TO PEOPLE! \w8TRY TO FIND A BALANCE BETWEEN A PLAN AND AN IMPROVISATION.%(ConvCancel)\e"
+	 "\0\s[24]%(jf)DON'T BE AFRAID TO PUT YOURSELF FIRST! \w8TO REST WHEN YOU NEED,\w4 OR SAY NO TO PEOPLE AND THINGS SOMETIMES. \w8IT IS NOT BAD OR WRONG TO TAKE CARE OF YOURSELF! \w8AND NEVER LISTEN TO PEOPLE WHO SAY OTHERWISE.%(ConvCancel)\e"
 	
 	 
 	}
@@ -1037,7 +1038,7 @@ Select.notenough
 	
 	else 
 	{
-	"\0\s[0]You tell Jazz that you need help with something else. \w8\s[8]He nods thoughtfully. \w8\n\n%(username)... \w8WHILE I TRY TO BE HELPFUL,\w4 I AM JUST A SINGLE SKELETON. \w8I MAY NOT HAVE ALL THE ANSWERS OR THE EXACT ADVICE YOU NEED. \w8\s[24]AND I AM SORRY IF THAT IS THE CASE,\w4 BUT THEN IT JUST MEANS YOU HAVE TO ASK SOMEONE ELSE! \w8DO NOT BE ASHAMED OF ASKING YOUR FRIENDS AND FAMILY FOR HELP,\w4 OR GOIND TO PROFESSIONALS! \w8THEY ARE THERE FOR THIS EXACT REASON. \w8\x\cPLEASE NOTE THAT THERE IS A LIST OF LINKS THAT CAN BE USEFUL TO YOU AS WELL,\w4 NO MATTER WHAT PROBLEM YOU STRUGGLE WITH. \w8IT IS RIGHT THERE IN THE 'ADVICE' SECTION,\w4 UNDER THIS OPTION! \w8GOOD LUCK TO YOU,\w4 AND REMEMBER THAT I WILL BE WITH YOU ON YOUR WAY. \w8\s[5]YOU CAN COUNT ON ME!!!%(ConvCancel)\e"
+	"\0\s[0]You tell Jazz that you need help with something else. \w8\s[8]He nods thoughtfully. \w8\n\n%(jf)%(username)... \w8WHILE I TRY TO BE HELPFUL,\w4 I AM JUST A SINGLE SKELETON. \w8I MAY NOT HAVE ALL THE ANSWERS OR THE EXACT ADVICE YOU NEED. \w8\s[24]AND I AM SORRY IF THAT IS THE CASE,\w4 BUT THEN IT JUST MEANS YOU HAVE TO ASK SOMEONE ELSE! \w8DO NOT BE ASHAMED OF ASKING YOUR FRIENDS AND FAMILY FOR HELP,\w4 OR GOIND TO PROFESSIONALS! \w8THEY ARE THERE FOR THIS EXACT REASON. \w8\x\cPLEASE NOTE THAT THERE IS A LIST OF LINKS THAT CAN BE USEFUL TO YOU AS WELL,\w4 NO MATTER WHAT PROBLEM YOU STRUGGLE WITH. \w8IT IS RIGHT THERE IN THE 'ADVICE' SECTION,\w4 UNDER THIS OPTION! \w8GOOD LUCK TO YOU,\w4 AND REMEMBER THAT I WILL BE WITH YOU ON YOUR WAY. \w8\s[5]YOU CAN COUNT ON ME!!!%(ConvCancel)\e"
 }
 }
 
@@ -1072,11 +1073,11 @@ Select.cheerup
 	if totappoints > 30 || badbad > 6
 	
 	{
-		"\0\s[3]OH,\w4 UM... \w8\s[40]Y-YOU HAVE THE MAKINGS OF A GOOD PERSON WHO CAN DO GOOD THINGS? \w8BUT YOU NEED TO WORK A LITTLE... \w8HARDER TO GET THERE.%(ConvCancel)\e"
-		"\0\s[4]UM... \w8YOU ARE DOING GOOD,\w4 AND YOU ARE GOOD AT WHAT YOU ARE GOOD AT?.. \w8\w8\w8\s[40]...I NEED MORE TIME TO PREPARE.%(ConvCancel)\e"
-	    "\0\s[1]I-I GUESS ANYONE CAN BE EITHER GOOD OR BAD. \w8\s[24]YOU CAN CHOOSE FOR YOURSELF. \w8SHAPE YOUR LIFE IN THE RIGHT WAY. \w8\w8\w8\s[4]...IF YOU WANT TO,\w4 THAT IS...%(ConvCancel)\e"
-		"\0\s[1]I AM SURE YOU HAVE... \w8\w8REALLY... \w8\w8\w8STRONG HANDS? \w8\w8\w8...%(ConvCancel)\e"
-		"\0\s[4]I,\w4 UM,\w4 I KNOW THAT YOU CAN BE... \w8DEDICATED? \w8SO YOU JUST HAVE TO REROUTE YOUR DEDICATION INTO SOMETHING LESS MORALLY GREY...%(ConvCancel)\e"
+		"\0\s[3]%(jf)OH,\w4 UM... \w8\s[40]Y-YOU HAVE THE MAKINGS OF A GOOD PERSON WHO CAN DO GOOD THINGS? \w8BUT YOU NEED TO WORK A LITTLE... \w8HARDER TO GET THERE.%(ConvCancel)\e"
+		"\0\s[4]%(jf)UM... \w8YOU ARE DOING GOOD,\w4 AND YOU ARE GOOD AT WHAT YOU ARE GOOD AT?.. \w8\w8\w8\s[40]...I NEED MORE TIME TO PREPARE.%(ConvCancel)\e"
+	    "\0\s[1]%(jf)I-I GUESS ANYONE CAN BE EITHER GOOD OR BAD. \w8\s[24]YOU CAN CHOOSE FOR YOURSELF. \w8SHAPE YOUR LIFE IN THE RIGHT WAY. \w8\w8\w8\s[4]...IF YOU WANT TO,\w4 THAT IS...%(ConvCancel)\e"
+		"\0\s[1]%(jf)I AM SURE YOU HAVE... \w8\w8REALLY... \w8\w8\w8STRONG HANDS? \w8\w8\w8...%(ConvCancel)\e"
+		"\0\s[4]%(jf)I,\w4 UM,\w4 I KNOW THAT YOU CAN BE... \w8DEDICATED? \w8SO YOU JUST HAVE TO REROUTE YOUR DEDICATION INTO SOMETHING LESS MORALLY GREY...%(ConvCancel)\e"
 	}
 	
 	if badbad > 50 || totappoints > 50
@@ -1092,25 +1093,25 @@ Select.cheerup
 		
 		
 		
-		"\0\s[5]YOU ARE A WARM,\w4 SQUISHY HUMAN BEING! \w8YOU ARE AMAZING!!! \w8\s[21]YOU DON'T EVEN KNOW HOW MANY DIFFERENT LITTLE PROCESSES ARE GOING WITHIN YOU TO KEEP YOU GOING! \w8IT IS LIKE THE CHEMICAL INSIDES OF A STAR! \w8ISN'T IT FASCINATING? \w8I THINK YOU ARE FASCINATING. \w8PLEASE,\w4 KEEP BEING YOU,\w4 %(username).%(ConvCancel)\e"
-	    "\0\s[6]I KNOW IT CAN BE HARD TO STAY POSITIVE AND SWEET NO MATTER WHAT... \w8AND HERE IS THE GOOD NEWS: \w8\s[32]YOU DON'T HAVE TO! \w8POSITIVITY TAKES ENERGY YOU MAY NOT ALWAYS HAVE. \w8IT'S OKAY TO FEEL BAD OR SAD. \w8\s[24]TAKE A REST,\w4 TAKE CARE OF YOURSELF,\w4 AND REPLENISH YOUR ENERGY TILL YOU CAN BE CHEERFUL ONCE MORE.%(ConvCancel)\e"
-		"\0\s[5]%(username),\w4 THERE IS SO MUCH GOODNESS AROUND! \w8PUPPIES! \w8GOOD WEATHER! \w8FLOWERS! \w8NICE SMELLS! \w8DANCING AND SINGING! \w8\s[6]HERE'S SOME MORE: KIND PEOPLE,\w4 SOFT BLANKETS,\w4 SWEET COCOA,\w4 SAVORY PIZZA,\w4 BEAUTIFUL MUSIC! \w8\s[21]THERE ARE SO MANY SIGHTS AND SENSATIONS TO LOOK FORWARD TO... \w8AND ENJOY! \w8MAYBE YOU CAN GET SOME OF THE RIGHT NOW TO LIFT YOUR SPIRITS?%(ConvCancel)\e"
-		"\0\s[6]I PROMISE YOU THAT THE WORLD IS MUCH,\w4 MUCH BETTER THAN IT SEEMS! \w8\s[5]THERE ALWAYS ARE KIND PEOPLE AND GOOD TIMES. \w8EVEN IF YOU CANNOT SEE THEM RIGHT NOW. \w8\s[5]I PROMISE YOU THAT THERE ARE,\w4 %(username),\w4 AND YOU ARE ONE OF THEM.%(ConvCancel)\e"
-		"\0\s[6]YOU DON'T HAVE TO BE PERFECT,\w4 %(username)! \w8YOU DON'T HAVE TO GET EVERYTHING RIGHT. \w8THERE IS NO JURY. \w8\s[5]YOU CAN BE YOURSELF AND BE LOVED! \w8YOU CAN DO THINGS YOU LIKE AND BE RESPECTED! \w8\s[24]AS LONG AS THINGS THAT YOU LIKE DON'T INCLUDE PUNCHING PEOPLE OR BEING MEAN.%(ConvCancel)\e"
-		"\0\s[24]IT CAN BE HARD TO LOVE YOURSELF,\w4 SOMETIMES... \w8AND IF IT IS,\w4 START WITH BEING OKAY WITH YOURSELF! \w8YOU ARE A LIVING BEING,\w4 AND LIKE ANY OTHER LIVING BEING YOU DESERVE FOOD,\w4 LOVE,\w4 RESPECT,\w4 COMFORT AND SUPPORT! \w8\s[5]YOU DON'T HAVE TO BELIEVE THAT YOU ARE THE BEST! \w8JUST THAT YOU ARE YOU,\w4 AND YOU ARE WORTHY OF THOSE THINGS. \w8IT IS OKAY. \w8IT COUNTS! \w8\s[24]BABY STEPS ARE STILL STEPS. \w8YOU ARE STILL MOVING FORWARD.%(ConvCancel)\e"
-		"\0\s[5]PLEASE,\w4 %(username),\w4 BE KIND! \w8AND BE KIND TO YOURSELF TOO. \w8\s[6]I THINK THIS IS THE MOST IMPORTANT THING EVER. \w8ESPECIALLY THAT SECOND PART. \w8\s[24]PLEASE,\w4 AT LEAST TRY! \w8I PROMISE YOU IT IS THE BEST THING YOU CAN DO TO YOURSELF. \w8BEING KIND.%(ConvCancel)\e"
-		"\0\s[5]I AM PROUD OF EVERYTHING YOU HAVE ACCOMPLISHED SO FAR! \w8\s[24]YOU'VE LEARNED A NEW SKILL? \w8GOT A NEW POSITIVE HABIT? \w8DID SOMETHING PRODUCTIVE OR HEALTHY? \w8\s[5]I AM PROUD OF YOU!!! \w8IT WAS AWESOME OF YOU,\w4 EVEN IF IT SEEMED LIKE A SMALL THING!!! \w8THANK YOU FOR THE GREAT JOB!!!%(ConvCancel)\e"
-		"\0\s[32]%(username),\w4 I CAN PROMISE YOU THAT YOU ARE AMAZING THE WAY YOU ARE! \w8\s[5]YOU ARE YOU! \w8YOU DON'T HAVE TO PROVE ANYTHING TO ANYONE TO BE YOURSELF. \w8PLEASE,\w4 KEEP BEING YOU. \w8BECAUSE THIS IS MY FAVORITE PERSON!!!%(ConvCancel)\e"
-		"\0\s[5]YOU HAVE MY CHEERS ALWAYS,\w4 %(username)! \w8I BELIEVE IN YOU WITH EVERYTHING I HAVE!!! \w8AND I HOPE YOU BELIEVE IN YOURSELF TOO! \w8\s[6]AND IF NOT,\w4 I WILL BELIEVE IN YOU TWICE AS HARD!!!%(ConvCancel)\e"
-	    "\0\s[5]PLEASE,\w4 DON'T GIVE UP,\w4 %(username)! \w8\s[32]I KNOW IT CAN BE HARD TO KEEP TRYING SOMETIMES. \w8THE WORLD CAN BE BIG AND HARSH,\w4 AND OUR OWN MINDS CAN BE MEAN TO US. \w8\s[5]BUT LOOK AT YOU,\w4 THERE! \w8BEING BRAVE \w8BEING STRONG. \w8BEING YOU. \w8PLEASE,\w4 NEVER STOP.%(ConvCancel)\e"
-		"\0\s[6]HUMANS COME IN SO MANY TYPES! \w8\s[24]FEWER THAN MONSTERS,\w4 BUT YOU ARE STILL ALL SO UNIQUE. \w8SMALLER HUMANS,\w4 TALLER HUMANS,\w4 BONY HUMANS,\w4 SQUISHY HUMANS! \w8\s[5]WITH MARKS AND PATTERNS,\w4 WITH PAINTED PATCHES AND PIERCINGS,\w4 WITH HAIR OF SO MANY COLORS! \w8\s[24]I THINK YOUR HUMAN BODY IS AMAZING,\w4 %(username). \w8\s[35]AND I HOPE YOU THINK IT TOO!%(ConvCancel)\e"
-		"\0\s[5]IF YOU NEED TO HEAR THAT,\w4 %(username),\w4 I CAN PROMISE YOU THAT YOU ARE ENOUGH! \w8YOU ARE LOVED,\w4 AND YOU ARE DOING GREAT. \w8\s[6]AND IF SOMEONE TELLS YOU OTHERWISE,\w4 EVEN YOUR OWN HEAD,\w4 PLEASE TELL THEM THAT JAZZ TOLD YOU OTHERWISE AND HE IS ALWAYS RIGHT!%(ConvCancel)\e"
-		"\0\s[24]PLEASE,\w4 RIGHT NOW,\w4 HUG YOURSELF VERY VERY TIGHT! \w8AND IMAGINE IT IS ME HUGGING YOU. \w8AND THEN TELL YOURSELF THE THINGS YOU WANT SOMEONE YOU LIKE TO TELL YOU! \w8TELL YOURSELF THAT YOU ARE LOVED. \w8TELL YOURSELF THAT YOU ARE STRONG. \w8TELL YOURSELF THAT YOU ARE PROUD. \w8\s[6]AND REPEAT IT AS MANY TIMES AS YOU NEED! \w8BECAUSE THAT IS WHAT I WOULD DO IF I COULD.%(ConvCancel)\e"
+		"\0\s[5]%(jf)YOU ARE A WARM,\w4 SQUISHY HUMAN BEING! \w8YOU ARE AMAZING!!! \w8\s[21]YOU DON'T EVEN KNOW HOW MANY DIFFERENT LITTLE PROCESSES ARE GOING WITHIN YOU TO KEEP YOU GOING! \w8IT IS LIKE THE CHEMICAL INSIDES OF A STAR! \w8ISN'T IT FASCINATING? \w8I THINK YOU ARE FASCINATING. \w8PLEASE,\w4 KEEP BEING YOU,\w4 %(username).%(ConvCancel)\e"
+	    "\0\s[6]%(jf)I KNOW IT CAN BE HARD TO STAY POSITIVE AND SWEET NO MATTER WHAT... \w8AND HERE IS THE GOOD NEWS: \w8\s[32]YOU DON'T HAVE TO! \w8POSITIVITY TAKES ENERGY YOU MAY NOT ALWAYS HAVE. \w8IT'S OKAY TO FEEL BAD OR SAD. \w8\s[24]TAKE A REST,\w4 TAKE CARE OF YOURSELF,\w4 AND REPLENISH YOUR ENERGY TILL YOU CAN BE CHEERFUL ONCE MORE.%(ConvCancel)\e"
+		"\0\s[5]%(jf)%(username),\w4 THERE IS SO MUCH GOODNESS AROUND! \w8PUPPIES! \w8GOOD WEATHER! \w8FLOWERS! \w8NICE SMELLS! \w8DANCING AND SINGING! \w8\s[6]HERE'S SOME MORE: KIND PEOPLE,\w4 SOFT BLANKETS,\w4 SWEET COCOA,\w4 SAVORY PIZZA,\w4 BEAUTIFUL MUSIC! \w8\s[21]THERE ARE SO MANY SIGHTS AND SENSATIONS TO LOOK FORWARD TO... \w8AND ENJOY! \w8MAYBE YOU CAN GET SOME OF THE RIGHT NOW TO LIFT YOUR SPIRITS?%(ConvCancel)\e"
+		"\0\s[6]%(jf)I PROMISE YOU THAT THE WORLD IS MUCH,\w4 MUCH BETTER THAN IT SEEMS! \w8\s[5]THERE ALWAYS ARE KIND PEOPLE AND GOOD TIMES. \w8EVEN IF YOU CANNOT SEE THEM RIGHT NOW. \w8\s[5]I PROMISE YOU THAT THERE ARE,\w4 %(username),\w4 AND YOU ARE ONE OF THEM.%(ConvCancel)\e"
+		"\0\s[6]%(jf)YOU DON'T HAVE TO BE PERFECT,\w4 %(username)! \w8YOU DON'T HAVE TO GET EVERYTHING RIGHT. \w8THERE IS NO JURY. \w8\s[5]YOU CAN BE YOURSELF AND BE LOVED! \w8YOU CAN DO THINGS YOU LIKE AND BE RESPECTED! \w8\s[24]AS LONG AS THINGS THAT YOU LIKE DON'T INCLUDE PUNCHING PEOPLE OR BEING MEAN.%(ConvCancel)\e"
+		"\0\s[24]%(jf)IT CAN BE HARD TO LOVE YOURSELF,\w4 SOMETIMES... \w8AND IF IT IS,\w4 START WITH BEING OKAY WITH YOURSELF! \w8YOU ARE A LIVING BEING,\w4 AND LIKE ANY OTHER LIVING BEING YOU DESERVE FOOD,\w4 LOVE,\w4 RESPECT,\w4 COMFORT AND SUPPORT! \w8\s[5]YOU DON'T HAVE TO BELIEVE THAT YOU ARE THE BEST! \w8JUST THAT YOU ARE YOU,\w4 AND YOU ARE WORTHY OF THOSE THINGS. \w8IT IS OKAY. \w8IT COUNTS! \w8\s[24]BABY STEPS ARE STILL STEPS. \w8YOU ARE STILL MOVING FORWARD.%(ConvCancel)\e"
+		"\0\s[5]%(jf)PLEASE,\w4 %(username),\w4 BE KIND! \w8AND BE KIND TO YOURSELF TOO. \w8\s[6]I THINK THIS IS THE MOST IMPORTANT THING EVER. \w8ESPECIALLY THAT SECOND PART. \w8\s[24]PLEASE,\w4 AT LEAST TRY! \w8I PROMISE YOU IT IS THE BEST THING YOU CAN DO TO YOURSELF. \w8BEING KIND.%(ConvCancel)\e"
+		"\0\s[5]%(jf)I AM PROUD OF EVERYTHING YOU HAVE ACCOMPLISHED SO FAR! \w8\s[24]YOU'VE LEARNED A NEW SKILL? \w8GOT A NEW POSITIVE HABIT? \w8DID SOMETHING PRODUCTIVE OR HEALTHY? \w8\s[5]I AM PROUD OF YOU!!! \w8IT WAS AWESOME OF YOU,\w4 EVEN IF IT SEEMED LIKE A SMALL THING!!! \w8THANK YOU FOR THE GREAT JOB!!!%(ConvCancel)\e"
+		"\0\s[32]%(jf)%(username),\w4 I CAN PROMISE YOU THAT YOU ARE AMAZING THE WAY YOU ARE! \w8\s[5]YOU ARE YOU! \w8YOU DON'T HAVE TO PROVE ANYTHING TO ANYONE TO BE YOURSELF. \w8PLEASE,\w4 KEEP BEING YOU. \w8BECAUSE THIS IS MY FAVORITE PERSON!!!%(ConvCancel)\e"
+		"\0\s[5]%(jf)YOU HAVE MY CHEERS ALWAYS,\w4 %(username)! \w8I BELIEVE IN YOU WITH EVERYTHING I HAVE!!! \w8AND I HOPE YOU BELIEVE IN YOURSELF TOO! \w8\s[6]AND IF NOT,\w4 I WILL BELIEVE IN YOU TWICE AS HARD!!!%(ConvCancel)\e"
+	    "\0\s[5]%(jf)PLEASE,\w4 DON'T GIVE UP,\w4 %(username)! \w8\s[32]I KNOW IT CAN BE HARD TO KEEP TRYING SOMETIMES. \w8THE WORLD CAN BE BIG AND HARSH,\w4 AND OUR OWN MINDS CAN BE MEAN TO US. \w8\s[5]BUT LOOK AT YOU,\w4 THERE! \w8BEING BRAVE \w8BEING STRONG. \w8BEING YOU. \w8PLEASE,\w4 NEVER STOP.%(ConvCancel)\e"
+		"\0\s[6]%(jf)HUMANS COME IN SO MANY TYPES! \w8\s[24]FEWER THAN MONSTERS,\w4 BUT YOU ARE STILL ALL SO UNIQUE. \w8SMALLER HUMANS,\w4 TALLER HUMANS,\w4 BONY HUMANS,\w4 SQUISHY HUMANS! \w8\s[5]WITH MARKS AND PATTERNS,\w4 WITH PAINTED PATCHES AND PIERCINGS,\w4 WITH HAIR OF SO MANY COLORS! \w8\s[24]I THINK YOUR HUMAN BODY IS AMAZING,\w4 %(username). \w8\s[35]AND I HOPE YOU THINK IT TOO!%(ConvCancel)\e"
+		"\0\s[5]%(jf)IF YOU NEED TO HEAR THAT,\w4 %(username),\w4 I CAN PROMISE YOU THAT YOU ARE ENOUGH! \w8YOU ARE LOVED,\w4 AND YOU ARE DOING GREAT. \w8\s[6]AND IF SOMEONE TELLS YOU OTHERWISE,\w4 EVEN YOUR OWN HEAD,\w4 PLEASE TELL THEM THAT JAZZ TOLD YOU OTHERWISE AND HE IS ALWAYS RIGHT!%(ConvCancel)\e"
+		"\0\s[24]%(jf)PLEASE,\w4 RIGHT NOW,\w4 HUG YOURSELF VERY VERY TIGHT! \w8AND IMAGINE IT IS ME HUGGING YOU. \w8AND THEN TELL YOURSELF THE THINGS YOU WANT SOMEONE YOU LIKE TO TELL YOU! \w8TELL YOURSELF THAT YOU ARE LOVED. \w8TELL YOURSELF THAT YOU ARE STRONG. \w8TELL YOURSELF THAT YOU ARE PROUD. \w8\s[6]AND REPEAT IT AS MANY TIMES AS YOU NEED! \w8BECAUSE THAT IS WHAT I WOULD DO IF I COULD.%(ConvCancel)\e"
 		
 		if jazzfriend == 1 || jazzlover == 1
 	  {
-		"\0\s[5]%(username),\w4 PLEASE,\w4 TRY TO LOVE YOURSELF AS MUCH AS I LOVE YOU! \w8I THINK YOU ARE GREAT,\w4 AND BRAVE,\w4 AND STRONG,\w4 AND WORTHY OF RESPECT AND LOVE! \w8\s[6]AND I HOPE YOU KNOW THAT. \w8I HOPE YOU KNOW IT REALLY REALLY WELL FOR THE TRUTH IT IS.%(ConvCancel)\e"
-		"\0\s[5]I AM MORE THAN HAPPY TO CHEER YOU UP,\w4 %(username)! \w8THERE IS SO MUCH GOODNESS ABOUT YOU! \w8\s[21]YOU ARE A GREAT FRIEND,\w4 AND I AM GLAD TO HAVE YOU IN MY LIFE! \w8\s[6]AND THAT'S NOT JUST EMPTY WORDS. \w8\s[37]I BELIEVE YOU ARE CAPABLE OF SO MANY GOOD THINGS. \w8AND DESERVE EVEN MORE OF THEM! \w8PLEASE,\w4 DON'T FORGET THAT.%(ConvCancel)\e"
+		"\0\s[5]%(jf)%(username),\w4 PLEASE,\w4 TRY TO LOVE YOURSELF AS MUCH AS I LOVE YOU! \w8I THINK YOU ARE GREAT,\w4 AND BRAVE,\w4 AND STRONG,\w4 AND WORTHY OF RESPECT AND LOVE! \w8\s[6]AND I HOPE YOU KNOW THAT. \w8I HOPE YOU KNOW IT REALLY REALLY WELL FOR THE TRUTH IT IS.%(ConvCancel)\e"
+		"\0\s[5]%(jf)I AM MORE THAN HAPPY TO CHEER YOU UP,\w4 %(username)! \w8THERE IS SO MUCH GOODNESS ABOUT YOU! \w8\s[21]YOU ARE A GREAT FRIEND,\w4 AND I AM GLAD TO HAVE YOU IN MY LIFE! \w8\s[6]AND THAT'S NOT JUST EMPTY WORDS. \w8\s[37]I BELIEVE YOU ARE CAPABLE OF SO MANY GOOD THINGS. \w8AND DESERVE EVEN MORE OF THEM! \w8PLEASE,\w4 DON'T FORGET THAT.%(ConvCancel)\e"
 	  }
 		
 	}
@@ -1156,7 +1157,7 @@ Select.telljoke
 	
 	{
 			"\0\s[1]*Jazz starts telling a pun about %(punny),\w4 but stutters a few times and gives up.%(ConvCancel)\e"
-			"\0\s[1]UM... \w8A SKELETON ALWAYS STAYS CALM,\w4 BECAUSE - \s[40]OH WAIT,\w4 NO,\w4 IT GOES NOT LIKE THIS... \w8UM... \w8WHY DOES A SKELETON ALWAYS STAY CALM? \w8\w8\w8\s[32]B-BECAUSE NOTHING GETS UNDER THEIR SKIN!!! \w8\w8\w8\s[1]...%(ConvCancel)\e"
+			"\0\s[1]%(jf)UM... \w8A SKELETON ALWAYS STAYS CALM,\w4 BECAUSE - \s[40]OH WAIT,\w4 NO,\w4 IT GOES NOT LIKE THIS... \w8UM... \w8WHY DOES A SKELETON ALWAYS STAY CALM? \w8\w8\w8\s[32]B-BECAUSE NOTHING GETS UNDER THEIR SKIN!!! \w8\w8\w8\s[1]...%(ConvCancel)\e"
 	}
 	
 	if badbad > 50 || totappoints > 50
@@ -1168,21 +1169,21 @@ Select.telljoke
 
 	
 	
-	"\0\s[3]LET ME THINK... \w8\s[6]OH! \w8A SKELETON WALKS INTO A BAR. \w8\w8\w8HE SAYS: 'OUCH!' \w8\s[24]BECAUSE HE NOW LEADS A HEALTHY LIFESTYLE AND DOES NOT WANT TO BE TEMPTED BY SUCH PLACES AGAIN. \w8\s[6]SO HE TURNS AROUND AND LEAVES THE BAR AND NEVER ENTERS A BAR AGAIN. \w8YOU CAN SAY HE AVOIDS THEM BAR NONE.%(ConvCancel)\e"
-	"\0\s[3]HMM... \w8\s[24]WHY DID A SKELETON GIVE UP FOOTBALL? \w8\w8\w8\s[6]BECAUSE HE FELT THAT THE ENJOYMENT WAS LOST. \w8THAT THE EARLY CHEER AND ZEST WAS THERE NO MORE... \w8THAT THE RACE AFTER THE SMALL ROUND OBJECT DID NOT MAKE HIS HEART RACE ANY LONGER... \w8\w8\w8\s[24]IN A WORD,\w4 BECAUSE HIS HEART WAS NOT IN IT.%(ConvCancel)\e"
-    "\0\s[8]HM. \w8HERE IS ONE... \w8\s[24]WHAT IS A SKELETON'S FAVORITE INSTRUMENT? \w8\w8\w8THE BONE-SHARP HARP. \w8\w8\w8... \w8\s[6]THAT'S A MONSTER MEME. \w8YOU PROBABLY WON'T UNDERSTAND.%(ConvCancel)\e"
-	"\0\s[3]ALRIGHT... \w8\s[24]A HUMAN AND A MONSTER SIT IN A COFFEE SHOP. \w8THE MONSTER SAYS,\w4 'SIGH,\w4 ALL THE BRUSHES AND PAINTINGS AND PAINTS IN MY ATTIC HAVE BEEN GATHERING DUST FOR YEARS NOW...' \w8\s[6]THE HUMAN ASKS: 'DID YOU USE TO BE A PAINTOR?' \w8'NO,\w4 I DIDN'T; MY GRANDFATHER AND FATHER DID. I AM A MORTICIAN.' \w8\w8\w8\s[8]...I SUPPOSE IT IS QUITE A DARK ONE.%(ConvCancel)\e"
-	"\0\s[3]OKAY,\w4 HOW ABOUT... \w8\s[24]A FLOWER WALKS INTO A SHOP. \w8THEY ARE VERY FRIENDLY,\w4 BUT THE CASHIER DEMANDS THEY WALK AWAY IMMEDIATELY. \w8\s[3]HIS COLLEAGUE ASKS,\w4 'WHY DID YOU DRIVE THIS GUY AWAY?' \w8\s[6]THE CASHIER REPLIES: 'WELL,\w4 HE SEEMS LIKE YOUR BUD,\w4 BUT AS SOON AS YOU ASK FOR SOME GREENS UP FRONT,\w4 HE LEAVES.'%(ConvCancel)\e"
-	"\0\s[8]OKAY,\w4 HERE GOES... \w8\s[24]WHAT WAS A GHOST MONSTER'S CHOSEN WEAPON? \w8\w8\w8\s[6]A BOO-MERANG. \w8\s[24]WHY DID THEY CHOOSE IT? \w8\s[6]BECAUSE THEY FOUGHT IN A WAR,\w4 WHICH IS THE MOST SCARY THING TO HAPPEN. \w8\w8\w8\s[32]OH,\w4 AND ALSO THEY TRIED THROWING IT AWAY,\w4 BUT IT KEPT RETURNING TO THEM.%(ConvCancel)\e"
-	"\0\s[8]HM,\w4 ALRIGHT... \w8\s[24]HOW MANY SKELETONS DO YOU NEED TO FIX A LIGHTBULB? \w8\w8\w8\s[6]THREE. \w8\s[32]ONE TO HOLD THE LIGHTBULB,\w4 ONE TO ROOT FOR HIM,\w4 AND ONE TO SLOWLY TURN THE ENTIRE BUILDING AROUND.%(ConvCancel)\e"
-	"\0\s[3]OKAY... \w8\s[24]WHY DID THE SKELETON BONEY-DIP INTO A BARREL OF PAINT? \w8\w8\w8\s[6]HE WANTED TO KEEP HIS BONES GREEN. \w8\s[24]WHY DID A CROWD OF FARMERS GRAB HIM AFTERWARDS? \w8\w8\w8\s[32]BECAUSE HE NOW HAD A GREEN THUMB. \w8\s[6]AH,\w4 AND ALSO HE WAS TRESSPASSING AND USING UP THE PAINT THAT WAS KIND OF THEIRS WITHOUT A PERMISSION AND ALSO HUMANS HAVE A STRANGE PREJUDICE AGAINST SKELETONS RUNNING AROUND NAKED.%(ConvCancel)\e"
-	"\0\s[3]A JOKE... \w8\s[24]WHY DID A SKELETON GO TO OUTER SPACE? \w8\w8\w8BECAUSE HE WAS TOLD THAT HE WAS NO EARTHLY GOOD. \w8\s[6]...SO,\w4 WELL,\w4 BASICALLY,\w4 THE REASON WAS SPITE. \w8LOTS OF SPITE. \w8SPITE OF UNGODLY AMOUNTS.%(ConvCancel)\e"
-	"\0\s[6]WHO WON THE SKELETON'S BEAUTY CONTEST? \w8\w8\w8NOBODY! \w8\s[24]THE BEAUTY STANDARDS OF TODAY'S FASHION ARE UNREASONABLY HIGH.%(ConvCancel)\e"
-	"\0\s[6]WHAT DO YOU GIVE A SKELETONE AS A PRESENT? \w8\w8\w8BONE-BONES! \w8\s[24]BONES ARE AN EXCELLENT PRESENT,\w4 GENERALLY.%(ConvCancel)\e"
-	"\0\s[6]HOW DO YOU MAKE A PERFECT ASTRONAUT PARTY? \w8\w8\w8YOU PLANET! \w8AND THEN YOU SIT AND HOPE THAT ENOUGH GUESTS WILL COMET IT. \w8\s[24]AND THEN YOU PRAY THAT THERE IS ENOUGH SPACE FOR EVERYBODY. \w8AND ALSO YOU NEED CAKE,\w4 BUT I COULD NOT FIND A SPACE PUN ON A CAKE.%(ConvCancel)\e"
-	"\0\s[6]WHAT DID A MOON SAY TO EARTH? \w8\w8\w8'YOU ROCK MY WORLD!' \w8\s[24]WHAT DID IT REPLY? \w8\w8\w8'I LOVE YOU TO THE MOON AND BACK!' \w8IT WAS A LOVE WRITTEN IN STARS.%(ConvCancel)\e"
-	"\0\s[6]WHEN DOES A SKELETON ON THE MOON CUT HIS HAIR? \w8\w8\w8\s[24]WHEN 'ECLIPSE IT. \w8WHAT DO YOU CALL HIM AFTER THAT? \w8\w8\w8A BONEHEAD! \w8A PRETTY ONE.%(ConvCancel)\e"
-	"\0\s[6]HOW DO YOU TELL A BABY SPACE SKELETON TO GO TO SLEEP? \w8\w8\w8\s[24]YOU TAKE A CRADLE AND YOU ROCKET! \w8WHERE DO YOU GET MILK TO FEED THEM? \w8\w8\w8THE SPACE GROCERY SHOP! \w8\w8\w8\w8\w8\s[6]...IT IS SITUATED ALONG THE MILKY WAY,\w4 YES.%(ConvCancel)\e"
+	"\0\s[3]%(jf)LET ME THINK... \w8\s[6]OH! \w8A SKELETON WALKS INTO A BAR. \w8\w8\w8HE SAYS: 'OUCH!' \w8\s[24]BECAUSE HE NOW LEADS A HEALTHY LIFESTYLE AND DOES NOT WANT TO BE TEMPTED BY SUCH PLACES AGAIN. \w8\s[6]SO HE TURNS AROUND AND LEAVES THE BAR AND NEVER ENTERS A BAR AGAIN. \w8YOU CAN SAY HE AVOIDS THEM BAR NONE.%(ConvCancel)\e"
+	"\0\s[3]%(jf)HMM... \w8\s[24]WHY DID A SKELETON GIVE UP FOOTBALL? \w8\w8\w8\s[6]BECAUSE HE FELT THAT THE ENJOYMENT WAS LOST. \w8THAT THE EARLY CHEER AND ZEST WAS THERE NO MORE... \w8THAT THE RACE AFTER THE SMALL ROUND OBJECT DID NOT MAKE HIS HEART RACE ANY LONGER... \w8\w8\w8\s[24]IN A WORD,\w4 BECAUSE HIS HEART WAS NOT IN IT.%(ConvCancel)\e"
+    "\0\s[8]%(jf)HM. \w8HERE IS ONE... \w8\s[24]WHAT IS A SKELETON'S FAVORITE INSTRUMENT? \w8\w8\w8THE BONE-SHARP HARP. \w8\w8\w8... \w8\s[6]THAT'S A MONSTER MEME. \w8YOU PROBABLY WON'T UNDERSTAND.%(ConvCancel)\e"
+	"\0\s[3]%(jf)ALRIGHT... \w8\s[24]A HUMAN AND A MONSTER SIT IN A COFFEE SHOP. \w8THE MONSTER SAYS,\w4 'SIGH,\w4 ALL THE BRUSHES AND PAINTINGS AND PAINTS IN MY ATTIC HAVE BEEN GATHERING DUST FOR YEARS NOW...' \w8\s[6]THE HUMAN ASKS: 'DID YOU USE TO BE A PAINTOR?' \w8'NO,\w4 I DIDN'T; MY GRANDFATHER AND FATHER DID. I AM A MORTICIAN.' \w8\w8\w8\s[8]...I SUPPOSE IT IS QUITE A DARK ONE.%(ConvCancel)\e"
+	"\0\s[3]%(jf)OKAY,\w4 HOW ABOUT... \w8\s[24]A FLOWER WALKS INTO A SHOP. \w8THEY ARE VERY FRIENDLY,\w4 BUT THE CASHIER DEMANDS THEY WALK AWAY IMMEDIATELY. \w8\s[3]HIS COLLEAGUE ASKS,\w4 'WHY DID YOU DRIVE THIS GUY AWAY?' \w8\s[6]THE CASHIER REPLIES: 'WELL,\w4 HE SEEMS LIKE YOUR BUD,\w4 BUT AS SOON AS YOU ASK FOR SOME GREENS UP FRONT,\w4 HE LEAVES.'%(ConvCancel)\e"
+	"\0\s[8]%(jf)OKAY,\w4 HERE GOES... \w8\s[24]WHAT WAS A GHOST MONSTER'S CHOSEN WEAPON? \w8\w8\w8\s[6]A BOO-MERANG. \w8\s[24]WHY DID THEY CHOOSE IT? \w8\s[6]BECAUSE THEY FOUGHT IN A WAR,\w4 WHICH IS THE MOST SCARY THING TO HAPPEN. \w8\w8\w8\s[32]OH,\w4 AND ALSO THEY TRIED THROWING IT AWAY,\w4 BUT IT KEPT RETURNING TO THEM.%(ConvCancel)\e"
+	"\0\s[8]%(jf)HM,\w4 ALRIGHT... \w8\s[24]HOW MANY SKELETONS DO YOU NEED TO FIX A LIGHTBULB? \w8\w8\w8\s[6]THREE. \w8\s[32]ONE TO HOLD THE LIGHTBULB,\w4 ONE TO ROOT FOR HIM,\w4 AND ONE TO SLOWLY TURN THE ENTIRE BUILDING AROUND.%(ConvCancel)\e"
+	"\0\s[3]%(jf)OKAY... \w8\s[24]WHY DID THE SKELETON BONEY-DIP INTO A BARREL OF PAINT? \w8\w8\w8\s[6]HE WANTED TO KEEP HIS BONES GREEN. \w8\s[24]WHY DID A CROWD OF FARMERS GRAB HIM AFTERWARDS? \w8\w8\w8\s[32]BECAUSE HE NOW HAD A GREEN THUMB. \w8\s[6]AH,\w4 AND ALSO HE WAS TRESSPASSING AND USING UP THE PAINT THAT WAS KIND OF THEIRS WITHOUT A PERMISSION AND ALSO HUMANS HAVE A STRANGE PREJUDICE AGAINST SKELETONS RUNNING AROUND NAKED.%(ConvCancel)\e"
+	"\0\s[3]%(jf)A JOKE... \w8\s[24]WHY DID A SKELETON GO TO OUTER SPACE? \w8\w8\w8BECAUSE HE WAS TOLD THAT HE WAS NO EARTHLY GOOD. \w8\s[6]...SO,\w4 WELL,\w4 BASICALLY,\w4 THE REASON WAS SPITE. \w8LOTS OF SPITE. \w8SPITE OF UNGODLY AMOUNTS.%(ConvCancel)\e"
+	"\0\s[6]%(jf)WHO WON THE SKELETON'S BEAUTY CONTEST? \w8\w8\w8NOBODY! \w8\s[24]THE BEAUTY STANDARDS OF TODAY'S FASHION ARE UNREASONABLY HIGH.%(ConvCancel)\e"
+	"\0\s[6]%(jf)WHAT DO YOU GIVE A SKELETONE AS A PRESENT? \w8\w8\w8BONE-BONES! \w8\s[24]BONES ARE AN EXCELLENT PRESENT,\w4 GENERALLY.%(ConvCancel)\e"
+	"\0\s[6]%(jf)HOW DO YOU MAKE A PERFECT ASTRONAUT PARTY? \w8\w8\w8YOU PLANET! \w8AND THEN YOU SIT AND HOPE THAT ENOUGH GUESTS WILL COMET IT. \w8\s[24]AND THEN YOU PRAY THAT THERE IS ENOUGH SPACE FOR EVERYBODY. \w8AND ALSO YOU NEED CAKE,\w4 BUT I COULD NOT FIND A SPACE PUN ON A CAKE.%(ConvCancel)\e"
+	"\0\s[6]%(jf)WHAT DID A MOON SAY TO EARTH? \w8\w8\w8'YOU ROCK MY WORLD!' \w8\s[24]WHAT DID IT REPLY? \w8\w8\w8'I LOVE YOU TO THE MOON AND BACK!' \w8IT WAS A LOVE WRITTEN IN STARS.%(ConvCancel)\e"
+	"\0\s[6]%(jf)WHEN DOES A SKELETON ON THE MOON CUT HIS HAIR? \w8\w8\w8\s[24]WHEN 'ECLIPSE IT. \w8WHAT DO YOU CALL HIM AFTER THAT? \w8\w8\w8A BONEHEAD! \w8A PRETTY ONE.%(ConvCancel)\e"
+	"\0\s[6]%(jf)HOW DO YOU TELL A BABY SPACE SKELETON TO GO TO SLEEP? \w8\w8\w8\s[24]YOU TAKE A CRADLE AND YOU ROCKET! \w8WHERE DO YOU GET MILK TO FEED THEM? \w8\w8\w8THE SPACE GROCERY SHOP! \w8\w8\w8\w8\w8\s[6]...IT IS SITUATED ALONG THE MILKY WAY,\w4 YES.%(ConvCancel)\e"
 
 	
 	
@@ -1206,11 +1207,11 @@ Select.changemind
 	
 	if mindchanger > 3
 	{
-	"\0\s[0]*You tell Jazz that you were wrong about the way you felt about him. \w8\s[8]\n\n.........AGAIN? \w8\s[1]I MEAN,\w4 UM. \w8IN WHAT WAY? \w8\n\nYou explain that you see him as...\n\n\_q"
+	"\0\s[0]*You tell Jazz that you were wrong about the way you felt about him. \w8\s[8]\n\n%(jf).........AGAIN? \w8\s[1]I MEAN,\w4 UM. \w8IN WHAT WAY? \w8\n\n%(df)You explain that you see him as...\n\n\_q"
 		
 	}
 	else {
-	"\0\s[0]*You tell Jazz that you were wrong about the way you felt about him. \w8\s[8]\n\n...OH? \w8WRONG HOW? \w8\n\nYou explain that you see him as...\n\n\_q"
+	"\0\s[0]*You tell Jazz that you were wrong about the way you felt about him. \w8\s[8]\n\n%(jf)...OH? \w8WRONG HOW? \w8\n\n%(df)You explain that you see him as...\n\n\_q"
 	}
 	 --
 	 
@@ -1248,7 +1249,7 @@ Select.friendzone
 	jazzfriend = 1
 	jazzok = 0
 	
-	"\0\s[8]*You confess that you love him,\w4 but your love towards him is purely platonic in nature. \w8In fact,\w4 you want to be his friend. \w8\s[21]He does not seem to mind?.. \w8\s[24]\n\n%(username),\w4 OF COURSE I WANT TO BE YOUR FRIEND! \w8IT IS OKAY! \w8AS LONG AS YOU LOVE ME,\w4 I AM MORE THAN GLAD TO STAY BY YOUR SIDE! \w8EVEN IF YOU CALL YOUR LOVE A DIFFERENT NAME. \w8\s[6]AND,\w4 FRANKLY SPEAKING,\w4 IT MIGHT BE FOR THE BEST. \w8WE BELONG TO DIFFERENT WORLDS... \w8HUMAN AND MONSTER... \w8MEATY AND SKELETAL... \w8THREE-DIMENSIONAL AND MULTIVERSAL... \w8\s[24]AT LEAST THIS WAY WE WON'T BREAK TOO MANY HEARTS OR FOURTH WALLS.%(ConvCancel)\e"
+	"\0\s[8]*You confess that you love him,\w4 but your love towards him is purely platonic in nature. \w8In fact,\w4 you want to be his friend. \w8\s[21]He does not seem to mind?.. \w8\s[24]\n\n%(jf)%(username),\w4 OF COURSE I WANT TO BE YOUR FRIEND! \w8IT IS OKAY! \w8AS LONG AS YOU LOVE ME,\w4 I AM MORE THAN GLAD TO STAY BY YOUR SIDE! \w8EVEN IF YOU CALL YOUR LOVE A DIFFERENT NAME. \w8\s[6]AND,\w4 FRANKLY SPEAKING,\w4 IT MIGHT BE FOR THE BEST. \w8WE BELONG TO DIFFERENT WORLDS... \w8HUMAN AND MONSTER... \w8MEATY AND SKELETAL... \w8THREE-DIMENSIONAL AND MULTIVERSAL... \w8\s[24]AT LEAST THIS WAY WE WON'T BREAK TOO MANY HEARTS OR FOURTH WALLS.%(ConvCancel)\e"
 	
 }
 
@@ -1258,7 +1259,7 @@ Select.lovezone
 	jazzfriend = 0
 	jazzok = 0
 	
-	"\0\s[8]*You confess that you actually love Jazz. \w8\s[5]\n\nOH! \w8I LOVE JAZZ TOO! \w8IT IS MY FAVORITE KIND OF MUSIC!!! \n\n\w8\w8\w8*...You say that you meant him,\w4 and not the music genre. \w8\n\n\s[32]OH. \w8\w8\w8\s[25]...OH. \w8\s[1]%(username),\w4 I AM NOT REALLY SURE HOW TO RESPOND?.. \w8\s[4]I MEAN!.. \w8YOU HAVE BEEN VERY KIND TO ME AND I AM NOT AGAINST THE IDEA,\w4 \w8BUT... \w8\s[4]I MIGHT BE NOT THE BEST PERSON TO PURSUE AS A ROMANTIC INTEREST. \w8\s[24]FIRST OF ALL! \w8THERE IS THAT SCREEN BETWEEN US WHICH REALLY HINDERS THINGS. \w8.......AND ALSO I AM A LITERAL SKELETON. \w8\s[32]THAT IS TO SAY! \w8I WILL NOT JUDGE YOU OR YOUR FEELINGS! \w8LOVE IS A COMPLICATED THING,\w4 \w8AFTER ALL. \w8AND I AM DEFINITELY HAPPY TO HEAR THAT I AM LOVED! \w8\s[6]BUT PLEASE THINK ABOUT WHAT I SAID. \w8THIS IS ALL I WILL ASK OF YOU!%(ConvCancel)\e"
+	"\0\s[8]*You confess that you actually love Jazz. \w8\s[5]\n\nOH! \w8I LOVE JAZZ TOO! \w8IT IS MY FAVORITE KIND OF MUSIC!!! \n\n\w8\w8\w8*...You say that you meant him,\w4 and not the music genre. \w8\n\n\s[32]%(jf)OH. \w8\w8\w8\s[25]...OH. \w8\s[1]%(username),\w4 I AM NOT REALLY SURE HOW TO RESPOND?.. \w8\s[4]I MEAN!.. \w8YOU HAVE BEEN VERY KIND TO ME AND I AM NOT AGAINST THE IDEA,\w4 \w8BUT... \w8\s[4]I MIGHT BE NOT THE BEST PERSON TO PURSUE AS A ROMANTIC INTEREST. \w8\s[24]FIRST OF ALL! \w8THERE IS THAT SCREEN BETWEEN US WHICH REALLY HINDERS THINGS. \w8.......AND ALSO I AM A LITERAL SKELETON. \w8\s[32]THAT IS TO SAY! \w8I WILL NOT JUDGE YOU OR YOUR FEELINGS! \w8LOVE IS A COMPLICATED THING,\w4 \w8AFTER ALL. \w8AND I AM DEFINITELY HAPPY TO HEAR THAT I AM LOVED! \w8\s[6]BUT PLEASE THINK ABOUT WHAT I SAID. \w8THIS IS ALL I WILL ASK OF YOU!%(ConvCancel)\e"
 }
 
 Select.nofriendzone
@@ -1267,12 +1268,12 @@ Select.nofriendzone
 	jazzfriend = 0
 	jazzok = 1
 	
-	"\0\s[8]*You tell Jazz that you have misjudged your feelings,\w4 and... \w8you just want you two to stay friendly acquaintances. \w8\s[2]\w8\s[4]He seems saddened... \n\n\w8%(username),\w4 I... \w8... \w8I UNDERSTAND. \w8IT MUST HAVE BEEN HARD TO SAY THAT,\w4 SO THANK YOU FOR YOUR HONESTY. \w8\s[29]I HOPE IT WAS NOT SOMETHING I DID? \w8BUT ANYWAY... \w8I UNDERSTAND. \w8\w8\w8IT'S OKAY. \w8\w8\w8\s[9]...IT'S OKAY.%(ConvCancel)\e"
+	"\0\s[8]*You tell Jazz that you have misjudged your feelings,\w4 and... \w8you just want you two to stay friendly acquaintances. \w8\s[2]\w8\s[4]He seems saddened... \n\n\w8%(jf)%(username),\w4 I... \w8... \w8I UNDERSTAND. \w8IT MUST HAVE BEEN HARD TO SAY THAT,\w4 SO THANK YOU FOR YOUR HONESTY. \w8\s[29]I HOPE IT WAS NOT SOMETHING I DID? \w8BUT ANYWAY... \w8I UNDERSTAND. \w8\w8\w8IT'S OKAY. \w8\w8\w8\s[9]...IT'S OKAY.%(ConvCancel)\e"
 }
 
 Select.samestate
 {
-	"\0\s[8]*...Actually,\w4 nevermind. \w8You tell Jazz you were right about how you felt. \w8\s[0]\n\nOH,\w4 IT'S FINE! \w8FEELINGS ARE COMPLICATED. \w8\s[6]I DON'T ALWAYS KNOW WHAT I FEEL EITHER! \w8BUT I KNOW I LIKE YOU,\w4 AND THAT IS ENOUGH FOR ME!%(ConvCancel)\e"
+	"\0\s[8]*...Actually,\w4 nevermind. \w8You tell Jazz you were right about how you felt. \w8\s[0]\n\n%(jf)OH,\w4 IT'S FINE! \w8FEELINGS ARE COMPLICATED. \w8\s[6]I DON'T ALWAYS KNOW WHAT I FEEL EITHER! \w8BUT I KNOW I LIKE YOU,\w4 AND THAT IS ENOUGH FOR ME!%(ConvCancel)\e"
 }
 
 
@@ -1289,13 +1290,13 @@ Select.samestate
 Select.thanksalot
 {
 	
-	if apology > 0 
+	if apology > 6 || totappoints > 10 
 	
 	{
-		"\0\s[0]*You tell Jazz 'thank you'. \n\n\w8\s[3]OH? \w8WHAT FOR? \w8\n\n*For being so forgiving,\w4 of course. \w8\n\n\s[1]AH - \w8\w8\w8...YOU ARE WELCOME?..%(ConvCancel)\e"
-		"\0\s[0]*You tell Jazz 'thank you'. \w8You tell him you really appreciate how merciful he is when it comes to forgiving others. \w8\n\n\s[6]OF COURSE I AM! \w8I DON'T EVEN REMEMBER WHAT I HAD TO FORGIVE YOU FOR... \w8\s[3]DID I EVEN FORGIVE YOU,\w4 OR WAS IT THE OTHER WAY AROUND? \w8\s[36]DID WE FORGIVE EACH OTHER??? \w8SORRY,\w4 I NEED A MOMENT TO REMEMBER BACK.%(ConvCancel)\e"
-		"\0\s[0]*You tell Jazz that you are thankful for his forgiveness. \w8\s[1]He fidgets. \w8\n\nOF COURSE!!! \w8I ALMOST FORGOT WHAT YOU WERE APOLOGISING FOR! \w8NOT A MEMORY!!! \w8ALL GONE! \w8UNMEMORIED INTO THE VOID!!! \w8\w8\w8...%(ConvCancel)\e"
-	    "\0\s[0]*You thank Jazz for forgiving you. \w8\s[1]He wrings his hands. \n\n\w8YOU'RE WELCOME??? \w8JUST,\w4 UM... \w8MAYBE PLEASE DON'T MAKE IT A HABIT.%(ConvCancel)\e"
+		"\0\s[0]*You tell Jazz 'thank you'. \n\n\w8\s[3]%(jf)OH? \w8WHAT FOR? \w8\n\n%(df)*For being so forgiving,\w4 of course. \w8\n\n\s[1]%(jf)AH - \w8\w8\w8...YOU ARE WELCOME?..%(ConvCancel)\e"
+		"\0\s[0]*You tell Jazz 'thank you'. \w8You tell him you really appreciate how merciful he is when it comes to forgiving others. \w8\n\n\s[6]%(jf)OF COURSE I AM! \w8I DON'T EVEN REMEMBER WHAT I HAD TO FORGIVE YOU FOR... \w8\s[3]DID I EVEN FORGIVE YOU,\w4 OR WAS IT THE OTHER WAY AROUND? \w8\s[36]DID WE FORGIVE EACH OTHER??? \w8SORRY,\w4 I NEED A MOMENT TO REMEMBER BACK.%(ConvCancel)\e"
+		"\0\s[0]*You tell Jazz that you are thankful for his forgiveness. \w8\s[1]He fidgets. \w8\n\n%(jf)OF COURSE!!! \w8I ALMOST FORGOT WHAT YOU WERE APOLOGISING FOR! \w8NOT A MEMORY!!! \w8ALL GONE! \w8UNMEMORIED INTO THE VOID!!! \w8\w8\w8...%(ConvCancel)\e"
+	    "\0\s[0]*You thank Jazz for forgiving you. \w8\s[1]He wrings his hands. \n\n\w8%(jf)YOU'RE WELCOME??? \w8JUST,\w4 UM... \w8MAYBE PLEASE DON'T MAKE IT A HABIT.%(ConvCancel)\e"
 	}
 	
 	if totappoints > 30 || badbad > 6 || apology > 10
@@ -1313,21 +1314,21 @@ Select.thanksalot
     if jazzfriend == 1 || jazzlover == 1
 	{
 		
-		"\0\s[0]*You thank Jazz for being such a good friend. \w8\s[5]\n\nOH! \w8YOU ARE WELCOME!!! \w8AND IT IS ALL MY PLEASURE,\w4 ANYWAY!%(ConvCancel)\e"
-		"\0\s[0]*You thank Jazz for being so great. \w8\s[5]\n\nYOU'RE WELCOME! \w8\s[6]IT IS A TALENT. \w8I AM A NATURAL. \w8IT IS BOTH A GIFT AND A BURDEN TO OVERSHADOW ALL. \w8\s[24]I HOPE YOU DON'T FEEL TOO BAD BEING SECOND-BEST!%(ConvCancel)\e"
-		"\0\s[0]*You thank Jazz for his friendship. \w8\s[5]\n\nTHANK YOU TOO! \w8\s[6]AFTER ALL,\w4 IT IS HARD TO BE A FRIEND IF YOU DON'T HAVE A FRIEND TO BE A FRIEND TO.%(ConvCancel)\e"
-		"\0\s[0]*You thank Jazz for everything he did for you. \w8\s[5]\n\nIT'S OKAY! \w8THAT'S JUST WHAT FRIENDS DO!!! \w8\s[6]ESPECIALLY IF THOSE FRIENDS ARE ME.%(ConvCancel)\e"
-		"\0\s[0]*You thank Jazz for his awesomeness. \w8\s[6]\n\nYOU ARE WELCOME! \w8IT IS ALWAYS ON THE HOUSE.%(ConvCancel)\e"
+		"\0\s[0]*You thank Jazz for being such a good friend. \w8\s[5]\n\n%(jf)OH! \w8YOU ARE WELCOME!!! \w8AND IT IS ALL MY PLEASURE,\w4 ANYWAY!%(ConvCancel)\e"
+		"\0\s[0]*You thank Jazz for being so great. \w8\s[5]\n\n%(jf)YOU'RE WELCOME! \w8\s[6]IT IS A TALENT. \w8I AM A NATURAL. \w8IT IS BOTH A GIFT AND A BURDEN TO OVERSHADOW ALL. \w8\s[24]I HOPE YOU DON'T FEEL TOO BAD BEING SECOND-BEST!%(ConvCancel)\e"
+		"\0\s[0]*You thank Jazz for his friendship. \w8\s[5]\n\n%(jf)THANK YOU TOO! \w8\s[6]AFTER ALL,\w4 IT IS HARD TO BE A FRIEND IF YOU DON'T HAVE A FRIEND TO BE A FRIEND TO.%(ConvCancel)\e"
+		"\0\s[0]*You thank Jazz for everything he did for you. \w8\s[5]\n\n%(jf)IT'S OKAY! \w8THAT'S JUST WHAT FRIENDS DO!!! \w8\s[6]ESPECIALLY IF THOSE FRIENDS ARE ME.%(ConvCancel)\e"
+		"\0\s[0]*You thank Jazz for his awesomeness. \w8\s[6]\n\n%(jf)YOU ARE WELCOME! \w8IT IS ALWAYS ON THE HOUSE. \w8OR IT WOULD BE IF I HAD ONE.%(ConvCancel)\e"
 
 	
 	}
 	
 	
-		"\0\s[0]*You thank Jazz for his presence. \w8\n\n\s[5]OF COURSE!!! \w8I WILL STAY HERE AS LONG AS YOU NEED!!! \w8\s[6]BECAUSE I HAVE NO IDEA HOW TO LEAVE,\w4 AMONG OTHER REASONS.%(ConvCancel)\e"
-		"\0\s[0]*You thank Jazz for being himself. \w8\n\n\s[5]YOU ARE WELCOME!!! \w8\s[6]AFTER ALL,\w4 I HAVE NEVER TRIED BEING SOMEONE ELSE! \w8I WOULD PROBABLY FALL SHORT! \w8\s[24]THOUGH I CAN EMULATE A CHICKEN RATHER WELL.%(ConvCancel)\e"
-		"\0\s[0]*You thank Jazz for everything. \w8\n\n\s[3]A BIT VAGUE,\w4 BUT... \w8\s[5]YOU ARE WELCOME FOR EVERYTHING TOO!%(ConvCancel)\e"
-		"\0\s[0]*You thank Jazz for being so nice. \w8\n\n\s[5]YOU ARE WELCOME!! \w8IT IS EASY TO BE NICE TO NICE PEOPLE!%(ConvCancel)\e"
-		"\0\s[0]*You thank Jazz for keeping you company. \w8\n\n\s[5]OF COURSE,\w4 IT IS NO BIG DEAL! \w8\s[6]THANK YOU TOO FOR KEEPING ME COMPANY! \w8\s[24]IT WOULD BE INCONVENIENT TO STAND IN A VOID,\w4 TELLING THINGS TO NO ONE JUST TO PASS TIME.%(ConvCancel)\e"
+		"\0\s[0]*You thank Jazz for his presence. \w8\n\n\s[5]%(jf)OF COURSE!!! \w8I WILL STAY HERE AS LONG AS YOU NEED!!! \w8\s[6]BECAUSE I HAVE NO IDEA HOW TO LEAVE,\w4 AMONG OTHER REASONS.%(ConvCancel)\e"
+		"\0\s[0]*You thank Jazz for being himself. \w8\n\n\s[5]%(jf)YOU ARE WELCOME!!! \w8\s[6]AFTER ALL,\w4 I HAVE NEVER TRIED BEING SOMEONE ELSE! \w8I WOULD PROBABLY FALL SHORT! \w8\s[24]THOUGH I CAN MAKE A FUN EXPRESSION OF A CHICKEN, BUT THAT IS WHERE MY TALENTS END.%(ConvCancel)\e"
+		"\0\s[0]*You thank Jazz for everything. \w8\n\n\s[3]%(jf)A BIT VAGUE,\w4 BUT... \w8\s[5]YOU ARE WELCOME FOR EVERYTHING TOO!%(ConvCancel)\e"
+		"\0\s[0]*You thank Jazz for being so nice. \w8\n\n\s[5]%(jf)YOU ARE WELCOME!! \w8IT IS EASY TO BE NICE TO NICE PEOPLE!%(ConvCancel)\e"
+		"\0\s[0]*You thank Jazz for keeping you company. \w8\n\n\s[5]%(jf)OF COURSE,\w4 IT IS NO BIG DEAL! \w8\s[6]THANK YOU TOO FOR KEEPING ME COMPANY! \w8\s[24]IT WOULD BE INCONVENIENT TO STAND IN A VOID,\w4 TELLING THINGS TO NO ONE JUST TO PASS TIME.%(ConvCancel)\e"
 	}
 	
 
@@ -1493,7 +1494,7 @@ Select.betsun
 	
 	else
 	{
-		"\0\s[0]*You tell Jazz that %(tsundere). %(tsunreact3) \w8\n\nThis is not how you meant this to go... %(ConvCancel)\e"
+		"\0\s[0]*You tell Jazz that %(tsundere). %(tsunreact3) \w8\n\n%(df)This is not how you meant this to go... %(ConvCancel)\e"
 	}
 }
 
@@ -1528,15 +1529,15 @@ Select.giveapology
 		 
 		 if apology == 1 
 		 {
-			 "\0\s[0]*You tell Jazz that you are sorry for being mean to him. \w8\s[22]He seems... \w8overjoyed? \n\n\w8%(username)! \w8\s[6]WHILE YOUR ACTIONS WERE LESS THAN ENJOYABLE,\w4 I AM GLAD THAT YOU CAN ADMIT BEING WRONG! \w8THIS IS A VERY GOOD QUALITY TO HAVE. \w8\s[5]SO PLEASE DON'T FEEL TOO BAD ABOUT MAKING MISTAKES OR STRAYING FROM THE PATH OF LAWFUL GOOD! \w8AND I AM GLAD TO ANNOUNCE THAT I FORGIVE YOU.%(ConvCancel)\e" 
+			 "\0\s[0]*You tell Jazz that you are sorry for being mean to him. \w8\s[22]He seems... \w8overjoyed? \n\n\w8%(jf)%(username)! \w8\s[6]WHILE YOUR ACTIONS WERE LESS THAN ENJOYABLE,\w4 I AM GLAD THAT YOU CAN ADMIT BEING WRONG! \w8THIS IS A VERY GOOD QUALITY TO HAVE. \w8\s[5]SO PLEASE DON'T FEEL TOO BAD ABOUT MAKING MISTAKES OR STRAYING FROM THE PATH OF LAWFUL GOOD! \w8AND I AM GLAD TO ANNOUNCE THAT I FORGIVE YOU.%(ConvCancel)\e" 
 		 }
 		 
 		 else
 		 {
-			 "\0\s[0]*You tell Jazz that you are sorry for being mean to him.\w8Again. \w8\s[39]He sighs, \w4but nods. \w8\n\n\s[24]I AM NOT ENTIRELY HAPPY WITH THAT, \w4BUT I DON'T BLAME YOU MUCH EITHER. \w8YOU ARE GRACIOUSLY FORGIVEN FOR YOUR MISDEEDS! \w8\s[3]THOUGH I RECOMMEND NOT TRYING THESE PARTICULAR OPTIONS AGAIN IN THE FUTURE.%(ConvCancel)\e"
-			 "\0\s[0]*You tell Jazz that you are sorry for being mean to him. \w8Again. \w8He seems more or less fine with that. \w8\s[24]\n\nI AM NOT HAPPY, BUT I UNDERSTAND THAT ACCIDENTS HAPPEN. \w8SO YOU ARE FORGIVEN! \w8\s[0]BUT IT DOES NOT MEAN YOU SHOULD NOT STRIVE FOR BETTERNESS.%(ConvCancel)\e"
-			 "\0\s[0]*You tell Jazz that you are sorry for being mean to him. \w8Again. \w8\s[3]He seems... \w8a bit confused,\w4 but still glad. \n\n\w8\s[6]%(username),\w4 I FORGIVE YOU! \w8I UNDERSTAND THE PROCESS OF CHANGE MIGHT BE LONG AND STRENUOUS. \w8JUST TRY TO DO BETTER IN FUTURE,\w4 OKAY?%(ConvCancel)\e"
-			 "\0\s[0]*You tell Jazz that you are sorry for being mean to him. \w8Again. \w8\s[6]\n\nTHAT IS ALRIGHT. \w8I'M GLAD YOU OWN UP TO YOUR MISTAKES! \w8\s[24]JUST TRY TO DO BETTER NEXT TIME, ALRIGHT?%(ConvCancel)\e"
+			 "\0\s[0]*You tell Jazz that you are sorry for being mean to him.\w8Again. \w8\s[39]He sighs, \w4but nods. \w8\n\n\s[24]%(jf)I AM NOT ENTIRELY HAPPY WITH THAT, \w4BUT I DON'T BLAME YOU MUCH EITHER. \w8YOU ARE GRACIOUSLY FORGIVEN FOR YOUR MISDEEDS! \w8\s[3]THOUGH I RECOMMEND NOT TRYING THESE PARTICULAR OPTIONS AGAIN IN THE FUTURE.%(ConvCancel)\e"
+			 "\0\s[0]*You tell Jazz that you are sorry for being mean to him. \w8Again. \w8He seems more or less fine with that. \w8\s[24]\n\n%(jf)I AM NOT HAPPY, BUT I UNDERSTAND THAT ACCIDENTS HAPPEN. \w8SO YOU ARE FORGIVEN! \w8\s[0]BUT IT DOES NOT MEAN YOU SHOULD NOT STRIVE FOR BETTERNESS.%(ConvCancel)\e"
+			 "\0\s[0]*You tell Jazz that you are sorry for being mean to him. \w8Again. \w8\s[3]He seems... \w8a bit confused,\w4 but still glad. \n\n\w8\s[6]%(jf)%(username),\w4 I FORGIVE YOU! \w8I UNDERSTAND THE PROCESS OF CHANGE MIGHT BE LONG AND STRENUOUS. \w8JUST TRY TO DO BETTER IN FUTURE,\w4 OKAY?%(ConvCancel)\e"
+			 "\0\s[0]*You tell Jazz that you are sorry for being mean to him. \w8Again. \w8\s[6]\n\n%(jf)THAT IS ALRIGHT. \w8I'M GLAD YOU OWN UP TO YOUR MISTAKES! \w8\s[24]JUST TRY TO DO BETTER NEXT TIME, ALRIGHT?%(ConvCancel)\e"
 		 }
 		 
 		 	  
@@ -1552,18 +1553,18 @@ Select.giveapology
 		 
 		 if apology == 1 
 		 { 
-		    	"\0\s[0]*You tell Jazz that you are sorry for being mean to him. \w8He seems...\w8 optimistic? \n\n\w8\s[24]%(username), \w4I AM GLAD THAT YOU OWN UP TO YOUR MISTAKES, \w4AND THAT IS THE IMPORTANT PART. \w8I BELIEVE IN YOUR SELF-BETTERING SKILLS! \w8\s[6]AND I BELIEVE YOU SHOULD BELIEVE IN THEM TOO.%(ConvCancel)\e"
+		    	"\0\s[0]*You tell Jazz that you are sorry for being mean to him. \w8He seems...\w8 optimistic? \n\n\w8\s[24]%(jf)%(username), \w4I AM GLAD THAT YOU OWN UP TO YOUR MISTAKES, \w4AND THAT IS THE IMPORTANT PART. \w8I BELIEVE IN YOUR SELF-BETTERING SKILLS! \w8\s[6]AND I BELIEVE YOU SHOULD BELIEVE IN THEM TOO.%(ConvCancel)\e"
 		 }
 		 
 		 
 		 else 
 		 {
-			 	"\0\s[0]*You tell Jazz that you are sorry for being mean to him. \w8Again. \w8\s[39]He sighs. \w8\n\n\s[9]I KNOW IT CAN BE... \w8HARD TO STICK TO THE STRAIGHT AND NARROW, \w4BUT TRY HARDER, ALRIGHT? \w8\s[24]I FORGIVE YOU. \w8JUST TRY TO AVOID MAKING THAT MISTAKE AGAIN.%(ConvCancel)\e"
-				"\0\s[0]*You tell Jazz that you are sorry for being mean to him. \w8Again. \w8\s[39]He sighs in a tired way. \w8\n\n\s[0]I WONDER IF YOU UNDERSTAND THE POINT OF APOLOGIES, %(username). \w8\s[24]IN CASE YOU DON'T, \w4HERE IS A BREAKDOWN FOR YOU: \w4AN APOLOGY IS MEANT TO MEAN THAT YOU KNOW YOU DID SOMETHING BAD. \w8AND WHY WOULD YOU DO SOMETHING BAD AGAIN IF YOU KNOW IT IS BAD? \w8\s[3]UNLESS IT IS A DIFFERENT BAD YOU HAVE TRIED FOR A CHANGE...%(ConvCancel)\e"
-				"\0\s[0]*You tell Jazz that you are sorry for being mean to him. \w8Again. \w8\s[4]He is not too thrilled, \w4but he nods to you. \w8n\nI THINK YOU CAN DO MUCH BETTER THAN THIS, \w4BUT... \w8\s[39]ANYWAY, \w4I FORGIVE YOU.%(ConvCancel)\e"
-				"\0\s[0]*You tell Jazz that you are sorry for being mean to him. \w8Again. \w8\s[39]He seems resolved. \w8\n\n\s[24]%(username), I BELIEVE THAT YOU ARE TRYING YOUR BEST. \w8\s[1]AND, \w4WHILE I'D LIKE THAT BEST TO BE A LITTLE NICER TO ME IN PARTICULAR... \w8\s[0]I SIMPLY HOPE THAT YOU WILL LEARN FROM YOUR MISTAKES. \w8AND I FORGIVE YOU.%(ConvCancel)\e"
-				"\0\s[0]*You tell Jazz that you are sorry for being mean to him. \w8Again. \w8\s[4]He isn't happy about that, \w4you can tell, \w4but he nods anyway. \w8\s[24]\n\nTHE ROAD TO SUCCESS IS LONG AND HARD, %(username). \w8BUT I BELIEVE YOU CAN WALK IT TOWARDS THE HAPPY END!%(ConvCancel)\e"
-		        "\0\s[0]*You tell Jazz that you are sorry for being mean to him. \w8Again. \w8\s[4]He seems... hesitant. \n\n\w8\s[24]%(username). \w8FOR SOME REASON IT FEELS LIKE YOU ARE NOT TRYING HARD ENOUGH... \w8\s[40]I - I MEAN,\w4 OF COURSE I FORGIVE YOU,\w4 BUT... \w8\s[4]MAYBE YOU MISUNDERSTAND THE POINT OF APOLOGIES? \w8YOU ARE MEANT TO TRY AND AVOID DOING WHAT YOU HAVE DONE TO HAVE TO APOLOGISE IN THE FIRST PLACE!%(ConvCancel)\e"
+			 	"\0\s[0]*You tell Jazz that you are sorry for being mean to him. \w8Again. \w8\s[39]He sighs. \w8\n\n\s[9]%(jf)I KNOW IT CAN BE... \w8HARD TO STICK TO THE STRAIGHT AND NARROW, \w4BUT TRY HARDER, ALRIGHT? \w8\s[24]I FORGIVE YOU. \w8JUST TRY TO AVOID MAKING THAT MISTAKE AGAIN.%(ConvCancel)\e"
+				"\0\s[0]*You tell Jazz that you are sorry for being mean to him. \w8Again. \w8\s[39]He sighs in a tired way. \w8\n\n\s[0]%(jf)I WONDER IF YOU UNDERSTAND THE POINT OF APOLOGIES, %(username). \w8\s[24]IN CASE YOU DON'T, \w4HERE IS A BREAKDOWN FOR YOU: \w4AN APOLOGY IS MEANT TO MEAN THAT YOU KNOW YOU DID SOMETHING BAD. \w8AND WHY WOULD YOU DO SOMETHING BAD AGAIN IF YOU KNOW IT IS BAD? \w8\s[3]UNLESS IT IS A DIFFERENT BAD YOU HAVE TRIED FOR A CHANGE...%(ConvCancel)\e"
+				"\0\s[0]*You tell Jazz that you are sorry for being mean to him. \w8Again. \w8\s[4]He is not too thrilled, \w4but he nods to you. \w8n\n%(jf)I THINK YOU CAN DO MUCH BETTER THAN THIS, \w4BUT... \w8\s[39]ANYWAY, \w4I FORGIVE YOU.%(ConvCancel)\e"
+				"\0\s[0]*You tell Jazz that you are sorry for being mean to him. \w8Again. \w8\s[39]He seems resolved. \w8\n\n\s[24]%(jf)%(username), I BELIEVE THAT YOU ARE TRYING YOUR BEST. \w8\s[1]AND, \w4WHILE I'D LIKE THAT BEST TO BE A LITTLE NICER TO ME IN PARTICULAR... \w8\s[0]I SIMPLY HOPE THAT YOU WILL LEARN FROM YOUR MISTAKES. \w8AND I FORGIVE YOU.%(ConvCancel)\e"
+				"\0\s[0]*You tell Jazz that you are sorry for being mean to him. \w8Again. \w8\s[4]He isn't happy about that, \w4you can tell, \w4but he nods anyway. \w8\s[24]%(jf)\n\nTHE ROAD TO SUCCESS IS LONG AND HARD, %(username). \w8BUT I BELIEVE YOU CAN WALK IT TOWARDS THE HAPPY END!%(ConvCancel)\e"
+		        "\0\s[0]*You tell Jazz that you are sorry for being mean to him. \w8Again. \w8\s[4]He seems... hesitant. \n\n\w8\s[24]%(jf)%(username). \w8FOR SOME REASON IT FEELS LIKE YOU ARE NOT TRYING HARD ENOUGH... \w8\s[40]I - I MEAN,\w4 OF COURSE I FORGIVE YOU,\w4 BUT... \w8\s[4]MAYBE YOU MISUNDERSTAND THE POINT OF APOLOGIES? \w8YOU ARE MEANT TO TRY AND AVOID DOING WHAT YOU HAVE DONE TO HAVE TO APOLOGISE IN THE FIRST PLACE!%(ConvCancel)\e"
 				
 		 }
 	 
@@ -1576,22 +1577,20 @@ Select.giveapology
 		 punchpoints = 0
 		 if apology == 1 
 		 { 
-		    	"\0\s[0]*You tell Jazz that you are sorry for being mean to him. \w8He seems...\w8 cautiously optimistic. \n\n\w8\s[24]%(username), \w4I FORGIVE YOU AND I AM GLAD THAT YOU OWN UP TO YOUR MISTAKES, \w4BUT... \w8\s[4]MAYBE YOU COULD MAKE LESS MISTAKES TO OWN UP TO?..%(ConvCancel)\e"
+		    	"\0\s[0]*You tell Jazz that you are sorry for being mean to him. \w8He seems...\w8 cautiously optimistic. \n\n\w8\s[24]%(jf)%(username), \w4I FORGIVE YOU AND I AM GLAD THAT YOU OWN UP TO YOUR MISTAKES, \w4BUT... \w8\s[4]MAYBE YOU COULD MAKE LESS MISTAKES TO OWN UP TO?..%(ConvCancel)\e"
 		 }
 		 
 		 
 		 else 
 		 {
-			 	"\0\s[0]*You tell Jazz that you are sorry for being mean to him.\w8Again. \w8\s[39]He sighs. \n\n\w8\s[3]%(username), \w4I KNOW YOU ARE TRYING... \w8BUT... \w8\s[1]MAYBE YOU COULD PUT A LITTLE LESS EFFORT INTO BEING MEAN AND A LITTLE MORE EFFORT INTO GOSH DARN DIGGITY LITERALLY ANYTHING ELSE? \w8\s[40]JUST A FRIENDLY SUGGESTION OF ONE FRIEND TO ANOTHER.%(ConvCancel)\e"
-				"\0\s[0]*You tell Jazz that you are sorry for being mean to him.\w8Again. \w8\n\n\s[3]%(username)... \w8\s[9]...NEVERMIND. \w8I GUESS EVERYONE SLIPS EVERY NOW AND THEN. \w8\s[8]THEN AGAIN BY GOODNESS THAT'S A LARGE SLIP RIGHT THERE.%(ConvCancel)\e"
-				"\0\s[0]*You tell Jazz that you are sorry for being mean to him.\w8Again. \w8\n\n\s[9]...%(username), \w4I KNOW THAT THE ROAD TO BEING GOOD IS WINDING BUT I HAVE NO IDEA HOW YOU MANAGE TO WIND UP ALL OVER THE PLACE LIKE THAT. \w8\s[24]THEN AGAIN, \w4WINDS OF CHANGE CAN BE OVERWHELMING... \w8TRY TO MASTER THEM A LITTLE BETTER, \w4THOUGH.%(ConvCancel)\e"
+			 	"\0\s[0]*You tell Jazz that you are sorry for being mean to him.\w8Again. \w8\s[39]He sighs. \n\n\w8\s[3]%(jf)%(username), \w4I KNOW YOU ARE TRYING... \w8BUT... \w8\s[1]MAYBE YOU COULD PUT A LITTLE LESS EFFORT INTO BEING MEAN AND A LITTLE MORE EFFORT INTO GOSH DARN DIGGITY LITERALLY ANYTHING ELSE? \w8\s[40]JUST A FRIENDLY SUGGESTION OF ONE FRIEND TO ANOTHER.%(ConvCancel)\e"
+				"\0\s[0]*You tell Jazz that you are sorry for being mean to him.\w8Again. \w8\n\n\s[3]%(jf)%(username)... \w8\s[9]...NEVERMIND. \w8I GUESS EVERYONE SLIPS EVERY NOW AND THEN. \w8\s[8]THEN AGAIN BY GOODNESS THAT'S A LARGE SLIP RIGHT THERE.%(ConvCancel)\e"
+				"\0\s[0]*You tell Jazz that you are sorry for being mean to him.\w8Again. \w8\n\n\s[9]%(jf)...%(username), \w4I KNOW THAT THE ROAD TO BEING GOOD IS WINDING BUT I HAVE NO IDEA HOW YOU MANAGE TO WIND UP ALL OVER THE PLACE LIKE THAT. \w8\s[24]THEN AGAIN, \w4WINDS OF CHANGE CAN BE OVERWHELMING... \w8TRY TO MASTER THEM A LITTLE BETTER, \w4THOUGH.%(ConvCancel)\e"
 				"\0\s[0]*You tell Jazz that you are sorry for being mean to him.\w8Again. \w8\s[9]He looks at you in a strange way, \w4but does not say anything. \w8You are forgiven in either case.%(ConvCancel)\e"
-				"\0\s[0]*You tell Jazz that you are sorry for being mean to him.\w8Again. \w8\s[8]He shakes his head at you and sighs. \w8\n\n\s[24]%(username), \w4I STILL BELIEVE IN YOU, \w4BUT... \w8\s[1]I-I JUST WISH I DID NOT HAVE TO PUT 'STILL' IN THAT SENTENCE.%(ConvCancel)\e"
-				"\0\s[0]*You tell Jazz that you are sorry for being mean to him.\w8Again. \w8\s[1]\n\nOH. \w8I SEE. \w8\s[40]IT IS A BIT OF A TRADITION BY NOW, \w4DON'T YOU THINK? \w8PERHAPS WE COULD EVEN CELEBRATE IT BY NOT BEING MEAN TO ME ANYMORE.%(ConvCancel)\e"
-				"\0\s[0]*You tell Jazz that you are sorry for being mean to him.\w8Again. \w8\n\n\s[1]OH WELL I AM VERY SURPRISED AT THIS TURN OF EVENTS BECAUSE THIS HAS NEVER HAPPENED BEFORE. \w8\w8\w8\w8\s[0]...IN EITHER CASE YOU ARE FORGIVEN.%(ConvCancel)\e"
-				"\0\s[0]*You tell Jazz that you are sorry for being mean to him.\w8Again. \w8\w8\w8\s[8]...He does not say anything, \w4but he looks let down.%(ConvCancel)\e"
-				"\0\s[0]*You tell Jazz that you are sorry for being mean to him.\w8Again. \w8\s[39]He nods in acknowledgement, \w4but does not really react otherwise.%(ConvCancel)\e"
-
+				"\0\s[0]*You tell Jazz that you are sorry for being mean to him.\w8Again. \w8\s[8]He shakes his head at you and sighs. \w8\n\n\s[24]%(jf)%(username), \w4I STILL BELIEVE IN YOU, \w4BUT... \w8\s[1]I-I JUST WISH I DID NOT HAVE TO PUT 'STILL' IN THAT SENTENCE.%(ConvCancel)\e"
+				"\0\s[0]*You tell Jazz that you are sorry for being mean to him.\w8Again. \w8\s[1]\n\n%(jf)OH. \w8I SEE. \w8\s[40]IT IS A BIT OF A TRADITION BY NOW, \w4DON'T YOU THINK? \w8PERHAPS WE COULD EVEN CELEBRATE IT BY NOT BEING MEAN TO ME ANYMORE.%(ConvCancel)\e"
+				"\0\s[0]*You tell Jazz that you are sorry for being mean to him.\w8Again. \w8\n\n\s[1]%(jf)OH WELL I AM VERY SURPRISED AT THIS TURN OF EVENTS BECAUSE THIS HAS NEVER HAPPENED BEFORE. \w8\w8\w8\w8\s[0]...IN EITHER CASE YOU ARE FORGIVEN.%(ConvCancel)\e"
+				
 		 }
 	    }
 	 }
@@ -1605,24 +1604,24 @@ Select.giveapology
 		 punchpoints = 0
 		 if apology == 1 
 		 { 
-		"\0\s[0]*You tell Jazz that you are sorry for being mean to him. \w8\s[4]He looks uncomfortable. \n\n\w8\w8\w8... \w8\w8\w8I FORGIVE YOU. \w8\w8\w8... \w8\w8\w8\n\n*Looks like this is all you'll get out of him.%(ConvCancel)\e"
+		"\0\s[0]*You tell Jazz that you are sorry for being mean to him. \w8\s[4]He looks uncomfortable. \n\n\w8\w8\w8%(jf)... \w8\w8\w8I FORGIVE YOU. \w8\w8\w8... \w8\w8\w8\n\n%(df)*Looks like this is all you'll get out of him.%(ConvCancel)\e"
 		 }
 		 
 		 elseif apology > 1 && apology <= 10 
 		 {
-		        "\0\s[0]*You tell Jazz that you are sorry for being mean to him. \w8\s[4]He seems... hesitant. \n\n\w8\s[24]%(username). \w8FOR SOME REASON IT FEELS LIKE YOU ARE NOT TRYING HARD ENOUGH... \w8\s[40]I - I MEAN,\w4 OF COURSE I FORGIVE YOU,\w4 BUT... \w8\s[4]MAYBE YOU MISUNDERSTAND THE POINT OF APOLOGIES?%(ConvCancel)\e"
-				"\0\s[0]*You tell Jazz that you are sorry for being mean to him. \w8Again. \w8\s[9]\n\n%(username), I... \w4I WON'T STOP TRYING, \w4\s[39]BUT I REALLY THINK YOU NEED TO THINK OVER SOME THINGS THAT NEED THINKING.%(ConvCancel)\e"
-				"\0\s[0]*You tell Jazz that you are sorry for being mean to him. \w8Again. \w8\n\n\s[1]UM... \w8YOU DEFINITELY MAKE A LOT OF MISTAKES, \w4DON'T YOU. \w8\s[24]I'D SAY THAT IT MAKES YOU HUMAN, \w4BUT... \w8IF ALL HUMANS MAKE MISTAKES LIKE THAT, \w4I FEEL LIKE I SHOULD BE WORRIED.%(ConvCancel)\e"
+		        "\0\s[0]*You tell Jazz that you are sorry for being mean to him. \w8\s[4]He seems... hesitant. \n\n\w8\s[24]%(jf)%(username). \w8FOR SOME REASON IT FEELS LIKE YOU ARE NOT TRYING HARD ENOUGH... \w8\s[40]I - I MEAN,\w4 OF COURSE I FORGIVE YOU,\w4 BUT... \w8\s[4]MAYBE YOU MISUNDERSTAND THE POINT OF APOLOGIES?%(ConvCancel)\e"
+				"\0\s[0]*You tell Jazz that you are sorry for being mean to him. \w8Again. \w8\s[9]\n\n%(jf)%(username), I... \w4I WON'T STOP TRYING, \w4\s[39]BUT I REALLY THINK YOU NEED TO THINK OVER SOME THINGS THAT NEED THINKING.%(ConvCancel)\e"
+				"\0\s[0]*You tell Jazz that you are sorry for being mean to him. \w8Again. \w8\n\n\s[1]%(jf)UM... \w8YOU DEFINITELY MAKE A LOT OF MISTAKES, \w4DON'T YOU. \w8\s[24]I'D SAY THAT IT MAKES YOU HUMAN, \w4BUT... \w8IF ALL HUMANS MAKE MISTAKES LIKE THAT, \w4I FEEL LIKE I SHOULD BE WORRIED.%(ConvCancel)\e"
 				"\0\s[0]*You tell Jazz that you are sorry for being mean to him. \w8Again. \w8\s[29]He does not seem too excited about it, \w4but he accepts it with a long suffering stare.%(ConvCancel)\e"
-				"\0\s[0]*You tell Jazz that you are sorry for being mean to him. \w8Again. \w8\n\n\s[24]YEAH. \w4YEAH, \w4I'VE LEARNED THE DRILL BY NOW. \w8I KNOW YOU ARE VERY SORRY FOR MISCLICKING SO MANY TIMES ETC. \w8\s[0]NOW, \w4PLEASE. \w8IF I MAY! \w8\s[39]I NEED MY BEAUTY STARING IN THE DISTANCE.%(ConvCancel)\e"
+				"\0\s[0]*You tell Jazz that you are sorry for being mean to him. \w8Again. \w8\n\n\s[24]%(jf)YEAH. \w4YEAH, \w4I'VE LEARNED THE DRILL BY NOW. \w8I KNOW YOU ARE VERY SORRY FOR MISCLICKING SO MANY TIMES ETC. \w8\s[0]NOW, \w4PLEASE. \w8IF I MAY! \w8\s[39]I NEED MY BEAUTY PERIOD OF STARING IN THE DISTANCE.%(ConvCancel)\e"
 		 }
 		 
 		 else 
 		 {
-		        "\0\s[0]*You tell Jazz that you are sorry for being mean to him. \w8\s[4]He winces and writhes his hands,\w4 not looking at you... \n\n\w8...IT'S,\w4 \w8IT'S OKAY. \w8I UNDERSTAND,\w4 I... \w8...IT'S OKAY.%(ConvCancel)\e"
+		        "\0\s[0]*You tell Jazz that you are sorry for being mean to him. \w8\s[4]He winces and writhes his hands,\w4 not looking at you... \n\n\w8%(jf)...IT'S,\w4 \w8IT'S OKAY. \w8I UNDERSTAND,\w4 I... \w8...IT'S OKAY.%(ConvCancel)\e"
 				"\0\s[0]*You tell Jazz that you are sorry for being mean to him. \w8Again. \w8\s[4]He glances at you with a strange expression. \w8It is hard to tell what he thinks when he slowly nods in acknowledgement.%(ConvCancel)\e"
-				"\0\s[0]*You tell Jazz that you are sorry for being mean to him. \w8Again. \w8\n\n\s[29]%(username), \w4ARE YOU SURE YOU WANT TO KEEP KEEPING ME HERE? \w8YOU DO NOT SEEM... \w8CONTENT. \w8WITH ME. \w8...AT ALL.%(ConvCancel)\e"
-				"\0\s[0]*You tell Jazz that you are sorry for being mean to him. \w8Again. \w8\n\n\s[29]%(username)... \w8\w8\w8\s[39]...NEVERMIND.%(ConvCancel)\e"
+				"\0\s[0]*You tell Jazz that you are sorry for being mean to him. \w8Again. \w8\n\n\s[29]%(jf)%(username), \w4ARE YOU SURE YOU WANT TO KEEP KEEPING ME HERE? \w8YOU DO NOT SEEM... \w8CONTENT. \w8WITH ME. \w8...AT ALL.%(ConvCancel)\e"
+				"\0\s[0]*You tell Jazz that you are sorry for being mean to him. \w8Again. \w8\n\n\s[29]%(jf)%(username)... \w8\w8\w8\s[39]...NEVERMIND.%(ConvCancel)\e"
 				"\0\s[0]*You tell Jazz that you are sorry for being mean to him. \w8Again. \w8\s[9]He nods before you finish talking, \w4looking a bit sadly used to the routine.%(ConvCancel)\e"
 				
 		 }
@@ -1635,15 +1634,15 @@ Select.giveapology
 		 punchpoints = 0
 		 if apology == 1 
 		 { 
-		"\0\s[0]*You tell Jazz that you are sorry for being mean to him. \w8\s[4]He looks uncomfortable. \n\n\w8\w8\w8... \w8\w8\w8I FORGIVE YOU. \w8\w8\w8... \w8\w8\w8\n\n*Looks like this is all you'll get out of him.%(ConvCancel)\e"
+		"\0\s[0]*You tell Jazz that you are sorry for being mean to him. \w8\s[4]He looks uncomfortable. \n\n\w8\w8\w8%(jf)... \w8\w8\w8I FORGIVE YOU. \w8\w8\w8... \w8\w8\w8\n\n*Looks like this is all you'll get out of him.%(ConvCancel)\e"
 		 }
 		 
 		 elseif apology > 1 && apology <= 10 
 		 {
-			 "\0\s[0]*You tell Jazz that you are sorry for being mean to him. \w8Again. \w8\s[4]\n\n%(username). \w8MAYBE YOU SHOULD INVEST INTO A BETTER SUITED COMPANION? \w8I'D RECOMMEND MY FRIEND THE PUNCHING BAD. \w8I CALL THEM PUNCHY. \w8PERHAPS YOU WILL LIKE THEM A LOT.%(ConvCancel)\e"
-			 "\0\s[0]*You tell Jazz that you are sorry for being mean to him. \w8Again. \w8\w8\w8\s[39]\n\n...RIGHT. \w8\s[8]THAT IS QUITE A LOT TO APOLOGISE FOR, \w4BUT SOMETHING TELLS ME YOU KNEW THAT ALREADY. \w8WELL. \w8EVERYONE HAS HOBBIES!%(ConvCancel)\e"
-			 "\0\s[0]*You tell Jazz that you are sorry for being mean to him. \w8Again. \w8\s[3]\n\nWOWIE!! \w8IT SEEMS LIKE YOU HAVE COLLECTED QUITE A FEW THINGS TO APOLOGISE FOR. \w8\s[1]PERHAPS YOU SHOULD TRY COLLECTING PEBBLES? \w8OR PRESSED CLOVER LEAVES?..%(ConvCancel)\e"
-			 "\0\s[0]*You tell Jazz that you are sorry for being mean to him. \w8Again. \w8\s[3]\n\nTHAT IS... \w8PROBABLY LONG DUE. \w8\s[40]I - I DON'T MEAN ANYTHING MEAN, \w4BUT... \w8WHAT I MEAN IS THAT YOU ARE QUITE A BIT OF A MEANIE SOMETIMES VERY OFTEN.%(ConvCancel)\e"
+			 "\0\s[0]*You tell Jazz that you are sorry for being mean to him. \w8Again. \w8\s[4]\n\n%(jf)%(username). \w8MAYBE YOU SHOULD INVEST INTO A BETTER SUITED COMPANION? \w8I'D RECOMMEND MY FRIEND THE PUNCHING BAD. \w8I CALL THEM PUNCHY. \w8PERHAPS YOU WILL LIKE THEM A LOT.%(ConvCancel)\e"
+			 "\0\s[0]*You tell Jazz that you are sorry for being mean to him. \w8Again. \w8\w8\w8\s[39]%(jf)\n\n...RIGHT. \w8\s[8]THAT IS QUITE A LOT TO APOLOGISE FOR, \w4BUT SOMETHING TELLS ME YOU KNEW THAT ALREADY. \w8WELL. \w8EVERYONE HAS HOBBIES!%(ConvCancel)\e"
+			 "\0\s[0]*You tell Jazz that you are sorry for being mean to him. \w8Again. \w8\s[3]\n\n%(jf)WOWIE!! \w8IT SEEMS LIKE YOU HAVE COLLECTED QUITE A FEW THINGS TO APOLOGISE FOR. \w8\s[1]PERHAPS YOU SHOULD TRY COLLECTING PEBBLES? \w8OR PRESSED CLOVER LEAVES?..%(ConvCancel)\e"
+			 "\0\s[0]*You tell Jazz that you are sorry for being mean to him. \w8Again. \w8\s[3]\n\n%(jf)THAT IS... \w8PROBABLY LONG DUE. \w8\s[40]I - I DON'T MEAN ANYTHING MEAN, \w4BUT... \w8WHAT I MEAN IS THAT YOU ARE QUITE A BIT OF A MEANIE SOMETIMES VERY OFTEN.%(ConvCancel)\e"
 			 "\0\s[0]*You tell Jazz that you are sorry for being mean to him. \w8Again. \w8\s[1]He looks like he wants to say something, \w4but in the end he just sighs.%(ConvCancel)\e"
 		 }
 		 
@@ -1653,7 +1652,7 @@ Select.giveapology
 			 "\0\s[0]*You tell Jazz that you are sorry for being mean to him. \w8Again. \w8\s[39]He nods and looks away. \w8\w8\w8\s[8]...You get a feeling that you were forgiven.%(ConvCancel)\e"
 			 "\0\s[0]*You tell Jazz that you are sorry for being mean to him. \w8Again. \w8\s[8]\n\nALRIGHT. \w8\w8\w8\n\n...Wait, is that all? \w8Oh well.%(ConvCancel)\e"
 			 "\0\s[0]*You tell Jazz that you are sorry for being mean to him. \w8Again. \w8\s[8]He nods. \w8He looks really tired.%(ConvCancel)\e"
-		     "\0\s[0]*You tell Jazz that you are sorry for being mean to him. \w8\s[8]He lets out a long sigh. \n\n\w8OKAY. \w8I FORGIVE YOU. \w8\n\n*He looks resolved. \w8...And tired. \w8Mostly tired.%(ConvCancel)\e"
+		     "\0\s[0]*You tell Jazz that you are sorry for being mean to him. \w8\s[8]He lets out a long sigh. \n\n\w8%(jf)OKAY. \w8I FORGIVE YOU. \w8\n\n%(df)*He looks resolved. \w8...And tired. \w8Mostly tired.%(ConvCancel)\e"
 		 }
 	    }
 	 }
@@ -1667,14 +1666,14 @@ Select.giveapology
 		 punchpoints = 0
 		 if apology == 1 
 		 { 
-		     	"\0\s[4]*You tell Jazz that you are sorry for being mean to him. \w8\n\n\s[29]...%(username), \w4I KNOW YOU ARE TRYING HARD. \w8I JUST... \w8DON'T KNOW WHAT EXACTLY YOU ARE TRYING TO DO SO HARD. \w8\w8\w8...%(ConvCancel)\e"
+		     	"\0\s[4]*You tell Jazz that you are sorry for being mean to him. \w8\n\n\s[29]%(jf)...%(username), \w4I KNOW YOU ARE TRYING HARD. \w8I JUST... \w8DON'T KNOW WHAT EXACTLY YOU ARE TRYING TO DO SO HARD. \w8\w8\w8...%(ConvCancel)\e"
 		 }
 		 
 		 else 
 		 {
 			 	"\0\s[4]*You tell Jazz that you are sorry for being mean to him. \w8Again. \w8%(badapology) %(ConvCancel)\e"
 				"\0\s[29]*You tell Jazz that you are sorry for being mean to him. \w8Again. \w8%(badapology) %(ConvCancel)\e"
-		        "\0\s[29]*You tell Jazz that you are sorry for being mean to him. \w8\s[4]He lets out a long sigh. \n\n\w8OKAY. \w8I FORGIVE YOU. \w8\n\n*He looks resolved. \w8...And tired. \w8Mostly tired.%(ConvCancel)\e"
+		        "\0\s[29]*You tell Jazz that you are sorry for being mean to him. \w8\s[4]He lets out a long sigh. \n\n\w8%(jf)OKAY. \w8I FORGIVE YOU. \w8\n\n%(df)*He looks resolved. \w8...And tired. \w8Mostly tired.%(ConvCancel)\e"
 		 
 	    }
 		}
@@ -1693,7 +1692,7 @@ Select.giveapology
 		 {
 			 "\0\s[4]*You tell Jazz that you are sorry for being mean to him. \w8Again. \w8%(worstapology) %(ConvCancel)\e"
 			 "\0\s[29]*You tell Jazz that you are sorry for being mean to him. \w8Again. \w8%(worstapology) %(ConvCancel)\e"
-		     "\0\s[29]*You tell Jazz that you are sorry for being mean to him. \w8\s[4]He lets out a long sigh. \n\n\w8OKAY. \w8I FORGIVE YOU. \w8\n\n*He looks resolved. \w8...And tired. \w8Mostly tired.%(ConvCancel)\e"
+		     "\0\s[29]*You tell Jazz that you are sorry for being mean to him. \w8\s[4]He lets out a long sigh. \n\n\w8%(jf)OKAY. \w8I FORGIVE YOU. \w8\n\n%(df)*He looks resolved. \w8...And tired. \w8Mostly tired.%(ConvCancel)\e"
 		 }
 	    }
 	 }
@@ -1779,12 +1778,12 @@ Select.givesnack
 		if badbad <= 6 
 		{
 		
-		"\0\s[1]UH,\w4 I THINK I'M FULL... \w8\s[5]OH! THANK YOU FOR THE MEAL,\w4 BY THE WAY!%(ConvCancel)\e"
+		"\0\s[1]%(jf)UH,\w4 I THINK I'M FULL... \w8\s[5]OH! THANK YOU FOR THE MEAL,\w4 BY THE WAY!%(ConvCancel)\e"
 		}
 		
 		if badbad > 6
 		{
-			"\0\s[1]UM,\w4 I DON'T REALLY... \w8WANT ANYTHING ELSE TO EAT RIGHT NOW...%(ConvCancel)\e"
+			"\0\s[1]%(jf)UM,\w4 I DON'T REALLY... \w8WANT ANYTHING ELSE TO EAT RIGHT NOW...%(ConvCancel)\e"
 		}
 	}
 	
@@ -1805,7 +1804,7 @@ Select.givesnack
 	"\0\s[0]*You hand him a small quiche. \w8\s[4]He seems a bit sad,\w4 for some reason... \w8\s[33]He takes it carefully \s[0]and pets it before taking a bite.%(ConvCancel)\e"
 	"\0\s[0]*You give him a bowl of soup. \w8\s[3]He looks at you funny... \w8\s[33]He still takes \s[0]and drinks it,\w4 though.%(ConvCancel)\e"
 	"\0\s[0]*You give him a bowl of salad. \w8\n\n\s[3]...WHAT... \w8\n\n\s[33]He takes it \s[0]and eats it straight from the bowl,\w4 still humming surprisedly.%(ConvCancel)\e"
-	"\0\s[0]*You give him some fried chicken. \w8\n\n\s[21]OH! \w8I LIKE MEAT! \w8HOW'D YOU KNOW? \w8\n\n\s[33]He snatches it \s[0]and eats. \w8He seems content!%(ConvCancel)\e"
+	"\0\s[0]*You give him some fried chicken. \w8\n\n\s[21]%(jf)OH! \w8I LIKE MEAT! \w8HOW'D YOU KNOW? %(df)\w8\n\n\s[33]He snatches it \s[0]and eats. \w8He seems content!%(ConvCancel)\e"
 	
 	}
 	
@@ -1821,7 +1820,7 @@ Select.givesnack
 	"\0\s[0]*You hand him a small quiche. \w8\s[33]He takes it with a forlorn nod \s[0]and pets it gently before biting in.%(ConvCancel)\e"
 	"\0\s[0]*You give him a bowl of soup. \w8\s[33]He accepts it \s[0]and drinks it till the last drop.%(ConvCancel)\e"
 	"\0\s[0]*You give him a bowl of salad. \w8\n\n\s[4]...DO I HAVE TO EAT THAT?.. \w8\n\n\s[33]He accepts it,\w4 \s[8]but he doesn't seem too happy to eat it.%(ConvCancel)\e"
-	"\0\s[0]*You give him some fried chicken. \w8\n\n\s[21]MY FAVOURITE! \w8I REALLY LIKE THAT. \w8THANKS! \w8\n\n\s[33]He grabs it in a blink \w8\s[37]and chews on it with a happy hum.%(ConvCancel)\e"
+	"\0\s[0]*You give him some fried chicken. \w8\n\n\s[21]%(jf)MY FAVOURITE! \w8I REALLY LIKE THAT. \w8THANKS! %(df)\w8\n\n\s[33]He grabs it in a blink \w8\s[37]and chews on it with a happy hum.%(ConvCancel)\e"
 	}
 	
 	if jazzfriend == 1 || jazzlover == 1
@@ -1836,7 +1835,7 @@ Select.givesnack
 	"\0\s[0]*You hand him a small quiche. \w8\s[33]He takes it gingerly \s[0]and bites,\w4 sighing...%(ConvCancel)\e"
 	"\0\s[0]*You give him a bowl of soup. \w8\s[33]He takes it \s[0]and drinks it with a sigh of content.%(ConvCancel)\e"
 	"\0\s[0]*You give him a bowl of salad. \w8He fidgets... \w8\n\n\s[4]I AM AN OMNIVORE,\w4 SURE,\w4 BUT I DON'T LIKE EATING LEAVES. \w8\n\n\s[33]He still eats it. \w8\s[30]He's grumbling the entire time.%(ConvCancel)\e"
-	"\0\s[0]*You give him some fried chicken. \w8\n\n\s[21]MEAT IS THE BEST. \w8MUCH BETTER THAN THE GREENS. \w8THEY ARE HEALTHY AND ALL,\w4 BUT... \w8\n\n\s[33]Jazz stops monologuing to snatch the chicken from your hands \w8\s[37]and devour it in seconds. \w8What a barbarian.%(ConvCancel)\e"
+	"\0\s[0]*You give him some fried chicken. \w8\n\n\s[21]%(jf)MEAT IS THE BEST. \w8MUCH BETTER THAN THE GREENS. \w8THEY ARE HEALTHY AND ALL,\w4 BUT... %(df)\w8\n\n\s[33]Jazz stops monologuing to snatch the chicken from your hands \w8\s[37]and devour it in seconds. \w8What a barbarian.%(ConvCancel)\e"
 	}
 	
 	if totappoints > 30 || badbad > 6
@@ -1850,8 +1849,8 @@ Select.givesnack
 	"\0\s[0]*You give him a banana. \w8\s[33]Jazz takes it hesitantly, \w8\s[0]watching your face all the time. \w8...He does not eat it. %(ConvCancel)\e"
 	"\0\s[0]*You hand him a small quiche. \w8\s[4]Jazz sighs with a strange expression. \w8\s[33]He takes it carefully \s[4]and stares at it for a long time,\w4 not even trying to eat it...%(ConvCancel)\e"
 	"\0\s[0]*You give him a bowl of soup. \w8\s[3]He studies your face... \w8\s[33]He still snatches it \s[0]and drinks it,\w4 though.%(ConvCancel)\e"
-	"\0\s[0]*You give him a bowl of salad. \w8\n\n\s[3]...OH. \w8\n\n\s[33]He takes it \s[0]and carefully picks out the pieces he does not like before digging in.%(ConvCancel)\e"
-	"\0\s[0]*You give him some fried chicken. \w8\n\n\s[4]...THANK YOU. \w8\n\n\s[33]He takes it with a guarded expression \s[0]but at least he seems to like the taste.%(ConvCancel)\e"
+	"\0\s[0]*You give him a bowl of salad. \w8\n\n\s[3]%(jf)...OH. %(df)\w8\n\n\s[33]He takes it \s[0]and carefully picks out the pieces he does not like before digging in.%(ConvCancel)\e"
+	"\0\s[0]*You give him some fried chicken. \w8\n\n\s[4]%(jf)...THANK YOU. %(df)\w8\n\n\s[33]He takes it with a guarded expression \s[0]but at least he seems to like the taste.%(ConvCancel)\e"
 	
 	}
 	}
@@ -1894,7 +1893,7 @@ Select.givehug
 		"\0\s[28]*You shuffle closer and hug Jazz. \w8\s[35]He returns the hug readily,\w4 \s[34]rubbing your back and mumbling something about you doing a great job.%(ConvCancel)\e"
 	    "\0\s[28]*You give Jazz a spontaneous hug. \w8\s[35]The surprise quickly wears off,\w4 \s[34]and he hugs you back with a happy chirp.%(ConvCancel)\e"
 	    "\0\s[28]*You have to reach high to hug Jazz. \w8\s[22]He snorts at your attempts very quietly to not hurt your feelings. \w8\s[34]And promptly hugs you back,\w4 of course.%(ConvCancel)\e"
-		"\0\s[0]*You give Jazz a surprise hug. \w8\s[28]\n\nWHOA- \w8\s[35]\n\n*He quickly comes to his senses and pulls you into a hug of his own.%(ConvCancel)\e"
+		"\0\s[0]*You give Jazz a surprise hug. \w8\s[28]\n\n%(jf)WHOA-%(df) \w8\s[35]\n\n*He quickly comes to his senses and pulls you into a hug of his own.%(ConvCancel)\e"
 		
 	}
 	
@@ -1904,8 +1903,8 @@ Select.givehug
 	{
 		"\0\s[28]*You give Jazz a hug. \w8He seems... confused and hesitant? \w8\s[51]But he hugs you back anyway.%(ConvCancel)\e"
 		"\0\s[0]*You demand a hug. \w8Jazz stares at you in a strange way, \w8\s[51]but he still puts his hands around you.%(ConvCancel)\e"
-		"\0\s[0]*You tell Jazz you want to hug him. \n\n\w8\s[4]REALLY? THERE IS NO CATCH,\w4 RIGHT? \w8YOU WOULD NOT TRY TO PINCH ME OR SOMETHING? \w8OR HIT ME WITH YOUR HEAD? OR... \n\n\w8\s[28]*You shut him up by hugging him. \w8He freezes, \w8\s[35]then returns the embrace,\w4 looking somewhat glad to stay unharmed.%(ConvCancel)\e"
-		"\0\s[28]*You hug Jazz. \w8He seems unprepared for this... \w8\s[35]but then he smiles at you hopefully and puts his hands around you too. \n\n\w8IS IT YOUR WAY OF SAYING SORRY? \w8\s[34]IT'S OKAY! \w8I ONLY HOPE YOU WON'T DO IT AGAIN. %(ConvCancel)\e"
+		"\0\s[0]*You tell Jazz you want to hug him. \n\n\w8\s[4]%(jf)REALLY? THERE IS NO CATCH,\w4 RIGHT? \w8YOU WOULD NOT TRY TO PINCH ME OR SOMETHING? \w8OR HIT ME WITH YOUR HEAD? OR... %(df)\n\n\w8\s[28]*You shut him up by hugging him. \w8He freezes, \w8\s[35]then returns the embrace,\w4 looking somewhat glad to stay unharmed.%(ConvCancel)\e"
+		"\0\s[28]*You hug Jazz. \w8He seems unprepared for this... \w8\s[35]but then he smiles at you hopefully and puts his hands around you too. \n\n\w8%(jf)IS IT YOUR WAY OF SAYING SORRY? \w8\s[34]IT'S OKAY! \w8I ONLY HOPE YOU WON'T DO IT AGAIN. %(ConvCancel)\e"
 	}
 	
 	elseif totappoints > 50 || badbad > 50
@@ -2023,7 +2022,7 @@ Select.rcube
 	
 	if cubegiven != 1
 	{
-		"\0\s[0]*You give Jazz a Rubic's cube. \w8\n\n\s[3]OH,\w4 IT IS THAT LOGIC PUZZLE THING? \w8LET ME SEE... \w8\n\n\s[33]He picks it up \s[37]and busies himself... \w8only to put it away for later after a few shifts. \w8\n\n\s[24]WELP! \w8I SAW THAT I AM STILL SLOW AT THAT.%(cubeg)%(ConvCancel)\e"
+		"\0\s[0]*You give Jazz a Rubic's cube. \w8\n\n\s[3]%(jf)OH,\w4 IT IS THAT LOGIC PUZZLE THING? \w8LET ME SEE... %(df)\w8\n\n\s[33]He picks it up \s[37]and busies himself... \w8only to put it away for later after a few shifts. \w8\n\n\s[24]WELP! \w8I SAW THAT I AM STILL SLOW AT THAT.%(cubeg)%(ConvCancel)\e"
 	
 	if totappoints > 30 || badbad > 6
 	{
@@ -2069,7 +2068,7 @@ Select.trckt
    {
 	   givegift += 1
 		"\0\s[0]*You give Jazz a %(numberp)-piece jigsaw puzzle. \w8\s[52]He picks it up,\w4 \s[1]slightly sweating. \w8You guess that it will take him a while... %(puzg)%(ConvCancel)\e"
-		"\0\s[0]*You give Jazz a %(numberp)-piece jigsaw puzzle. \w8\s[52]He picks it up,\w4 \s[1]visibly worried. \w8\n\n\s[40]I LIKE PUZZLES,\w4 DON'T WORRY! \w8BUT THEY MAKE MY EYES BURN VERY QUICK. \w8ALL THOSE SMALL PIECES... \w8THEY CONFUSE ME. \w8\s[6]YOU CAN SAY THAT THEY PU- \w8\s[3]... \w8\w8\w8...I REFUSE TO SAY THAT. %(puzg)%(ConvCancel)\e"
+		"\0\s[0]*You give Jazz a %(numberp)-piece jigsaw puzzle. \w8\s[52]He picks it up,\w4 \s[1]visibly worried. \w8\n\n\s[40]%(jf)I LIKE PUZZLES,\w4 DON'T WORRY! \w8BUT THEY MAKE MY EYES BURN VERY QUICK. \w8ALL THOSE SMALL PIECES... \w8THEY CONFUSE ME. \w8\s[6]YOU CAN SAY THAT THEY PU- \w8\s[3]... \w8\w8\w8...I REFUSE TO SAY THAT. %(puzg)%(ConvCancel)\e"
 		"\0\s[0]*You give Jazz a %(numberp)-piece jigsaw puzzle. \w8\s[52]He picks it up \s[1]after a moment of hesitation. \w8Looks like he is a little daunted by the task... %(puzg)%(ConvCancel)\e"
 		"\0\s[0]*You give Jazz a %(numberp)-piece jigsaw puzzle. \w8\s[52]He takes it,\w4 \s[1]thoroughly intimidated... %(puzg)%(ConvCancel)\e"
 		"\0\s[0]*You give Jazz a %(numberp)-piece jigsaw puzzle. \w8\s[52]He takes it \s[1]with a shiver in his claws and a resolve in his eyesockets. \w8The bridges are burned. \w8The only way to go is forward.%(puzg)%(ConvCancel)\e"
@@ -2096,27 +2095,27 @@ Select.plsh
 	lovelove += 1
 	
 	
-	"\0\s[0]*You give Jazz a stuffed plushie. \w8\s[33]He takes it with \s[37]a sigh. \w8\s[22]\n\nI WILL TAKE GOOD CARE OF THEM,\w4 PROMISE!%(plushg)%(ConvCancel)\e"
-	"\0\s[0]*You give Jazz a stuffed plushie. \w8\s[33]He takes it with \s[37]a smile. \w8\s[22]\n\nTHANKS!!! \w8I WILL LOVE THEM,\w4 CHERISH THEM,\w4 AND POSSIBLY CHEW ON THEM AS A SIGN OF AFFECTION! \w8\s[5]LOVE CAN BE TOUGH!!!%(plushg)%(ConvCancel)\e"
-	"\0\s[0]*You give Jazz a stuffed plushie. \w8\s[33]He takes it,\w4 \s[37]grinning. \w8\s[5]\n\nTHANKS,\w4 %(username)! \w8THEY ARE IN GOOD HANDS! \w8\s[6]THAT ARE ATTACHED TO A RIPPED BODY AND POWERED BY A BEAUTIFUL SOUL! %(plushg)%(ConvCancel)\e"
-	"\0\s[0]*You give Jazz a stuffed plushie. \w8\s[33]He grabs it \s[37]in a blink! \w8\s[20]\n\nWOWIE!!! \w8THIS IS JUST WHAT I WANTED ALL MY LIFE! \w8\s[21]WHAT IS IT? \w8\s[22]AH,\w4 NEVERMIND,\w4 I LOVE IT ANYWAY!!!%(plushg)%(ConvCancel)\e"
-	"\0\s[0]*You give Jazz a stuffed plushie. \w8\s[33]He takes it \s[37]very gently. \w8\s[21]\n\nAH,\w4 TO LIVE IN A WORLD WHERE SMALL SOFT WEIRD ANIMALS EXIST... \w8\s[27]AND IN SUCH AMOUNTS...%(plushg)%(ConvCancel)\e"
+	"\0\s[0]*You give Jazz a stuffed plushie. \w8\s[33]He takes it with \s[37]a sigh. \w8\s[22]\n\n%(jf)I WILL TAKE GOOD CARE OF THEM,\w4 PROMISE!%(plushg)%(ConvCancel)\e"
+	"\0\s[0]*You give Jazz a stuffed plushie. \w8\s[33]He takes it with \s[37]a smile. \w8\s[22]\n\n%(jf)THANKS!!! \w8I WILL LOVE THEM,\w4 CHERISH THEM,\w4 AND POSSIBLY CHEW ON THEM AS A SIGN OF AFFECTION! \w8\s[5]LOVE CAN BE TOUGH!!!%(plushg)%(ConvCancel)\e"
+	"\0\s[0]*You give Jazz a stuffed plushie. \w8\s[33]He takes it,\w4 \s[37]grinning. \w8\s[5]\n\n%(jf)THANKS,\w4 %(username)! \w8THEY ARE IN GOOD HANDS! \w8\s[6]THAT ARE ATTACHED TO A RIPPED BODY AND POWERED BY A BEAUTIFUL SOUL! %(plushg)%(ConvCancel)\e"
+	"\0\s[0]*You give Jazz a stuffed plushie. \w8\s[33]He grabs it \s[37]in a blink! \w8\s[20]\n\n%(jf)WOWIE!!! \w8THIS IS JUST WHAT I WANTED ALL MY LIFE! \w8\s[21]WHAT IS IT? \w8\s[22]AH,\w4 NEVERMIND,\w4 I LOVE IT ANYWAY!!!%(plushg)%(ConvCancel)\e"
+	"\0\s[0]*You give Jazz a stuffed plushie. \w8\s[33]He takes it \s[37]very gently. \w8\s[21]\n\n%(jf)AH,\w4 TO LIVE IN A WORLD WHERE SMALL SOFT WEIRD ANIMALS EXIST... \w8\s[27]AND IN SUCH AMOUNTS...%(plushg)%(ConvCancel)\e"
 	"\0\s[0]*You give Jazz a stuffed plushie. \w8\s[33]He carefully picks it up... \s[37]\w8\s[21]to never let it go,\w4 judging by his expression.%(plushg)%(ConvCancel)\e"
 
 
 	if plushgiven > 1
 		{
-			"\0\s[0]*You give Jazz a stuffed plushie. \w8\s[33]He takes it carefully \s[37]and adds it to its soft friends. \w8\s[22]\n\nTHE MORE THE MERRIER... \w8AND CASHMERIER.%(plushg)%(ConvCancel)\e"
-			"\0\s[0]*You give Jazz a stuffed plushie. \w8\s[33]He takes it with \s[37]a smile. \w8\s[6]\n\nANOTHER DAY,\w4 ANOTHER PLUSH... \w8ANOTHER WAY TO MAKE LIFE LUSH.%(plushg)%(ConvCancel)\e"
-			"\0\s[0]*You give Jazz a stuffed plushie. \w8\s[33]He picks it up \s[37]and places it next to the rest. \w8\s[6]\n\nI HAVE NO IDEA WHERE YOU GET ALL THESE TINY SOFT ANIMALS FROM,\w4 BUT THAT IS NONE OF MY BUSINESS! \w8\s[24]AS LONG AS YOU ARE NOT POUCHING THEM IN THEIR TINY SOFT NATURAL HABITATS.%(plushg)%(ConvCancel)\e"
-	        "\0\s[0]*You give Jazz a stuffed plushie. \w8\s[33]He takes it with \s[37]a soft smile. \w8\s[5]\n\nTHANKS!!! \w8I AM DROWNING IN SMALL SOFT THINGS AND THIS IS THE ONLY DROWNING I ALLOW!!!!%(plushg)%(ConvCancel)\e"
-	        "\0\s[0]*You give Jazz a stuffed plushie. \w8\s[33]He grabs it \s[37]excitedly. \w8\s[21]\n\nANOTHER ONE?! \w8I HOPE YOU NEVER EVER RUN OUT OF THOSE!!! \w8\n\n*Don't worry. \w8You won't.%(plushg)%(ConvCancel)\e"
+			"\0\s[0]*You give Jazz a stuffed plushie. \w8\s[33]He takes it carefully \s[37]and adds it to its soft friends. \w8\s[22]\n\n%(jf)THE MORE THE MERRIER... \w8AND CASHMERIER.%(plushg)%(ConvCancel)\e"
+			"\0\s[0]*You give Jazz a stuffed plushie. \w8\s[33]He takes it with \s[37]a smile. \w8\s[6]\n\n%(jf)ANOTHER DAY,\w4 ANOTHER PLUSH... \w8ANOTHER WAY TO MAKE LIFE LUSH.%(plushg)%(ConvCancel)\e"
+			"\0\s[0]*You give Jazz a stuffed plushie. \w8\s[33]He picks it up \s[37]and places it next to the rest. \w8\s[6]\n\n%(jf)I HAVE NO IDEA WHERE YOU GET ALL THESE TINY SOFT ANIMALS FROM,\w4 BUT THAT IS NONE OF MY BUSINESS! \w8\s[24]AS LONG AS YOU ARE NOT POUCHING THEM IN THEIR TINY SOFT NATURAL HABITATS.%(plushg)%(ConvCancel)\e"
+	        "\0\s[0]*You give Jazz a stuffed plushie. \w8\s[33]He takes it with \s[37]a soft smile. \w8\s[5]\n\n%(jf)THANKS!!! \w8I AM DROWNING IN SMALL SOFT THINGS AND THIS IS THE ONLY DROWNING I ALLOW!!!!%(plushg)%(ConvCancel)\e"
+	        "\0\s[0]*You give Jazz a stuffed plushie. \w8\s[33]He grabs it \s[37]excitedly. \w8\s[21]\n\n%(jf)ANOTHER ONE?! \w8I HOPE YOU NEVER EVER RUN OUT OF THOSE!!! \w8\n\n%(df)*Don't worry. \w8You won't.%(plushg)%(ConvCancel)\e"
 
 		}
 		
 		if totappoints > 30 || badbad > 6
 	{
-		"\0\s[0]*You give Jazz a stuffed plushie. \w8\s[52]He takes it with \s[1]a quiet ''thank you'' and presses it to his chest before putting it away - as if afraid you might take it back.%(plushg)%(ConvCancel)\e"
+		"\0\s[0]*You give Jazz a stuffed plushie. \w8\s[52]He takes it with \s[1]a quiet ''%(jf)thank you%(df)'' and presses it to his chest before putting it away - as if afraid you might take it back.%(plushg)%(ConvCancel)\e"
 	    "\0\s[0]*You hand Jazz a stuffed plushie. \w8\s[52]He takes it with \s[4]barely a twitch in his bony fingers. \w8\w8\w8...Did he whisper something about ''keeping it safe''?%(plushg)%(ConvCancel)\e"
 		"\0\s[0]*You give Jazz a stuffed plushie. \w8\s[33]He picks it \s[37]and looks up at you with an expression of confused hope.%(plushg)%(ConvCancel)\e"
 		"\0\s[0]*You give Jazz a stuffed plushie. \w8\s[33]He takes it  \s[37]very,\w4 very carefully. \w8Looks like he likes it. \w8And also like you gained a bonus point or two in his eyes.%(plushg)%(ConvCancel)\e"
@@ -2125,7 +2124,7 @@ Select.plsh
 	    
 		if plushgiven > 1
 		{
-			"\0\s[0]*You give Jazz a stuffed plushie. \w8\s[33]He takes it gingerly \s[37]with a rare smile... \w8\n\nTHANKS!! \w8\s[4]AND. \w8UM. \w8I FEEL LIKE YOU ARE ON THE RIGHT ROAD THERE! \w8\s[40]SOFT THINGS ARE REALLY GOOD! \w8P - PERHAPS YOU COULD LEARN SOMETHING FROM THEM?..%(plushg)%(ConvCancel)\e"
+			"\0\s[0]*You give Jazz a stuffed plushie. \w8\s[33]He takes it gingerly \s[37]with a rare smile... \w8\n\n%(jf)THANKS!! \w8\s[4]AND. \w8UM. \w8I FEEL LIKE YOU ARE ON THE RIGHT ROAD THERE! \w8\s[40]SOFT THINGS ARE REALLY GOOD! \w8P - PERHAPS YOU COULD LEARN SOMETHING FROM THEM?..%(plushg)%(ConvCancel)\e"
 			"\0\s[0]*You hand Jazz a stuffed plushie. \w8\s[33]He is surprised \s[37]in a good way... \w8both by getting another plushie and by you being nice more than once in a row.%(plushg)%(ConvCancel)\e"
 		}
 	}
@@ -2145,12 +2144,12 @@ Select.fgrn
 	    "\0\s[0]*You hand Jazz a plastic figurine. \w8\s[33]He grabs it,\w4 \s[22]already muttering something about fight strategies and finishing moves.%(figg)%(ConvCancel)\e"
 	    "\0\s[0]*You hand Jazz a plastic figurine. \w8\s[33]He accepts \s[21]your humble offering. \w8His favor is yours. \w8The beast is pleased. \w8You did well.%(figg)%(ConvCancel)\e"
 	    "\0\s[0]*You hand Jazz a plastic figurine. \w8\s[33]He takes it,\w4 \s[22]and in a blink he is lost to the world of living people... \w8instead sinking into the world of plastic warriors and cardboard castles.%(figg)%(ConvCancel)\e"
-	    "\0\s[0]*You hand Jazz a plastic figurine. \w8\s[33]He picks it,\w4 \s[22]grinning. \w8\n\nTHANKS!! \w8I HOPE IT IS NOT MADE FROM SOMETHING TOXIC,\w4 BECAUSE I PLAY THE PART OF THE NEEDLE-TEETHED DRAGON AND SOMETIMES I GET STUCK IN THE ROLE. \w8\s[6]I AM NOT BEING WEIRD,\w4 THIS IS PURE METHOD ACTING.%(figg)%(ConvCancel)\e"
+	    "\0\s[0]*You hand Jazz a plastic figurine. \w8\s[33]He picks it,\w4 \s[22]grinning. \w8\n\n%(jf)THANKS!! \w8I HOPE IT IS NOT MADE FROM SOMETHING TOXIC,\w4 BECAUSE I PLAY THE PART OF THE NEEDLE-TEETHED BITEY DRAGON AND SOMETIMES I GET STUCK IN THE ROLE. \w8\s[6]I AM NOT BEING WEIRD,\w4 THIS IS PURE METHOD ACTING.%(figg)%(ConvCancel)\e"
 	    "\0\s[0]*You hand Jazz a plastic figurine. \w8\s[33]He takes it from \s[37]your hands,\w4 nodding. \w8I guess this is what he is going to do now...%(figg)%(ConvCancel)\e"
 		
 		if figgiven > 1
 		{
-			 "\0\s[0]*You hand Jazz a plastic figurine. \n\n\s[3]OH. ANOTHER ONE? \n\n\w8\s[33]He takes it,\w4 \s[42]pulls out the ones he has already and enacts a tiny battle before you. \w8It is sad that such low-effort animation does not let you see his tactical genius.%(figg)%(ConvCancel)\e"
+			 "\0\s[0]*You hand Jazz a plastic figurine. \n\n\s[3]%(jf)OH. ANOTHER ONE? %(df)\n\n\w8\s[33]He takes it,\w4 \s[42]pulls out the ones he has already and enacts a tiny battle before you. \w8It is sad that such low-effort animation does not let you see his tactical genius.%(figg)%(ConvCancel)\e"
 		}
 		
 	if totappoints > 30 || badbad > 6
@@ -2195,7 +2194,7 @@ Select.givefive
 	"\0\s[0]*You ask Jazz for a highfive. \w8\s[31]He happily obliges! \w8\s[37]By smacking your tiny hand full-force.%(ConvCancel)\e"
 	"\0\s[0]*You lift your hand for a highfive,\w4 waving it a little. \w8\w8\w8\s[31]Jazz waves back. \w8\s[37]...Success?..%(ConvCancel)\e"
 	"\0\s[0]*You shout 'Highfive!' and lift your hand. \w8\s[31]Jazz gets the hint and gently presses his bony hand into your fleshy one. \w8\s[37]It is not really cool,\w4 but really sweet.%(ConvCancel)\e"
-	"\0\s[0]*You ask Jazz to highfive you as hard as he can. \w8\n\n\s[1]%(username),\w4 ARE YOU... \w8SURE? \n\n\w8*You have never been as sure. \w8Your heart is fearless. \w8You are filled with Determination. \w8You raise your hand. \w8\s[31]Jazz smashes his hand into yours. \w8\w8\w8You smile. \w8You are pretty sure half of your bones are vaporized.%(ConvCancel)\e"
+	"\0\s[0]*You ask Jazz to highfive you as hard as he can. \w8\n\n\s[1]%(jf)%(username),\w4 ARE YOU... \w8SURE? %(df)\n\n\w8*You have never been as sure. \w8Your heart is fearless. \w8You are filled with Determination. \w8You raise your hand. \w8\s[31]Jazz smashes his hand into yours. \w8\w8\w8You smile. \w8You are pretty sure half of your bones are vaporized.%(ConvCancel)\e"
 	"\0\s[0]*You say 'Highfive!' and flail at Jazz. \w8\s[31]He catches your hand with his,\w4 \s[37]completing the highfive like a perfect mirror... \w8Together,\w4 with this fusion dance,\w4 you are unstoppable.%(ConvCancel)\e"
 	"\0\s[0]*You ask Jazz to highfive you. \w8\s[31]He agrees with vigor! \w8\s[37]He'd probably highsix and highseven you too,\w4 if only he could.%(ConvCancel)\e"
 	"\0\s[0]*You raise your hand for a highfive. \w8\s[31]Jazz does not entirely understand it,\w4 but he raises his hand too,\w4 and you proudly smack your palm against his. \w8It sounds like patting an abacus.%(ConvCancel)\e"
@@ -2207,9 +2206,9 @@ Select.givefive
 	
 	if totappoints > 30 || badbad > 6
 	{
-	    "\0\s[0]*You tell Jazz to highfive you. \w8\s[8]\n\nTO WHAT? \w8WHAT IS HIGH FIVE? \w8\n\nYou tell him that you know he knows. \w8\s[3]\n\nI KNOW? \w8BUT I DON'T THINK I KNOW THAT I KNOW. \w8I MEAN,\w4 I KNOW WHAT I KNOW AND I KNOW THAT I KNOW WHAT I KNOW,\w4 BUT WHAT I DON'T KNOW I DON'T KNOW AND I KNOW THAT. \w8YOU KNOW? \w8\w8\w8\n\n*...By now you question everything and don't even know what you came here for.%(ConvCancel)\e"
-	    "\0\s[0]*You order Jazz to highfive you. \w8\s[3]\n\nWHAT? \w8'HI FIVE'? \w8DO I HAVE TO GREET A FIVE? \w8WHO IS 'FIVE'? \w8IS YOUR NAME 'FIVE' ALL OF A SUDDEN? \w8\s[31]THEN HI,\w4 FIVE! \w8\n\n*You tell him to cut it. \w8Your name is still the same. \w8\n\n\s[0]OH. \w8\w8\w8\s[1]...WHAT IS YOUR NAME,\w4 AGAIN??? %(ConvCancel)\e"
-		"\0\s[0]*You tell Jazz to highfive you. \w8\s[1]\n\n...\w8\w8\w8WHAT IS HIGHFIVE? \w8IS IT A GRADE? \w8A HIGH ONE? \w8I AM SORRY,\w4 AT BEST I CAN GIVE YOU A 2+. \w8\n\nYou sigh.%(ConvCancel)\e"
+	    "\0\s[0]*You tell Jazz to highfive you. \w8\s[8]\n\n%(jf)TO WHAT? \w8WHAT IS HIGH FIVE? %(df)\w8\n\nYou tell him that you know he knows. %(jf)\w8\s[3]\n\nI KNOW? \w8BUT I DON'T THINK I KNOW THAT I KNOW. \w8I MEAN,\w4 I KNOW WHAT I KNOW AND I KNOW THAT I KNOW WHAT I KNOW,\w4 BUT WHAT I DON'T KNOW I DON'T KNOW AND I KNOW THAT. \w8YOU KNOW? \w8\w8\w8\n\n%(df)*...By now you question everything and don't even know what you came here for.%(ConvCancel)\e"
+	    "\0\s[0]*You order Jazz to highfive you. \w8\s[3]\n\n%(jf)WHAT? \w8'HI FIVE'? \w8DO I HAVE TO GREET A FIVE? \w8WHO IS 'FIVE'? \w8IS YOUR NAME 'FIVE' ALL OF A SUDDEN? \w8\s[31]THEN HI,\w4 FIVE! %(df)\w8\n\n*You tell him to cut it. \w8Your name is still the same. \w8\n\n\s[0]%(jf)OH. \w8\w8\w8\s[1]...WHAT IS YOUR NAME,\w4 AGAIN??? %(ConvCancel)\e"
+		"\0\s[0]*You tell Jazz to highfive you. \w8\s[1]\n\n...\w8\w8\w8%(jf)WHAT IS HIGHFIVE? \w8IS IT A GRADE? \w8A HIGH ONE? \w8I AM SORRY,\w4 AT BEST I CAN GIVE YOU A 2+. \w8\n\n%(df)*You sigh.%(ConvCancel)\e"
 	    "\0\s[0]*You tell Jazz to highfive you. \w8\w8\w8\s[1]...He pretends he did not hear you.%(ConvCancel)\e"
 	    "\0\s[0]*You shout 'Highfive!' and lift your hand. \w8\s[1]Jazz just... \w8stares. \w8You slowly lower your hand.%(ConvCancel)\e"
 	    "\0\s[0]*You tell Jazz you want a highfive. \w8\s[1]He does not quite understand what you want \s[52]and flails around. \w8You forcefully smack your hand into his. \w8There. \w8Is it really that difficult?%(ConvCancel)\e"
@@ -2222,13 +2221,13 @@ Select.givefive
 Select.givenoogie
 {
 	
-	"\0\s[0]*You beckon Jazz closer and,\w4 \s[21]when he leans in,\w4 you noogie \s[28]his boney head! \w8\n\n\s[36]PLEASE DON'T NOOGIE THE SKELETON!!!%(ConvCancel)\e"
-	"\0\s[0]*You give Jazz a sly look. \w8\w8\w8\n\n\s[3].....WHAT. \n\n\w8*You creep closer. \n\n\w8\s[1]NO. \n\n\w8*You spring into action and sneak attack him with a noogie! \w8\n\n\s[36]NOOOOOO!!!%(ConvCancel)\e"
+	"\0\s[0]*You beckon Jazz closer and,\w4 \s[21]when he leans in,\w4 you noogie \s[28]his boney head! \w8\n\n\s[36]%(jf)PLEASE DON'T NOOGIE THE SKELETON!!!%(ConvCancel)\e"
+	"\0\s[0]*You give Jazz a sly look. \w8\w8\w8\n\n\s[3]%(jf).....WHAT. %(df)\n\n\w8*You creep closer. \n\n\w8\s[1]%(jf)NO. %(df)\n\n\w8*You spring into action and sneak attack him with a noogie! \w8\n\n\s[36]%(jf)NOOOOOO!!!%(ConvCancel)\e"
 	"\0\s[28]*You plant your palm on top of Jazz's hand and forcibly rub it a few times! \w8\w8\w8\s[20]...He purrs. \w8Well,\w4 it's not the result you were working towards,\w4 but this is just as well.%(ConvCancel)\e"
-	"\0\s[0]*You tell Jazz that he is in for a noogie. \w8\s[1]\4He sweats and \4tries to evade you. \w8\s[28]You still catch and noogie him before he can completely slip away.%(ConvCancel)\e"
+	"\0\s[0]*You tell Jazz that he is in for a noogie. \w8\s[1]\4He sweats and tries to evade you. \w8\s[28]You still catch and noogie him before he can completely slip away.%(ConvCancel)\e"
 	"\0\s[28]*You rub your knuckles into the top of Jazz's head,\w4 but your hand gets caught on a sharp edge. \w8Ouch. \w8You lose 1HP. \w8Perhaps you should stick to pets.%(ConvCancel)\e"
-	"\0\s[0]*You tell Jazz that you have something for him. \w8\n\n\s[3]OH? \w8WHAT IS IT? \w8\n\n*You say that he needs to come closer. \w8\n\n\s[0]\5ALRIGHT? \w8\n\n*As soon as he is in your reaching range,\w4 you \s[28]grab him in a headlock and rub his head relentlessly. \w8Apparently,\w4 what you had in store for him was a noogie. \w8\n\n\s[36]WHY DO I FALL FOR THIS EVERY TIME!!!!%(ConvCancel)\e"
-	"\0\s[0]*You give Jazz a playful squint and move closer. \w8\n\n\s[8]...STOP AND SEIZE THAT. \w8\n\n*You squint harder and grab him by the shoulders. \w8\n\n\s[36]NOT ME!!! \w8DO NOT SEIZE ME!!! \w8\n\n*Too late. \w8The noogie is delivered.%(ConvCancel)\e"
+	"\0\s[0]*You tell Jazz that you have something for him. \w8\n\n\s[3]%(jf)OH? \w8WHAT IS IT? \w8\n\n%(df)*You say that he needs to come closer. \w8\n\n\s[0]%(jf)ALRIGHT? \w8\n\n%(df)*As soon as he is in your reaching range,\w4 you \s[28]grab him in a headlock and rub his head relentlessly. \w8Apparently,\w4 what you had in store for him was a noogie. \w8\n\n\s[36]%(jf)WHY DO I FALL FOR THIS EVERY TIME!!!!%(ConvCancel)\e"
+	"\0\s[0]*You give Jazz a playful squint and move closer. \w8\n\n\s[8]%(jf)...STOP AND SEIZE THAT. \w8\n\n%(df)*You squint harder and grab him by the shoulders. \w8\n\n\s[36]%(jf)NOT ME!!! \w8DO NOT SEIZE ME!!! \w8\n\n%(df)*Too late. \w8The noogie is delivered.%(ConvCancel)\e"
 	"\0\s[0]*You crawl closer to the unsuspecting Jazz,\w4 cackling... \w8\s[42]Except he catches you in your steps and noogies you,\w4 instead! \w8Oh,\w4 how the tables have turned... \w8How cold is his bony revenge.%(ConvCancel)\e"
 	"\0\s[0]*You move closer to noogie Jazz,\w4 but he notices your attempt and,\w4 \s[21]thinking you want to pet him,\w4 leans himself... \w8\w8\w8...You cannot betray such trust,\w4 \s[20]so you end up petting him indeed.%(ConvCancel)\e"
 	
@@ -2237,7 +2236,7 @@ Select.givenoogie
 		"\0\s[0]*You tell Jazz you want to noogie him. \w8\s[44]\4Jazz nonchalantly tries to exit your monitor. \w8He almost slips away completely \s[28]before the noogie reaches him. \w8But he stands no chance.%(ConvCancel)\e"
 		"\0\s[28]*You grab Jazz into a headlock and noogie him... \w8\s[44]It is not too much fun,\w4 since he simply freezes and waits for it to be over.%(ConvCancel)\e"
 		"\0\s[28]*You grind your fist into Jazz's skull,\w4 laughing. \w8\s[44]Jazz tries to laugh along. \w8He almost succeeds.%(ConvCancel)\e"
-		"\0\s[28]*You spring into action and noogie Jazz before he can even blink! \w8\w8\w8\s[32]\n\n...AH. \w8A NOOGIE! \w8HA HA. \w8RIGHT. \w8\w8\w8\w8\w8........HA.%(ConvCancel)\e"
+		"\0\s[28]*You spring into action and noogie Jazz before he can even blink! \w8\w8\w8\s[32]\n\n%(jf)...AH. \w8A NOOGIE! \w8HA HA. \w8RIGHT. \w8\w8\w8\w8\w8........HA.%(ConvCancel)\e"
 	}
 }
 
@@ -2250,44 +2249,44 @@ Select.givenoogie
 Select.givesmooch 
 {
 	"\0\s[0]*You beckon Jazz closer and,\w4 \s[21]as he leans in,\w4 \s[28]you leave a smooch on his cheek! \w8\s[23]He nearly catches fire and hides from your kissy assaults.%(ConvCancel)\e"
-	"\0\s[0]*You ask Jazz if you can smooch him. \w8\s[3]\n\nSMOOCH? \w8I GUESS YOU CAN! \w8DOES A HAND SUFFICE? \w8\n\n*You assure him that it does. \w8\s[33]Jazz offers you his hand,\w4 and you press your lips to it. \w8\s[37]It feels very bony and smells of grass.%(ConvCancel)\e"
-	"\0\s[0]*You ask Jazz for a smooch. \w8\w8\w8\s[8]\n\n...I DON'T HAVE LIPS. \w8I CAN GENTLY BONK YOU WITH MY TEETH AT BEST?.. \w8\n\n*You insist that this is just as good. \w8\s[3]He is quite confused,\w4 but he leans in \s[29]and presses his teeth to the top of your head. \w8\s[0]Bonk.%(ConvCancel)\e"
-	"\0\s[0]*You tell Jazz that you are going to kiss him. \w8\n\n\s[44]WAIT WHA- \w8\n\n\s[28]*You plant your lips on his teeth. \w8\s[25]He is surprised,\w4 even despite your warning!%(ConvCancel)\e"
+	"\0\s[0]*You ask Jazz if you can smooch him. \w8\s[3]\n\n%(jf)SMOOCH? \w8I GUESS YOU CAN! \w8DOES A HAND SUFFICE? \w8\n\n%(df)*You assure him that it does. \w8\s[33]Jazz offers you his hand,\w4 and you press your lips to it. \w8\s[37]It feels very bony and smells of grass.%(ConvCancel)\e"
+	"\0\s[0]*You ask Jazz for a smooch. \w8\w8\w8\s[8]\n\n%(jf)...I DON'T HAVE LIPS. \w8I CAN GENTLY BONK YOU WITH MY TEETH AT BEST?.. \w8\n\n%(df)*You insist that this is just as good. \w8\s[3]He is quite confused,\w4 but he leans in \s[29]and presses his teeth to the top of your head. \w8\s[0]Bonk.%(ConvCancel)\e"
+	"\0\s[0]*You tell Jazz that you are going to kiss him. \w8\n\n\s[44]%(jf)WAIT WHA- \w8\n\n\s[28]%(df)*You plant your lips on his teeth. \w8\s[25]He is surprised,\w4 even despite your warning!%(ConvCancel)\e"
 	"\0\s[0]*You stand on your tiptoes and smooch Jazz on the shoulder! \w8\s[25]He is surprised,\w4 \s[20]but mostly amused and giggly. \w8And wondering how come humans are so short.%(ConvCancel)\e"
-	"\0\s[0]*You ask Jazz for a smooch. \w8\s[3]\n\n...I HAVE NO IDEA HOW TO SMOOCH PEOPLE. \w8CAN I JUST SMACK MY HEAD AGAINST YOURS? \w8\n\n*You eagerly nod. \w8\s[20]Jazz leans in and presses his forehead to yours. \w8It feels very gentle...%(ConvCancel)\e"
-	"\0\s[0]*You tell Jazz you want to smooch him. \w8\s[8]\n\n...SURE,\w4 I GUESS? \w8\s[24]I PREFER HUGS,\w4 BUT SMOOCHES ARE FINE TOO. \w8THEY ARE LIKE TINY HUGS EXCEPT WITH LIPS ONLY. \w8\n\n*You suppose this is as good a description as any... \w8\s[20]and leave a tiny lip hug on his cheek. %(ConvCancel)\e"
+	"\0\s[0]*You ask Jazz for a smooch. \w8\s[3]\n\n%(jf)...I HAVE NO IDEA HOW TO SMOOCH PEOPLE. \w8CAN I JUST SMACK MY HEAD AGAINST YOURS? \w8\n\n%(df)*You eagerly nod. \w8\s[20]Jazz leans in and presses his forehead to yours. \w8It feels very gentle...%(ConvCancel)\e"
+	"\0\s[0]*You tell Jazz you want to smooch him. \w8\s[8]\n\n%(jf)...SURE,\w4 I GUESS? \w8\s[24]I PREFER HUGS,\w4 BUT SMOOCHES ARE FINE TOO. \w8THEY ARE LIKE TINY HUGS EXCEPT WITH LIPS ONLY. \w8\n\n%(df)*You suppose this is as good a description as any... \w8\s[20]and leave a tiny lip hug on his cheek. %(ConvCancel)\e"
 	"\0\s[0]*You warn Jazz that a smooch is incoming. \w8\s[38]He sighs with the look of a martyr and resigns to his fate. \w8You smooch his cheek very seriously. \w8\w8\w8\s[20]...Then you both burst into giggles.%(ConvCancel)\e"
 	"\0\s[0]*You send Jazz a little air kiss. \w8\s[8]He is confused... \w8but you know that he is now carrying a tiny air kiss on his bony body.%(ConvCancel)\e"
 	"\0\s[28]*You jump till you manage to smooch Jazz on the cheek... \w8\s[20]He is so busy snorting at you that he does not even notice.%(ConvCancel)\e"
 
 	if totappoints > 30 || badbad > 6
 	{
-		"\0\s[0]*You tell Jazz that you want a smooch. \w8\s[40]\n\n...UM. \w8I DO NOT EXACTLY HAVE THE FACIAL EQUIPMENT FOR THAT,\w4 SO... \w8MAYBE YOU SHOULD ASK SOMEONE MEATIER? \w8\n\n*You tell him that you still want a smooch. \w8\s[44]He leans in,\w4 scrapes his teeth along your jaw,\w4 and stares at you questioningly. \w8\w8\w8...You don't know what you expected.%(ConvCancel)\e"
+		"\0\s[0]*You tell Jazz that you want a smooch. \w8\s[40]\n\n%(jf)...UM. \w8I DO NOT EXACTLY HAVE THE FACIAL EQUIPMENT FOR THAT,\w4 SO... \w8MAYBE YOU SHOULD ASK SOMEONE MEATIER? \w8\n\n%(df)*You tell him that you still want a smooch. \w8\s[44]He leans in,\w4 scrapes his teeth along your jaw,\w4 and stares at you questioningly. \w8\w8\w8...You don't know what you expected.%(ConvCancel)\e"
 		"\0\s[0]*You ask Jazz to smooch you. \w8\w8\w8...He pretends that he does not hear you. \w8You still reach out and \s[28]smooch him on the cheek. \w8\s[25]He does not know what to do with this!%(ConvCancel)\e"
 		"\0\s[28]*You grab Jazz by the front of his shirt,\w4 pull him down and smooch his cheek. \w8\s[44]This is his life now. \w8And his smooch.%(ConvCancel)\e"
-	    "\0\s[0]*You demand a smooch. \w8\w8\w8\n\n\s[8]...I AM NOT SURE HOW YOU THINK THAT WILL GO? \w8\n\n*You frown and pull him down till his face is inches away from yours. \w8\s[44]He gets the hint and quickly presses his teeth to your cheek. \w8You release him,\w4 content.%(ConvCancel)\e"
+	    "\0\s[0]*You demand a smooch. \w8\w8\w8\n\n\s[8]%(jf)...I AM NOT SURE HOW YOU THINK THAT WILL GO? \w8\n\n%(df)*You frown and pull him down till his face is inches away from yours. \w8\s[44]He gets the hint and quickly presses his teeth to your cheek. \w8You release him,\w4 content.%(ConvCancel)\e"
 	}
 	
 }
 
 Select.givewink
 {
-	"\0\s[0]*You wink at Jazz. \w8\w8\w8\s[3]\n\n...IS YOUR EYE OKAY,\w4 %(username)? \w8I DON'T THINK THEY ARE MEANT TO CLOSE ON THEIR OWN LIKE THAT. \w8PERHAPS IT NEEDS CALIBRATION? \w8OR SOME OILING? \w8\n\n*What a dork.%(ConvCancel)\e"
-	"\0\s[0]*You send Jazz a wink and point your fingerguns at him. \w8\w8\w8\s[40]\n\n...I FORFEIT?? \w8\n\n*You carefully pull your fingerguns away. \w8This is not an RPG,\w4 after all.%(ConvCancel)\e"
+	"\0\s[0]*You wink at Jazz. \w8\w8\w8\s[3]\n\n%(jf)...IS YOUR EYE OKAY,\w4 %(username)? \w8I DON'T THINK THEY ARE MEANT TO CLOSE ON THEIR OWN LIKE THAT. \w8PERHAPS IT NEEDS CALIBRATION? \w8OR SOME OILING? \w8\n\n%(df)*What a dork.%(ConvCancel)\e"
+	"\0\s[0]*You send Jazz a wink and point your fingerguns at him. \w8\w8\w8\s[40]\n\n%(jf)...I FORFEIT?? \w8\n\n%(df)*You carefully pull your fingerguns away. \w8This is not an RPG,\w4 after all.%(ConvCancel)\e"
 	"\0\s[0]*You used Wink! \w8\s[8]JAZZ deflected your attack by being clueless to human signs of affection. \w8You used Sigh.%(ConvCancel)\e"
-	"\0\s[0]*You wink. \w8\s[3]Jazz stares. \w8You explain that winking is a flirting move. \w8\n\n\s[21]AH! \w8I THOUGHT YOU WERE GIVING ME SIGNS IN MORSE CODE.%(ConvCancel)\e"
+	"\0\s[0]*You wink. \w8\s[3]Jazz stares. \w8You explain that winking is a flirting move. \w8\n\n\s[21]%(jf)AH! \w8I THOUGHT YOU WERE GIVING ME SIGNS IN MORSE CODE. \w8\s[24]BADLY.%(ConvCancel)\e"
 	"\0\s[0]*You wink at Jazz very smoothly... \w8\w8\w8\s[9]...He is not even looking at you. \w8This is rough,\w4 buddy.%(ConvCancel)\e"
-	"\0\s[0]*You wink at Jazz. \w8...Nothing happens. \w8You wink again. \w8\s[44]Jazz starts sweating. \w8You wink for the third time. \w8\n\n...I KEEP WAITING FOR YOU TO SWERVE,\w4 BUT I AM STARTING TO SUSPECT THAT THIS IS NOT THE HUMAN VERSION OF A TURN SIGNAL AFTER ALL.%(ConvCancel)\e"
+	"\0\s[0]*You wink at Jazz. \w8...Nothing happens. \w8You wink again. \w8\s[44]Jazz starts sweating. \w8You wink for the third time. \w8\n\n%(jf)...I KEEP WAITING FOR YOU TO SWERVE,\w4 BUT I AM STARTING TO SUSPECT THAT THIS IS NOT THE HUMAN VERSION OF A TURN SIGNAL AFTER ALL.%(ConvCancel)\e"
 	"\0\s[0]*You wink! \w8Jazz stares at you with a blank face. \w8Perhaps you do not have the right level to unlock his Swooning Skeleton path yet.%(ConvCancel)\e"
-	"\0\s[0]*You wink with a sly smile. \w8\s[3]\n\nAH. \w8ARE YOU TRYING TO FLIRT ME? \w8\s[6]THAT IS A BIT EXCESSIVE SINCE I ALREADY KNOW YOU ARE DEEP IN LOVE WITH ME. \w8THOUGH I DEFINITELY DO NOT MIND CONSEQUTIVE CONFESSIONS. %(ConvCancel)\e"
+	"\0\s[0]*You wink with a sly smile. \w8\s[3]\n\n%(jf)AH. \w8ARE YOU TRYING TO FLIRT ME? \w8\s[6]THAT IS A BIT EXCESSIVE SINCE I ALREADY KNOW YOU ARE DEEP IN LOVE WITH ME. \w8THOUGH I DEFINITELY DO NOT MIND CONSEQUTIVE CONFESSIONS. %(ConvCancel)\e"
 
 	
 	if totappoints > 30 || badbad > 6
 	{
 		"\0\s[0]*You wink at Jazz. \w8\w8\w8...He does not seem to get the hint at all. \w8You are not even sure he saw.%(ConvCancel)\e"
-		"\0\s[0]*You wink at Jazz. \w8\s[44]\n\nWHAT DOES THAT MEAN? \w8IS IT A SIGN? \w8I DO NOT KNOW THAT SIGN. \w8I SPEAK IN HANDS,\w4 NOT EYES.%(ConvCancel)\e"
+		"\0\s[0]*You wink at Jazz. \w8\s[44]\n\n%(jf)WHAT DOES THAT MEAN? \w8IS IT A SIGN? \w8I DO NOT KNOW THAT SIGN. \w8I SPEAK IN HANDS,\w4 NOT EYES.%(ConvCancel)\e"
 		"\0\s[0]*You wink at Jazz. \w8\s[44]\n\nHe does not understand you,\w4 but sweats a little anyway.%(ConvCancel)\e"
-		"\0\s[0]*You wink at Jazz. \w8\s[3]\n\nDID SOMETHING GET IN YOUR EYE? \w8ARE YOU CRYING? \w8\n\n*You tell him that you are not. \w8\n\n\s[0]AH,\w4 ALRIGHT. \w8I THOUGHT YOU WERE REPENTING YOUR WRONGDOINGS OR SOMETHING. \w8WHOOPS!%(ConvCancel)\e"
+		"\0\s[0]*You wink at Jazz. \w8\s[3]\n\n%(jf)DID SOMETHING GET IN YOUR EYE? \w8ARE YOU CRYING? \w8\n\n%(df)*You tell him that you are not. \w8\n\n\s[0]%(jf)AH,\w4 ALRIGHT. \w8I THOUGHT YOU WERE REPENTING YOUR WRONGDOINGS OR SOMETHING. \w8WHOOPS!%(ConvCancel)\e"
 	}
 	
 }
@@ -2363,7 +2362,7 @@ Select.resetconfirm
 
 ConvCancel
 {
-	"\w8\n\n\![*]\q[I need something else,BACKTOMENU]\n\![*]\q[Nah I'm good,CANCEL]\e"
+	"%(df)\w8\n\n\![*]\q[I need something else,BACKTOMENU]\n\![*]\q[Nah I'm good,CANCEL]\e"
 }
 
 Select.BACKTOMENU
@@ -2380,9 +2379,9 @@ Select.BACKTOMENU
 	}
 		else 
 		{
-		"\0\s[0]OKAY,\w4 THEN.\e"
+		"\0\s[0]%(jf)OKAY,\w4 THEN.%(df)\e"
 		
-		"\0\s[0]ALRIGHT.\e"
+		"\0\s[0]%(jf)ALRIGHT.%(df)\e"
  	}
 	}
 	
@@ -2411,6 +2410,8 @@ TalkConfig
 	"\f[bold,1]*Your birthday:\f[bold,0] %(birthdayprint) \f[sup,1](\q[Change it?,TEACHBDAY])\f[sup,0]\n\n"
 	--
 	"\f[bold,1]*Talk Rate:\f[bold,0] - every %(talktime) \f[sup,1](\q[Change it,talkinter])\f[sup,0]\n\n"
+	--
+	"\f[bold,1]%(jf)PAPYRUS:\f[bold,0] %(ifpapyrus) \f[sup,1](\q[Change it?,turnpapyrus])\f[sup,0]\n\n"
 	--
 	"* %(petpet) times pet. %(beatbeat) times punched."
 	--
@@ -2478,10 +2479,24 @@ Select.updateconfirm
 
 
 
+//-----------------------------------------------------------Font--------------------------------------------------------------------------
 
+Select.turnpapyrus
+{
+	"\0\s[0]*Right now the font 'UT Papyrus' in Jazz's replies is %(ifpapyrus). \nYou can turn it \q[ON,yespap] or \q[OFF,nopap].\e"
+}
 
+Select.yespap
+{
+	ifpapyrus = "ON"
+	"\0\s[0]Jazz will now speak in his native font.%(ConvCancel)\e"
+}
 
-
+Select.nopap
+{
+	ifpapyrus = "OFF"
+	"\0\s[0]Jazz will now speak in a regular font.%(ConvCancel)\e"
+}
 
 //-----------------------------------------------------------Pronouns-----------------------------------------------------------------------------
 
@@ -2528,7 +2543,7 @@ Select.choicemasc
 	 
 	 else 
 	 {
-	 "\0\s[6]ALRIGHT! I WILL CALL YOU A 'HE',\w4 THEN!%(ConvCancel)\e"
+	 "\0\s[6]%(jf)ALRIGHT! I WILL CALL YOU A 'HE',\w4 THEN!%(ConvCancel)\e"
 	 }
 }
 
@@ -2546,7 +2561,7 @@ Select.choicefem
 	 
 	 else{
 	
-	"\0\s[6]ALRIGHT! FROM NOW ON I WILL CALL YOU 'SHE'!%(ConvCancel)\e"
+	"\0\s[6]%(jf)ALRIGHT! FROM NOW ON I WILL CALL YOU 'SHE'!%(ConvCancel)\e"
 	 }
 }
 
@@ -2565,7 +2580,7 @@ Select.choiceneither
 	else
 	{
 	
-	"\0\s[6]OKAY! 'THEY' IT IS,\w4 THEN!%(ConvCancel)\e"
+	"\0\s[6]%(jf)OKAY! 'THEY' IT IS,\w4 THEN!%(ConvCancel)\e"
 	}
 }
 
@@ -2591,7 +2606,7 @@ Select.TEACHBDAY
 	
 	else 
 	{
-		"\0\s[21]RIGHT! \w8TELL ME YOUR BIRTHDAY,\w4 SO I COULD CONGRATULATE YOU PROPERLY! \w8\s[6]FIRST,\w4 WRITE THE NUMBER OF YOUR MONTH!\![open,\w4inputbox,\w4OnUserBornMonth,\w4-1]\e"
+		"\0\s[21]%(jf)RIGHT! \w8TELL ME YOUR BIRTHDAY,\w4 SO I COULD CONGRATULATE YOU PROPERLY! \w8\s[6]FIRST,\w4 WRITE THE NUMBER OF YOUR MONTH!\![open,\w4inputbox,\w4OnUserBornMonth,\w4-1]\e"
 		}
 	}
 
@@ -2605,12 +2620,12 @@ OnUserBornMonth
 			bornmonthprint = Printmonth
 			bornmonthprint2 = TOUPPER(bornmonthprint)
 			
-			"\0\s[24]I SEE THAT YOU WERE BORN IN %(bornmonthprint2).\n\w8NOW TELL ME THE DAY!\![open,inputbox,OnUserBornDay,-1]\e"
+			"\0\s[24]%(jf)I SEE THAT YOU WERE BORN IN %(bornmonthprint2).\n\w8NOW TELL ME THE DAY!\![open,inputbox,OnUserBornDay,-1]\e"
 			
 			}
 		else //if the month isn't a valid month, like 32 or something.
 			{
-			"\0\s[1]...ARE YOU SURE THERE IS A MONTH LIKE THAT?\![open,inputbox,OnUserBornMonth,-1]\e"
+			"\0\s[1]%(jf)...ARE YOU SURE THERE IS A MONTH LIKE THAT?\![open,inputbox,OnUserBornMonth,-1]\e"
 			
 			}
 	}
@@ -2707,7 +2722,7 @@ OnUserBornDay
 				}
 			else //if the day isn't valid, like the 10046th or something.
 				{
-					"\0\s[1]UM,\w4 I AM AFRAID THAT DOESN'T LOOK VERY... VALID. \w8ARE YOU TRYING TO TRICK ME?\![open,inputbox,OnUserBornDay,-1]\e"
+					"\0\s[1]%(jf)UM,\w4 I AM AFRAID THAT DOESN'T LOOK VERY... VALID. \w8ARE YOU TRYING TO TRICK ME?\![open,inputbox,OnUserBornDay,-1]\e"
 					
 				}
 		}
@@ -2725,7 +2740,7 @@ OnUserBornDay
 				}
 			else
 				{
-					"\0\s[1]UM,\w4 I AM AFRAID THAT DOESN'T LOOK VERY... VALID. \w8ARE YOU TRYING TO TRICK ME?\![open,inputbox,OnUserBornDay,-1]\e"
+					"\0\s[1]%(jf)UM,\w4 I AM AFRAID THAT DOESN'T LOOK VERY... VALID. \w8ARE YOU TRYING TO TRICK ME?\![open,inputbox,OnUserBornDay,-1]\e"
 					
 					
 				}
@@ -2743,7 +2758,7 @@ OnUserBornDay
 				}
 			else
 				{
-					"\0\s[1]UM,\w4 I AM AFRAID THAT DOESN'T LOOK VERY... VALID. \w8ARE YOU TRYING TO TRICK ME?\![open,inputbox,OnUserBornDay,-1]\e"
+					"\0\s[1]%(jf)UM,\w4 I AM AFRAID THAT DOESN'T LOOK VERY... VALID. \w8ARE YOU TRYING TO TRICK ME?\![open,inputbox,OnUserBornDay,-1]\e"
 				}
 		}		
 }
@@ -2753,19 +2768,19 @@ birthchecked
 {
 	if userbirthday == dayslot //if today is the user's birthday
 		{
-			"\0\s[28]WAIT A SECOND! \w8IT'S YOUR BIRTHDAY!!! \w8\s[5]HAPPY BIRTHDAY,\w4 %(username)! \w8I WISH YOU LOTS OF HAPPINESS,\w4 MANY FRIENDS,\w4 AND EVERYTHING NICE IN THE WORLD!\e"
+			"\0\s[28]%(jf)WAIT A SECOND! \w8IT'S YOUR BIRTHDAY!!! \w8\s[5]HAPPY BIRTHDAY,\w4 %(username)! \w8I WISH YOU LOTS OF HAPPINESS,\w4 MANY FRIENDS,\w4 AND EVERYTHING NICE IN THE WORLD!\e"
 			
 		}
 	elseif userbirthday == "5month 5day"
 		{
-			"\0\s[5]OH!!! \w8\s[21]THAT'S MY BIRTHDAY TOO! \w8I WISH US BOTH THE BEST!%(ConvCancel)\e"
+			"\0\s[5]%(jf)OH!!! \w8\s[21]THAT'S MY BIRTHDAY TOO! \w8I WISH US BOTH THE BEST!%(ConvCancel)\e"
 		}
 		
 	else //if the birthday is not listed above.
 		{
 			bornmonthprint2 = TOUPPER(bornmonthprint)
 			borndayprint2 = TOUPPER(borndayprint)
-			"\0\s[5]I WILL DEFINITELY REMEMBER THAT YOUR BIRTHDAY IS %(bornmonthprint2) %(borndayprint2). \w8AND I WILL MAKE SURE TO GIVE YOU THE BEST CONGRATULATIONS!!!%(ConvCancel)\e"
+			"\0\s[5]%(jf)I WILL DEFINITELY REMEMBER THAT YOUR BIRTHDAY IS %(bornmonthprint2) %(borndayprint2). \w8AND I WILL MAKE SURE TO GIVE YOU THE BEST CONGRATULATIONS!!!%(ConvCancel)\e"
 		}
 }
 
@@ -2790,7 +2805,7 @@ Select.talkinter
 	   }
 		else 
 		{
-		"\0\s[8]\b2HOW OFTEN SHOULD I SPEAK? \w8I DON'T WANT TO SEEM TOO CHATTY... \w8OR TOO DISTANT.\w8\n\n*The interval is currently set to %(talktime). \n\n\![*]\q[Every 30 seconds,TALKMAX]\n\![*]\q[Every minute,TALKHIGH]\n\![*]\q[Every 3 minutes,TALKNORMAL]\n\![*]\q[Every 5 minutes,TALKPOOR]\n\![*]\q[Silence,TALKNONE]\n\n\![*]\q[Don't change,TalksTill]\e"
+		"\0\s[8]\b2*The talking interval is currently set to %(talktime). \n\n\![*]\q[Every 30 seconds,TALKMAX]\n\![*]\q[Every minute,TALKHIGH]\n\![*]\q[Every 3 minutes,TALKNORMAL]\n\![*]\q[Every 5 minutes,TALKPOOR]\n\![*]\q[Silence,TALKNONE]\n\n\![*]\q[Don't change,TalksTill]\e"
 		}
 	
 	   
@@ -2805,7 +2820,7 @@ Select.TalksTill
 	   }
 	   else
 	   {
-		"\0\s[6]ALRIGHT! NOT EVERYTHING NEEDS CHANGING!%(ConvCancel)\e"
+		"\0\s[6]%(jf)ALRIGHT! \w8NOT EVERYTHING NEEDS CHANGING!%(ConvCancel)\e"
 	   }
 	}
 
@@ -2916,11 +2931,12 @@ Select.dosomething
 		
 		else 
 		{
-		"\0\s[22]WHAT DO YOU WANT ME TO DO?\n\n"
- 		"\0\s[22]OH,\w4 DID YOU NEED SOMETHING?\n\n"
-		"\0\s[22]I AM ALWAYS!!! \w8READY TO HELP!!!\n\n"
+		"\0\s[22]%(jf)WHAT DO YOU WANT ME TO DO?\n\n"
+ 		"\0\s[22]%(jf)OH,\w4 DID YOU NEED SOMETHING?\n\n"
+		"\0\s[22]%(jf)I AM ALWAYS!!! \w8READY TO HELP!!!\n\n"
 		}
 		--
+		"%(df)"
  		"\![*]\q[Open Calendar,CALENDAR]\n/
 		\![*]\q[Check Email,MailCheck]\n/
 		\![*]\q[Open SSP Preferences,sspconfig]\n/
@@ -2949,7 +2965,7 @@ Select.CALENDAR
 	else
 	{
 	
-	"\0\s[24]OKAY! \w8I WILL OPEN YOUR CALENDAR FOR YOU! \w8KEEPING TRACK OF TIME IS VERY IMPORTANT,\w4 AFTER ALL!\![open,calendar]\e"
+	"\0\s[24]%(jf)OKAY! \w8I WILL OPEN YOUR CALENDAR FOR YOU! \w8KEEPING TRACK OF TIME IS VERY IMPORTANT,\w4 AFTER ALL!\![open,calendar]\e"
 	
 	}
 	
@@ -2971,7 +2987,7 @@ Select.sspconfig
 		
 	}
 	else{
-	"\0\s[0]OKAY! \w8ONE SSP PREFERENCE MENU COMING RIGHT UP!\![open,configurationdialog]\e"
+	"\0\s[0]%(jf)OKAY! \w8ONE SSP PREFERENCE MENU COMING RIGHT UP!\![open,configurationdialog]\e"
 	}
 }
 
@@ -2998,7 +3014,7 @@ Select.ChoiceGarbagecan
 		
 	}
 		else{
-		"\0\s[8]DO YOU WANT ME TO TAKE OUT YOUR TRASH? \w8\s[5]I CAN DO THAT!\w8\w8\s[-1]\w8\w8\w8\w8\w8\s[6]\cIT WAS EMPTY, BUT I LIKED THE WALK!%(ConvCancel)\e"
+		"\0\s[8]%(jf)DO YOU WANT ME TO TAKE OUT YOUR TRASH? \w8\s[5]I CAN DO THAT!\w8\w8\s[-1]\w8\w8\w8\w8\w8\s[6]\cIT WAS EMPTY, BUT I LIKED THE WALK!%(ConvCancel)\e"
 		}
 	}
 	elseif _gomicheck >= 1 //If the recycle bin is full.
@@ -3014,13 +3030,13 @@ Select.ChoiceGarbagecan
 		
 		if jazzlover == 1
 		{
-			"\0\s[8]DO YOU WANT ME TO TAKE OUT THE GARBAGE? \w8\s[5]I GUESS I CANNOT REFUSE WHEN YOU SUGGEST A DATE LIKE THIS! \w8YOU... \w8ME... \w8WALKING TOWARDS THE GARBAGE CANS WITH TRASHBAGS... \w8\w8\s[-1]\w8\w8\w8\w8\w8\![raise,OnGarbagecanEmpty]\w9\w9\w9\s[6]\cI LOOKED THROUGH YOUR GARBAGE AND LEFT YOU THE BEST BITS.%(ConvCancel)\e"
+			"\0\s[8]%(jf)DO YOU WANT ME TO TAKE OUT THE GARBAGE? \w8\s[5]I GUESS I CANNOT REFUSE WHEN YOU SUGGEST A DATE LIKE THIS! \w8YOU... \w8ME... \w8WALKING TOWARDS THE GARBAGE CANS WITH TRASHBAGS... \w8\w8\s[-1]\w8\w8\w8\w8\w8\![raise,OnGarbagecanEmpty]\w9\w9\w9\s[6]\cI LOOKED THROUGH YOUR GARBAGE AND LEFT YOU THE BEST BITS.%(ConvCancel)\e"
 		
 		}
 		
-		"\0\s[8]DO YOU WANT ME TO TAKE OUT YOUR TRASH? \w8\s[5]I CAN DO THAT!\w8\w8\s[-1]\w8\w8\w8\w8\w8\![raise,OnGarbagecanEmpty]\w9\w9\w9\s[6]\cDONE AND DONE! \w8I TOOK IT OUT ON A NICE DINNER. \w8WE HAD A GOOD TIME.%(ConvCancel)\e"
+		"\0\s[8]%(jf)DO YOU WANT ME TO TAKE OUT YOUR TRASH? \w8\s[5]I CAN DO THAT!\w8\w8\s[-1]\w8\w8\w8\w8\w8\![raise,OnGarbagecanEmpty]\w9\w9\w9\s[6]\cDONE AND DONE! \w8I TOOK IT OUT ON A NICE DINNER. \w8WE HAD A GOOD TIME.%(ConvCancel)\e"
 		
-		"\0\s[8]OH! \w8GIVE ME A MOMENT,\w4 I WILL BE QUICK!\w8\w8\s[-1]\w8\w8\w8\w8\w8\![raise,OnGarbagecanEmpty]\w9\w9\w9\s[5]\cI AM BACK AND YOUR TRASH IS OUT! %(ConvCancel)\e"
+		"\0\s[8]%(jf)OH! \w8GIVE ME A MOMENT,\w4 I WILL BE QUICK!\w8\w8\s[-1]\w8\w8\w8\w8\w8\![raise,OnGarbagecanEmpty]\w9\w9\w9\s[5]\cI AM BACK AND YOUR TRASH IS OUT! %(ConvCancel)\e"
 	}	
 		}
 }
@@ -3206,7 +3222,7 @@ Select.HEADLINECANCEL
 		"\0\s[50]*...%(ConvCancel)\e"
 	}
 	
- 		"\0\s[0]HEADLINES DONE!%(ConvCancel)\e"
+ 		"\0\s[0]%(jf)HEADLINES DONE!%(ConvCancel)\e"
 	}
 
 

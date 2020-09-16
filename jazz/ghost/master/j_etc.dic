@@ -24,7 +24,7 @@ OnFileDrop2
 			\q[No thanks,SetWallpaper_Cancel]\e"
 		}
 		else {
-			"\0\s[24]OH! IT SAYS THIS IS %(_filename)%(_fileext).\w8I GUESS YOU WANT IT TO BE YOUR WALLPAPER, SO HOW DO YOU WANT TO SET IT?\n\n[half]/
+			"\0\s[24]%(jf)OH! IT SAYS THIS IS %(_filename)%(_fileext).\w8I GUESS YOU WANT IT TO BE YOUR WALLPAPER, SO HOW DO YOU WANT TO SET IT?%(df)\n\n[half]/
 		
 			
 			\q[Centered,SetWallpaper_0]\n/
@@ -41,7 +41,7 @@ OnFileDrop2
 			}
 			else 
 			{
-			"\0\s[3]%(_filename)%(_fileext) IS A MUSIC FILE, I GUESS?\e"
+			"\0\s[3]%(jf)%(_filename)%(_fileext) IS A MUSIC FILE, I GUESS?\e"
 		}
 		}
 		others //Any other file format. 
@@ -51,7 +51,7 @@ OnFileDrop2
 				"\0\s[50]*Asking a scarf to do something with a %(_filename)%(_fileext) is a bit too much.\e"
 			}
 		else{
-			"\0\s[3]LOOKS LIKE A %(_filename)%(_fileext). CAN'T DO MUCH WITH IT!\e"
+			"\0\s[3]%(jf)LOOKS LIKE A %(_filename)%(_fileext). CAN'T DO MUCH WITH IT!\e"
 		}
 		}
 	}
@@ -67,7 +67,7 @@ Select.SetWallpaper_0
 	else
 	{
 	
-	"\![set,wallpaper,%(Wallpaperfile),center]\0\s[6]IT IS NOW CENTERED.\e"
+	"\![set,wallpaper,%(Wallpaperfile),center]\0\s[6]%(jf)IT IS NOW CENTERED.\e"
     }
 }
 Select.SetWallpaper_1
@@ -77,7 +77,7 @@ Select.SetWallpaper_1
 		"\![set,wallpaper,%(Wallpaperfile),tile]\0\s[50]*It is tiled.\e"
 	}
 	else {
-	"\![set,wallpaper,%(Wallpaperfile),tile]\0\s[6]DONE AND TILED!\e"
+	"\![set,wallpaper,%(Wallpaperfile),tile]\0\s[6]%(jf)DONE AND TILED!\e"
 	}
 }
 Select.SetWallpaper_2
@@ -88,7 +88,7 @@ Select.SetWallpaper_2
 	}
 	else 
 	{
-	"\![set,wallpaper,%(Wallpaperfile),stretch]\0\s[6]IT'S NOW PROPERLY STRETCHED. I AM CAPABLE OF MANY THINGS!\e"
+	"\![set,wallpaper,%(Wallpaperfile),stretch]\0\s[6]%(jf)IT'S NOW PROPERLY STRETCHED. I AM CAPABLE OF MANY THINGS!\e"
 	}
 }
 Select.SetWallpaper_Cancel
@@ -99,7 +99,7 @@ Select.SetWallpaper_Cancel
 	}
 	else 
 	{
-	"\0\s[3]CHANGED YOUR MIND? \w8THAT'S OKAY, SOMETIMES OLD IS BETTER!\e"
+	"\0\s[3]%(jf)CHANGED YOUR MIND? \w8THAT'S OKAY, SOMETIMES OLD IS BETTER!\e"
 	}
 }
 
@@ -114,7 +114,7 @@ OnInstallBegin
 	}
 	else 
 	{
-	"\0\s[24]OH! \w8THIS HAS SOMETHING CALLED 'INSTALL.TXT' IN THERE. \w8I GUESS I WILL INSTALL IT, THEN?\e"
+	"\0\s[24]%(jf)OH! \w8THIS HAS SOMETHING CALLED 'INSTALL.TXT' IN THERE. \w8I GUESS I WILL INSTALL IT, THEN?\e"
 	}
  }
 
@@ -133,8 +133,8 @@ OnInstallComplete
 	}
 	   else
 	    {
-			reference0 = TOUPPER(reference0)
-	 	"\s[0]IT IS A SHELL, I THINK. IT'S CALLED %(reference1).\e"
+			reference1 = TOUPPER(reference1)
+	 	"\s[0]%(jf)IT IS A SHELL, I THINK. IT'S CALLED %(reference1).\e"
 		}
  	
 	}
@@ -149,7 +149,7 @@ OnInstallComplete
 		else
 		{
 			reference1 = TOUPPER(reference1)
-		"\s[21]OH! \w8OOOOH! \w8LUCKY YOU ARE - IT'S SOME NEW COOL PERSON YOU CAN MEET AND BEFRIEND! \w8THEIR NAME IS %(reference1).\e"
+		"\s[21]%(jf)OH! \w8OOOOH! \w8LUCKY YOU ARE - IT'S SOME NEW COOL PERSON YOU CAN MEET AND BEFRIEND! \w8THEIR NAME IS %(reference1).\e"
 		}
  	}
 	elseif reference0 == "balloon" 
@@ -162,7 +162,7 @@ OnInstallComplete
 	else 
 	{
 		reference1 = TOUPPER(reference1)
-		"\s[8]IT'S A... \w8BALLOON? \w8IT DOESN'T LOOK LIKE A REAL BALLOON... \wIT IS NOT BRIGHT NOR FLOATY?.. \w8ANYWAY, IT'S CALLED %(reference1).\e"
+		"\s[8]%(jf)IT'S A... \w8BALLOON? \w8IT DOESN'T LOOK LIKE A REAL BALLOON... \wIT IS NOT BRIGHT NOR FLOATY?.. \w8ANYWAY, IT'S CALLED %(reference1).\e"
 	}
  	}
 	elseif reference0 == "plugin" 
@@ -174,7 +174,7 @@ OnInstallComplete
 	else 
 	{
 		reference1 = TOUPPER(reference1)
-		"\s[0]THIS IS A PLUG-IN. \w8\s[6]I HAVE NO IDEA WHAT A PLUG-IN IS, BUT IT IS CALLED %(reference1).\e"
+		"\s[0]%(jf)THIS IS A PLUG-IN. \w8\s[6]I HAVE NO IDEA WHAT A PLUG-IN IS, BUT IT IS CALLED %(reference1).\e"
 	}
  	}
 }
@@ -201,15 +201,15 @@ OnInstallFailure
 	
 	else 
 	{
-	"\0\s[25]WHOOPS! \w8\s[1]I CAN'T UPLOAD THAT.\n\n[half]\w8" 
+	"\0\s[25]%(jf)WHOOPS! \w8\s[1]I CAN'T UPLOAD THAT.\n\n[half]\w8" 
 	--
 	if reference0 == "unsupported" 
 	{
-	"THIS FILE IS KIND OF... \w8UNSUPPORTED? \w8SORRY???\e"
+	"%(jf)THIS FILE IS KIND OF... \w8UNSUPPORTED? \w8SORRY???\e"
 	}	
 	elseif reference0 == "extraction" 
 	{
-	"I COULD NOT EXTRACT THE FILE. \w8SORRY.\e"
+	"%(jf)I COULD NOT EXTRACT THE FILE. \w8SORRY.\e"
 	}
 	}
  }
@@ -227,7 +227,7 @@ OnInstallRefuse
 	 else 
 	 {
 	 
-	"\0\s[8]ARE YOU SURE IT'S FOR ME? \w8BECAUSE I AM NOT SURE AT ALL.\e"
+	"\0\s[8]%(jf)ARE YOU SURE IT'S FOR ME? \w8BECAUSE I AM NOT SURE AT ALL.\e"
 	 }
 	
  }
@@ -248,7 +248,7 @@ OnVanishSelecting
 	else 
 	{
 	
-	"\0\s[4]DO YOU REALLY WANT TO... \w8UNINSTALL ME? \w8MAYBE YOU SHOULD THINK TWICE?\e"
+	"\0\s[4]%(jf)DO YOU REALLY WANT TO... \w8UNINSTALL ME? \w8MAYBE YOU SHOULD THINK TWICE?\e"
 	}
 }
 
@@ -265,12 +265,12 @@ OnVanishSelected
 	 elseif jazzfriend == 1 || jazzlover == 1
 	 {
 	
-	"\0\s[43]OH! \w8\s[4]OH. \w8\w8\s[5]ALRIGHT! \w8GOOD LUCK, AND PLEASE STAY SAFE. \w8\w8AND REMEMBER: \w8\w8I WILL ALWAYS LOVE YOU, %(username). \w8\w8\s[31]BYE!\w9\w9\e"
+	"\0\s[43]%(jf)OH! \w8\s[4]OH. \w8\w8\s[5]ALRIGHT! \w8GOOD LUCK, AND PLEASE STAY SAFE. \w8\w8AND REMEMBER: \w8\w8I WILL ALWAYS LOVE YOU, %(username). \w8\w8\s[31]BYE!\w9\w9\e"
 	 }
 	 
 	 else
 	 {
-		 "\0\s[4]......OH. \w8\w8\s[5]I SEE! \w8GOOD LUCK, AND PLEASE STAY SAFE. \w8\w8I WILL ALWAYS REMEMBER YOU, %(username). \w8\w8\s[31]BYE!\w9\w9\e"
+		 "\0\s[4]%(jf)......OH. \w8\w8\s[5]I SEE! \w8GOOD LUCK, AND PLEASE STAY SAFE. \w8\w8I WILL ALWAYS REMEMBER YOU, %(username). \w8\w8\s[31]BYE!\w9\w9\e"
 	
 	 }
 	 
@@ -288,7 +288,7 @@ OnVanishCancel
 	}
 	 else{
 	
-	"\0\s[28]OH! \w8OHHH!!! \w8\s[5]OH THANK GOODNESS, YOU GOT ME WORRIED!!!!\e"
+	"\0\s[28]%(jf)OH! \w8OHHH!!! \w8\s[5]OH THANK GOODNESS, YOU GOT ME WORRIED!!!!\e"
 	 }
 }
 
@@ -317,7 +317,7 @@ OnVanished
 	else 
 	{
 	reference0 = TOUPPER(reference0)
-	"\0\s[4]%(reference0) JUST... DISAPPEARED? \w8WHERE DID THEY GO?\e"
+	"\0\s[4]%(jf)%(reference0) JUST... DISAPPEARED? \w8WHERE DID THEY GO?\e"
 	}
 	
 }
@@ -336,7 +336,7 @@ OnBIFFBegin
 
 	else 
 	{
-	"\0\s[6]ALRIGHT! \w8I CAN CHECK YOUR MAIL FOR YOU! \w8AS LONG AS THERE ARE NO DISTRACTING MAILMEN THERE!\e"
+	"\0\s[6]%(jf)ALRIGHT! \w8I CAN CHECK YOUR MAIL FOR YOU! \w8AS LONG AS THERE ARE NO DISTRACTING MAILMEN THERE!\e"
 	}
  }
 
@@ -375,24 +375,24 @@ OnBIFFComplete
 	{
 	if reference0 == 0 
  	{
- 		"\0\s[32]SORRY! \w8IT IS EMPTY. \w8TRUST ME, I LOOKED WELL.\e"
-		"\0\s[32]I SEARCHED WELL, BUT FOUND NOTHING?\e"
+ 		"\0\s[32]%(jf)SORRY! \w8IT IS EMPTY. \w8TRUST ME, I LOOKED WELL.\e"
+		"\0\s[32]%(jf)I SEARCHED WELL, BUT FOUND NOTHING?\e"
 	}
 	elseif reference0 == 1
  	{
- 		"\0\s[6]I FOUND A LETTER! \w8JUST ONE! \w8I HOPE IT'S A GOOD ONE...\e"
+ 		"\0\s[6]%(jf)I FOUND A LETTER! \w8JUST ONE! \w8I HOPE IT'S A GOOD ONE...\e"
 	}
 	elseif reference0 > 1 && reference0 < 11
 	{
-		"\0\s[24]YOU HAVE QUITE A LOT OF UNREAD EMAILS THERE. \w8 %(reference0), PRECISELY!\e"
+		"\0\s[24]%(jf)YOU HAVE QUITE A LOT OF UNREAD EMAILS THERE. \w8 %(reference0), PRECISELY!\e"
 	}
 	elseif reference0 > 100 
 	{
-		"\0\s[3]THERE IS... \w8A LOT OF THEM. \w8I HAVE NEVER SEEN %(reference0) LETTERS IN ONE PLACE...\e"
+		"\0\s[3]%(jf)THERE IS... \w8A LOT OF THEM. \w8I HAVE NEVER SEEN %(reference0) LETTERS IN ONE PLACE...\e"
 	}
  	else 
 	{
-		"\0\s[6]I FOUND %(reference0) LETTERS FOR YOU. \w8\s[21]DID I DO GOOD?\e"
+		"\0\s[6]%(jf)I FOUND %(reference0) LETTERS FOR YOU. \w8\s[21]DID I DO GOOD?\e"
  	}
 	}
 }
@@ -425,21 +425,21 @@ OnBIFFFailure
 	 
 	if reference0 == "timeout" 
  	{
- 		"\0\s[3]THE CONNECTION HAS TIMED OUT...\e"
+ 		"\0\s[3]%(jf)THE CONNECTION HAS TIMED OUT...\e"
 	}
  	elseif reference0 == "kick" 
 	{
-		"\0\s[3]I CANNOT GET INSIDE YOUR ACCOUNT. \w8I THINK IT DOESN'T WANT ME TO?\e"
+		"\0\s[3]%(jf)I CANNOT GET INSIDE YOUR ACCOUNT. \w8I THINK IT DOESN'T WANT ME TO?\e"
  	}
 	elseif reference0 == "defect" 
  	{
- 		"\0\s[1]...HUMAN. \w8ARE YOU SURE YOU GAVE ME THE RIGHT COORDINATES? \w8I THINK YOU SHOULD DOUBLE-CHECK AND MAYBE CHANGE THEM! \![open,configurationdialog]\e"
+ 		"\0\s[1]%(jf)...HUMAN. \w8ARE YOU SURE YOU GAVE ME THE RIGHT COORDINATES? \w8I THINK YOU SHOULD DOUBLE-CHECK AND MAYBE CHANGE THEM! \![open,configurationdialog]\e"
 		
 	}
  	else 
 	{
 		reference0 = TOUPPER(reference0)
-		"\0\s[3]SOMETHING WENT WRONG, I THINK. \w8IT SAYS THAT THE ERROR IS '%(reference[0])'.\e"
+		"\0\s[3]%(jf)SOMETHING WENT WRONG, I THINK. \w8IT SAYS THAT THE ERROR IS '%(reference[0])'.\e"
 		
  	}
 }
@@ -457,9 +457,9 @@ OnUpdateBegin
 		"\0\s[50]*You decide to check for updates.\e"
 	}
 	
-	"\0\s[3]OH! \w8ARE YOU CHECKING FOR UPDATES FOR ME?\w8\e"
+	"\0\s[3]%(jf)OH! \w8ARE YOU CHECKING FOR UPDATES FOR ME?\w8\e"
 	
-	"\0\s[8]I WILL CHECK FOR UPDATES NOW! \w8I HOPE THERE IS SOMETHING NEW...\w8\e"
+	"\0\s[8]%(jf)I WILL CHECK FOR UPDATES NOW! \w8I HOPE THERE IS SOMETHING NEW...\w8\e"
  }
 
  //---- OnUpdateReady ---------------------------------------------------------
@@ -469,12 +469,13 @@ OnUpdateReady
 	
 	if gotwhatscoming == 1
 	{
-		"\0\s[50]*There are %(reference0) new files.\e"
+		"\0\s[50]*There are some new files.\e"
 	}
 	
 	else 
 	{
-	"\0\s[0]LET ME SEE... \w8\s[5]THERE ARE %(reference0) NEW FILES! \w8NICE.\w8\e"
+		
+	"\0\s[0]%(jf)LET ME SEE... \w8\s[5]THERE ARE SOME NEW FILES! \w8NICE.\w8\e"
 	
  }
  }
@@ -501,13 +502,13 @@ OnUpdateComplete
 	
 	if reference0 == "none" 
  	{
- 		"\0\s[6]SORRY! \w8I GUESS THERE'S NOTHING.\e"
+ 		"\0\s[6]%(jf)SORRY! \w8I GUESS THERE'S NOTHING.\e"
 		
-		"\0\s[6]NOPE! \w8NOTHING NEW YET.\e"
+		"\0\s[6]%(jf)NOPE! \w8NOTHING NEW YET.\e"
 	}
  	else 
 	{
-		"\0\s[5]DONE AND DONE!\e"
+		"\0\s[5]%(jf)DONE AND DONE!\e"
  	}
 }
  }
@@ -540,16 +541,16 @@ OnUpdateFailure
 	
 	if reference0 == "timeout" 
  	{
- 		"\0\s[1]WHOOPSIE! \w8THE CONNECTION HAS TIMED OUT.\e"
+ 		"\0\s[1]%(jf)WHOOPSIE! \w8THE CONNECTION HAS TIMED OUT.\e"
 	}
  	elseif reference0 == "md5 miss" 
 	{
-		"\0\s[1]OOPS. \w8I THINK THE MD5 HASH DO NOT MATCH...\e"
+		"\0\s[1]%(jf)OOPS. \w8I THINK THE MD5 HASH DO NOT MATCH...\e"
  	}
 	else 
  	{
 		reference0 = TOUPPER(reference0)
- 		"\0\s[3]...SOMETHING WENT WRONG. \w8I GUESS YOU CAN BLAME'%(reference0)'.\e"
+ 		"\0\s[3]%(jf)...SOMETHING WENT WRONG. \w8I GUESS YOU CAN BLAME'%(reference0)'.\e"
 	}
  }
  }
@@ -638,7 +639,7 @@ OnUpdate.OnMD5CompareFailure
 	else
 	{
 		reference0 = TOUPPER(reference0)
-	"\0\s[0]THE MD5 VALUES DO NOT MATCH. \w8\s[6]I SUGGEST CALLING AB TO INVESTIGATE! \w8SHE PROBABLY MISSED SOMETHING IN %(reference0).\w8\e"
+	"\0\s[0]%(jf)THE MD5 VALUES DO NOT MATCH. \w8\s[6]I SUGGEST CALLING AB TO INVESTIGATE! \w8SHE PROBABLY MISSED SOMETHING IN %(reference0).\w8\e"
  }
  }
 
@@ -660,7 +661,7 @@ OnHeadlinesenseBegin
 	{
 		reference0 = TOUPPER(reference0)
 	
-	"\0\s[3]%(reference0)? \w8LET'S SEE WHAT'S THERE...\e"
+	"\0\s[3]%(jf)%(reference0)? \w8LET'S SEE WHAT'S THERE...\e"
  }
  }
 
@@ -711,7 +712,7 @@ Select.Headline_Cancel
 		"\0\s[50]*That's enough.\e"
 	}
 	
-	"\0\s[0]I GUESS THAT'S ENOUGH LOOKING AT HEADLINES.\e"
+	"\0\s[0]%(jf)I GUESS THAT'S ENOUGH LOOKING AT HEADLINES.\e"
 }
 
  //---- OnHeadlinesenseComplete -------------------------------------------------------
@@ -727,7 +728,7 @@ OnHeadlinesenseComplete
 	 {
 		 reference0 = TOUPPER(reference0)
 	
-	"\0\s[0]THERE IS NO UPDATE. \w8%(reference0).\e"
+	"\0\s[0]%(jf)THERE IS NO UPDATE. \w8%(reference0).\e"
  }
  }
 
@@ -760,19 +761,19 @@ OnHeadlinesenseFailure
 	else 
 	{
 	
-	"\0\s[3]I COULD NOT UPDATE THE FEED, SORRY. \w8" //This sets up an exchange between the two characters. The final part of the exchange continues below in the if statements.
+	"\0\s[3]%(jf)I COULD NOT UPDATE THE FEED, SORRY. \w8" //This sets up an exchange between the two characters. The final part of the exchange continues below in the if statements.
  	--
 	if reference0 == "can't download" //if they can't download the rss feed for some reason
  	{
-		"IT CAN'T BE DOWNLOADED."
+		"%(jf)IT CAN'T BE DOWNLOADED."
  	}
 	elseif reference0 == "can't analyze" //if they can't read the file for some reason
  	{
-		"IT CAN'T BE ANALYSED."
+		"%(jf)IT CAN'T BE ANALYSED."
  	}
 	else //other errors
  	{
-		"I DON'T REALLY KNOW WHY."
+		"%(jf)I DON'T REALLY KNOW WHY."
  	}
 	--
  	"\e" //And here is the final /e, so you don't need to include it in the if statements above. Another one of the very rare cases this occurs.
@@ -860,7 +861,7 @@ OnSNTPBegin
 	else 
 	{
 	reference0 = TOUPPER(reference0)
-	"\0\s[8]DO YOU WANT ME TO CHECK THE TIME FOR YOU? \w8\s[6]EASY-PEASY! \w8JUST GIVE ME A SECOND TO CONNECT TO %(reference0).\e"
+	"\0\s[8]%(jf)DO YOU WANT ME TO CHECK THE TIME FOR YOU? \w8\s[6]EASY-PEASY! \w8JUST GIVE ME A SECOND TO CONNECT TO %(reference0).\e"
     }
  }
 
@@ -897,11 +898,11 @@ OnSNTPCompare
 	--
  	if reference3 == 0 //if your clock is already accurate.
 	{
- 		"\0\s[8]YOUR CLOCK SEEMS FAIRLY ACCURATE! \w8GOOD TO KNOW.\e" //replace this with whatever message you like.
+ 		"\0\s[8]%(jf)YOUR CLOCK SEEMS FAIRLY ACCURATE! \w8GOOD TO KNOW.\e" //replace this with whatever message you like.
 	}
  	else //if your clock doesn't match
 	{
- 		"\0\s[3]YOUR CLOCK DOES NOT SEEM VERY ACCURATE.\w8SHOULD I FIX IT?\n\n[half]/
+ 		"\0\s[3]%(jf)YOUR CLOCK DOES NOT SEEM VERY ACCURATE.\w8SHOULD I FIX IT?\n\n[half]/
 		\![*]\q[Fix it,OnSNTPEXECUTE]\n/
  		\![*]\q[Leave it alone,OnSNTPCANCEL]\e"
 	}
@@ -921,7 +922,7 @@ OnSNTPEXECUTE
 	 else
 	 {
 	
-	"\0\s[6]HERE! \w8IT'S ALL FIXED NOW.\e"
+	"\0\s[6]%(jf)HERE! \w8IT'S ALL FIXED NOW.\e"
  }
  }
 
@@ -937,9 +938,9 @@ OnSNTPCANCEL
 	else
 	{
 	
-	"\0\s[3]...WELL, MAYBE YOU ARE SIMPLY NOT A FAN OF PUNCTUALITY... \w8\s[5]I GUESS NEVER BEING ON TIME AND LIVING ON THE EDGE HAS ITS BENEFITS! \w8FOR EXAMPLE, STRESS, ADRENALINE AND THE GLORIOUS DOOM LOOMING OVER YOU ANY PASSING SECOND!!!\e"
-	"\0\s[40]I AM NOT THE ONE TO JUDGE LIFE DECISIONS BUT I AM VERY CLOSE TO JUDGING YOURS. \w8\s[5]BUT ALRIGHT! \w8IT IS YOUR LIFE!!! \w8LIVE IT TO THE FULLEST!!! \w8BE LATE EVERYTWHERE!!! \w8PUNCH THE IMMINENT PASSAGE OF TIME IN THE FACE!!!!\e"	
-	"\0\s[3]WELL!!! \w8SOMETIMES THE OLDER IS THE BETTER. \w8...BUT NOT ALWAYS. \w8SOMETIMES CHANGE IS GOOD. \w8VERY GOOD. \w8I AM HINTING VERY HARD RIGHT NOW.\e"	
+	"\0\s[3]%(jf)...WELL, MAYBE YOU ARE SIMPLY NOT A FAN OF PUNCTUALITY... \w8\s[5]I GUESS NEVER BEING ON TIME AND LIVING ON THE EDGE HAS ITS BENEFITS! \w8FOR EXAMPLE, STRESS, ADRENALINE AND THE GLORIOUS DOOM LOOMING OVER YOU ANY PASSING SECOND!!!\e"
+	"\0\s[40]%(jf)I AM NOT THE ONE TO JUDGE LIFE DECISIONS BUT I AM VERY CLOSE TO JUDGING YOURS. \w8\s[5]BUT ALRIGHT! \w8IT IS YOUR LIFE!!! \w8LIVE IT TO THE FULLEST!!! \w8BE LATE EVERYTWHERE!!! \w8PUNCH THE IMMINENT PASSAGE OF TIME IN THE FACE!!!!\e"	
+	"\0\s[3]%(jf)WELL!!! \w8SOMETIMES THE OLDER IS THE BETTER. \w8...BUT NOT ALWAYS. \w8SOMETIMES CHANGE IS GOOD. \w8VERY GOOD. \w8I AM HINTING VERY HARD RIGHT NOW.\e"	
  }
  }
 
@@ -956,7 +957,7 @@ OnSNTPFailure
 	 else 
 	 {
 	
-	"\0\s[1]SORRY, I COULD NOT CHANGE YOUR CLOCK! \w8I TRIED HARD BUT SOMETHING WENT WRONG. \w8MAYBE THE COGS NEED OILING.\e"
+	"\0\s[1]%(jf)SORRY, I COULD NOT CHANGE YOUR CLOCK! \w8I TRIED HARD BUT SOMETHING WENT WRONG. \w8MAYBE THE COGS NEED OILING.\e"
  }
  }
 
@@ -983,7 +984,7 @@ OnScreenSaverStart
 	}
 	else
 	{
-	"\0\s[40]WAIT! \w8THE SCREENSAVER IS STARTING! \w8QUICK, WIGGLE YOUR MOUSE!!!\e"
+	"\0\s[40]%(jf)WAIT! \w8THE SCREENSAVER IS STARTING! \w8QUICK, WIGGLE YOUR MOUSE!!!\e"
  }
  }
  //---- OnScreenSaverEnd -------------------------------------------------------
@@ -997,7 +998,7 @@ OnScreenSaverEnd
 	}
 	
 	else{
-	"\0\s[9]PHEW. \w8THAT WAS CLOSE...\e"
+	"\0\s[9]%(jf)PHEW. \w8THAT WAS CLOSE...\e"
  }
  }
 
@@ -1014,7 +1015,7 @@ OnApplicationBoot
 	else
 	{
 		reference0 = TOUPPER(reference0)
-	"\0\s[3]%(reference0) JUST STARTED...\e"
+	"\0\s[3]%(jf)%(reference0) JUST STARTED...\e"
  }
  }
 
@@ -1030,7 +1031,7 @@ OnApplicationClose
 	else 
 	{
 	reference0 = TOUPPER(reference0)
-	"\0\s[9]%(reference0) HAS CLOSED...\e"
+	"\0\s[9]%(jf)%(reference0) HAS CLOSED...\e"
  }
  }
  //---- OnApplicationFileOpen ----------------------------------------------------------
@@ -1047,7 +1048,7 @@ OnApplicationFileOpen
 	{
 		reference1 = TOUPPER(reference1)
 	
-	"\0\s[0]OPENING %(reference1).\e"
+	"\0\s[0]%(jf)OPENING %(reference1).\e"
  }
  }
 
@@ -1069,30 +1070,30 @@ OnBatteryLow
 	
 	if beatbeat <= 3
 	{
-	"\0\s[3]YOUR BATTERY IS RUNNING LOW, %(username). \w8I THINK YOU SHOULD PLUG YOUR LAPTOP IN? \w8CRASHING IS NOT VERY FUN.\e"
-	"\0\s[40]I FIND YOUR LACK OF POWER DISTURBING!!! \w8WHERE DID IT ALL GO?? \w8\s[3]WHERE DOES ENERGY GO WHEN YOU NEED IT MOST? \wLIKE WHEN YOU ARE TALKING TO NICE PEOPLE LIKE ME???\e"	
+	"\0\s[3]%(jf)YOUR BATTERY IS RUNNING LOW, %(username). \w8I THINK YOU SHOULD PLUG YOUR LAPTOP IN? \w8CRASHING IS NOT VERY FUN.\e"
+	"\0\s[40]%(jf)I FIND YOUR LACK OF POWER DISTURBING!!! \w8WHERE DID IT ALL GO?? \w8\s[3]WHERE DOES ENERGY GO WHEN YOU NEED IT MOST? \wLIKE WHEN YOU ARE TALKING TO NICE PEOPLE LIKE ME???\e"	
 	}
 	
 	if beatbeat <= 3 && petpet > 50
 	{
-	"\0\s[40]...OH DEAR!!!!! \w8YOU ARE ALMOST OUT OF ENERGY!!!!! \w8\s[4]QUICK, DO SOMETHING! \w8OR YOU WON'T BE ABLE TO FEAST YOUR EYES UPON MY PRETTY FACE ANYMORE.\e"	
-	"\0\s[40]OH NO! \w8YOU ARE RUNNING OUT OF ENERGY! \w8WHAT A TERRIBLE THING TO HAPPEN!!! \w8WITHOUT YOUR BATTERY POWER, YOU WON'T BE ABLE TO SPEND TIME WITH ME!!!\e"
+	"\0\s[40]%(jf)...OH DEAR!!!!! \w8YOU ARE ALMOST OUT OF ENERGY!!!!! \w8\s[4]QUICK, DO SOMETHING! \w8OR YOU WON'T BE ABLE TO FEAST YOUR EYES UPON MY PRETTY FACE ANYMORE.\e"	
+	"\0\s[40]%(jf)OH NO! \w8YOU ARE RUNNING OUT OF ENERGY! \w8WHAT A TERRIBLE THING TO HAPPEN!!! \w8WITHOUT YOUR BATTERY POWER, YOU WON'T BE ABLE TO SPEND TIME WITH ME!!!\e"
 	}
 	
 	if beatbeat > 20
 	{
-		"\0\s[4]I THINK YOU MIGHT WANT TO PLUG YOUR COMPUTER IN. \w8...THAT IS, IF YOU ARE NOT BORED WITH ME YET...\e"
-		"\0\s[4]UM, THERE IS, THERE IS A SLIGHT ENERGY PROBLEM. \w8YOU MIGHT WANT TO CHECK IT. \w8I BELIEVE YOU ARE NOT... \w8DONE WITH ME YET, ARE YOU.\e"
-		"\0\s[4]UH, SORRY TO BOTHER YOU, BUT... \w8YOUR LAPTOP ATE ALL ITS ENERGY. \w8\s[1]N-NOT MY FAULT!!! I AM VERY ENERGY SAVING!!!!\e"
+		"\0\s[4]%(jf)I THINK YOU MIGHT WANT TO PLUG YOUR COMPUTER IN. \w8...THAT IS, IF YOU ARE NOT BORED WITH ME YET...\e"
+		"\0\s[4]%(jf)UM, THERE IS, THERE IS A SLIGHT ENERGY PROBLEM. \w8YOU MIGHT WANT TO CHECK IT. \w8I BELIEVE YOU ARE NOT... \w8DONE WITH ME YET, ARE YOU.\e"
+		"\0\s[4]%(jf)UH, SORRY TO BOTHER YOU, BUT... \w8YOUR LAPTOP ATE ALL ITS ENERGY. \w8\s[1]N-NOT MY FAULT!!! I AM VERY ENERGY SAVING!!!!\e"
 	}
 	
 
 	
 	else 
 	{
-		"\0\s[3]YOUR BATTERY IS RUNNING LOW, %(username).\e"
-		"\0\s[3]DO YOU HAVE A CHARGER? \w8I FEEL LIKE YOU MIGHT NEED A CHARGER, %(username).\e"
-		"\0\s[3]OH DEAR I HOPE YOU DO NOT HAVE ANYTHING IMPORTANT GOING ON BECAUSE YOUR LAPTOP WILL SOON RUN OUT OF ENERGY... \w8\w8\s[36]WAIT A SECOND!!! \w8YOU HAVE ME GOING ON!!! \w8PLEASE PLUG IN RIGHT AWAY!!!!!!\e"
+		"\0\s[3]%(jf)YOUR BATTERY IS RUNNING LOW, %(username).\e"
+		"\0\s[3]%(jf)DO YOU HAVE A CHARGER? \w8I FEEL LIKE YOU MIGHT NEED A CHARGER, %(username).\e"
+		"\0\s[3]%(jf)OH DEAR I HOPE YOU DO NOT HAVE ANYTHING IMPORTANT GOING ON BECAUSE YOUR LAPTOP WILL SOON RUN OUT OF ENERGY... \w8\w8\s[36]WAIT A SECOND!!! \w8YOU HAVE ME GOING ON!!! \w8PLEASE PLUG IN RIGHT AWAY!!!!!!\e"
 	}
  }
  }
@@ -1107,7 +1108,7 @@ OnBatteryCritical
 	else
 	{
 	
-	"\0\s[40]%(username)!!! \w8YOU'D PROBABLY WANT TO PLUG YOUR COMPUTER IN REALLY QUICK!\e"
+	"\0\s[40]%(jf)%(username)!!! \w8YOU'D PROBABLY WANT TO PLUG YOUR COMPUTER IN REALLY QUICK!\e"
 }
 }
 
@@ -1140,17 +1141,17 @@ OnShellScaling
 	else{
 	if reference0 >= 150 
 	{
-		"\0\s[28]OOF??? \w8\s[1]I - I SURE HOPE I WON'T ELBOW SOME IMPORTANT FILES ON ACCIDENT??? \w8IT IS NOT THAT FUN BEING THAT BIG...\e"
-		"\0\s[28]OH WOW??? \w8DID I JUST HIT A SECOND GROWTH SPURT??? \w8 I HOPE THIS WILL BE THE LAST BECAUSE I AM ALREADY TALL ENOUGH TO NOT NEED A LADDER ANYWHEN, ANYWHERE, ANYMORE??\e"
+		"\0\s[28]%(jf)OOF??? \w8\s[1]I - I SURE HOPE I WON'T ELBOW SOME IMPORTANT FILES ON ACCIDENT??? \w8IT IS NOT THAT FUN BEING THAT BIG...\e"
+		"\0\s[28]%(jf)OH WOW??? \w8DID I JUST HIT A SECOND GROWTH SPURT??? \w8 I HOPE THIS WILL BE THE LAST BECAUSE I AM ALREADY TALL ENOUGH TO NOT NEED A LADDER ANYWHEN, ANYWHERE, ANYMORE??\e"
 	}
 	elseif reference0 == 100
 	{
-		"\0\s[5]SOMETIMES OLD IS BEST!!! \w8I DON'T LIKE BEING EITHER SMALL OR INTIMIDATING WHEN I DON'T WANT TO BE EITHER SMALL OR INTIMIDATING.\e"
+		"\0\s[5]%(jf)SOMETIMES OLD IS BEST!!! \w8I DON'T LIKE BEING EITHER SMALL OR INTIMIDATING WHEN I DON'T WANT TO BE EITHER SMALL OR INTIMIDATING.\e"
 	}
 	elseif reference0 <= 50 
 	{
-		"\0\s[28]...OH NO??? \w8HOW AWFUL??? \w8HOW WILL YOU SEE MY FACE LIKE THIS??? \w8THERE ARE SO MANY EXPRESSIONS I HAVE BEEN PRACTICING?????\e"
-		"\0\s[28]OH NO? \w8DID I JUST SHRINK??? \w8HOW HORRIBLE??? \w8SUDDENLY THERE IS THAT MUCH LESS OF THE GOODNESS I AM?????\e"
+		"\0\s[28]%(jf)...OH NO??? \w8HOW AWFUL??? \w8HOW WILL YOU SEE MY FACE LIKE THIS??? \w8THERE ARE SO MANY EXPRESSIONS I HAVE BEEN PRACTICING?????\e"
+		"\0\s[28]%(jf)OH NO? \w8DID I JUST SHRINK??? \w8HOW HORRIBLE??? \w8SUDDENLY THERE IS THAT MUCH LESS OF THE GOODNESS I AM?????\e"
 	}
 }
 }
