@@ -138,7 +138,7 @@ goodboyreact1
 	
 	"\w8\s[28]He is surprised by the sudden praise. \w8\s[20]In a good way."
 	"\w8\s[28]He is confused,\w4 \s[20]but decides to soak up the praise."
-	"\w8\s[28]He is startled... Did he expect something else?.."
+	"\w8\s[28]He is startled... \w8Did he expect something else?.."
 	"\w8\s[28]He stares at you for a few seconds disbelievingly \s[20]before finally smiling."
 	"\w8\s[28]He does not know what to make of it,\w4 \s[20]but he decides to take it as it goes."
 	
@@ -270,8 +270,6 @@ greatreact1
 	"\w8\s[25]\n\n%(jf)OH,\w4 GOLLY... \w8\s[37]THAT IS UNEXPECTED,\w4 BUT THANK YOU! \w8\w8\w8\s[29]...PERHAPS YOU COULD TRY TO MAKE THIS... \w8SLIGHTLY MORE EXPECTABLE? \w8PLEASE?"
 	"\w8\s[25]He is thoroughly confused... \w8and perhaps a little bit wondering where's the catch."
 	"\w8\s[25]He couldn't have predicted this! \w8Especially given your track record."
-	"\w8\s[25]He is bonedoggled! \w8Thoroughly flabbergastered. \w8Completely bamboozled."
-	"\w8\s[25]It is a pleasant surprise!"
 }
 
 greatreact2
@@ -298,6 +296,7 @@ greatreact3
 	"\w8\s[20]\n\n%(jf)%(username)... \w8THANK YOU FOR CONFIRMING SOMETHING I HAVE DEFINITELY TOTALLY SURELY KNOWN ALREADY!!!"
 	"\w8\s[22]\n\n%(jf)REALLY?? \w8\s[5]%(username),\w4 THANK YOU!!! \w8YOU ARE GREAT TOO!!!"
 	"\w8\s[22]He is unable to say anything except for an upbeat '%(jf)THANK YOU!%(df)'"
+	"\w8\s[25]He is bonedoggled! \w8Thoroughly flabbergastered. \w8Completely bamboozled."
 }
 
 
@@ -548,7 +547,7 @@ reaction
 	"He seems happy."
 	"He seems sad."
 	"He looks confused..."
-	"He ponders the meaning of it."
+	"He quietly grumbles."
 	"He looks dreamy."
 	"He shakes off the thought."
 	"He mumbles something."

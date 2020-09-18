@@ -12,10 +12,9 @@ OpenSakuraMenu
 			"\0\s[50]\b2*Everything stays the same."
 		}
 		
-		else
-		{
+	
 			
-		if totappoints > 30 || badbad > 10 
+		elseif totappoints > 30 || badbad > 10 
 		{
 			"\0\s[4]\b2%(jf)...DO YOU NEED SOMETHING?%(df)"
 			"\0\s[4]\b2%(jf)...I'LL BE RIGHT AT IT.%(df)"
@@ -24,7 +23,7 @@ OpenSakuraMenu
 		}
 		
 		
-		if jazzlover == 1 || jazzfriend == 1 && badbad < 3
+		elseif jazzlover == 1 || jazzfriend == 1 && badbad < 3
 		{
 			"\0\s[5]\b2%(jf)HI!!! CAN I HELP?%(df)"
 			"\0\s[5]\b2%(jf)I'LL BE RIGHT AT IT!!!%(df)"
@@ -33,7 +32,8 @@ OpenSakuraMenu
 			
 		}
 		
-		
+		   else 
+		   {
 		"\0\s[0]\b2%(jf)DID YOU WANT SOMETHING?%(df)"
 		"\0\s[0]\b2%(jf)JUST TELL ME IF YOU NEED ANY HELP!%(df)"
 		"\0\s[0]\b2%(jf)DON'T HESITATE TO ASK ME IF YOU NEED ANYTHING!%(df)"
@@ -41,7 +41,7 @@ OpenSakuraMenu
 		"\0\s[0]\b2%(jf)ASK, AND YOU SHALL RECEIVE!%(df)"
 		"\0\s[0]\b2%(jf)HELLO! WHAT DO YOU WANT?%(df)"
 		
-		}
+		   }
 		--
 		MenuRun
 }
@@ -67,8 +67,9 @@ MenuRun
 	
 	"\![*]\q[Tell me something new,altalk]\n\n"
 	--
-     //"\![*]\q[I want to try,testvariable]\n/
-	"\![*]\q[I want to talk,talk]\n/
+    //\![*]\q[I want to try,testvariable]\n/
+	 "\![*]\q[I want to CHECK,checkmenu]\n/
+	\![*]\q[I want to talk,talk]\n/
 	\![*]\q[I want to give you something,gift]\n/
 	\![*]\q[I need some help,dosomething]\n\n/
 	\![*]\q[Show me the Config Menu,configmenu]\n\n\n/
@@ -91,7 +92,96 @@ OnLastTalk
 
 
 
+//-----------------------------------------------------Check-----------------------------------------------------------------------------
 
+
+
+Select.checkmenu
+{
+	
+	
+	 if gotwhatscoming == 1
+		 {
+   "\0"
+	--
+	"* SCARF - 1 ATK 1 DEF"
+	--
+	"\n\n"
+	-- 
+	"* ...Who knows what he feels now."
+	"* ..."
+	
+	--
+	 "\n\n\![*]\q[Back to menu,BACKTOMENU] \![*]\q[I'm done,CANCEL]\e"
+		 }
+	else
+	{
+	
+	"\0"
+	--
+	"* JAZZ - 10 ATK 10 DEF"
+	--
+	"\n\n"
+	-- 
+	 
+	
+	
+	if jazzfriend == 1 
+	 {
+		 "* He believes you to be his friend."	
+		 "* He thinks that he has a friend."
+		 "* He now has a whole one human friend!"
+       --		 
+	
+	 if badbad > 50 || totappoints > 50
+		 {
+			 "\n* ...but he wonders what friendship really means to you."
+		 }
+	}	 
+	elseif jazzlover == 1 
+	 {
+		 "* He believes that you love him."
+		 "* He knows that you love him."
+		 "* He thinks you must be a fan of skeletons."
+	  --
+	 if badbad > 50 || totappoints > 50
+		 {
+			 "\n* ...but you show love in a very strange way."
+		 }
+       }
+	 
+	 elseif totappoints > 30 || badbad > 6
+	 {
+		"* He doesn't think you are trying hard enough to be a good person." 
+		"* He'd give you a F+."
+		"* He thinks your levels of evil are dangerously high for such a small creature."
+	 }
+	 
+	 
+	else
+	 {
+		 "* He does not know what to make of you yet."
+         "* He smells like chalk."
+         "* This skeleton is shaped like a friend."
+         "* He likes saying 'Nyeh heh heh!'"
+         "* He is not supposed to be here."		 
+	 }
+	 --
+	 "\n\n"
+	 --
+	 "* %(petpet) times pet. %(beatbeat) times punched."
+	 --
+	  if rockgiven == 1
+	  {
+		" 1 pet rock given."
+	  }
+	--
+	    "\n\n\![*]\q[Back to menu,BACKTOMENU] \![*]\q[I'm done,CANCEL]\e"
+	
+}
+
+
+}
 
 //------------------------------------------------------TalkMenu-----------------------------------------------------------------------------------
 
@@ -108,12 +198,17 @@ Select.talk
 		  --
          "\![*]\q[You are sorry,sorry] \![*]\q[You are not sorry,notsorry] \n"
 		 --
-         "\![*]\q[You need advice...,needadvice]\![*]\q[You know a joke,telljoke]\n"
+         "\![*]\q[You need advice...,needadvice]\![*]\q[You know a joke,telljoke]\n\n"
 		 --
 		 "\![*]\q[Back to menu,BACKTOMENU] \![*]\q[I'm done,CANCEL]\e"
 		   
 		}
 	else {
+		
+		 if badbad > 10 || totappoints > 30
+		{
+			"\0\s[4]\b2*What you want to say is...\w8\n\n\_q"
+		}
 	"\0\s[0]\b2*What you want to say is...\w8\n\n\_q"
 	--
    "\![*]\q[I need advice,needadvice] \![*]\q[Cheer me up,cheerup] \n"
@@ -132,6 +227,11 @@ Select.talk
     "\![*]\q[Good boy!,goodboy] \![*]\q[Bad boy!,badboy]"
 	--
 	"\n\n"
+	--
+	if lovelove > 150 && askedwhy == 0 && totappoints < 10
+	{
+	"\![*]\q[Let's talk about us,letstalk]\n\n" 
+	}
 	--
 	if jazzfriend == 1
 	{
@@ -163,6 +263,63 @@ Select.talk
 	--
     "\n\n\![*]\q[Back to menu,BACKTOMENU] \![*]\q[I'm done,CANCEL]\e"
 }
+}
+
+
+//-----------------------------------------------------------Relationship-------------------------------------------------
+
+Select.letstalk
+
+	{
+			
+	    "\0\s[0]*You tell Jazz that you need to talk about something. \w8\n\n\s[4]%(jf)... \w8%(username)... \w8I WANTED TO ASK YOU SOMETHING, TOO. \w8I KNOW YOU HAVE BEEN REALLY KIND TO ME."
+		--
+		if passhour > 1
+		{
+			" \w8YOU SPENT QUITE SOME TIME WITH ME,\w4 TOO..."
+        }
+		--
+		if goodboy = 1
+		{
+			" \w8\s[5]YOU HAVE PRAISED ME!!!"
+		}
+		--
+		if fedjazz > 0
+		{
+			" \w8\s[37]YOU GAVE ME SNACKS OUT OF NOWHERE..."
+		}
+		--
+		if givegift > 0
+		{
+			" \w8\s[6]YOU EVEN GAVE ME DIFFERENT GIFTY STUFF."
+		}
+		--
+		" \w8\s[4]SO,\w4 I HAVE TO ASK. \w8WHY? \n\n%(df)\![*]\q[I want us to be friends,befriend]\n\![*]\q[I love you,belover]\n\![*]\q[That is just how I am,beok]\n\n"
+    }
+
+
+	Select.befriend
+{
+	askedwhy = 1
+	jazzfriend = 1
+	
+	"*You tell Jazz that he is a very great skeleton and you would like to be his friend. \0\s[25]\w8He seems shocked. \w8In a good way.  \w8\n\n\s[22]%(jf)%(username)!!! \w8THIS! \w8IS! \w8\s[1]SOMETHING I T-TOTALLY EXPECTED BECAUSE I OBVIOUSLY HAVE MANY FRIENDS AND AM VERY EXPERIENCED IN THIS. \w8\s[21]...I AM VERY HAPPY,\w4 THOUGH! \w8OF COURSE I WILL BE YOUR FRIEND! \w8AND I WILL BE A VERY GOOD FRIEND,\w4 TOO! \w8NYEH HEH HEH! \w8\n\n\s[20]*This is probably the happiest you have ever seen him,\w4 you think. %(ConvCancel)\e"
+}
+
+Select.belover
+{
+	askedwhy = 1
+	jazzlover = 1
+	
+	"*You tell Jazz that he is a very great skeleton. \w8So great that you actually fell in love with him. \0\s[25]\w8He seems... \w8\s[23]completely stunned by your admittance.  \w8\w8\w8\n\n\s[23]%(jf)%(username)... \w8I.  \w8\s[1]I AM NOT REALLY SURE HOW TO RESPOND?.. \w8\s[4]I MEAN!.. \w8YOU HAVE BEEN VERY KIND TO ME AND I AM NOT AGAINST THE IDEA,\w4 \w8BUT... \w8\s[4]I MIGHT BE NOT THE BEST PERSON TO PURSUE AS A ROMANTIC INTEREST. \w8\s[24]FIRST OF ALL! \w8THERE IS THAT SCREEN BETWEEN US WHICH REALLY HINDERS THINGS. \w8\s[6]AND ALSO I AM A LITERAL SKELETON. \w8\s[5]THAT IS TO SAY! \w8I WILL NOT JUDGE YOU OR YOUR FEELINGS! \w8LOVE IS A COMPLICATED THING, \w8AFTER ALL. \w8AND I AM DEFINITELY HAPPY TO HEAR THAT I AM LOVED! \w8\s[6]BUT PLEASE THINK ABOUT WHAT I SAID. \w8THIS IS ALL I WILL ASK OF YOU! \w8\n\n\s[20]*Jazz seems... quite okay with what you told him,\w4 all in all. %(ConvCancel)\e"
+}
+
+Select.beok
+{
+	askedwhy = 1
+	jazzok = 1
+	
+	"*You tell Jazz that you simply try to be a good person.  \w8\s[0]He nods,\w4 looking content with your answer. \w8\n\n\s[24]%(jf)%(username)! \w8I AM REALLY PROUD OF YOU. \w8I KNOW THAT LIFE IS HARD SOMETIMES,\w4 AND... \w8\s[4]SOMETIMES,\w4 WHEN YOU ARE HURTING,\w4 IT IS REALLY DIFFICULT NOT TO HURT OTHERS. \w8BUT IT IS IMPORTANT TO STAY KIND,\w4 NO MATTER WHAT. \w8\s[6]OF COURSE NOT TO THE POINT OF BEING SELF-DESTRUCTIVE! \w8BUT IT IS GREAT THAT YOU KEEP MAKING THE RIGHT CHOICE AND TRYING TO SHOW MERCY TO OTHERS. \w8\s[5]JUST REMEMBER TO SHOW YOURSELF THE SAME KINDNESS,\w4 OKAY? %(ConvCancel)\e"
 }
 
 
@@ -257,6 +414,16 @@ OnChatterbox
 			"\0\s[3]%(jf)I,\w4 UM... \w8I AM NOT SURE... \w8WHY?%(ConvCancel)\e"
 			"\0\s[8]%(jf)I'M,\w4 UM,\w4 I'M SORRY? \w8THOUGH I'M NOT SURE WHAT I DID WRONG...%(ConvCancel)\e"
 			"\0\s[3]%(jf).....ARE YOU SPEAKING TO ME???%(ConvCancel)\e"
+		
+		if jazzfriend == 1 || jazzlover == 1
+		{
+			
+			badbad += 1
+			"\0\s[1]%(jf)......WHAT.%(ConvCancel)\e"
+			"\0\s[1]%(jf)...IS IT A SLANG FOR 'I LOVE YOU VERY MUCH'??%(ConvCancel)\e"
+			"\0\s[1]%(jf)...HUMAN. \w8I THINK YOU MISSPELLED 'LOVE'. \w8YOU MADE THREE MISTAKES. \w8YOU SHOULD REALLY WORK ON YOUR SPELLING.%(ConvCancel)\e"
+		}
+		
 		}
 		
 		if badbad > 6 || totappoints > 30
@@ -276,14 +443,7 @@ OnChatterbox
 			"\0\s[4]*...He quietly nods.%(ConvCancel)\e"
 		}
 				
-		if jazzfriend == 1 || jazzlover == 1
-		{
-			
-			badbad += 1
-			"\0\s[1]%(jf)......WHAT.%(ConvCancel)\e"
-			"\0\s[1]%(jf)...IS IT A SLANG FOR 'I LOVE YOU VERY MUCH'??%(ConvCancel)\e"
-			"\0\s[1]%(jf)...HUMAN. \w8I THINK YOU MISSPELLED 'LOVE'. \w8YOU MADE THREE MISTAKES. \w8YOU SHOULD REALLY WORK ON YOUR SPELLING.%(ConvCancel)\e"
-		}
+		
 		
 		
 	}
@@ -299,9 +459,19 @@ OnChatterbox
 			"\0\s[5]%(jf)RIGHT BACK AT YOU,\w4 %(username)!!! \w8IN FACT!!! \w8\s[6]IF I DID NOT HAVE SUCH AMAZING PEOPLE SKILLS,\w4 I WOULD THINK THAT YOU WERE GIVING A PEP TALK TO A MIRROR!%(ConvCancel)\e"
 			"\0\s[21]%(jf)AW,\w4 THANK YOU!!! \w8\s[6]I GUESS I HAVEN'T BEEN UPKEEPING MY PERSONALITY ALL FOR NOTHING.%(ConvCancel)\e"
 			"\0\s[20]%(jf)%(username),\w4 %(reference0) TOO!%(ConvCancel)\e"
+			
+			if jazzfriend == 1 || jazzlover == 1
+		{
+			lovelove += 1
+			badbad -= 1
+			"\0\s[5]%(jf)%(reference0) TOO! \w8BUT A HUNDRED TIMES MORE!!!%(ConvCancel)\e"
+			"\0\s[5]%(jf)OH!! \w8THANK YOU,\w4 %(username)! \w8\s[6]AND,\w4 SINCE YOU ARE MY FRIEND,\w4 AND MY FRIENDS CANNOT BE WORSE THAN ME,\w4 YOU ARE JUST THE SAME!!!%(ConvCancel)\e"
+			"\0\s[20]*Jazz nods so furiously that his skull almost comes undone.%(ConvCancel)\e"
+		}
+			
 		}
 		
-		if badbad > 6 || apology > 6
+		if badbad > 6 || totappoints > 30
 		{
 			lovelove += 1
 			badbad -= 1
@@ -310,7 +480,7 @@ OnChatterbox
 			"\0\s[28]%(jf)OH... \w8\s[1]UM,\w4 THANK YOU? \w8\s[32]SORRY,\w4 I DID NOT EXPECT TO HEAR THIS FROM YOU.%(ConvCancel)\e"
 		}
 		
-		if badbad > 50 
+		if badbad > 50 || totappoints > 50
 		{
 			"\0\s[4]%(jf)OH. \w8UM...%(ConvCancel)\e"
 			"\0\s[4]...%(ConvCancel)\e"
@@ -318,14 +488,7 @@ OnChatterbox
 			"\0\s[4]*He does not seem to agree with the sentiment.%(ConvCancel)\e"
 		}
 		
-		if jazzfriend == 1 || jazzlover == 1
-		{
-			lovelove += 1
-			badbad -= 1
-			"\0\s[5]%(jf)%(reference0) TOO! \w8BUT A HUNDRED TIMES MORE!!!%(ConvCancel)\e"
-			"\0\s[5]%(jf)OH!! \w8THANK YOU,\w4 %(username)! \w8\s[6]AND,\w4 SINCE YOU ARE MY FRIEND,\w4 AND MY FRIENDS CANNOT BE WORSE THAN ME,\w4 YOU ARE JUST THE SAME!!!%(ConvCancel)\e"
-			"\0\s[20]*Jazz nods so furiously that his skull almost comes undone.%(ConvCancel)\e"
-		}
+		
 				
 	}
 	
@@ -339,6 +502,15 @@ OnChatterbox
 			"\0\s[3]%(jf)...I THINK YOU NEED TO HAVE YOUR HUMAN EYESIGHT CHECKED. \w8I THINK SOMETHING WENT WRONG WITH IT SOMEWHERE AT SOME POINT.%(ConvCancel)\e"
 			"\0\s[8]%(jf)...I GUESS WE CAN AGREE TO DISAGREE IF YOU AGREE TO AGREE THAT YOU ARE REALLY REALLY WRONG.%(ConvCancel)\e"
 			"\0\s[3]%(jf)...EITHER YOU HAVE AN AWFUL SELF ESTEEM, \w4\s[6]OR YOU HAVE AN AWFUL EYESIGHT \s[3]AND BOTH ARE KIND OF SAD.%(ConvCancel)\e"
+		
+		if jazzfriend == 1 || jazzlover == 1
+		{
+			
+			badbad += 1
+			"\0\s[3]*Jazz seems genuinely confused... \w8if not a little shocked.%(ConvCancel)\e"
+			"\0\s[8]%(jf)...WOW. \w8YOU CHANGE YOUR MIND FAST...%(ConvCancel)\e"
+			"\0\s[3]%(jf)...WHY? \w8WHAT DID I DO WRONG?%(ConvCancel)\e"
+		}
 		}
 		
 		if badbad > 6 || totappoints > 30
@@ -358,14 +530,7 @@ OnChatterbox
 			"\0\s[4]%(jf)I,\w4 UM... \w8BUT... \w8WHY?...%(ConvCancel)\e"
 		}
 		
-		if jazzfriend == 1 || jazzlover == 1
-		{
-			
-			badbad += 1
-			"\0\s[3]*Jazz seems genuinely confused... \w8if not a little shocked.%(ConvCancel)\e"
-			"\0\s[8]%(jf)...WOW. \w8YOU CHANGE YOUR MIND FAST...%(ConvCancel)\e"
-			"\0\s[3]%(jf)...WHY? \w8WHAT DID I DO WRONG?%(ConvCancel)\e"
-		}
+		
 				
 	}
 	
@@ -516,7 +681,7 @@ Select.backstory
 	if badbad > 6 || totappoints > 30
 	{
 		
-	     "\0\s[0]*You tell Jazz to talk about himself. \w8%(idlejazz) %(jf)"
+	     "\0\s[4]*You tell Jazz to talk about himself. \w8%(idlejazz) %(jf)"
 			--
 		    "\n\n\w8\s[8]I'M... JAZZ. \w8I'M NOT SURE WHAT..." 
 			"\n\n\w8\s[4]IS THERE A RIGHT ANSWER? \w8DO I HAVE TO GET IT RIGHT FOR YOU NOT TO... \w8\w8\w8\w8\s[1]..." 
@@ -550,14 +715,6 @@ Select.backstory
 Select.platewhat
 {
 
-
-if jazzlover == 1 || jazzfriend == 1
-	{
-		badbad += 1
-		"\0\s[0]You ask Jazz about the strange thing on his chest. \w8\s[1]He looks away. \w8\n\n\s[4]%(jf)IT IS... MY LETTER. \w8JUST THIS. \w8IT IS NOT INTERESTING AT ALL. \w8CAN WE PLEASE TALK ABOUT SOMETHING ELSE?%(ConvCancel)\e"
-		"\0\s[0]You ask Jazz what that thing on his chest was. \w8\s[1]He fidgets... \w8\s[4]\n\n%(jf)YOU KNOW... \w8I DON'T REALLY LIKE TALKING ABOUT THIS,\w4 BUT... \w8IT IS AN IDENTIFICATION LETTER. \w8\w8\w8...SORRY,\w4 I. \w8I TRY NOT TO THINK ABOUT IT MUCH.%(ConvCancel)\e"
-		"\0\s[0]You ask Jazz about the thing you have felt on his chest. \w8\s[1]He looks uneasy... \w8\s[4]\n\n%(jf)IT IS... A MARKING. \w8NOTHING MORE. \w8IT DOES NOT HURT,\w4 IF THAT IS WHAT YOU WANTED TO KNOW. \w8IT IS JUST ALWAYS THERE.%(ConvCancel)\e"
-	}
 	
 	if badbad > 6 || totappoints > 30
 	{
@@ -570,7 +727,14 @@ if jazzlover == 1 || jazzfriend == 1
 	}
 	else
 	{
-		
+		if jazzlover == 1 || jazzfriend == 1
+	{
+		badbad += 1
+		"\0\s[0]You ask Jazz about the strange thing on his chest. \w8\s[1]He looks away. \w8\n\n\s[4]%(jf)IT IS... MY LETTER. \w8JUST THIS. \w8IT IS NOT INTERESTING AT ALL. \w8CAN WE PLEASE TALK ABOUT SOMETHING ELSE?%(ConvCancel)\e"
+		"\0\s[0]You ask Jazz what that thing on his chest was. \w8\s[1]He fidgets... \w8\s[4]\n\n%(jf)YOU KNOW... \w8I DON'T REALLY LIKE TALKING ABOUT THIS,\w4 BUT... \w8IT IS AN IDENTIFICATION LETTER. \w8\w8\w8...SORRY,\w4 I. \w8I TRY NOT TO THINK ABOUT IT MUCH.%(ConvCancel)\e"
+		"\0\s[0]You ask Jazz about the thing you have felt on his chest. \w8\s[1]He looks uneasy... \w8\s[4]\n\n%(jf)IT IS... A MARKING. \w8NOTHING MORE. \w8IT DOES NOT HURT,\w4 IF THAT IS WHAT YOU WANTED TO KNOW. \w8IT IS JUST ALWAYS THERE.%(ConvCancel)\e"
+	}
+	
 	 "\0\s[0]You ask Jazz about the carving on his chest. \w8\s[1]He pretends that he did not hear you.%(ConvCancel)\e"
 	 "\0\s[0]You ask Jazz about the carving on his chest. \w8\s[1]He seems to be too busy watching your cursor to answer.%(ConvCancel)\e"
 	 "\0\s[0]You ask Jazz about the carving you've discovered on his chest. \w8\s[1]He politely ignores you.%(ConvCancel)\e"
@@ -598,7 +762,7 @@ Select.needadvice
 	
 	if gotwhatscoming == 1
 	{
-		"\0\s[50]*Sadly,\w4 the small scarf cannot offer much advice. \w8It can only inspire you to be kinder. \w8And to take care of yourself,\w4 despite everything."
+		"\0\s[50]*Sadly,\w4 the small scarf cannot offer much advice. \w8It can only inspire you to be kinder. \w8And to take care of yourself,\w4 despite everything.\n\n"
 		--
 	 "\![*]\q[Something more?..,notenough] \n"
 	 --
@@ -611,7 +775,10 @@ Select.needadvice
 	
 	else
 	{
-	
+	    if badbad > 10 || totappoints > 30
+		{
+			"\0\s[4]\b2%(jf)OKAY?..%(df)\w8\n\n\_q"
+		}
 	"\0\s[3]\b2%(jf)OH?? \w8WHAT DO YOU NEED HELP WITH?%(df)\w8\n\n\_q"
 	--
 	 "\![*]\q[Making friends,makefriend] \![*]\q[Keeping friends,keepfriend] \n"
@@ -714,7 +881,8 @@ Select.keepfriend
 		"\0\s[1]%(terrified)%(ConvCancel)\e"
 	}
 	
-	
+	else
+	{
 	"\0\s[24]%(jf)KEEPING YOUR FRIENDS IS EASY. \w8YOU ONLY NEED A GOOD LEASH AND A COLLAR!!! \w8\w8\w8\w8... \w8\w8\w8\s[40]WHAT?!?!?!?! \w8DOGS CAN BE FRIENDS,\w4 TOO!!!!%(ConvCancel)\e"
 	"\0\s[24]%(jf)TO KEEP YOUR FRIENDS AS FRIENDS,\w4 YOU SHOULD TRY BEING A GOOD FRIEND TO THEM! \w8HOWEVER,\w4 IF YOU GIVE MORE THAN YOU RECEIVE AND YOU NEED TO DO SOMETHING CONSTANTLY TO KEEP THEM CLOSE AND EARN THEIR FAVOR,\w4 MAYBE YOU DO NOT NEED THEM AS YOUR FRIENDS. \w8A GOOD FRIENDSHIP IS TWO-SIDED!%(ConvCancel)\e"
 	"\0\s[24]%(jf)THAT DEPENDS ON THE CONTEXT. \w8\s[6]IF YOU WANT TO KEEP YOUR FRIENDS HAPPY,\w4 SUPPORT THEM! \w8IF YOU WANT TO KEEP YOUR FRIENDS CLOSE,\w4 USE A HUG! \w8IF YOU WANT TO KEEP YOUR FRIENDS IN YOUR BASEMENT,\w4 RETHINK YOUR LIFE CHOICES!!!%(ConvCancel)\e"
@@ -732,7 +900,7 @@ Select.keepfriend
 		  
 	  }
 	  
-	  
+	}
 
 
 }
@@ -916,7 +1084,7 @@ Select.doubt
 	
 	}
 	
-	if badbad <= 6
+	else
 	{
 		
 		
@@ -963,7 +1131,7 @@ Select.anxiety
 	
 	}
 	
-	if badbad <= 6
+	else
 	{
 	"\0\s[24]%(jf)WHEN YOU ARE WORRYING ABOUT SOMETHING,\w4 IT IS VERY EASY TO LET YOUR THOUGHTS SPIRAL OUT OF CONTROL... \w8AND IT IS NOT YOUR FAULT! \w8BUT TRY TO STAY PRESENT,\w4 INSTEAD OF LETTING THEM CARRY YOU AWAY. \w8CONCENTRATE ON WHAT YOUR BODY FEELS. \w8\s[6]OR WHAT YOU CAN HEAR,\w4 SEE AND SMELL AROUND YOU! \w8IT IS CALLED 'GROUNDING'. \w8PLANT YOURSEL FIRMLY AND GET A GOOD GULP OF OXYGEN,\w4 LIKE A LITTLE FLOWER TAKING ROOT.%(ConvCancel)\e"
 	"\0\s[24]%(jf)THOUGHTS CAN BE LIARS. \w8OFTEN,\w4 THEY CAN BLOW LITTLE BAD THINGS OUT OF PROPORTION. \w8WHEN THAT HAPPENS,\w4 TRY TO THINK OF THREE THINGS: \w8THE BEST POSSIBLE OUTCOME,\w4 \w8THE WORST POSSIBLE OUTCOME \w8AND WHAT WILL MOST LIKELY HAPPEN. \w8AND THEN REMIND YOURSELF THAT,\w4 EVEN IF THINGS GO WRONG,\w4 YOU CAN HANDLE THIS!%(ConvCancel)\e"
@@ -999,7 +1167,7 @@ Select.badstress
 	"\0\s[4]%(terrified)%(ConvCancel)\e"
 	}
 	
-	if badbad <= 6
+	else
 	{
 	 "\0\s[6]%(jf)THERE ARE DIFFERENT WAYS TO FEEL BETTER... \w8WHEN YOU NEED A QUICK ONE,\w4 TRY TO IMAGINE YOURSELF IN A HAPPY PLACE! \w8\s[0]A PLACE FROM A NICE MEMORY,\w4 OR A DREAM PLACE YOU WOULD LIKE TO VISIT. \w8IMAGINE YOURSELF THERE,\w4 HAVING FUN,\w4 DOING WHATEVER YOU LIKE! \w8THINK OF HOW IT WOULD FEEL TO SMELL AND TOUCH ALL THE THINGS THERE. \w8\s[24]IT IS NOT A LONG-TERM SOLUTION,\w4 BUT IT CAN BE A GOOD FIRST STEP.%(ConvCancel)\e"
 	 "\0\s[24]%(jf)IF YOU NEED A QUICK SOLUTION,\w4 TRY TENSING AND RELAXING YOUR MUSLES GROUP BY GROUP! \w8FIRST THE HANDS,\w4 THEN THE ARMS... \w8SHOULDERS... \w8BACK... \w8FEET,\w4 THEN LEGS,\w4 THEN THIGHS... \w8AND FINALLY,\w4 YOUR FACE.%(ConvCancel)\e"
@@ -1088,7 +1256,7 @@ Select.cheerup
 	
     
 	
-	if badbad <= 6
+	else
 	{
 		
 		
@@ -1137,7 +1305,7 @@ Select.telljoke
 	
 	if gotwhatscoming == 1
 	{
-			"\0\s[50]*You tell the scarf a joke about %(jokerandom). \w8"
+			"\0\s[50]*You tell the scarf a joke about %(jokerandom) \w8"
 			--
 			"Nothing happens."
 			"It stays idle."
@@ -1146,7 +1314,7 @@ Select.telljoke
 			"It does not move."
 			"It does not approve."
 			--
-			"\e"
+			"%(ConvCancel)\e"
 	}
 	
 	else
@@ -1166,7 +1334,8 @@ Select.telljoke
 		"\0\s[1]%(terrified)%(ConvCancel)\e"
 	}
 	
-
+   else
+   {
 	
 	
 	"\0\s[3]%(jf)LET ME THINK... \w8\s[6]OH! \w8A SKELETON WALKS INTO A BAR. \w8\w8\w8HE SAYS: 'OUCH!' \w8\s[24]BECAUSE HE NOW LEADS A HEALTHY LIFESTYLE AND DOES NOT WANT TO BE TEMPTED BY SUCH PLACES AGAIN. \w8\s[6]SO HE TURNS AROUND AND LEAVES THE BAR AND NEVER ENTERS A BAR AGAIN. \w8YOU CAN SAY HE AVOIDS THEM BAR NONE.%(ConvCancel)\e"
@@ -1186,7 +1355,7 @@ Select.telljoke
 	"\0\s[6]%(jf)HOW DO YOU TELL A BABY SPACE SKELETON TO GO TO SLEEP? \w8\w8\w8\s[24]YOU TAKE A CRADLE AND YOU ROCKET! \w8WHERE DO YOU GET MILK TO FEED THEM? \w8\w8\w8THE SPACE GROCERY SHOP! \w8\w8\w8\w8\w8\s[6]...IT IS SITUATED ALONG THE MILKY WAY,\w4 YES.%(ConvCancel)\e"
 
 	
-	
+   }
 	
 	}
 }
@@ -1310,7 +1479,9 @@ Select.thanksalot
 		"\0\s[0]*You thank Jazz for not having a spine to stand up to you. \w8\s[4]%(postapology) %(ConvCancel)\e"
 	}
 	
-		
+		else
+			
+			{
     if jazzfriend == 1 || jazzlover == 1
 	{
 		
@@ -1333,7 +1504,7 @@ Select.thanksalot
 	
 
 
-
+}
 
 
 
@@ -1732,7 +1903,7 @@ Select.gift
 			}
 			
 		  "\0\s[50]*There is nothing to give to a scarf. \w8Except for some fabric freshener,\w4 perhaps.%(ConvCancel)\e"
-		   
+			
 		}
 	else {
 	"*You decide to give him... \w8\n\n\_q"
@@ -1791,6 +1962,23 @@ Select.givesnack
 	{
 	
 	
+	if totappoints > 30 || badbad > 6
+	{
+		
+		snackeat += 1
+		fedjazz += 1
+	"\0\s[0]*You give him a sandwich. \w8\s[3]Jazz looks at you warily... \w8\s[33]but he still takes it,\w4 \s[0]after a little pause.%(ConvCancel)\e"
+	"\0\s[0]*You hand an apple over to him. \w8\s[3]Jazz pauses,\w4 looking it all over. \w8\s[33]After studying it \s[0]he takes it with a barely perceptible nod.%(ConvCancel)\e"
+	"\0\s[0]*You give him a snack bar. \w8\s[3]He looks confused and wary, \w8\s[33]but he still takes it s[0]and takes a small cautious bite.%(ConvCancel)\e"
+	"\0\s[0]*You give him a banana. \w8\s[33]Jazz takes it hesitantly, \w8\s[0]watching your face all the time. \w8...He does not eat it. %(ConvCancel)\e"
+	"\0\s[0]*You hand him a small quiche. \w8\s[4]Jazz sighs with a strange expression. \w8\s[33]He takes it carefully \s[4]and stares at it for a long time,\w4 not even trying to eat it...%(ConvCancel)\e"
+	"\0\s[0]*You give him a bowl of soup. \w8\s[3]He studies your face... \w8\s[33]He still snatches it \s[0]and drinks it,\w4 though.%(ConvCancel)\e"
+	"\0\s[0]*You give him a bowl of salad. \w8\n\n\s[3]%(jf)...OH. %(df)\w8\n\n\s[33]He takes it \s[0]and carefully picks out the pieces he does not like before digging in.%(ConvCancel)\e"
+	"\0\s[0]*You give him some fried chicken. \w8\n\n\s[4]%(jf)...THANK YOU. %(df)\w8\n\n\s[33]He takes it with a guarded expression \s[0]but at least he seems to like the taste.%(ConvCancel)\e"
+	
+	}
+	else
+	{
 	if lovelove < 50
 	{
 		
@@ -1838,25 +2026,11 @@ Select.givesnack
 	"\0\s[0]*You give him some fried chicken. \w8\n\n\s[21]%(jf)MEAT IS THE BEST. \w8MUCH BETTER THAN THE GREENS. \w8THEY ARE HEALTHY AND ALL,\w4 BUT... %(df)\w8\n\n\s[33]Jazz stops monologuing to snatch the chicken from your hands \w8\s[37]and devour it in seconds. \w8What a barbarian.%(ConvCancel)\e"
 	}
 	
-	if totappoints > 30 || badbad > 6
-	{
-		
-		snackeat += 1
-		fedjazz += 1
-	"\0\s[0]*You give him a sandwich. \w8\s[3]Jazz looks at you warily... \w8\s[33]but he still takes it,\w4 \s[0]after a little pause.%(ConvCancel)\e"
-	"\0\s[0]*You hand an apple over to him. \w8\s[3]Jazz pauses,\w4 looking it all over. \w8\s[33]After studying it \s[0]he takes it with a barely perceptible nod.%(ConvCancel)\e"
-	"\0\s[0]*You give him a snack bar. \w8\s[3]He looks confused and wary, \w8\s[33]but he still takes it s[0]and takes a small cautious bite.%(ConvCancel)\e"
-	"\0\s[0]*You give him a banana. \w8\s[33]Jazz takes it hesitantly, \w8\s[0]watching your face all the time. \w8...He does not eat it. %(ConvCancel)\e"
-	"\0\s[0]*You hand him a small quiche. \w8\s[4]Jazz sighs with a strange expression. \w8\s[33]He takes it carefully \s[4]and stares at it for a long time,\w4 not even trying to eat it...%(ConvCancel)\e"
-	"\0\s[0]*You give him a bowl of soup. \w8\s[3]He studies your face... \w8\s[33]He still snatches it \s[0]and drinks it,\w4 though.%(ConvCancel)\e"
-	"\0\s[0]*You give him a bowl of salad. \w8\n\n\s[3]%(jf)...OH. %(df)\w8\n\n\s[33]He takes it \s[0]and carefully picks out the pieces he does not like before digging in.%(ConvCancel)\e"
-	"\0\s[0]*You give him some fried chicken. \w8\n\n\s[4]%(jf)...THANK YOU. %(df)\w8\n\n\s[33]He takes it with a guarded expression \s[0]but at least he seems to like the taste.%(ConvCancel)\e"
 	
-	}
 	}
 
 }
-
+}
 
 
 Select.givehug
@@ -1865,6 +2039,26 @@ Select.givehug
 	hughug += 1
 	lovelove += 1
 	
+	
+	if totappoints > 30 || badbad > 6
+	{
+		"\0\s[28]*You give Jazz a hug. \w8He seems... confused and hesitant? \w8\s[51]But he hugs you back anyway.%(ConvCancel)\e"
+		"\0\s[0]*You demand a hug. \w8Jazz stares at you in a strange way, \w8\s[51]but he still puts his hands around you.%(ConvCancel)\e"
+		"\0\s[0]*You tell Jazz you want to hug him. \n\n\w8\s[4]%(jf)REALLY? THERE IS NO CATCH,\w4 RIGHT? \w8YOU WOULD NOT TRY TO PINCH ME OR SOMETHING? \w8OR HIT ME WITH YOUR HEAD? OR... %(df)\n\n\w8\s[28]*You shut him up by hugging him. \w8He freezes, \w8\s[35]then returns the embrace,\w4 looking somewhat glad to stay unharmed.%(ConvCancel)\e"
+		"\0\s[28]*You hug Jazz. \w8He seems unprepared for this... \w8\s[35]but then he smiles at you hopefully and puts his hands around you too. \n\n\w8%(jf)IS IT YOUR WAY OF SAYING SORRY? \w8\s[34]IT'S OKAY! \w8I ONLY HOPE YOU WON'T DO IT AGAIN. %(ConvCancel)\e"
+	}
+	
+	if totappoints > 50 || badbad > 50
+	{
+		"\0\s[28]*You give Jazz a hug. \w8He flinches and stares at you helplessly...%(ConvCancel)\e"
+		"\0\s[0]*You demand a hug. \w8Jazz tries to pretend that he hasn't heard you. \w8You still hug him. \s[28]\w8He feels very stiff...%(ConvCancel)\e"
+		"\0\s[0]*You tell Jazz you want to hug him. \w8For some reason,\w4 he seems disturbed. \n\n\w8\s[4]... \n\n\w8\s[28]You hug him tight. \w8...Jazz looks away.%(ConvCancel)\e"
+		"\0\s[28]*You hug Jazz. \w8\s[4]He fidgets in your embrace,\w4 waiting for it to be over...%(ConvCancel)\e"
+	}
+	
+	else
+		
+		{
 	
 	if jazzfriend == 1 || jazzlover == 1
 	{
@@ -1885,7 +2079,7 @@ Select.givehug
 		"\0\s[28]*You hug the skeleton. \w8He pauses \w3\s[35]and hugs you back. \w8He is very pointy and hard to the touch... \w8you are not sure what else you could expect.%(ConvCancel)\e"
 	}
 	
-	elseif lovelove > 50 
+	if lovelove > 50 
 	{
 		lovelove += 1
 		"\0\s[21]*You hug Jazz. \w8\s[35]He hugs you back! \w8\s[34]Everyone is happy about this.%(ConvCancel)\e"
@@ -1899,21 +2093,7 @@ Select.givehug
 	
 	
 	
-	if totappoints > 30 || badbad > 6
-	{
-		"\0\s[28]*You give Jazz a hug. \w8He seems... confused and hesitant? \w8\s[51]But he hugs you back anyway.%(ConvCancel)\e"
-		"\0\s[0]*You demand a hug. \w8Jazz stares at you in a strange way, \w8\s[51]but he still puts his hands around you.%(ConvCancel)\e"
-		"\0\s[0]*You tell Jazz you want to hug him. \n\n\w8\s[4]%(jf)REALLY? THERE IS NO CATCH,\w4 RIGHT? \w8YOU WOULD NOT TRY TO PINCH ME OR SOMETHING? \w8OR HIT ME WITH YOUR HEAD? OR... %(df)\n\n\w8\s[28]*You shut him up by hugging him. \w8He freezes, \w8\s[35]then returns the embrace,\w4 looking somewhat glad to stay unharmed.%(ConvCancel)\e"
-		"\0\s[28]*You hug Jazz. \w8He seems unprepared for this... \w8\s[35]but then he smiles at you hopefully and puts his hands around you too. \n\n\w8%(jf)IS IT YOUR WAY OF SAYING SORRY? \w8\s[34]IT'S OKAY! \w8I ONLY HOPE YOU WON'T DO IT AGAIN. %(ConvCancel)\e"
-	}
-	
-	elseif totappoints > 50 || badbad > 50
-	{
-		"\0\s[28]*You give Jazz a hug. \w8He flinches and stares at you helplessly...%(ConvCancel)\e"
-		"\0\s[0]*You demand a hug. \w8Jazz tries to pretend that he hasn't heard you. \w8You still hug him. \s[28]\w8He feels very stiff...%(ConvCancel)\e"
-		"\0\s[0]*You tell Jazz you want to hug him. \w8For some reason,\w4 he seems disturbed. \n\n\w8\s[4]... \n\n\w8\s[28]You hug him tight. \w8...Jazz looks away.%(ConvCancel)\e"
-		"\0\s[28]*You hug Jazz. \w8\s[4]He fidgets in your embrace,\w4 waiting for it to be over...%(ConvCancel)\e"
-	}
+		}
 	
 }
 
@@ -1936,7 +2116,15 @@ Select.echoice
 {
 	givegift += 1
 	
+	if totappoints > 30 || badbad > 6
+	{
+		
+		"\0\s[0]*You give him a book about %(easybook). %(ebookreact3) %(ConvCancel)\e"
+		
+	}
 	
+	else 
+	{
 		"\0\s[0]*You give him a book about %(easybook). %(ebookreact1)%(ConvCancel)\e"
 		
 	
@@ -1946,11 +2134,6 @@ Select.echoice
 		"\0\s[0]*You give him a book about %(easybook). %(ebookreact2) %(ConvCancel)\e"
 	}
 	
-	if totappoints > 30 || badbad > 6
-	{
-		
-		"\0\s[0]*You give him a book about %(easybook). %(ebookreact3) %(ConvCancel)\e"
-		
 	}
 	
 }
@@ -1958,12 +2141,6 @@ Select.echoice
 Select.hchoice
 {
 	givegift += 1
-	"\0\s[0]*You give him a book about %(hardbook). %(hbookreact1)%(ConvCancel)\e"
-	
-    if jazzfriend == 1 || jazzlover == 1
-	{
-		"\0\s[0]*You give him a book about %(hardbook). %(hbookreact2) %(ConvCancel)\e"
-	}
 	
 	if totappoints > 30 || badbad > 6
 	{
@@ -1971,6 +2148,17 @@ Select.hchoice
 		"\0\s[0]*You give him a book about %(hardbook). %(hbookreact3) %(ConvCancel)\e"
 		
 	}
+	
+	else 
+	{
+	"\0\s[0]*You give him a book about %(hardbook). %(hbookreact1)%(ConvCancel)\e"
+	
+    if jazzfriend == 1 || jazzlover == 1
+	{
+		"\0\s[0]*You give him a book about %(hardbook). %(hbookreact2) %(ConvCancel)\e"
+	}
+	}
+	
 }
 
 
@@ -1979,7 +2167,14 @@ Select.fchoice
 {
 	givegift +=1
 	lovelove +=1
-	
+	if totappoints > 30 || badbad > 6
+	{
+		
+		"\0\s[0]*You give him a book about %(funbook). %(fbookreact3) %(ConvCancel)\e"
+		
+	}
+	else 
+	{
 	"\0\s[0]*You give him a book about %(funbook). %(fbookreact1)%(ConvCancel)\e"
 
 	if jazzfriend == 1 || jazzlover == 1
@@ -1987,11 +2182,6 @@ Select.fchoice
 		"\0\s[0]*You give him a book about %(funbook). %(fbookreact2) %(ConvCancel)\e"
 	}
 	
-	if totappoints > 30 || badbad > 6
-	{
-		
-		"\0\s[0]*You give him a book about %(funbook). %(fbookreact3) %(ConvCancel)\e"
-		
 	}
 }
 
@@ -2007,12 +2197,11 @@ Select.givetoy
 	--
 	"\![*]\q[A figurine,fgrn]"
 	--
-	if jazzlover == 1 || jazzfriend == 1 
+	if jazzlover == 1 || jazzfriend == 1 && rockgiven == 0
 	{
 	"\n\![*]\q[A pet rock,ptrck]"
-	--
 	}
-	
+	--
 	"\n\n\![*]\q[Back to menu,BACKTOMENU] \![*]\q[Nevermind,CANCEL]\e"
 }
 
@@ -2022,14 +2211,18 @@ Select.rcube
 	
 	if cubegiven != 1
 	{
-		"\0\s[0]*You give Jazz a Rubic's cube. \w8\n\n\s[3]%(jf)OH,\w4 IT IS THAT LOGIC PUZZLE THING? \w8LET ME SEE... %(df)\w8\n\n\s[33]He picks it up \s[37]and busies himself... \w8only to put it away for later after a few shifts. \w8\n\n\s[24]WELP! \w8I SAW THAT I AM STILL SLOW AT THAT.%(cubeg)%(ConvCancel)\e"
-	
-	if totappoints > 30 || badbad > 6
+		if totappoints > 30 || badbad > 6
 	{
 		"\0\s[0]*You give Jazz a Rubic's cube. \w8\s[52]He picks it up \s[1]with a tiny nod and puts it away immediately. \w8Won't he even try to solve it?...%(cubeg)%(ConvCancel)\e"
 	 
 	}
-
+	
+	else
+	{
+	
+	"\0\s[0]*You give Jazz a Rubic's cube. \w8\n\n\s[3]%(jf)OH,\w4 IT IS THAT LOGIC PUZZLE THING? \w8LET ME SEE... %(df)\w8\n\n\s[33]He picks it up \s[37]and busies himself... \w8only to put it away for later after a few shifts. \w8\n\n\s[24]WELP! \w8I SAW THAT I AM STILL SLOW AT THAT.%(cubeg)%(ConvCancel)\e"
+	
+	}
 	}
 
     else
@@ -2048,13 +2241,16 @@ Select.trckt
 	
 	 if rocketgiven != 1
 	{
-		"\0\s[0]*You give Jazz a toy rocket. \w8\s[33]He grabs it out of your hands \s[37]faster than you can blink! \w8Looks like someone is already practicing rocket sounds. \w8Oh,\w4 no,\w4 that's just his purr. %(rockg)%(ConvCancel)\e"
-	
-	if totappoints > 30 || badbad > 6
+		if totappoints > 30 || badbad > 6
 	{
 		"\0\s[0]*You hand Jazz a toy rocket. \w8\s[33]He grabs it in a blink \s[37]and genuinely grins for a moment \s[43]before abruptly remembering himself. \w8\s[44]And yourself. \w8Mostly your self.%(rockg)%(ConvCancel)\e"
 
 	}
+	else 
+	{
+	"\0\s[0]*You give Jazz a toy rocket. \w8\s[33]He grabs it out of your hands \s[37]faster than you can blink! \w8Looks like someone is already practicing rocket sounds. \w8Oh,\w4 no,\w4 that's just his purr. %(rockg)%(ConvCancel)\e"
+	}
+	
 	}
 	
 	else
@@ -2067,6 +2263,17 @@ Select.trckt
    Select.jpuzl
    {
 	   givegift += 1
+		if totappoints > 30 || badbad > 6
+	{
+		"\0\s[0]*You give Jazz a %(numberp)-piece jigsaw puzzle. \w8\s[52]He reluctantly picks it up,\w4 \s[1]sweating. \w8He wonders if you are laughing at him.%(puzg)%(ConvCancel)\e"	
+		"\0\s[0]*You hand Jazz a %(numberp)-piece jigsaw puzzle. \w8\s[52]He does not want to take it,\w4 \s[1]but he still does. \w8Perhaps doing what you want is the right answer. \w8He is not a stranger to being tested in strange ways.%(puzg)%(ConvCancel)\e"
+		"\0\s[0]*You give Jazz a %(numberp)-piece jigsaw puzzle. \w8\s[52]He takes it,\w4 \s[1]thoroughly intimidated... %(puzg)%(ConvCancel)\e"
+		"\0\s[0]*You give Jazz a %(numberp)-piece jigsaw puzzle. \w8\s[52]He takes it,\w4 \s[1]even though he is not thrilled. %(puzg)%(ConvCancel)\e"
+		"\0\s[0]*You give Jazz a %(numberp)-piece jigsaw puzzle. \w8\s[52]He reaches out for it,\w4 \s[1]wincing all the way through. \w8Are your gifts as tricky as you are? %(puzg)%(ConvCancel)\e"
+	}
+	     
+		else
+		{
 		"\0\s[0]*You give Jazz a %(numberp)-piece jigsaw puzzle. \w8\s[52]He picks it up,\w4 \s[1]slightly sweating. \w8You guess that it will take him a while... %(puzg)%(ConvCancel)\e"
 		"\0\s[0]*You give Jazz a %(numberp)-piece jigsaw puzzle. \w8\s[52]He picks it up,\w4 \s[1]visibly worried. \w8\n\n\s[40]%(jf)I LIKE PUZZLES,\w4 DON'T WORRY! \w8BUT THEY MAKE MY EYES BURN VERY QUICK. \w8ALL THOSE SMALL PIECES... \w8THEY CONFUSE ME. \w8\s[6]YOU CAN SAY THAT THEY PU- \w8\s[3]... \w8\w8\w8...I REFUSE TO SAY THAT. %(puzg)%(ConvCancel)\e"
 		"\0\s[0]*You give Jazz a %(numberp)-piece jigsaw puzzle. \w8\s[52]He picks it up \s[1]after a moment of hesitation. \w8Looks like he is a little daunted by the task... %(puzg)%(ConvCancel)\e"
@@ -2076,15 +2283,7 @@ Select.trckt
         "\0\s[0]*You give Jazz a %(numberp)-piece jigsaw puzzle. \w8\s[52]He picks it \s[1]with a quiet whimper when he sees the number of pieces printed on the box...%(puzg)%(ConvCancel)\e"
 		"\0\s[0]*You give Jazz a %(numberp)-piece jigsaw puzzle. \w8\s[52]He takes it,\w4 \s[1]but he puts it away quickly. \w8This is a big box for such a (relatively) small skeleton... %(puzg)%(ConvCancel)\e"
 	   
-	   if totappoints > 30 || badbad > 6
-	{
-		"\0\s[0]*You give Jazz a %(numberp)-piece jigsaw puzzle. \w8\s[52]He reluctantly picks it up,\w4 \s[1]sweating. \w8He wonders if you are laughing at him.%(puzg)%(ConvCancel)\e"	
-		"\0\s[0]*You hand Jazz a %(numberp)-piece jigsaw puzzle. \w8\s[52]He does not want to take it,\w4 \s[1]but he still does. \w8Perhaps doing what you want is the right answer. \w8He is not a stranger to being tested in strange ways.%(puzg)%(ConvCancel)\e"
-		"\0\s[0]*You give Jazz a %(numberp)-piece jigsaw puzzle. \w8\s[52]He takes it,\w4 \s[1]thoroughly intimidated... %(puzg)%(ConvCancel)\e"
-		"\0\s[0]*You give Jazz a %(numberp)-piece jigsaw puzzle. \w8\s[52]He takes it,\w4 \s[1]even though he is not thrilled. %(puzg)%(ConvCancel)\e"
-		"\0\s[0]*You give Jazz a %(numberp)-piece jigsaw puzzle. \w8\s[52]He reaches out for it,\w4 \s[1]wincing all the way through. \w8Are your gifts as tricky as you are? %(puzg)%(ConvCancel)\e"
-	}
-	      
+		}
 	   
    }
 
@@ -2094,6 +2293,24 @@ Select.plsh
 	givegift += 1
 	lovelove += 1
 	
+	if totappoints > 30 || badbad > 6
+	{
+		"\0\s[0]*You give Jazz a stuffed plushie. \w8\s[52]He takes it with \s[1]a quiet ''%(jf)thank you%(df)'' and presses it to his chest before putting it away - as if afraid you might take it back.%(plushg)%(ConvCancel)\e"
+	    "\0\s[0]*You hand Jazz a stuffed plushie. \w8\s[52]He takes it with \s[4]barely a twitch in his bony fingers. \w8\w8\w8...Did he whisper something about ''keeping it safe''?%(plushg)%(ConvCancel)\e"
+		"\0\s[0]*You give Jazz a stuffed plushie. \w8\s[33]He picks it \s[37]and looks up at you with an expression of confused hope.%(plushg)%(ConvCancel)\e"
+		"\0\s[0]*You give Jazz a stuffed plushie. \w8\s[33]He takes it  \s[37]very,\w4 very carefully. \w8Looks like he likes it. \w8And also like you gained a bonus point or two in his eyes.%(plushg)%(ConvCancel)\e"
+		"\0\s[0]*You give Jazz a stuffed plushie. \w8\s[52]He picks it,\w4 \s[1]wondering if you will ever demand it back... \w8It is not like you ever did this,\w4 but he cannot help but worry. \w8You do not seem on the nice side,\w4 after all.%(plushg)%(ConvCancel)\e"
+		"\0\s[0]*You give Jazz a stuffed plushie. \w8\s[33]He takes it \s[37]and puts it away,\w4 deciding to roll with this for now even if he is slightly surprised. \w8It is not in your character,\w4 but your character is not a nice one.%(plushg)%(ConvCancel)\e"
+	    
+		if plushgiven > 1
+		{
+			"\0\s[0]*You give Jazz a stuffed plushie. \w8\s[33]He takes it gingerly \s[37]with a rare smile... \w8\n\n%(jf)THANKS!! \w8\s[4]AND. \w8UM. \w8I FEEL LIKE YOU ARE ON THE RIGHT ROAD THERE! \w8\s[40]SOFT THINGS ARE REALLY GOOD! \w8P - PERHAPS YOU COULD LEARN SOMETHING FROM THEM?..%(plushg)%(ConvCancel)\e"
+			"\0\s[0]*You hand Jazz a stuffed plushie. \w8\s[33]He is surprised \s[37]in a good way... \w8both by getting another plushie and by you being nice more than once in a row.%(plushg)%(ConvCancel)\e"
+		}
+	}
+	
+	else
+	{
 	
 	"\0\s[0]*You give Jazz a stuffed plushie. \w8\s[33]He takes it with \s[37]a sigh. \w8\s[22]\n\n%(jf)I WILL TAKE GOOD CARE OF THEM,\w4 PROMISE!%(plushg)%(ConvCancel)\e"
 	"\0\s[0]*You give Jazz a stuffed plushie. \w8\s[33]He takes it with \s[37]a smile. \w8\s[22]\n\n%(jf)THANKS!!! \w8I WILL LOVE THEM,\w4 CHERISH THEM,\w4 AND POSSIBLY CHEW ON THEM AS A SIGN OF AFFECTION! \w8\s[5]LOVE CAN BE TOUGH!!!%(plushg)%(ConvCancel)\e"
@@ -2113,20 +2330,6 @@ Select.plsh
 
 		}
 		
-		if totappoints > 30 || badbad > 6
-	{
-		"\0\s[0]*You give Jazz a stuffed plushie. \w8\s[52]He takes it with \s[1]a quiet ''%(jf)thank you%(df)'' and presses it to his chest before putting it away - as if afraid you might take it back.%(plushg)%(ConvCancel)\e"
-	    "\0\s[0]*You hand Jazz a stuffed plushie. \w8\s[52]He takes it with \s[4]barely a twitch in his bony fingers. \w8\w8\w8...Did he whisper something about ''keeping it safe''?%(plushg)%(ConvCancel)\e"
-		"\0\s[0]*You give Jazz a stuffed plushie. \w8\s[33]He picks it \s[37]and looks up at you with an expression of confused hope.%(plushg)%(ConvCancel)\e"
-		"\0\s[0]*You give Jazz a stuffed plushie. \w8\s[33]He takes it  \s[37]very,\w4 very carefully. \w8Looks like he likes it. \w8And also like you gained a bonus point or two in his eyes.%(plushg)%(ConvCancel)\e"
-		"\0\s[0]*You give Jazz a stuffed plushie. \w8\s[52]He picks it,\w4 \s[1]wondering if you will ever demand it back... \w8It is not like you ever did this,\w4 but he cannot help but worry. \w8You do not seem on the nice side,\w4 after all.%(plushg)%(ConvCancel)\e"
-		"\0\s[0]*You give Jazz a stuffed plushie. \w8\s[33]He takes it \s[37]and puts it away,\w4 deciding to roll with this for now even if he is slightly surprised. \w8It is not in your character,\w4 but your character is not a nice one.%(plushg)%(ConvCancel)\e"
-	    
-		if plushgiven > 1
-		{
-			"\0\s[0]*You give Jazz a stuffed plushie. \w8\s[33]He takes it gingerly \s[37]with a rare smile... \w8\n\n%(jf)THANKS!! \w8\s[4]AND. \w8UM. \w8I FEEL LIKE YOU ARE ON THE RIGHT ROAD THERE! \w8\s[40]SOFT THINGS ARE REALLY GOOD! \w8P - PERHAPS YOU COULD LEARN SOMETHING FROM THEM?..%(plushg)%(ConvCancel)\e"
-			"\0\s[0]*You hand Jazz a stuffed plushie. \w8\s[33]He is surprised \s[37]in a good way... \w8both by getting another plushie and by you being nice more than once in a row.%(plushg)%(ConvCancel)\e"
-		}
 	}
 		
 }
@@ -2138,20 +2341,6 @@ Select.fgrn
 	givegift += 1
 	lovelove += 1
 	
-	
-	    "\0\s[0]*You hand Jazz a plastic figurine. \w8\s[33]He takes it,\w4 \s[37]moves its arms and legs a little and puts it away with a grateful nod.%(figg)%(ConvCancel)\e"
-	    "\0\s[0]*You hand Jazz a plastic figurine. \w8\s[33]He takes it,\w4 \s[42]immediately starts making battle noises and swings its arms and legs around. \w8Looks like he is having a good time!%(figg)%(ConvCancel)\e"
-	    "\0\s[0]*You hand Jazz a plastic figurine. \w8\s[33]He grabs it,\w4 \s[22]already muttering something about fight strategies and finishing moves.%(figg)%(ConvCancel)\e"
-	    "\0\s[0]*You hand Jazz a plastic figurine. \w8\s[33]He accepts \s[21]your humble offering. \w8His favor is yours. \w8The beast is pleased. \w8You did well.%(figg)%(ConvCancel)\e"
-	    "\0\s[0]*You hand Jazz a plastic figurine. \w8\s[33]He takes it,\w4 \s[22]and in a blink he is lost to the world of living people... \w8instead sinking into the world of plastic warriors and cardboard castles.%(figg)%(ConvCancel)\e"
-	    "\0\s[0]*You hand Jazz a plastic figurine. \w8\s[33]He picks it,\w4 \s[22]grinning. \w8\n\n%(jf)THANKS!! \w8I HOPE IT IS NOT MADE FROM SOMETHING TOXIC,\w4 BECAUSE I PLAY THE PART OF THE NEEDLE-TEETHED BITEY DRAGON AND SOMETIMES I GET STUCK IN THE ROLE. \w8\s[6]I AM NOT BEING WEIRD,\w4 THIS IS PURE METHOD ACTING.%(figg)%(ConvCancel)\e"
-	    "\0\s[0]*You hand Jazz a plastic figurine. \w8\s[33]He takes it from \s[37]your hands,\w4 nodding. \w8I guess this is what he is going to do now...%(figg)%(ConvCancel)\e"
-		
-		if figgiven > 1
-		{
-			 "\0\s[0]*You hand Jazz a plastic figurine. \n\n\s[3]%(jf)OH. ANOTHER ONE? %(df)\n\n\w8\s[33]He takes it,\w4 \s[42]pulls out the ones he has already and enacts a tiny battle before you. \w8It is sad that such low-effort animation does not let you see his tactical genius.%(figg)%(ConvCancel)\e"
-		}
-		
 	if totappoints > 30 || badbad > 6
 	{
 		"\0\s[0]*You hand Jazz a plastic figurine. \w8\s[52]He takes it,\w4 \s[1]stares at it for a few seconds and then quickly hides it... \w8somewhere.%(figg)%(ConvCancel)\e"
@@ -2167,6 +2356,23 @@ Select.fgrn
 			 "\0\s[0]*You hand Jazz a plastic figurine. \w8\s[52]He takes it,\w4 \s[3]subtly wondering about your motives. \w8But he is not going to look a gifted figurine force in the mouth(s). %(figg)%(ConvCancel)\e"
 		}
      }
+	 
+	 else
+	 {
+	    "\0\s[0]*You hand Jazz a plastic figurine. \w8\s[33]He takes it,\w4 \s[37]moves its arms and legs a little and puts it away with a grateful nod.%(figg)%(ConvCancel)\e"
+	    "\0\s[0]*You hand Jazz a plastic figurine. \w8\s[33]He takes it,\w4 \s[42]immediately starts making battle noises and swings its arms and legs around. \w8Looks like he is having a good time!%(figg)%(ConvCancel)\e"
+	    "\0\s[0]*You hand Jazz a plastic figurine. \w8\s[33]He grabs it,\w4 \s[22]already muttering something about fight strategies and finishing moves.%(figg)%(ConvCancel)\e"
+	    "\0\s[0]*You hand Jazz a plastic figurine. \w8\s[33]He accepts \s[21]your humble offering. \w8His favor is yours. \w8The beast is pleased. \w8You did well.%(figg)%(ConvCancel)\e"
+	    "\0\s[0]*You hand Jazz a plastic figurine. \w8\s[33]He takes it,\w4 \s[22]and in a blink he is lost to the world of living people... \w8instead sinking into the world of plastic warriors and cardboard castles.%(figg)%(ConvCancel)\e"
+	    "\0\s[0]*You hand Jazz a plastic figurine. \w8\s[33]He picks it,\w4 \s[22]grinning. \w8\n\n%(jf)THANKS!! \w8I HOPE IT IS NOT MADE FROM SOMETHING TOXIC,\w4 BECAUSE I PLAY THE PART OF THE NEEDLE-TEETHED BITEY DRAGON AND SOMETIMES I GET STUCK IN THE ROLE. \w8\s[6]I AM NOT BEING WEIRD,\w4 THIS IS PURE METHOD ACTING.%(figg)%(ConvCancel)\e"
+	    "\0\s[0]*You hand Jazz a plastic figurine. \w8\s[33]He takes it from \s[37]your hands,\w4 nodding. \w8I guess this is what he is going to do now...%(figg)%(ConvCancel)\e"
+		
+		if figgiven > 1
+		{
+			 "\0\s[0]*You hand Jazz a plastic figurine. \n\n\s[3]%(jf)OH. ANOTHER ONE? %(df)\n\n\w8\s[33]He takes it,\w4 \s[42]pulls out the ones he has already and enacts a tiny battle before you. \w8It is sad that such low-effort animation does not let you see his tactical genius.%(figg)%(ConvCancel)\e"
+		}
+		
+	 }
 
 }
 		
@@ -2190,6 +2396,18 @@ Select.ptrck
 
 Select.givefive 
 {
+	if totappoints > 30 || badbad > 6
+	{
+	    "\0\s[0]*You tell Jazz to highfive you. \w8\s[8]\n\n%(jf)TO WHAT? \w8WHAT IS HIGH FIVE? %(df)\w8\n\nYou tell him that you know he knows. %(jf)\w8\s[3]\n\nI KNOW? \w8BUT I DON'T THINK I KNOW THAT I KNOW. \w8I MEAN,\w4 I KNOW WHAT I KNOW AND I KNOW THAT I KNOW WHAT I KNOW,\w4 BUT WHAT I DON'T KNOW I DON'T KNOW AND I KNOW THAT. \w8YOU KNOW? \w8\w8\w8\n\n%(df)*...By now you question everything and don't even know what you came here for.%(ConvCancel)\e"
+	    "\0\s[0]*You order Jazz to highfive you. \w8\s[3]\n\n%(jf)WHAT? \w8'HI FIVE'? \w8DO I HAVE TO GREET A FIVE? \w8WHO IS 'FIVE'? \w8IS YOUR NAME 'FIVE' ALL OF A SUDDEN? \w8\s[31]THEN HI,\w4 FIVE! %(df)\w8\n\n*You tell him to cut it. \w8Your name is still the same. \w8\n\n\s[0]%(jf)OH. \w8\w8\w8\s[1]...WHAT IS YOUR NAME,\w4 AGAIN??? %(ConvCancel)\e"
+		"\0\s[0]*You tell Jazz to highfive you. \w8\s[1]\n\n...\w8\w8\w8%(jf)WHAT IS HIGHFIVE? \w8IS IT A GRADE? \w8A HIGH ONE? \w8I AM SORRY,\w4 AT BEST I CAN GIVE YOU A 2+. \w8\n\n%(df)*You sigh.%(ConvCancel)\e"
+	    "\0\s[0]*You tell Jazz to highfive you. \w8\w8\w8\s[1]...He pretends he did not hear you.%(ConvCancel)\e"
+	    "\0\s[0]*You shout 'Highfive!' and lift your hand. \w8\s[1]Jazz just... \w8stares. \w8You slowly lower your hand.%(ConvCancel)\e"
+	    "\0\s[0]*You tell Jazz you want a highfive. \w8\s[1]He does not quite understand what you want \s[40]and flails around. \w8You forcefully smack your hand into his. \w8There. \w8Is it really that difficult?%(ConvCancel)\e"
+	}
+	
+	else
+	{
 	
 	"\0\s[0]*You ask Jazz for a highfive. \w8\s[31]He happily obliges! \w8\s[37]By smacking your tiny hand full-force.%(ConvCancel)\e"
 	"\0\s[0]*You lift your hand for a highfive,\w4 waving it a little. \w8\w8\w8\s[31]Jazz waves back. \w8\s[37]...Success?..%(ConvCancel)\e"
@@ -2199,19 +2417,6 @@ Select.givefive
 	"\0\s[0]*You ask Jazz to highfive you. \w8\s[31]He agrees with vigor! \w8\s[37]He'd probably highsix and highseven you too,\w4 if only he could.%(ConvCancel)\e"
 	"\0\s[0]*You raise your hand for a highfive. \w8\s[31]Jazz does not entirely understand it,\w4 but he raises his hand too,\w4 and you proudly smack your palm against his. \w8It sounds like patting an abacus.%(ConvCancel)\e"
 	"\0\s[0]*You decide to jump-highfive Jazz and run at him with your hand in the air. \w8\s[3]Jazz stares till the last possible moment,\w4 \s[31]but then he finally understands and raises his hand too. \w8He does not jump,\w4 but you barely reach his palm anyway.%(ConvCancel)\e"
-
-	
-	
-	
-	
-	if totappoints > 30 || badbad > 6
-	{
-	    "\0\s[0]*You tell Jazz to highfive you. \w8\s[8]\n\n%(jf)TO WHAT? \w8WHAT IS HIGH FIVE? %(df)\w8\n\nYou tell him that you know he knows. %(jf)\w8\s[3]\n\nI KNOW? \w8BUT I DON'T THINK I KNOW THAT I KNOW. \w8I MEAN,\w4 I KNOW WHAT I KNOW AND I KNOW THAT I KNOW WHAT I KNOW,\w4 BUT WHAT I DON'T KNOW I DON'T KNOW AND I KNOW THAT. \w8YOU KNOW? \w8\w8\w8\n\n%(df)*...By now you question everything and don't even know what you came here for.%(ConvCancel)\e"
-	    "\0\s[0]*You order Jazz to highfive you. \w8\s[3]\n\n%(jf)WHAT? \w8'HI FIVE'? \w8DO I HAVE TO GREET A FIVE? \w8WHO IS 'FIVE'? \w8IS YOUR NAME 'FIVE' ALL OF A SUDDEN? \w8\s[31]THEN HI,\w4 FIVE! %(df)\w8\n\n*You tell him to cut it. \w8Your name is still the same. \w8\n\n\s[0]%(jf)OH. \w8\w8\w8\s[1]...WHAT IS YOUR NAME,\w4 AGAIN??? %(ConvCancel)\e"
-		"\0\s[0]*You tell Jazz to highfive you. \w8\s[1]\n\n...\w8\w8\w8%(jf)WHAT IS HIGHFIVE? \w8IS IT A GRADE? \w8A HIGH ONE? \w8I AM SORRY,\w4 AT BEST I CAN GIVE YOU A 2+. \w8\n\n%(df)*You sigh.%(ConvCancel)\e"
-	    "\0\s[0]*You tell Jazz to highfive you. \w8\w8\w8\s[1]...He pretends he did not hear you.%(ConvCancel)\e"
-	    "\0\s[0]*You shout 'Highfive!' and lift your hand. \w8\s[1]Jazz just... \w8stares. \w8You slowly lower your hand.%(ConvCancel)\e"
-	    "\0\s[0]*You tell Jazz you want a highfive. \w8\s[1]He does not quite understand what you want \s[52]and flails around. \w8You forcefully smack your hand into his. \w8There. \w8Is it really that difficult?%(ConvCancel)\e"
 	}
 	
     }
@@ -2220,7 +2425,16 @@ Select.givefive
 
 Select.givenoogie
 {
+		if totappoints > 30 || badbad > 6
+	{
+		"\0\s[0]*You tell Jazz you want to noogie him. \w8\s[44]\4Jazz nonchalantly tries to exit your monitor. \w8He almost slips away completely \s[28]before the noogie reaches him. \w8But he stands no chance.%(ConvCancel)\e"
+		"\0\s[28]*You grab Jazz into a headlock and noogie him... \w8\s[44]It is not too much fun,\w4 since he simply freezes and waits for it to be over.%(ConvCancel)\e"
+		"\0\s[28]*You grind your fist into Jazz's skull,\w4 laughing. \w8\s[44]Jazz tries to laugh along. \w8He almost succeeds.%(ConvCancel)\e"
+		"\0\s[28]*You spring into action and noogie Jazz before he can even blink! \w8\w8\w8\s[40]\n\n%(jf)...AH. \w8A NOOGIE! \w8HA HA. \w8RIGHT. \w8\w8\w8\w8\w8........HA.%(ConvCancel)\e"
+	}
 	
+	else
+	{
 	"\0\s[0]*You beckon Jazz closer and,\w4 \s[21]when he leans in,\w4 you noogie \s[28]his boney head! \w8\n\n\s[36]%(jf)PLEASE DON'T NOOGIE THE SKELETON!!!%(ConvCancel)\e"
 	"\0\s[0]*You give Jazz a sly look. \w8\w8\w8\n\n\s[3]%(jf).....WHAT. %(df)\n\n\w8*You creep closer. \n\n\w8\s[1]%(jf)NO. %(df)\n\n\w8*You spring into action and sneak attack him with a noogie! \w8\n\n\s[36]%(jf)NOOOOOO!!!%(ConvCancel)\e"
 	"\0\s[28]*You plant your palm on top of Jazz's hand and forcibly rub it a few times! \w8\w8\w8\s[20]...He purrs. \w8Well,\w4 it's not the result you were working towards,\w4 but this is just as well.%(ConvCancel)\e"
@@ -2230,14 +2444,8 @@ Select.givenoogie
 	"\0\s[0]*You give Jazz a playful squint and move closer. \w8\n\n\s[8]%(jf)...STOP AND SEIZE THAT. \w8\n\n%(df)*You squint harder and grab him by the shoulders. \w8\n\n\s[36]%(jf)NOT ME!!! \w8DO NOT SEIZE ME!!! \w8\n\n%(df)*Too late. \w8The noogie is delivered.%(ConvCancel)\e"
 	"\0\s[0]*You crawl closer to the unsuspecting Jazz,\w4 cackling... \w8\s[42]Except he catches you in your steps and noogies you,\w4 instead! \w8Oh,\w4 how the tables have turned... \w8How cold is his bony revenge.%(ConvCancel)\e"
 	"\0\s[0]*You move closer to noogie Jazz,\w4 but he notices your attempt and,\w4 \s[21]thinking you want to pet him,\w4 leans himself... \w8\w8\w8...You cannot betray such trust,\w4 \s[20]so you end up petting him indeed.%(ConvCancel)\e"
-	
-	if totappoints > 30 || badbad > 6
-	{
-		"\0\s[0]*You tell Jazz you want to noogie him. \w8\s[44]\4Jazz nonchalantly tries to exit your monitor. \w8He almost slips away completely \s[28]before the noogie reaches him. \w8But he stands no chance.%(ConvCancel)\e"
-		"\0\s[28]*You grab Jazz into a headlock and noogie him... \w8\s[44]It is not too much fun,\w4 since he simply freezes and waits for it to be over.%(ConvCancel)\e"
-		"\0\s[28]*You grind your fist into Jazz's skull,\w4 laughing. \w8\s[44]Jazz tries to laugh along. \w8He almost succeeds.%(ConvCancel)\e"
-		"\0\s[28]*You spring into action and noogie Jazz before he can even blink! \w8\w8\w8\s[32]\n\n%(jf)...AH. \w8A NOOGIE! \w8HA HA. \w8RIGHT. \w8\w8\w8\w8\w8........HA.%(ConvCancel)\e"
 	}
+
 }
 
 
@@ -2248,6 +2456,16 @@ Select.givenoogie
 
 Select.givesmooch 
 {
+	if totappoints > 30 || badbad > 6
+	{
+		"\0\s[0]*You tell Jazz that you want a smooch. \w8\s[40]\n\n%(jf)...UM. \w8I DO NOT EXACTLY HAVE THE FACIAL EQUIPMENT FOR THAT,\w4 SO... \w8MAYBE YOU SHOULD ASK SOMEONE MEATIER? \w8\n\n%(df)*You tell him that you still want a smooch. \w8\s[44]He leans in,\w4 scrapes his teeth along your jaw,\w4 and stares at you questioningly. \w8\w8\w8...You don't know what you expected.%(ConvCancel)\e"
+		"\0\s[0]*You ask Jazz to smooch you. \w8\w8\w8...He pretends that he does not hear you. \w8You still reach out and \s[28]smooch him on the cheek. \w8\s[25]He does not know what to do with this!%(ConvCancel)\e"
+		"\0\s[28]*You grab Jazz by the front of his shirt,\w4 pull him down and smooch his cheek. \w8\s[44]This is his life now. \w8And his smooch.%(ConvCancel)\e"
+	    "\0\s[0]*You demand a smooch. \w8\w8\w8\n\n\s[8]%(jf)...I AM NOT SURE HOW YOU THINK THAT WILL GO? \w8\n\n%(df)*You frown and pull him down till his face is inches away from yours. \w8\s[44]He gets the hint and quickly presses his teeth to your cheek. \w8You release him,\w4 content.%(ConvCancel)\e"
+	}
+	
+	else
+	{
 	"\0\s[0]*You beckon Jazz closer and,\w4 \s[21]as he leans in,\w4 \s[28]you leave a smooch on his cheek! \w8\s[23]He nearly catches fire and hides from your kissy assaults.%(ConvCancel)\e"
 	"\0\s[0]*You ask Jazz if you can smooch him. \w8\s[3]\n\n%(jf)SMOOCH? \w8I GUESS YOU CAN! \w8DOES A HAND SUFFICE? \w8\n\n%(df)*You assure him that it does. \w8\s[33]Jazz offers you his hand,\w4 and you press your lips to it. \w8\s[37]It feels very bony and smells of grass.%(ConvCancel)\e"
 	"\0\s[0]*You ask Jazz for a smooch. \w8\w8\w8\s[8]\n\n%(jf)...I DON'T HAVE LIPS. \w8I CAN GENTLY BONK YOU WITH MY TEETH AT BEST?.. \w8\n\n%(df)*You insist that this is just as good. \w8\s[3]He is quite confused,\w4 but he leans in \s[29]and presses his teeth to the top of your head. \w8\s[0]Bonk.%(ConvCancel)\e"
@@ -2259,27 +2477,12 @@ Select.givesmooch
 	"\0\s[0]*You send Jazz a little air kiss. \w8\s[8]He is confused... \w8but you know that he is now carrying a tiny air kiss on his bony body.%(ConvCancel)\e"
 	"\0\s[28]*You jump till you manage to smooch Jazz on the cheek... \w8\s[20]He is so busy snorting at you that he does not even notice.%(ConvCancel)\e"
 
-	if totappoints > 30 || badbad > 6
-	{
-		"\0\s[0]*You tell Jazz that you want a smooch. \w8\s[40]\n\n%(jf)...UM. \w8I DO NOT EXACTLY HAVE THE FACIAL EQUIPMENT FOR THAT,\w4 SO... \w8MAYBE YOU SHOULD ASK SOMEONE MEATIER? \w8\n\n%(df)*You tell him that you still want a smooch. \w8\s[44]He leans in,\w4 scrapes his teeth along your jaw,\w4 and stares at you questioningly. \w8\w8\w8...You don't know what you expected.%(ConvCancel)\e"
-		"\0\s[0]*You ask Jazz to smooch you. \w8\w8\w8...He pretends that he does not hear you. \w8You still reach out and \s[28]smooch him on the cheek. \w8\s[25]He does not know what to do with this!%(ConvCancel)\e"
-		"\0\s[28]*You grab Jazz by the front of his shirt,\w4 pull him down and smooch his cheek. \w8\s[44]This is his life now. \w8And his smooch.%(ConvCancel)\e"
-	    "\0\s[0]*You demand a smooch. \w8\w8\w8\n\n\s[8]%(jf)...I AM NOT SURE HOW YOU THINK THAT WILL GO? \w8\n\n%(df)*You frown and pull him down till his face is inches away from yours. \w8\s[44]He gets the hint and quickly presses his teeth to your cheek. \w8You release him,\w4 content.%(ConvCancel)\e"
 	}
 	
 }
 
 Select.givewink
 {
-	"\0\s[0]*You wink at Jazz. \w8\w8\w8\s[3]\n\n%(jf)...IS YOUR EYE OKAY,\w4 %(username)? \w8I DON'T THINK THEY ARE MEANT TO CLOSE ON THEIR OWN LIKE THAT. \w8PERHAPS IT NEEDS CALIBRATION? \w8OR SOME OILING? \w8\n\n%(df)*What a dork.%(ConvCancel)\e"
-	"\0\s[0]*You send Jazz a wink and point your fingerguns at him. \w8\w8\w8\s[40]\n\n%(jf)...I FORFEIT?? \w8\n\n%(df)*You carefully pull your fingerguns away. \w8This is not an RPG,\w4 after all.%(ConvCancel)\e"
-	"\0\s[0]*You used Wink! \w8\s[8]JAZZ deflected your attack by being clueless to human signs of affection. \w8You used Sigh.%(ConvCancel)\e"
-	"\0\s[0]*You wink. \w8\s[3]Jazz stares. \w8You explain that winking is a flirting move. \w8\n\n\s[21]%(jf)AH! \w8I THOUGHT YOU WERE GIVING ME SIGNS IN MORSE CODE. \w8\s[24]BADLY.%(ConvCancel)\e"
-	"\0\s[0]*You wink at Jazz very smoothly... \w8\w8\w8\s[9]...He is not even looking at you. \w8This is rough,\w4 buddy.%(ConvCancel)\e"
-	"\0\s[0]*You wink at Jazz. \w8...Nothing happens. \w8You wink again. \w8\s[44]Jazz starts sweating. \w8You wink for the third time. \w8\n\n%(jf)...I KEEP WAITING FOR YOU TO SWERVE,\w4 BUT I AM STARTING TO SUSPECT THAT THIS IS NOT THE HUMAN VERSION OF A TURN SIGNAL AFTER ALL.%(ConvCancel)\e"
-	"\0\s[0]*You wink! \w8Jazz stares at you with a blank face. \w8Perhaps you do not have the right level to unlock his Swooning Skeleton path yet.%(ConvCancel)\e"
-	"\0\s[0]*You wink with a sly smile. \w8\s[3]\n\n%(jf)AH. \w8ARE YOU TRYING TO FLIRT ME? \w8\s[6]THAT IS A BIT EXCESSIVE SINCE I ALREADY KNOW YOU ARE DEEP IN LOVE WITH ME. \w8THOUGH I DEFINITELY DO NOT MIND CONSEQUTIVE CONFESSIONS. %(ConvCancel)\e"
-
 	
 	if totappoints > 30 || badbad > 6
 	{
@@ -2289,6 +2492,17 @@ Select.givewink
 		"\0\s[0]*You wink at Jazz. \w8\s[3]\n\n%(jf)DID SOMETHING GET IN YOUR EYE? \w8ARE YOU CRYING? \w8\n\n%(df)*You tell him that you are not. \w8\n\n\s[0]%(jf)AH,\w4 ALRIGHT. \w8I THOUGHT YOU WERE REPENTING YOUR WRONGDOINGS OR SOMETHING. \w8WHOOPS!%(ConvCancel)\e"
 	}
 	
+	else
+	{
+	"\0\s[0]*You wink at Jazz. \w8\w8\w8\s[3]\n\n%(jf)...IS YOUR EYE OKAY,\w4 %(username)? \w8I DON'T THINK THEY ARE MEANT TO CLOSE ON THEIR OWN LIKE THAT. \w8PERHAPS IT NEEDS CALIBRATION? \w8OR SOME OILING? \w8\n\n%(df)*What a dork.%(ConvCancel)\e"
+	"\0\s[0]*You send Jazz a wink and point your fingerguns at him. \w8\w8\w8\s[40]\n\n%(jf)...I FORFEIT?? \w8\n\n%(df)*You carefully pull your fingerguns away. \w8This is not an RPG,\w4 after all.%(ConvCancel)\e"
+	"\0\s[0]*You used Wink! \w8\s[8]JAZZ deflected your attack by being clueless to human signs of affection. \w8You used Sigh.%(ConvCancel)\e"
+	"\0\s[0]*You wink. \w8\s[3]Jazz stares. \w8You explain that winking is a flirting move. \w8\n\n\s[21]%(jf)AH! \w8I THOUGHT YOU WERE GIVING ME SIGNS IN MORSE CODE. \w8\s[24]BADLY.%(ConvCancel)\e"
+	"\0\s[0]*You wink at Jazz very smoothly... \w8\w8\w8\s[9]...He is not even looking at you. \w8This is rough,\w4 buddy.%(ConvCancel)\e"
+	"\0\s[0]*You wink at Jazz. \w8...Nothing happens. \w8You wink again. \w8\s[44]Jazz starts sweating. \w8You wink for the third time. \w8\n\n%(jf)...I KEEP WAITING FOR YOU TO SWERVE,\w4 BUT I AM STARTING TO SUSPECT THAT THIS IS NOT THE HUMAN VERSION OF A TURN SIGNAL AFTER ALL.%(ConvCancel)\e"
+	"\0\s[0]*You wink! \w8Jazz stares at you with a blank face. \w8Perhaps you do not have the right level to unlock his Swooning Skeleton path yet.%(ConvCancel)\e"
+	"\0\s[0]*You wink with a sly smile. \w8\s[3]\n\n%(jf)AH. \w8ARE YOU TRYING TO FLIRT ME? \w8\s[6]THAT IS A BIT EXCESSIVE SINCE I ALREADY KNOW YOU ARE DEEP IN LOVE WITH ME. \w8THOUGH I DEFINITELY DO NOT MIND CONSEQUTIVE CONFESSIONS. %(ConvCancel)\e"
+	}
 }
 
 
@@ -2301,7 +2515,15 @@ Select.givewink
 
 Select.resetconfirm
 {
-	"\s[0]*Do you really want to erase all his memories?\n\n\![*]\q[Yes,reset] \n\![*]\q[No,CANCEL]\e"
+	if gotwhatscoming == 1
+	{
+		"\s[50]*Do you really want to start anew?\n\n\![*]\q[Yes,reset] \n\![*]\q[No,CANCEL]\e"
+	}
+	else
+	{
+	
+	"\s[0]*Do you really want to erase your progress?\n\n\![*]\q[Yes,reset] \n\![*]\q[No,CANCEL]\e"
+	}
 }
 
 
@@ -2309,6 +2531,11 @@ Select.resetconfirm
  Select.reset 
 
 {
+	
+	if gotwhatscoming == 1
+	{
+	
+	
 	petpet         = 0
 	badbad         = 0
 	beatbeat       = 0
@@ -2346,9 +2573,101 @@ Select.resetconfirm
 	
 	
 	
+	
+	resetter += 1
+	"\s[28]*Your progress has been successfully erased. \w8You get another chance. \w8You are filled with joy. \w8\w8\w8...Try to be careful with your toys this time.\e"
+	}
+	
+	elseif badbad > 50 || totappoints > 50
+	{
+		petpet         = 0
+	badbad         = 0
+	beatbeat       = 0
+	askedwhy       = 0
+	jazzfriend     = 0
+	jazzlover      = 0
+	jazzok         = 0
+	snackeat       = 0
+	apology        = 0
+	hughug         = 0
+	earlybird      = 0
+	seenplate      = 0
+	gotwhatscoming = 0
+	truebackstory  = 0
+	fedjazz        = 0
+	goodboy        = 0
+	badboy         = 0
+	givegift       = 0
+	lovelove       = 0
+	askedadvice    = 0
+    cubegiven      = 0
+	plushgiven     = 0
+	figgiven       = 0
+	puzzlegiven    = 0
+	rocketgiven    = 0
+	rockgiven      = 0
+	funbookgiven   = 0
+	easybookgiven  = 0
+	hardbookgiven  = 0
+	simplecounter  = 0
+	punchpoints    = 0
+	currappoints   = 0
+	totappoints    = 0
+	
+	
+	
+	
+	
+	resetter += 1
+	
+	"\s[28]*Your progress has been successfully erased. \w8Jazz is confused,\w4 but he does not remember anything... \w8Perhaps for the better.\e"
+	}
+	
+	else
+	{
+		
+	petpet         = 0
+	badbad         = 0
+	beatbeat       = 0
+	askedwhy       = 0
+	jazzfriend     = 0
+	jazzlover      = 0
+	jazzok         = 0
+	snackeat       = 0
+	apology        = 0
+	hughug         = 0
+	earlybird      = 0
+	seenplate      = 0
+	gotwhatscoming = 0
+	truebackstory  = 0
+	fedjazz        = 0
+	goodboy        = 0
+	badboy         = 0
+	givegift       = 0
+	lovelove       = 0
+	askedadvice    = 0
+    cubegiven      = 0
+	plushgiven     = 0
+	figgiven       = 0
+	puzzlegiven    = 0
+	rocketgiven    = 0
+	rockgiven      = 0
+	funbookgiven   = 0
+	easybookgiven  = 0
+	hardbookgiven  = 0
+	simplecounter  = 0
+	punchpoints    = 0
+	currappoints   = 0
+	totappoints    = 0
+	
+	
+	
+	
+	
 	resetter += 1
 	
 	"\s[28]*Your progress has been successfully erased. \w8Jazz is confused,\w4 but he does not know what just happened...\e"
+	}
 }
  
  
@@ -2374,9 +2693,15 @@ Select.BACKTOMENU
 	{
 		
 		if gotwhatscoming == 1
-	{
+	    {
 		"\0\s[50]*...\e"
-	}
+	    }
+		
+		elseif badbad > 10
+		{
+			"\0\s[4]%(jf)OKAY,\w4 THEN...%(df)\e"
+		}
+		
 		else 
 		{
 		"\0\s[0]%(jf)OKAY,\w4 THEN.%(df)\e"
@@ -2413,61 +2738,16 @@ TalkConfig
 	--
 	"\f[bold,1]PAPYRUS:\f[bold,0] %(ifpapyrus) \f[sup,1](\q[Change it?,turnpapyrus])\f[sup,0]\n\n"
 	--
-	"* %(petpet) times pet. %(beatbeat) times punched."
-	--
-	if rockgiven == 1
-	{
-		" 1 pet rock given."
-	}
-	--
-	"\n\n"
-	-- 
 	 
-	 if gotwhatscoming == 1
-		 {
-			 "*...Who knows what he feels now."
-		 }
-	
-	elseif jazzfriend == 1 
-	 {
-		 "* He believes you to be his friend."		 
-	
-	 if badbad > 50 || totappoints > 50
-		 {
-			 "\n*...but he wonders what friendship really means to you."
-		 }
-	}	 
-	elseif jazzlover == 1 
-	 {
-		 "* He believes that you love him."
-	  
-	 if badbad > 50 || totappoints > 50
-		 {
-			 "\n*...but you show love in a very strange way."
-		 }
-       }
-	 
-	 elseif totappoints > 30 || badbad > 6
-	 {
-		"*He doesn't think you are trying hard enough to be a good person." 
-	 }
-	 
-	 
-	else
-	 {
-		 "*He does not know what to make of you yet."	 
-	 }
-	 --
-	 
-	"\n\n\![*]Do you want to \q[Update,updateconfirm] him? "
+	"\![*]Do you want to \q[Update,updateconfirm] him? "
 	--		
-	"\n\![*]Do you want to \q[RESET,resetconfirm]?"
+	"\n\n\![*]Do you want to \q[RESET,resetconfirm]?"
 	--
 		
-	"\n\![*]Enable Uninstall? (NOW : %(deleteshitai))\n\q[ON,deleteon] \q[OFF,deleteoff]\n\n"
+	"\n\n\![*]Enable Uninstall? (NOW : %(deleteshitai))\n\q[ON,deleteon] \q[OFF,deleteoff]\n\n"
 		
 	--
-	"\![*]\q[Back to the menu,BACKTOMENU]\_q\e"
+	"\n\![*]\q[Back to the menu,BACKTOMENU]\_q\e"
 }
 
 
@@ -2513,7 +2793,7 @@ Select.TEACHPRONOUN
 
   if gotwhatscoming != 1
   {
-	"\0\s[0]OH! WHAT SHOULD I CALL YOU?\w8\n\n\_q/
+	"\0\s[0]WHAT SHOULD I CALL YOU?\w8\n\n\_q/
 		\![*]\q[He-His-Him,choicemasc]\n/
 		\![*]\q[She-Her-Her,choicefem]\n/	
 		\![*]\q[They-Their-Them,choiceneither]\e"
@@ -2541,9 +2821,14 @@ Select.choicemasc
 	"\0\s[50]*You are now called 'he'.%(ConvCancel)\e"
 	 }
 	 
+	 elseif badbad > 10
+		{
+			"\0\s[4]%(jf)OKAY, \w4I WILL CALL YOU 'HE'.%(ConvCancel)\e"
+		}
+	 
 	 else 
 	 {
-	 "\0\s[6]%(jf)ALRIGHT! I WILL CALL YOU A 'HE',\w4 THEN!%(ConvCancel)\e"
+	 "\0\s[6]%(jf)I WILL CALL YOU 'HE',\w4 THEN!%(ConvCancel)\e"
 	 }
 }
 
@@ -2558,10 +2843,15 @@ Select.choicefem
 	{
 		"\0\s[50]*You are now called 'she'.%(ConvCancel)\e"
 	}
+	
+	elseif badbad > 10
+		{
+			"\0\s[4]%(jf)OKAY, \w4I WILL CALL YOU 'SHE'.%(ConvCancel)\e"
+		}
 	 
 	 else{
 	
-	"\0\s[6]%(jf)ALRIGHT! FROM NOW ON I WILL CALL YOU 'SHE'!%(ConvCancel)\e"
+	"\0\s[6]%(jf)FROM NOW ON I WILL CALL YOU 'SHE'!%(ConvCancel)\e"
 	 }
 }
 
@@ -2577,6 +2867,12 @@ Select.choiceneither
 	{
 		"\0\s[50]*You are now called 'they'.%(ConvCancel)\e"
 	}
+	
+	elseif badbad > 10
+		{
+			"\0\s[4]%(jf)ALRIGHT, \w4I WILL CALL YOU 'THEY'.%(ConvCancel)\e"
+		}
+		
 	else
 	{
 	
@@ -2604,6 +2900,11 @@ Select.TEACHBDAY
 		"\0\s[50]*The scarf cannot remember dates.%(ConvCancel)\e"
 	}
 	
+	elseif badbad > 10
+		{
+			"\0\s[4]%(jf)RIGHT... \w8\s[0]FIRST,\w4 WRITE THE NUMBER OF YOUR MONTH.\![open,\w4inputbox,\w4OnUserBornMonth,\w4-1]\e"
+		}
+	
 	else 
 	{
 		"\0\s[21]%(jf)RIGHT! \w8TELL ME YOUR BIRTHDAY,\w4 SO I COULD CONGRATULATE YOU PROPERLY! \w8\s[6]FIRST,\w4 WRITE THE NUMBER OF YOUR MONTH!\![open,\w4inputbox,\w4OnUserBornMonth,\w4-1]\e"
@@ -2619,7 +2920,10 @@ OnUserBornMonth
 			bornmonth = _tempmonth
 			bornmonthprint = Printmonth
 			bornmonthprint2 = TOUPPER(bornmonthprint)
-			
+			if badbad > 10
+		{
+			"\0\s[4]%(jf)SO YOU WERE BORN IN %(bornmonthprint2)...\n\w8NOW,\w4 PLEASE THE DAY.\![open,inputbox,OnUserBornDay,-1]\e"
+		}
 			"\0\s[24]%(jf)I SEE THAT YOU WERE BORN IN %(bornmonthprint2).\n\w8NOW TELL ME THE DAY!\![open,inputbox,OnUserBornDay,-1]\e"
 			
 			}
@@ -2766,9 +3070,31 @@ OnUserBornDay
 
 birthchecked
 {
+	if badbad > 10
+		{
+			if userbirthday == dayslot //if today is the user's birthday
+		{
+			"\0\s[28]%(jf)OH! \w8\s[40]H-HAPPY BIRTHDAY? \w8WOW WHAT A COINCEDENCE...%(ConvCancel)\e"
+			
+		}
+	elseif userbirthday == "5month 5day"
+		{
+			"\0\s[28]%(jf)OH!!! \w8\s[40]THAT'S MY BIRTHDAY TOO! \w8FUNNY ENOUGH...%(ConvCancel)\e"
+		}
+		
+	else //if the birthday is not listed above.
+		{
+			bornmonthprint2 = TOUPPER(bornmonthprint)
+			borndayprint2 = TOUPPER(borndayprint)
+			"\0\s[0]%(jf)SO YOUR BIRTHDAY IS %(bornmonthprint2) %(borndayprint2). \w8FINE CHOICE, \w4I GUESS!%(ConvCancel)\e"
+		}
+		
+		}
+	
+	
 	if userbirthday == dayslot //if today is the user's birthday
 		{
-			"\0\s[28]%(jf)WAIT A SECOND! \w8IT'S YOUR BIRTHDAY!!! \w8\s[5]HAPPY BIRTHDAY,\w4 %(username)! \w8I WISH YOU LOTS OF HAPPINESS,\w4 MANY FRIENDS,\w4 AND EVERYTHING NICE IN THE WORLD!\e"
+			"\0\s[28]%(jf)WAIT A SECOND! \w8IT'S YOUR BIRTHDAY!!! \w8\s[5]HAPPY BIRTHDAY,\w4 %(username)! \w8I WISH YOU LOTS OF HAPPINESS,\w4 MANY FRIENDS,\w4 AND EVERYTHING NICE IN THE WORLD!%(ConvCancel)\e"
 			
 		}
 	elseif userbirthday == "5month 5day"
@@ -2818,6 +3144,10 @@ Select.TalksTill
 	   {
 		   "\0\s[50]*You decide to leave the scarf alone.%(ConvCancel)\e"
 	   }
+	   elseif badbad > 10
+		{
+			"\0\s[4]%(jf)ALRIGHT...%(ConvCancel)\e"
+		}
 	   else
 	   {
 		"\0\s[6]%(jf)ALRIGHT! \w8NOT EVERYTHING NEEDS CHANGING!%(ConvCancel)\e"
@@ -2928,6 +3258,11 @@ Select.dosomething
 		"\0\s[50]*The scarf cannot do much,\w4 so you will have to do it yourself.\n\n"
 		
 	}
+	
+	elseif badbad > 10
+		{
+			"\0\s[4]%(jf)CAN I HELP?..\n\n"
+		}
 		
 		else 
 		{
@@ -2962,6 +3297,11 @@ Select.CALENDAR
 		
 	}
 	
+	elseif badbad > 10
+		{
+			"\0\s[4]%(jf)SURE, \w4HERE IT IS.\![open,calendar]\e"
+		}
+	
 	else
 	{
 	
@@ -2986,6 +3326,12 @@ Select.sspconfig
 		"\0\s[50]*You open your SSP preference menu. \![open,configurationdialog]\e"
 		
 	}
+	
+	elseif badbad > 10
+		{
+			"\0\s[4]%(jf)SURE, \w4HERE IT IS.\![open,configurationdialog]\e"
+		}
+	
 	else{
 	"\0\s[0]%(jf)OKAY! \w8ONE SSP PREFERENCE MENU COMING RIGHT UP!\![open,configurationdialog]\e"
 	}
@@ -3013,6 +3359,12 @@ Select.ChoiceGarbagecan
 		"\0\s[50]*You check your recycle bin. \w8It is empty as it is.%(ConvCancel)\e"
 		
 	}
+	
+	elseif badbad > 10
+		{
+			"\0\s[40]%(jf)SURE, \w4I CAN DO THAT, \w4PROMISE!!\w8\w8\s[-1]\w8\w8\w8\w8\w8\s[4]\c...THERE WAS NOTHING. \w8BUT, \w4UM, \w4I TRIED...%(ConvCancel)\e"
+		}
+	
 		else{
 		"\0\s[8]%(jf)DO YOU WANT ME TO TAKE OUT YOUR TRASH? \w8\s[5]I CAN DO THAT!\w8\w8\s[-1]\w8\w8\w8\w8\w8\s[6]\cIT WAS EMPTY, BUT I LIKED THE WALK!%(ConvCancel)\e"
 		}
@@ -3026,6 +3378,11 @@ Select.ChoiceGarbagecan
 		
 	}
 	
+	elseif badbad > 10
+		{
+			"\0\s[40]%(jf)SURE, \w4I CAN DO THAT, \w4PROMISE!!\w8\w8\s[-1]\w8\w8\w8\w8\![raise,OnGarbagecanEmpty]\w8\s[4]\cI DID IT. \w8I HOPE I DID WELL...%(ConvCancel)\e"
+		}
+	
 	else{
 		
 		if jazzlover == 1
@@ -3038,7 +3395,7 @@ Select.ChoiceGarbagecan
 		
 		"\0\s[8]%(jf)OH! \w8GIVE ME A MOMENT,\w4 I WILL BE QUICK!\w8\w8\s[-1]\w8\w8\w8\w8\w8\![raise,OnGarbagecanEmpty]\w9\w9\w9\s[5]\cI AM BACK AND YOUR TRASH IS OUT! %(ConvCancel)\e"
 	}	
-		}
+	}
 }
 
 
@@ -3111,7 +3468,7 @@ OnChoiceTimeout
 	"\0\s[9]*Jazz is bored...\e"
 	"\0\s[9]*Jazz decides to do something else.\e"
 	"\0\s[9]*Jazz moves on with his life.\e"
-	"\0\s[9]*Jazz loses interest in you. \w8Only temporarily!\e"
+	"\0\s[9]*Jazz loses interest.\e"
 	 }
  }
 
@@ -3134,8 +3491,9 @@ OnChoiceTimeout
 
 Select.testvariable
 {
+	"%(badbad)"
 	
-	"\0\s[0] %(badbad)\e"
+	
 }
 
 
@@ -3222,7 +3580,16 @@ Select.HEADLINECANCEL
 		"\0\s[50]*...%(ConvCancel)\e"
 	}
 	
+	elseif badbad > 10
+		{
+			"\0\s[4]%(jf)HEADLINES DONE...%(ConvCancel)\e"
+		}
+		
+		else 
+		{
+	
  		"\0\s[0]%(jf)HEADLINES DONE!%(ConvCancel)\e"
+		}
 	}
 
 

@@ -23,6 +23,16 @@ OnFileDrop2
 			\q[Stretched,SetWallpaper_2]\n\n[half]/
 			\q[No thanks,SetWallpaper_Cancel]\e"
 		}
+		
+		elseif badbad > 10
+		{
+			"\0\s[4]IT SAYS %(_filename)%(_fileext), \w4SO IT IS PROBABLY FOR YOUR WALLPAPER... \w8HOW DO YOU WANT ME TO SET IT?\n\n[half]/
+		   \q[Centered,SetWallpaper_0]\n/
+			\q[Tiled,SetWallpaper_1]\n/
+			\q[Stretched,SetWallpaper_2]\n\n[half]/
+			\q[No thanks,SetWallpaper_Cancel]\e"
+		}
+		
 		else {
 			"\0\s[24]%(jf)OH! IT SAYS THIS IS %(_filename)%(_fileext).\w8I GUESS YOU WANT IT TO BE YOUR WALLPAPER, SO HOW DO YOU WANT TO SET IT?%(df)\n\n[half]/
 		
@@ -39,6 +49,12 @@ OnFileDrop2
 			{
 				"\0\s[50]%(_filename)%(_fileext) is a music file. \w8Not that the scarf knows.\e"
 			}
+			
+			elseif badbad > 10
+		{
+			"\0\s[4]%(jf)%(_filename)%(_fileext) IS A MUSIC FILE, I GUESS?\e"
+		}
+		
 			else 
 			{
 			"\0\s[3]%(jf)%(_filename)%(_fileext) IS A MUSIC FILE, I GUESS?\e"
@@ -50,6 +66,10 @@ OnFileDrop2
 			{
 				"\0\s[50]*Asking a scarf to do something with a %(_filename)%(_fileext) is a bit too much.\e"
 			}
+			elseif badbad > 10
+		{
+			"\0\s[4]%(jf)%(_filename)%(_fileext) IS NOT SOMETHING I CAN DO ANYTHING WITH... \w8\s[1]SORRY.\e"
+		}
 		else{
 			"\0\s[3]%(jf)LOOKS LIKE A %(_filename)%(_fileext). CAN'T DO MUCH WITH IT!\e"
 		}
@@ -64,6 +84,10 @@ Select.SetWallpaper_0
 	{
 		"\![set,wallpaper,%(Wallpaperfile),center]\0\s[50]*It is centered.\e"
 	}
+	elseif badbad > 10
+		{
+			"\![set,wallpaper,%(Wallpaperfile),center]\0\s[0]%(jf)IT IS NOW CENTERED.\e"
+		}
 	else
 	{
 	
@@ -76,6 +100,10 @@ Select.SetWallpaper_1
 	{
 		"\![set,wallpaper,%(Wallpaperfile),tile]\0\s[50]*It is tiled.\e"
 	}
+	elseif badbad > 10
+		{
+			"\![set,wallpaper,%(Wallpaperfile),tile]\0\s[0]%(jf)IT IS NOW TILED.\e"
+		}
 	else {
 	"\![set,wallpaper,%(Wallpaperfile),tile]\0\s[6]%(jf)DONE AND TILED!\e"
 	}
@@ -86,9 +114,13 @@ Select.SetWallpaper_2
 	{
 		"\![set,wallpaper,%(Wallpaperfile),stretch]\0\s[50]*It is stretched.\e"
 	}
+	elseif badbad > 10
+		{
+			"\![set,wallpaper,%(Wallpaperfile),stretch]\0\s[0]%(jf)IT IS NOW STRETCHED.\e"
+		}
 	else 
 	{
-	"\![set,wallpaper,%(Wallpaperfile),stretch]\0\s[6]%(jf)IT'S NOW PROPERLY STRETCHED. I AM CAPABLE OF MANY THINGS!\e"
+	"\![set,wallpaper,%(Wallpaperfile),stretch]\0\s[6]%(jf)IT'S NOW PROPERLY STRETCHED.\e"
 	}
 }
 Select.SetWallpaper_Cancel
@@ -97,6 +129,10 @@ Select.SetWallpaper_Cancel
 	{
 		"\0\s[50]*You have changed your mind.\e"
 	}
+	elseif badbad > 10
+		{
+			"\0\s[0]%(jf)ALRIGHT...\e"
+		}
 	else 
 	{
 	"\0\s[3]%(jf)CHANGED YOUR MIND? \w8THAT'S OKAY, SOMETIMES OLD IS BETTER!\e"
@@ -112,6 +148,10 @@ OnInstallBegin
 	{
 		"\0\s[50]*The scarf tries its best to install a file.\e"
 	}
+	elseif badbad > 10
+		{
+			"\0\s[4]%(jf)I GUESS I SHOULD INSTALL IT? \w8RIGHT?..\e"
+		}
 	else 
 	{
 	"\0\s[24]%(jf)OH! \w8THIS HAS SOMETHING CALLED 'INSTALL.TXT' IN THERE. \w8I GUESS I WILL INSTALL IT, THEN?\e"
@@ -146,6 +186,11 @@ OnInstallComplete
 	{
 		"\0\s[50]*It is a new ghost called %(reference1). \w8Have fun with your new toy. \w8Maybe it will be more... \w8durable.\e"
 	}
+	elseif badbad > 10
+		{
+			reference1 = TOUPPER(reference1)
+		"\s[4]%(jf)...IT IS SOMEONE ALIVE, \w4THERE. \w8THEIR NAME IS %(reference1). \w8...BE NICE TO THEM MAYBE?..\e"
+		}
 		else
 		{
 			reference1 = TOUPPER(reference1)
@@ -159,6 +204,11 @@ OnInstallComplete
 	{
 		"\0\s[50]*It is a balloon %(reference1).\e"
 	}
+	elseif badbad > 10
+		{
+	reference1 = TOUPPER(reference1)
+		"\s[4]%(jf)IT IS A 'BALLOON' CALLED %(reference1)... \w8AT LEAST THAT IS WHAT IT SAYS...\e"
+		}
 	else 
 	{
 		reference1 = TOUPPER(reference1)
@@ -171,6 +221,11 @@ OnInstallComplete
 	{
 		"\0\s[50]*It is a plug-in %(reference1).\e"
 	}
+	elseif badbad > 10
+		{
+	reference1 = TOUPPER(reference1)
+		"\s[4]%(jf)IT IS A 'PLUG-IN' CALLED %(reference1)... \w8AT LEAST THAT IS WHAT IT SAYS...\e"
+		}
 	else 
 	{
 		reference1 = TOUPPER(reference1)
@@ -199,6 +254,21 @@ OnInstallFailure
 	
 	}
 	
+	elseif badbad > 10
+		{
+	
+		"\0\s[4]SORRY, I - I CANNOT UPLOAD IT...\n\n[half]\w8" 
+	--
+	if reference0 == "unsupported" 
+	{
+	"THE FILE IS NOT SUPPORTED...\e"
+	}	
+	elseif reference0 == "extraction" 
+	{
+	"I JUST COULD NOT EXTRACT IT?..\e"
+	}
+		}
+	
 	else 
 	{
 	"\0\s[25]%(jf)WHOOPS! \w8\s[1]I CAN'T UPLOAD THAT.\n\n[half]\w8" 
@@ -224,6 +294,12 @@ OnInstallRefuse
 		"\0\s[50]*It cannot be installed with this scarf.\e"
 	}
 	 
+	 elseif badbad > 10
+		{
+
+		"\s[4]%(jf)...ARE YOU SURE THIS IS FOR ME?\e"
+		}
+	 
 	 else 
 	 {
 	 
@@ -245,6 +321,8 @@ OnVanishSelecting
 	{
 		"\0\s[50]*Are you ready to move on?\e"
 	}
+	
+	
 	else 
 	{
 	
@@ -286,6 +364,11 @@ OnVanishCancel
 	{
 		"\0\s[50]*You decide to wait some more. \w8How quaint.\e"
 	}
+	elseif badbad > 10
+		{
+		"\s[4]%(jf)... \w8%(username)...\e"
+		}
+	
 	 else{
 	
 	"\0\s[28]%(jf)OH! \w8OHHH!!! \w8\s[5]OH THANK GOODNESS, YOU GOT ME WORRIED!!!!\e"
@@ -334,6 +417,12 @@ OnBIFFBegin
 		"\0\s[50]*You decide to check your mail.\e"
 	}
 
+     elseif badbad > 10
+		{
+		"\s[1]%(jf)O-OKAY! \w8I CAN CHECK YOUR MAIL! \w8THIS IS EASY, \w8RIGHT?\e"
+		}
+	
+
 	else 
 	{
 	"\0\s[6]%(jf)ALRIGHT! \w8I CAN CHECK YOUR MAIL FOR YOU! \w8AS LONG AS THERE ARE NO DISTRACTING MAILMEN THERE!\e"
@@ -370,6 +459,26 @@ OnBIFFComplete
 		"\0\s[50]*There are %(reference0) new letters.\e"
  	}
 	}
+	
+	elseif badbad > 10
+		{
+		if reference0 == 0 //If you have no new mail.
+ 	{
+ 		"\0\s[4]...THERE IS NOTHING. \w8I'M SORRY, \w4I REALLY LOOKED, \w4I PROMISE...\e"
+	
+	}
+	elseif reference0 == 1 //If you have one new email.
+ 	{
+ 		"\0\s[4]I FOUND ONE! \w8DID I DO WELL?..\e"
+	}
+	else //If you have more than one email but less than eleven.
+	{
+		"\0\s[40]I FOUND %(reference0) NEW LETTERS!\e"
+	}
+	
+		}
+	
+	
 	
 	else 
 	{
@@ -423,6 +532,10 @@ OnBIFFFailure
  	}
 	}
 	 
+	 
+	 
+	 
+	 
 	if reference0 == "timeout" 
  	{
  		"\0\s[3]%(jf)THE CONNECTION HAS TIMED OUT...\e"
@@ -457,6 +570,11 @@ OnUpdateBegin
 		"\0\s[50]*You decide to check for updates.\e"
 	}
 	
+	if badbad > 10
+		{
+		"\s[1]%(jf)O-OH, \w8SHOULD I CHECK FOR UPDATES? \w8ALRIGHT...\e"
+		}
+	
 	"\0\s[3]%(jf)OH! \w8ARE YOU CHECKING FOR UPDATES FOR ME?\w8\e"
 	
 	"\0\s[8]%(jf)I WILL CHECK FOR UPDATES NOW! \w8I HOPE THERE IS SOMETHING NEW...\w8\e"
@@ -471,6 +589,11 @@ OnUpdateReady
 	{
 		"\0\s[50]*There are some new files.\e"
 	}
+	
+	elseif badbad > 10
+		{
+		"\s[1]%(jf)LET ME SEE... \w8\s[40]THERE ARE SOME NEW FILES!\e"
+		}
 	
 	else 
 	{
@@ -494,6 +617,19 @@ OnUpdateComplete
  	else 
 	{
 		"\0\s[50]*It is done.\e"
+ 	}
+	}
+	
+	
+	elseif badbad > 10
+	{
+		if reference0 == "none" 
+ 	{
+ 		"\0\s[4]%(jf)SORRY, \w4I GUESS THERE'S NOTHING...\e"
+	}
+ 	else 
+	{
+		"\0\s[1]%(jf)THERE, \w4IS IT GOOD? \w8DID I DO GOOD?\e"
  	}
 	}
 	
@@ -534,6 +670,23 @@ OnUpdateFailure
  		"\0\s[50]*Something went wrong with %(reference0)'.\e"
 	}
 	}
+	
+	elseif badbad > 10
+		{
+		if reference0 == "timeout" 
+ 	{
+ 		"\0\s[1]%(jf)THE CONNECTION HAS TIMED OUT. \w8IT'S NOT ME, \w8I SWEAR...\e"
+	}
+ 	elseif reference0 == "md5 miss" 
+	{
+		"\0\s[1]%(jf)I THINK THE MD5 HASH DOES NOT MATCH...\e"
+ 	}
+	else 
+ 	{
+		reference0 = TOUPPER(reference0)
+ 		"\0\s[1]%(jf)...SOMETHING WENT WRONG. \w8I GUESS YOU CAN BLAME'%(reference0)'.\e"
+	}
+		}
 	
 	
 	else 
@@ -636,10 +789,15 @@ OnUpdate.OnMD5CompareFailure
 		"\0\s[50]*The MD5 values do not match. \w8Whoops. \w8Try contacting the mastermind. \w8Also known as Ab.\e"
 	}
 	
+	elseif badbad > 10
+		{
+		"\0\s[1]%(jf)THE MD5 VALUES DO NOT MATCH... \w8PLEASE, \w4TELL AB ABOUT A MISTAKE IN %(reference0).\e"
+		}
+	
 	else
 	{
 		reference0 = TOUPPER(reference0)
-	"\0\s[0]%(jf)THE MD5 VALUES DO NOT MATCH. \w8\s[6]I SUGGEST CALLING AB TO INVESTIGATE! \w8SHE PROBABLY MISSED SOMETHING IN %(reference0).\w8\e"
+	"\0\s[0]%(jf)THE MD5 VALUES DO NOT MATCH. \w8\s[6]I SUGGEST CALLING AB TO INVESTIGATE! \w8SHE PROBABLY MISSED SOMETHING IN %(reference0).\e"
  }
  }
 
@@ -656,6 +814,11 @@ OnHeadlinesenseBegin
 	{
 		"\0\s[50]*You decide to check %(reference0).\e"
 	}
+	elseif badbad > 10
+		{
+			reference0 = TOUPPER(reference0)
+		"\0\s[1]%(jf)OKAY, \w4LET'S CHECK %(reference0)...\e"
+		}
 	
 	else 
 	{
@@ -712,6 +875,12 @@ Select.Headline_Cancel
 		"\0\s[50]*That's enough.\e"
 	}
 	
+	elseif badbad > 10
+		{
+			
+		"\0\s[4]%(jf)*That's enough.\e"
+		}
+	
 	"\0\s[0]%(jf)I GUESS THAT'S ENOUGH LOOKING AT HEADLINES.\e"
 }
 
@@ -723,6 +892,12 @@ OnHeadlinesenseComplete
 	{
 		"\0\s[50]*There is no update. \w8%(reference0).\e"
 	}
+	 
+	 elseif badbad > 10
+		{
+			
+		"\0\s[4]%(jf)*There is no update. \w8%(reference0).\e"
+		}
 	 
 	 else 
 	 {
@@ -756,6 +931,28 @@ OnHeadlinesenseFailure
 	--
  	"\e"
 	}
+	
+	elseif badbad > 10
+		{
+			
+		
+		"\0\s[4]*The feed cannot be updated. \w8" //This sets up an exchange between the two characters. The final part of the exchange continues below in the if statements.
+ 	--
+	if reference0 == "can't download" //if they can't download the rss feed for some reason
+ 	{
+		"It cannot be downloaded."
+ 	}
+	elseif reference0 == "can't analyze" //if they can't read the file for some reason
+ 	{
+		"It cannot be analysed."
+ 	}
+	else //other errors
+ 	{
+		"For no apparent reason."
+ 	}
+	--
+ 	"\e"
+		}
 	
 	
 	else 
@@ -858,6 +1055,13 @@ OnSNTPBegin
 		"\0\s[50]*You decide to connect to %(reference0) to check your clock.\e"
 	}
 	
+	elseif badbad > 10
+		{
+		reference0 = TOUPPER(reference0)
+		"\0\s[1]%(jf)OH. \w8DO YOU WANT ME TO CHECK YOUR CLOCK? \w8J-JUST ONE MOMENT, \w4I WILL CONNECT TO \w8%(reference0)...\e"
+		}
+	
+	
 	else 
 	{
 	reference0 = TOUPPER(reference0)
@@ -890,6 +1094,25 @@ OnSNTPCompare
 	
 	}
 	
+	elseif badbad > 10
+		{
+		"Retrieved Time: %reference1[1]/%reference1[2]/%reference1[0] %reference1[3]:%reference1[4]:%reference1[5]\w2\n/
+	Your Time: %reference2[1]/%reference2[2]/%reference2[0] %reference2[3]:%reference2[4]:%reference2[5]\w2\n/
+ 	\n"
+	--
+ 	if reference3 == 0 //if your clock is already accurate.
+	{
+ 		"\0\s[40]%(jf)YOUR CLOCK IS JUST FINE!\e" //replace this with whatever message you like.
+	}
+ 	else //if your clock doesn't match
+	{
+ 		"\0\s[1]%(jf)YOUR CLOCK DOES NOT SEEM VERY... \w8ACCURATE. \w8SHOULD I FIX IT?..\n\n[half]/
+		\![*]\q[Fix it,OnSNTPEXECUTE]\n/
+ 		\![*]\q[Leave it alone,OnSNTPCANCEL]\e"
+	}
+		}
+	
+	
 	else 
 	{
 	"Retrieved Time: %reference1[1]/%reference1[2]/%reference1[0] %reference1[3]:%reference1[4]:%reference1[5]\w2\n/
@@ -919,6 +1142,12 @@ OnSNTPEXECUTE
 		"\0\s[50]*It is done.\e"
 	}
 	 
+	 elseif badbad > 10
+		{
+			
+		"\0\s[4]%(jf)UM, \w4THERE YOU GO...\e"
+		}
+	 
 	 else
 	 {
 	
@@ -934,6 +1163,13 @@ OnSNTPCANCEL
 	{
 		"\0\s[50]*You decide to live with what you started.\e"
 	}
+	
+	elseif badbad > 10
+		{
+			
+		"\0\s[4]%(jf)...ALRIGHT? \w8I DON'T UNDERSTAND, \w4BUT... \w8ALRIGHT.\e"
+		}
+	
 	
 	else
 	{
@@ -953,7 +1189,13 @@ OnSNTPFailure
 	{
 		"\0\s[50]*It cannot be changed. \w8Just like your choices.\e"
 	}
-	 
+	
+	 elseif badbad > 10
+		{
+			
+		"\0\s[4]%(jf)...SORRY, \w4BUT... \w8SOMETHING WENT WRONG, \w4AND.. \w8I SWEAR IT WAS NOT ME.\e"
+		}
+		
 	 else 
 	 {
 	
@@ -1068,19 +1310,19 @@ OnBatteryLow
 	else 
 	{
 	
-	if beatbeat <= 3
+	if badbad <= 6
 	{
 	"\0\s[3]%(jf)YOUR BATTERY IS RUNNING LOW, %(username). \w8I THINK YOU SHOULD PLUG YOUR LAPTOP IN? \w8CRASHING IS NOT VERY FUN.\e"
 	"\0\s[40]%(jf)I FIND YOUR LACK OF POWER DISTURBING!!! \w8WHERE DID IT ALL GO?? \w8\s[3]WHERE DOES ENERGY GO WHEN YOU NEED IT MOST? \wLIKE WHEN YOU ARE TALKING TO NICE PEOPLE LIKE ME???\e"	
 	}
 	
-	if beatbeat <= 3 && petpet > 50
+	if badbad <= 6 && lovelove > 50
 	{
 	"\0\s[40]%(jf)...OH DEAR!!!!! \w8YOU ARE ALMOST OUT OF ENERGY!!!!! \w8\s[4]QUICK, DO SOMETHING! \w8OR YOU WON'T BE ABLE TO FEAST YOUR EYES UPON MY PRETTY FACE ANYMORE.\e"	
 	"\0\s[40]%(jf)OH NO! \w8YOU ARE RUNNING OUT OF ENERGY! \w8WHAT A TERRIBLE THING TO HAPPEN!!! \w8WITHOUT YOUR BATTERY POWER, YOU WON'T BE ABLE TO SPEND TIME WITH ME!!!\e"
 	}
 	
-	if beatbeat > 20
+	if badbad > 20
 	{
 		"\0\s[4]%(jf)I THINK YOU MIGHT WANT TO PLUG YOUR COMPUTER IN. \w8...THAT IS, IF YOU ARE NOT BORED WITH ME YET...\e"
 		"\0\s[4]%(jf)UM, THERE IS, THERE IS A SLIGHT ENERGY PROBLEM. \w8YOU MIGHT WANT TO CHECK IT. \w8I BELIEVE YOU ARE NOT... \w8DONE WITH ME YET, ARE YOU.\e"

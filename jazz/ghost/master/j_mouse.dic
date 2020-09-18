@@ -296,12 +296,12 @@ MouseMoveSakura
 						}
 				}
 				
-				elseif badbad > 3 
+				elseif badbad > 6 
 				{
 					if jazzfriend == 1 || jazzlover == 1
 				{
-					"\0\s[42]*You poke his cheek. \w8He jerks away. \w8\s[29]...Then slowly moves closer,\w4 looking at you warily.\e"
-					"\0\s[42]*You pet Jazz on the cheek. \w8\s[44]He tries to smile at you.\e"
+					"\0\s[41]*You poke his cheek. \w8He jerks away. \w8\s[29]...Then slowly moves closer,\w4 looking at you warily.\e"
+					"\0\s[41]*You pet Jazz on the cheek. \w8\s[44]He tries to smile at you.\e"
 			
 					"\0\s[29]*You try to pet Jazz on the face.\w8"
 					--
@@ -319,7 +319,7 @@ MouseMoveSakura
 				
 				if lovelove > 50
 				{
-					"\0\s[42]*You pet Jazz on the face. \w8He looks alarmed,\w4 but he still lets you do it.\e"
+					"\0\s[41]*You pet Jazz on the face. \w8He looks alarmed,\w4 but he still lets you do it.\e"
 					"\0\s[29]*You reach out for Jazz,\w4 trying to poke his face. \w8Whoops! \w8Looks like you missed.\e"
 					"\0\s[29]*You reach for his face. \w8He avoids your hand,\w4 trying to make it seem like he was simply stretching.\e"
 				}
@@ -329,7 +329,7 @@ MouseMoveSakura
 					lovelove -= 2
 						"\0\s[29]*You pet Jazz on the face. \w8\s[26]He squints and shivers.\e"
 						"\0\s[28]*You poke Jazz in the eyesocket. \w8\s[26]He yelps and promptly moves away fom you.\e"
-						"\0\s[42]*You cup the skeleton's face. \w8\s[43]Jazz looks uneasy,\w4 but he stands very still. \w8Perhaps he hopes that this way he won't get hurt.\e"
+						"\0\s[41]*You cup the skeleton's face. \w8\s[43]Jazz looks uneasy,\w4 but he stands very still. \w8Perhaps he hopes that this way he won't get hurt.\e"
 				        "\0\s[29]*You try to pet Jazz on the face.\w8"
 						--
 						"...Is that the tiniest growl that you've heard?"
@@ -399,7 +399,9 @@ OnMouseDoubleClick
 Select.badchoice
 {
 	beatbeat += 1
+	punchpoints += 1
 	lovelove -= 2
+	badbad += 1
 	"\0\s[2]%(jf)A-AH! \w8\w8\w8...WHY WOULD YOU DO THAT?!\e"
 }
 
@@ -421,35 +423,35 @@ MouseDoubleClickSakura
 		
 		if simplecounter == 1 
 		{
-			"\0\s[0]*Do you really want to hit him? \w8Clicking his head or chest will hurt him. \w8If you want to see his menu,\w4 try double-clicking on his legs.\n\n\![*]\q[Menu please,openmenu]\n\![*]\q[Punch him,badchoice]\e"
+			"\0\s[0]*Do you really want to hit him? \w8Clicking his head or chest will hurt him. \w8If you want to see his menu,\w4 try double-clicking on his legs.\n\n\![*]\q[Menu please,openmenu]\n\n\![*]\q[Punch him,badchoice]\e"
 		}
 		
 		if simplecounter == 2 
 		{
-			"\0\s[0]*I think you missed the spot again. \w8It's okay. \w8Remember: the legs.\n\n\![*]\q[Menu please,openmenu]\n\![*]\q[Punch him,badchoice]\e"
+			"\0\s[0]*I think you missed the spot again. \w8It's okay. \w8Remember: the legs.\n\n\![*]\q[Menu please,openmenu]\n\n\![*]\q[Punch him,badchoice]\e"
 		}
 		
 		
 		if simplecounter == 3 
 		{
-			"\0\s[0]*...Ah. \w8You missed it again. \w8Here.\n\n\![*]\q[Menu please,openmenu]\n\![*]\q[Punch him,badchoice]\e"
+			"\0\s[0]*...Ah. \w8You missed it again. \w8Here.\n\n\![*]\q[Menu please,openmenu]\n\n\![*]\q[Punch him,badchoice]\e"
 		}
 		
 		if simplecounter == 4 
 		{
-			"\0\s[0]*You seem to misclick a lot. \w8...Or maybe it is on purpose.\n\n\![*]\q[Menu please,openmenu]\n\![*]\q[Punch him,badchoice]\e"
+			"\0\s[0]*You seem to misclick a lot. \w8...Or maybe it is on purpose.\n\n\![*]\q[Menu please,openmenu]\n\n\![*]\q[Punch him,badchoice]\e"
 		}
 		
 		
 		if simplecounter == 5 
 		{
-			"\0\s[0]*... \w8Are you having fun with this?\n\n\![*]\q[Menu please,openmenu]\n\![*]\q[Punch him,badchoice]\e"
+			"\0\s[0]*... \w8Are you having fun with this?\n\n\![*]\q[Menu please,openmenu]\n\n\![*]\q[Punch him,badchoice]\e"
 		}
 		
 		
 		if simplecounter > 5 
 		{
-			"\0\s[0]*...\n\n\![*]\q[Menu please,openmenu]\n\![*]\q[Punch him,badchoice]\e"
+			"\0\s[0]*...\n\n\![*]\q[Menu please,openmenu]\n\n\![*]\q[Punch him,badchoice]\e"
 		}
 		
 		}
@@ -484,7 +486,7 @@ MouseDoubleClickSakura
 		if apology == 1
 		{
 			lovelove -= 2
-			"\0\s[2]%(jf)NGHH! \w8\w8\w8\s[1]B-BUT... \w8\w8YOU APOLOGISED? \w8\w8YOU PROMISED ME THAT YOU... \w8\w8\s[4]...\e"
+			"\0\s[2]%(jf)NGHH! \w8\w8\w8\s[1]B-BUT... \w8\w8YOU PROMISED THAT YOU... \w8\w8\s[4]...\e"
 		}
 		
 		
@@ -502,10 +504,10 @@ MouseDoubleClickSakura
 		{
 			lovelove -= 2
 		"\0\s[2]%(jf)A-AH! \w8\w8\w8...WHY WOULD YOU DO THAT?!\e"
-		"\0\s[2]%(jf)NGHHH... \w8\s[1]H-HUMAN! I THINK YOUR HANDS JUST... \w8SLIPPED...\e"
+		"\0\s[2]%(jf)NGHHH... \w8\s[1]H-HUMAN! \w8I THINK YOUR HANDS JUST... \w8SLIPPED...\e"
 		"\0\s[2]%(jf)NGHK! \w8\s[1]...PLEASE,\w4 BE MORE CAREFUL! WATCH WHERE YOU CLICK!\e"
-		"\0\s[2]%(jf)OUCH! \w8\s[1]I'M AFRAID YOU MISSED THE RIGHT SPOT! I-IT MUST BE HARD TO ALWAYS PAY ATTENTION TO WHERE YOU CLICK...\e"
-		"\0\s[2]%(jf)MPH-! \w8\s[1]PLEASE,\w4 DON'T DO THAT? I DON'T APPRECIATE FRIENDLY PUNCHES...\e"
+		"\0\s[2]%(jf)OUCH! \w8\s[1]I'M AFRAID YOU MISSED THE RIGHT SPOT! \w8I-IT MUST BE HARD TO ALWAYS PAY ATTENTION TO WHERE YOU CLICK...\e"
+		"\0\s[2]%(jf)MPH-! \w8\s[1]PLEASE,\w4 DON'T DO THAT? \w8I DON'T APPRECIATE FRIENDLY PUNCHES...\e"
 		
 		}
 		
@@ -518,7 +520,7 @@ MouseDoubleClickSakura
 		"\0\s[2]%(jf)NGHHH... \w8\w8\w8\s[1]UM... HUMAN... \w8\w8\s[4]I THINK YOU REALLY SHOULD STOP THIS! \w8THIS IS NOT... \w8\w8HEALTHY FOR YOU TO BE SO AGGRESSIVE.\e"
 		"\0\s[2]%(jf)NGHK! \w8\w8\w8\s[1]WHY?.. \w8\w8\s[4]IS IT SOMETHING I SAID? \w8\w8SOMETHING I DID? \w8\w8I AM SO SORRY,\w4 IF THAT IS THE CASE...\e"
 		"\0\s[2]%(jf)OUCH! \w8\w8\w8\s[4]...HUMAN! I THINK I... \w8\w8I THINK I UNDERSTAND YOU. \w8\w8I UNDERSTAND FEELING... ANGRY. FEELING LIKE YOU ARE... \w8\w8\s[1]STUCK. LIKE YOU CANNOT DO ANYTHING BUT... \w8\w8\s[4]TURN ON THE OTHERS,\w4 BECAUSE YOU DON'T KNOW HOW ELSE TO LET THESE FEELINGS OUT. \w8\w8IT MUST BE HARD ON YOU. \w8\w8REALLY HARD. \w8\w8\s[29]BUT... PLEASE. DON'T DO THIS. \w8IT IS NOT... \w8\w8GOOD FOR YOU,\w4 OR FOR THE OTHERS. \w8YOU CANNOT... \w8\w8YOU CANNOT KEEP DOING THIS. PLEASE... \w8\w8PLEASE,\w4 STOP.\e"
-		"\0\s[2]%(jf)MPH-! \w8\w8\w8\s[1]YOU KNOW,\w4 I STAND BY THE OPINION THAT VIOLENCE IS UNNEEDED... AND MAYBE YOU SHOULD CONSIDER THIS OPINION TOO?\e"
+		"\0\s[2]%(jf)MPH-! \w8\w8\w8\s[1]YOU KNOW,\w4 I STAND BY THE OPINION THAT VIOLENCE IS UNNEEDED... \w8AND MAYBE YOU SHOULD CONSIDER THIS OPINION TOO?\e"
 		
 		}
 		

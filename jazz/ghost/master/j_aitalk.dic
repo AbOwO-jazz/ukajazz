@@ -57,10 +57,13 @@ RandomTalk : nonoverlap
 	
 	if badbad > 10 
 	{
-		if badbad > 200
+		if badbad > 150
 	   {
 		"\0\s[4]... \w8%(username)... \w8I WANTED TO ASK YOU SOMETHING. \w8I KNOW YOU HAVE BEEN REALLY... \w8\w8NOT. \w8\w8NICE TO ME. \w8\s[29]YOU HAVE... \w8HURT ME A LOT. \w8AND... \w8I - I DON'T UNDERSTAND... \w8\s[4]SO,\w4 I HAVE TO ASK... \w8\w8\w8WHY?.. \n\n\![*]\q[I hated it,hater]\n\![*]\q[I loved it,lover]\n\![*]\q[I wanted to know,knower]\n\n"
 	   }
+	   
+	   else 
+	   {
 		 if badbad > 50
 	   {
 	        "\0\s[4]%(jf)...IF YOU WERE UNHAPPY WITH SOMETHING I DID OR SAID,\w4 YOU WOULD... \w8YOU WOULD TELL ME? \w8RIGHT?\e"
@@ -94,7 +97,7 @@ RandomTalk : nonoverlap
 	        "\0\s[39]*Jazz makes sure to stand very still to save you some CPU power.\e"
 	        "\0\s[39]*Jazz practices his lines while you are not looking.\e"
 	        "\0\s[39]*Jazz thinks of new things to say.\e"
-	        "\0\s[3]*Jazz wnders how he managed to fit all of himself here...\e"
+	        "\0\s[3]*Jazz wonders how he managed to fit all of himself here...\e"
 	
 	if passhour >= 1
 	{
@@ -227,7 +230,7 @@ RandomTalk : nonoverlap
 		"\0\s[38]*Jazz dreams about the sky.\e"
 	}
 	
-	
+	   }
 	
 	
 	}
@@ -245,6 +248,11 @@ RandomTalk : nonoverlap
 	
 	if badbad <= 10
 	{
+	
+	
+
+	
+	
 	
 	
 	if jazzfriend != 1 && jazzlover != 1 && jazzok != 1 
@@ -280,34 +288,7 @@ RandomTalk : nonoverlap
     }
 	
 
-	if lovelove > 200 && askedwhy != 1 && apology < 6 && badbad < 3
-	{
-			
-	    "\0\s[4]%(jf)... \w8%(username)... \w8I WANTED TO ASK YOU SOMETHING. \w8I KNOW YOU HAVE BEEN REALLY KIND TO ME."
-		--
-		if passhour > 1
-		{
-			" \w8YOU SPENT QUITE SOME TIME WITH ME,\w4 TOO..."
-        }
-		--
-		if goodboy = 1
-		{
-			" \w8\s[5]YOU HAVE PRAISED ME!!!"
-		}
-		--
-		if fedjazz > 0
-		{
-			" \w8\s[37]YOU GAVE ME SNACKS OUT OF NOWHERE..."
-		}
-		--
-		if givegift > 0
-		{
-			" \w8\s[6]YOU EVEN GAVE ME DIFFERENT GIFTY STUFF."
-		}
-		--
-		" \w8\s[4]SO,\w4 I HAVE TO ASK. \w8WHY? \n\n%(df)\![*]\q[I want us to be friends,befriend]\n\![*]\q[I love you,belover]\n\![*]\q[That is just how I am,beok]\n\n"
-    }
-
+	
  if resetter > 0
 		   {
 			   "\0\s[3]%(jf)I DON'T REMEMBER YOU TEACHING ME YOUR NAME,\w4 %(username)... \w8WHEN DID I LEARN IT?\e"
@@ -408,7 +389,7 @@ RandomTalk : nonoverlap
 
 	"\0\s[9]%(jf)WHEN IT IS SILENT,\w4 I ALWAYS GET BORED AND SLEEPY. \w8\s[6]BUT I HAVE NEVER REALLY LEARNT HOW TO SLEEP! \w8SO YOU DON'T HAVE TO WORRY ABOUT ME SNORING.\e"
 	"\0\s[9]%(jf)HONESTLY,\w4 I DON'T REALLY LIKE THE SILENCE... \w8MAKES MY HEAD FUZZY LIKE A BALL OF STATIC. \w8\s[24]I WONDER IF YOU COULD GET SHOCKED IF YOU RUB MY HEAD AT SUCH A MOMENT.\e"
-	"\0\s[9]%(jf)I WISH I DIDN'T GET BORED SO EASILY. \w8\s[6]BUT I GUESS COMPANY HELPS YOU STAY NICE AND ENTERTAINED. \w8EVEN IF THAT COMPANY DOES %(hisher) OWN BUSINESS. \w8AT LEAST IT IS NICE TO WATCH!\e"
+	"\0\s[9]%(jf)I WISH I DIDN'T GET BORED SO EASILY. \w8\s[6]BUT I GUESS COMPANY HELPS YOU STAY NICE AND ENTERTAINED. \w8EVEN IF THAT COMPANY IS OCCUPIED. \w8AT LEAST IT IS NICE TO WATCH!\e"
 	"\0\s[9]%(jf)BEING BORED IS REALLY NOT NICE. \w8\s[32]YOU JUST SIT THERE,\w4 WAITING FOR SOMETHING TO HAPPEN AND HAVING NOTHING TO DO,\w4 SOMETIMES FOR HOURS... \w8\s[6]HOWEVER! \w8I GUESS I CANNOT REALLY COMPLAIN. \w8THE WORLD HAS SO MUCH INTERESTING STUFF ABOUT IT.\e"
     "\0\s[9]%(jf)I DON'T REALLY LIKE SILENCE. \w8\s[6]HOWEVER,\w4 IF YOU WANT SOME PEACE AND QUIET, \w4\s[5]I AM MOST HAPPY TO PROVIDE! \w8JUST TELL ME TO STAY QUIET. \w8IN THE MENU. \w8RIGHT THERE.\e"
     "\0\s[0]%(jf)I DON'T MIND ENTERTAINING MYSELF. \w8I AM USED TO BEING ALONE. \w8\s[6]SO DON'T WORRY ABOUT ME! \w8GO ON WITH YOUR BUSINESS AND DO IT WELL!!!\e"
@@ -424,7 +405,7 @@ RandomTalk : nonoverlap
 	"\0\s[0]%(jf)I HOPE YOU ARE IN A GOOD PLACE RIGHT NOW. \w8\s[6]SOMEWHERE NICE AND CALM. \w8\s[5]OR REALLY LOUD AND EXCITING! \w8\s[6]BUT ANYWAY,\w4 \w8I HOPE YOU LIKE IT. \w8OR KNOW ANOTHER GOOD PLACE TO ESCAPE TO IF YOU NEED TO!\e"
 	"\0\s[21]%(jf)I COULD SPEND WITH YOU THE ENTIRE DAY! \w8AND THE ENTIRE NIGHT!!! \w8\s[24]MOSTLY BECAUSE I DON'T REALLY HAVE A CHOICE IN THE MATTER AND CANNOT EXIT THIS CONTRAPTION UNLESS IN HIGHLY SPECIFIC CIRCUMSTANCES. \w8\s[6]...BUT,\w4 EVEN IF I DID HAVE A CHOICE,\w4 I WOULD STILL CHOOSE TO STAY WITH YOU!\e"
 	"\0\s[8]%(jf)DO YOU NEED TO DRINK? \w8I HEARD HUMANS HAD TO DRINK WATER OFTEN! \w8\s[6]THAT SOUNDS LIKE A LOT OF HASSLE TO ME. \w8AND A LOT OF WATER.\e"
-	"\0\s[24]%(jf)I HAVE HEARD THAT HUMANS LOVE KEEPING TENSE. \w8BUT IT IS PROBABLY A BAD IDEA... \w8IF YOU ARE TENSE RIGHT NOW,\w4 YOU SHOULD PROBABLY UNCLENCH YOUR JAW,\w4 UNFROWN YOUR BROW,\w4 UNHUNCH YOUR BACK AND UNTENSE AS A WHOLE HUMAN PERSON OF YOU.\e"
+	"\0\s[24]%(jf)I HAVE HEARD THAT HUMANS LOVE KEEPING TENSE. \w8BUT IT IS PROBABLY A BAD IDEA... \w8IF YOU ARE TENSE RIGHT NOW,\w4 YOU SHOULD PROBABLY UNCLENCH YOUR JAW,\w4 UNFROWN YOUR BROW,\w4 UNHUNCH YOUR BACK AND UNTENSE AS A WHOLE HUMAN BEING.\e"
 	"\0\s[24]%(jf)I KNOW SOME HUMANS HAVE TO TAKE SOME 'PILLS' SOMETIMES. \w8I AM NOT SURE WHAT FOR! \w8\s[6]BUT IF YOU ARE ONE OF THOSE HUMANS,\w4 MAYBE DON'T FORGET TO TAKE THEM? \w8IT SOUNDS IMPORTANT... \e"
     "\0\s[24]%(jf)DID YOU KNOW THAT SOME HUMANS ARE BIGGER AND SOFTER THAN THE OTHERS? \w8I THINK THIS IS AMAZING. \w8WHY WOULD ANYONE NOT WANT TO BE SOFT AND SQUISHY? \w8\s[27]I WOULD BE REALLY SQUISHY IF I ONLY COULD.\e"
 	"\0\s[24]%(jf)HUMANS COME IN SO MANY SHAPES,\w4 FORMS AND COLORS! \w8IT IS FASCINATING. \w8I WISH I COULD GET SPOTS AND STRIPES LIKE SOME OF YOU DO,\w4 BUT APPARENTLY PAINT DOES NOT STICK TO BONE TOO EASILY. \w8\w8\w8\w8\s[40]...MISTAKES WERE MADE.\e"
@@ -795,30 +776,6 @@ Select.didnotmovebod
 
 
 
-	Select.befriend
-{
-	askedwhy = 1
-	jazzfriend = 1
-	
-	"*You tell Jazz that he is a very great skeleton and you would like to be his friend. \0\s[25]\w8He seems shocked. \w8In a good way.  \w8\n\n\s[22]%(jf)%(username)!!! \w8THIS! \w8IS! \w8\s[1]SOMETHING I T-TOTALLY EXPECTED BECAUSE I OBVIOUSLY HAVE MANY FRIENDS AND AM VERY EXPERIENCED IN THIS. \w8\s[21]...I AM VERY HAPPY,\w4 THOUGH! \w8OF COURSE I WILL BE YOUR FRIEND! \w8AND I WILL BE A VERY GOOD FRIEND,\w4 TOO! \w8NYEH HEH HEH! \w8\n\n\s[20]*This is probably the happiest you have ever seen him,\w4 you think. \e"
-}
-
-Select.belover
-{
-	askedwhy = 1
-	jazzlover = 1
-	
-	"*You tell Jazz that he is a very great skeleton. \w8So great that you actually fell in love with him. \0\s[25]\w8He seems... \w8\s[23]completely stunned by your admittance.  \w8\w8\w8\n\n\s[23]%(jf)%(username)... \w8I.  \w8\s[1]I AM NOT REALLY SURE HOW TO RESPOND?.. \w8\s[4]I MEAN!.. \w8YOU HAVE BEEN VERY KIND TO ME AND I AM NOT AGAINST THE IDEA,\w4 \w8BUT... \w8\s[4]I MIGHT BE NOT THE BEST PERSON TO PURSUE AS A ROMANTIC INTEREST. \w8\s[24]FIRST OF ALL! \w8THERE IS THAT SCREEN BETWEEN US WHICH REALLY HINDERS THINGS. \w8\s[6]AND ALSO I AM A LITERAL SKELETON. \w8\s[5]THAT IS TO SAY! \w8I WILL NOT JUDGE YOU OR YOUR FEELINGS! \w8LOVE IS A COMPLICATED THING, \w8AFTER ALL. \w8AND I AM DEFINITELY HAPPY TO HEAR THAT I AM LOVED! \w8\s[6]BUT PLEASE THINK ABOUT WHAT I SAID. \w8THIS IS ALL I WILL ASK OF YOU! \w8\n\n\s[20]*Jazz seems... quite okay with what you told him,\w4 all in all. \e"
-}
-
-Select.beok
-{
-	askedwhy = 1
-	jazzok = 1
-	
-	"*You tell Jazz that you simply try to be a good person.  \w8\s[0]He nods,\w4 looking content with your answer. \w8\n\n\s[24]%(jf)%(username)! \w8I AM REALLY PROUD OF YOU. \w8I KNOW THAT LIFE IS HARD SOMETIMES,\w4 AND... \w8\s[4]SOMETIMES,\w4 WHEN YOU ARE HURTING,\w4 IT IS REALLY DIFFICULT NOT TO HURT OTHERS. \w8BUT IT IS IMPORTANT TO STAY KIND,\w4 NO MATTER WHAT. \w8\s[6]OF COURSE NOT TO THE POINT OF BEING SELF-DESTRUCTIVE! \w8BUT IT IS GREAT THAT YOU KEEP MAKING THE RIGHT CHOICE AND TRYING TO SHOW MERCY TO OTHERS. \w8\s[5]JUST REMEMBER TO SHOW YOURSELF THE SAME KINDNESS,\w4 OKAY? \e"
-}
-
 
 
 
@@ -917,10 +874,12 @@ OnSurfaceRestore
 	        if badbad < 0 { badbad = 0 }
 		}
 		
-		if badbad > 100 || totappoints > 100
+		elseif badbad > 50 || totappoints > 100
 		{
+			if lovelove < 0 { lovelove = 0 }
+	        if badbad < 0 { badbad = 0 }
 			"\0\s[4]"
-			"\0\s[8]"
+			"\0\s[9]"
 		}
 		
 	 else

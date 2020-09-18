@@ -41,6 +41,7 @@ OnFirstBoot
 	rockgiven        = 0
 	simplecounter    = 0
 	ifpapyrus        = "OFF"
+	punchpoints      = 0
 	
 	
  	aitalkinterval = 400 
