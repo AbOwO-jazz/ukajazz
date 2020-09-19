@@ -67,8 +67,8 @@ MenuRun
 	
 	"\![*]\q[Tell me something new,altalk]\n\n"
 	--
-    //\![*]\q[I want to try,testvariable]\n/
-	 "\![*]\q[I want to CHECK,checkmenu]\n/
+   //"\![*]\q[I want to try,testvariable]\n/
+	"\![*]\q[I want to CHECK,checkmenu]\n/
 	\![*]\q[I want to talk,talk]\n/
 	\![*]\q[I want to give you something,gift]\n/
 	\![*]\q[I need some help,dosomething]\n\n/
@@ -276,7 +276,7 @@ Select.letstalk
 		--
 		if passhour > 1
 		{
-			" \w8YOU SPENT QUITE SOME TIME WITH ME,\w4 TOO..."
+			" \w8YOU SPENT QUITE SOME TIME WITH ME..."
         }
 		--
 		if goodboy = 1
@@ -303,7 +303,7 @@ Select.letstalk
 	askedwhy = 1
 	jazzfriend = 1
 	
-	"*You tell Jazz that he is a very great skeleton and you would like to be his friend. \0\s[25]\w8He seems shocked. \w8In a good way.  \w8\n\n\s[22]%(jf)%(username)!!! \w8THIS! \w8IS! \w8\s[1]SOMETHING I T-TOTALLY EXPECTED BECAUSE I OBVIOUSLY HAVE MANY FRIENDS AND AM VERY EXPERIENCED IN THIS. \w8\s[21]...I AM VERY HAPPY,\w4 THOUGH! \w8OF COURSE I WILL BE YOUR FRIEND! \w8AND I WILL BE A VERY GOOD FRIEND,\w4 TOO! \w8NYEH HEH HEH! \w8\n\n\s[20]*This is probably the happiest you have ever seen him,\w4 you think. %(ConvCancel)\e"
+	"\b2*You tell Jazz that he is a very great skeleton and you would like to be his friend. \0\s[25]\w8He seems shocked. \w8In a good way.  \w8\n\n\s[22]%(jf)%(username)!!! \w8THIS! \w8IS! \w8\s[40]SOMETHING I T-TOTALLY EXPECTED BECAUSE I OBVIOUSLY HAVE MANY FRIENDS AND AM VERY EXPERIENCED IN THIS. \w8\n\s[3]BUT I CANNOT HELP BUT FEEL THAT YOU ARE A LITTLE... \w8COMPLETELY AND UTTERLY OBSESSED, \w4WITH ME????? \w8\s[24]WHICH IS NOT THAT BAD, \w4BUT! \w8I JUST HOPE YOU HAVE CLOSE AND INTIMATE RELATIONSHIPS ON YOUR SIDE OF THE SCREEN AS WELL, \w4AND YOU DO NOT FAIL TO MAINTAIN THEM. \w8\n\s[21]...I AM VERY HAPPY,\w4 THOUGH! \w8OF COURSE I WILL BE YOUR FRIEND! \w8AND I WILL BE A VERY GOOD FRIEND,\w4 TOO! \w8NYEH HEH HEH! \w8\s[20]%(df)*This is the happiest you have ever seen him,\w4 you think. %(ConvCancel)\e"
 }
 
 Select.belover
@@ -311,7 +311,7 @@ Select.belover
 	askedwhy = 1
 	jazzlover = 1
 	
-	"*You tell Jazz that he is a very great skeleton. \w8So great that you actually fell in love with him. \0\s[25]\w8He seems... \w8\s[23]completely stunned by your admittance.  \w8\w8\w8\n\n\s[23]%(jf)%(username)... \w8I.  \w8\s[1]I AM NOT REALLY SURE HOW TO RESPOND?.. \w8\s[4]I MEAN!.. \w8YOU HAVE BEEN VERY KIND TO ME AND I AM NOT AGAINST THE IDEA,\w4 \w8BUT... \w8\s[4]I MIGHT BE NOT THE BEST PERSON TO PURSUE AS A ROMANTIC INTEREST. \w8\s[24]FIRST OF ALL! \w8THERE IS THAT SCREEN BETWEEN US WHICH REALLY HINDERS THINGS. \w8\s[6]AND ALSO I AM A LITERAL SKELETON. \w8\s[5]THAT IS TO SAY! \w8I WILL NOT JUDGE YOU OR YOUR FEELINGS! \w8LOVE IS A COMPLICATED THING, \w8AFTER ALL. \w8AND I AM DEFINITELY HAPPY TO HEAR THAT I AM LOVED! \w8\s[6]BUT PLEASE THINK ABOUT WHAT I SAID. \w8THIS IS ALL I WILL ASK OF YOU! \w8\n\n\s[20]*Jazz seems... quite okay with what you told him,\w4 all in all. %(ConvCancel)\e"
+	"\b2*You tell Jazz that he is a very great skeleton. \w8So great that you actually fell in love with him. \0\s[25]\w8He seems... \w8\s[23]completely stunned by your confession.  \w8\w8\w8\n\n\s[23]%(jf)%(username)... \w8I. \w8\s[1]I AM NOT REALLY SURE HOW TO RESPOND?.. \w8\s[4]I MEAN!.. \w8YOU HAVE BEEN VERY NICE,\w4 AND I THINK YOU ARE A GREAT PERSON, \w8BUT... \w8\s[4]I MIGHT BE NOT THE BEST PERSON TO PURSUE AS A ROMANTIC INTEREST. \w8\n\s[24]FIRST OF ALL! \w8THERE IS THAT SCREEN BETWEEN US WHICH REALLY HINDERS THINGS. \w8\s[1]SECOND OF ALL, \w4I THINK YOU ARE A LITTLE... \w8TOO OBSESSED WITH ME FOR YOUR OWN GOOD. \w8\s[6]AND ALSO I AM A LITERAL SKELETON WHILE YOU ARE MADE OF MEAT MATTER SO WE MIGHT BE A LITTLE TOO DIFFERENT. \w8I BET YOU CANNOT EVEN FORM AFFECTION BULLETS TO PROPERLY CONVEY YOUR FEELS. \w8\n\s[5]THAT IS TO SAY! \w8I WILL NOT JUDGE YOU OR YOUR FEELINGS! \w8LOVE IS A COMPLICATED THING, \w8AFTER ALL. \w8AND I AM DEFINITELY HAPPY TO HEAR THAT I AM LOVED! \w8\s[6]BUT PLEASE THINK ABOUT WHAT I SAID. \w8THIS IS ALL I WILL ASK OF YOU! \w8\s[20]%(df)*Jazz seems... quite okay with what you told him,\w4 all in all. %(ConvCancel)\e"
 }
 
 Select.beok
@@ -319,7 +319,7 @@ Select.beok
 	askedwhy = 1
 	jazzok = 1
 	
-	"*You tell Jazz that you simply try to be a good person.  \w8\s[0]He nods,\w4 looking content with your answer. \w8\n\n\s[24]%(jf)%(username)! \w8I AM REALLY PROUD OF YOU. \w8I KNOW THAT LIFE IS HARD SOMETIMES,\w4 AND... \w8\s[4]SOMETIMES,\w4 WHEN YOU ARE HURTING,\w4 IT IS REALLY DIFFICULT NOT TO HURT OTHERS. \w8BUT IT IS IMPORTANT TO STAY KIND,\w4 NO MATTER WHAT. \w8\s[6]OF COURSE NOT TO THE POINT OF BEING SELF-DESTRUCTIVE! \w8BUT IT IS GREAT THAT YOU KEEP MAKING THE RIGHT CHOICE AND TRYING TO SHOW MERCY TO OTHERS. \w8\s[5]JUST REMEMBER TO SHOW YOURSELF THE SAME KINDNESS,\w4 OKAY? %(ConvCancel)\e"
+	"\b2*You tell Jazz that you simply try to be a good person.  \w8\s[0]He nods,\w4 looking content with your answer. \w8\n\n\s[24]%(jf)%(username)! \w8I AM REALLY PROUD OF YOU. \w8I KNOW THAT LIFE IS HARD SOMETIMES,\w4 AND... \w8\s[4]SOMETIMES,\w4 WHEN YOU ARE HURTING,\w4 IT IS REALLY DIFFICULT NOT TO HURT OTHERS. \w8BUT IT IS IMPORTANT TO STAY KIND,\w4 NO MATTER WHAT. \w8\s[6]OF COURSE NOT TO THE POINT OF BEING SELF-DESTRUCTIVE! \w8BUT IT IS GREAT THAT YOU KEEP MAKING THE RIGHT CHOICE AND TRYING TO SHOW MERCY TO OTHERS. \w8\s[5]JUST REMEMBER TO SHOW YOURSELF THE SAME KINDNESS,\w4 OKAY? %(ConvCancel)\e"
 }
 
 
@@ -1341,7 +1341,7 @@ Select.telljoke
 	"\0\s[3]%(jf)LET ME THINK... \w8\s[6]OH! \w8A SKELETON WALKS INTO A BAR. \w8\w8\w8HE SAYS: 'OUCH!' \w8\s[24]BECAUSE HE NOW LEADS A HEALTHY LIFESTYLE AND DOES NOT WANT TO BE TEMPTED BY SUCH PLACES AGAIN. \w8\s[6]SO HE TURNS AROUND AND LEAVES THE BAR AND NEVER ENTERS A BAR AGAIN. \w8YOU CAN SAY HE AVOIDS THEM BAR NONE.%(ConvCancel)\e"
 	"\0\s[3]%(jf)HMM... \w8\s[24]WHY DID A SKELETON GIVE UP FOOTBALL? \w8\w8\w8\s[6]BECAUSE HE FELT THAT THE ENJOYMENT WAS LOST. \w8THAT THE EARLY CHEER AND ZEST WAS THERE NO MORE... \w8THAT THE RACE AFTER THE SMALL ROUND OBJECT DID NOT MAKE HIS HEART RACE ANY LONGER... \w8\w8\w8\s[24]IN A WORD,\w4 BECAUSE HIS HEART WAS NOT IN IT.%(ConvCancel)\e"
     "\0\s[8]%(jf)HM. \w8HERE IS ONE... \w8\s[24]WHAT IS A SKELETON'S FAVORITE INSTRUMENT? \w8\w8\w8THE BONE-SHARP HARP. \w8\w8\w8... \w8\s[6]THAT'S A MONSTER MEME. \w8YOU PROBABLY WON'T UNDERSTAND.%(ConvCancel)\e"
-	"\0\s[3]%(jf)ALRIGHT... \w8\s[24]A HUMAN AND A MONSTER SIT IN A COFFEE SHOP. \w8THE MONSTER SAYS,\w4 'SIGH,\w4 ALL THE BRUSHES AND PAINTINGS AND PAINTS IN MY ATTIC HAVE BEEN GATHERING DUST FOR YEARS NOW...' \w8\s[6]THE HUMAN ASKS: 'DID YOU USE TO BE A PAINTOR?' \w8'NO,\w4 I DIDN'T; MY GRANDFATHER AND FATHER DID. I AM A MORTICIAN.' \w8\w8\w8\s[8]...I SUPPOSE IT IS QUITE A DARK ONE.%(ConvCancel)\e"
+	"\0\s[3]%(jf)ALRIGHT... \w8\s[24]A HUMAN AND A MONSTER SIT IN A COFFEE SHOP. \w8THE MONSTER SAYS,\w4 'SIGH,\w4 ALL THE BRUSHES AND PAINTINGS AND PAINTS IN MY ATTIC HAVE BEEN GATHERING DUST FOR YEARS NOW...' \w8\s[6]THE HUMAN ASKS: 'DID YOU USE TO BE A PAINTER?' \w8'NO,\w4 I DIDN'T; MY GRANDFATHER AND FATHER DID. I AM A MORTICIAN.' \w8\w8\w8\s[8]...I SUPPOSE IT IS QUITE A DARK ONE.%(ConvCancel)\e"
 	"\0\s[3]%(jf)OKAY,\w4 HOW ABOUT... \w8\s[24]A FLOWER WALKS INTO A SHOP. \w8THEY ARE VERY FRIENDLY,\w4 BUT THE CASHIER DEMANDS THEY WALK AWAY IMMEDIATELY. \w8\s[3]HIS COLLEAGUE ASKS,\w4 'WHY DID YOU DRIVE THIS GUY AWAY?' \w8\s[6]THE CASHIER REPLIES: 'WELL,\w4 HE SEEMS LIKE YOUR BUD,\w4 BUT AS SOON AS YOU ASK FOR SOME GREENS UP FRONT,\w4 HE LEAVES.'%(ConvCancel)\e"
 	"\0\s[8]%(jf)OKAY,\w4 HERE GOES... \w8\s[24]WHAT WAS A GHOST MONSTER'S CHOSEN WEAPON? \w8\w8\w8\s[6]A BOO-MERANG. \w8\s[24]WHY DID THEY CHOOSE IT? \w8\s[6]BECAUSE THEY FOUGHT IN A WAR,\w4 WHICH IS THE MOST SCARY THING TO HAPPEN. \w8\w8\w8\s[32]OH,\w4 AND ALSO THEY TRIED THROWING IT AWAY,\w4 BUT IT KEPT RETURNING TO THEM.%(ConvCancel)\e"
 	"\0\s[8]%(jf)HM,\w4 ALRIGHT... \w8\s[24]HOW MANY SKELETONS DO YOU NEED TO FIX A LIGHTBULB? \w8\w8\w8\s[6]THREE. \w8\s[32]ONE TO HOLD THE LIGHTBULB,\w4 ONE TO ROOT FOR HIM,\w4 AND ONE TO SLOWLY TURN THE ENTIRE BUILDING AROUND.%(ConvCancel)\e"
@@ -1418,7 +1418,7 @@ Select.friendzone
 	jazzfriend = 1
 	jazzok = 0
 	
-	"\0\s[8]*You confess that you love him,\w4 but your love towards him is purely platonic in nature. \w8In fact,\w4 you want to be his friend. \w8\s[21]He does not seem to mind?.. \w8\s[24]\n\n%(jf)%(username),\w4 OF COURSE I WANT TO BE YOUR FRIEND! \w8IT IS OKAY! \w8AS LONG AS YOU LOVE ME,\w4 I AM MORE THAN GLAD TO STAY BY YOUR SIDE! \w8EVEN IF YOU CALL YOUR LOVE A DIFFERENT NAME. \w8\s[6]AND,\w4 FRANKLY SPEAKING,\w4 IT MIGHT BE FOR THE BEST. \w8WE BELONG TO DIFFERENT WORLDS... \w8HUMAN AND MONSTER... \w8MEATY AND SKELETAL... \w8THREE-DIMENSIONAL AND MULTIVERSAL... \w8\s[24]AT LEAST THIS WAY WE WON'T BREAK TOO MANY HEARTS OR FOURTH WALLS.%(ConvCancel)\e"
+	"\0\s[8]\b2*You confess that you love him,\w4 and your love towards him is purely platonic in nature. \w8In fact,\w4 you want to be his friend. \w8\s[21]He does not seem to mind?.. \w8\s[24]\n\n%(jf)%(username),\w4 OF COURSE I WANT TO BE YOUR FRIEND! \w8IT IS OKAY! \w8AS LONG AS YOU LOVE ME,\w4 I AM MORE THAN GLAD TO STAY BY YOUR SIDE! \w8EVEN IF YOU CALL YOUR LOVE A DIFFERENT NAME. \w8\s[6]AND,\w4 FRANKLY SPEAKING,\w4 IT MIGHT BE FOR THE BEST. \w8WE BELONG TO DIFFERENT WORLDS... \w8HUMAN AND MONSTER... \w8MEATY AND SKELETAL... \w8THREE-DIMENSIONAL AND MULTIVERSAL... \w8\s[24]AT LEAST THIS WAY WE WON'T BREAK TOO MANY HEARTS OR FOURTH WALLS. \w8\w8\w8\n\s[3]THAT IS TO SAY,\w4 I CANNOT HELP BUT FEEL THAT YOU ARE A LITTLE... \w8COMPLETELY AND UTTERLY OBSESSED, \w4WITH ME????? \w8\s[24]WHICH IS NOT THAT BAD, \w4BUT! \w8I JUST HOPE YOU HAVE CLOSE AND INTIMATE RELATIONSHIPS ON YOUR SIDE OF THE SCREEN AS WELL, \w4AND YOU DO NOT FAIL TO MAINTAIN THEM.%(ConvCancel)\e"
 	
 }
 
@@ -1428,7 +1428,7 @@ Select.lovezone
 	jazzfriend = 0
 	jazzok = 0
 	
-	"\0\s[8]*You confess that you actually love Jazz. \w8\s[5]\n\nOH! \w8I LOVE JAZZ TOO! \w8IT IS MY FAVORITE KIND OF MUSIC!!! \n\n\w8\w8\w8*...You say that you meant him,\w4 and not the music genre. \w8\n\n\s[32]%(jf)OH. \w8\w8\w8\s[25]...OH. \w8\s[1]%(username),\w4 I AM NOT REALLY SURE HOW TO RESPOND?.. \w8\s[4]I MEAN!.. \w8YOU HAVE BEEN VERY KIND TO ME AND I AM NOT AGAINST THE IDEA,\w4 \w8BUT... \w8\s[4]I MIGHT BE NOT THE BEST PERSON TO PURSUE AS A ROMANTIC INTEREST. \w8\s[24]FIRST OF ALL! \w8THERE IS THAT SCREEN BETWEEN US WHICH REALLY HINDERS THINGS. \w8.......AND ALSO I AM A LITERAL SKELETON. \w8\s[32]THAT IS TO SAY! \w8I WILL NOT JUDGE YOU OR YOUR FEELINGS! \w8LOVE IS A COMPLICATED THING,\w4 \w8AFTER ALL. \w8AND I AM DEFINITELY HAPPY TO HEAR THAT I AM LOVED! \w8\s[6]BUT PLEASE THINK ABOUT WHAT I SAID. \w8THIS IS ALL I WILL ASK OF YOU!%(ConvCancel)\e"
+	"\0\s[8]\b2*You confess that you actually love Jazz. \w8\s[5]\n\nOH! \w8I LOVE JAZZ TOO! \w8IT IS MY FAVORITE KIND OF MUSIC!!! \n\n\w8\w8\w8*...You say that you meant him,\w4 and not the music genre. \w8\n\n\s[32]%(jf)OH. \w8\w8\w8\s[25]...OH. \w8\w8\w8\n\n\s[23]%(jf)%(username)... \w8I. \w8\s[1]I AM NOT REALLY SURE HOW TO RESPOND?.. \w8\s[4]I MEAN!.. \w8YOU HAVE BEEN VERY NICE,\w4 AND I THINK YOU ARE A GREAT PERSON, \w8BUT... \w8\s[4]I MIGHT BE NOT THE BEST PERSON TO PURSUE AS A ROMANTIC INTEREST. \w8\n\s[24]FIRST OF ALL! \w8THERE IS THAT SCREEN BETWEEN US WHICH REALLY HINDERS THINGS. \w8\s[1]SECOND OF ALL, \w4I THINK YOU ARE A LITTLE... \w8TOO OBSESSED WITH ME FOR YOUR OWN GOOD. \w8\s[6]AND ALSO I AM A LITERAL SKELETON WHILE YOU ARE MADE OF MEAT MATTER SO WE MIGHT BE A LITTLE TOO DIFFERENT. \w8I BET YOU CANNOT EVEN FORM AFFECTION BULLETS TO PROPERLY CONVEY YOUR FEELS. \w8\n\s[5]THAT IS TO SAY! \w8I WILL NOT JUDGE YOU OR YOUR FEELINGS! \w8LOVE IS A COMPLICATED THING, \w8AFTER ALL. \w8AND I AM DEFINITELY HAPPY TO HEAR THAT I AM LOVED! \w8\s[6]BUT PLEASE THINK ABOUT WHAT I SAID. \w8THIS IS ALL I WILL ASK OF YOU!%(ConvCancel)\e"
 }
 
 Select.nofriendzone
@@ -3256,20 +3256,6 @@ Select.dosomething
 		if gotwhatscoming == 1
 	{
 		"\0\s[50]*The scarf cannot do much,\w4 so you will have to do it yourself.\n\n"
-		
-	}
-	
-	elseif badbad > 10
-		{
-			"\0\s[4]%(jf)CAN I HELP?..\n\n"
-		}
-		
-		else 
-		{
-		"\0\s[22]%(jf)WHAT DO YOU WANT ME TO DO?\n\n"
- 		"\0\s[22]%(jf)OH,\w4 DID YOU NEED SOMETHING?\n\n"
-		"\0\s[22]%(jf)I AM ALWAYS!!! \w8READY TO HELP!!!\n\n"
-		}
 		--
 		"%(df)"
  		"\![*]\q[Open Calendar,CALENDAR]\n/
@@ -3278,6 +3264,35 @@ Select.dosomething
 		\![*]\q[Empty Recycle Bin,ChoiceGarbagecan]\n/
 		\![*]\q[System Information,ChoiceSystemInformation]\n\n/
  		\![*]\q[Back to main menu,BACKTOMENU]\e"
+		
+	}
+	
+	elseif badbad > 10
+		{
+			"\0\s[4]%(jf)CAN I HELP?..\n\n%(df)"
+			--
+ 		"\![*]\q[Open Calendar,CALENDAR]\n/
+		\![*]\q[Check Email,MailCheck]\n/
+		\![*]\q[Open SSP Preferences,sspconfig]\n/
+		\![*]\q[Empty Recycle Bin,ChoiceGarbagecan]\n/
+		\![*]\q[System Information,ChoiceSystemInformation]\n\n/
+ 		\![*]\q[Back to main menu,BACKTOMENU]\e"
+		}
+		
+		else 
+		{
+		"\0\s[22]%(jf)WHAT DO YOU WANT ME TO DO?%(df)\n\n"
+ 		"\0\s[22]%(jf)OH,\w4 DID YOU NEED SOMETHING?%(df)\n\n"
+		"\0\s[22]%(jf)I AM ALWAYS!!! \w8READY TO HELP!!!%(df)\n\n"
+		--
+ 		"\![*]\q[Open Calendar,CALENDAR]\n/
+		\![*]\q[Check Email,MailCheck]\n/
+		\![*]\q[Open SSP Preferences,sspconfig]\n/
+		\![*]\q[Empty Recycle Bin,ChoiceGarbagecan]\n/
+		\![*]\q[System Information,ChoiceSystemInformation]\n\n/
+ 		\![*]\q[Back to main menu,BACKTOMENU]\e"
+		}
+		
 		
 }
 
@@ -3491,8 +3506,10 @@ OnChoiceTimeout
 
 Select.testvariable
 {
-	"%(badbad)"
-	
+	askedwhy = 0
+	jazzfriend = 0
+	jazzlover = 0
+	jazzok = 0
 	
 }
 
