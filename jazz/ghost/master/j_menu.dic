@@ -2212,15 +2212,19 @@ Select.rcube
 	if cubegiven != 1
 	{
 		if totappoints > 30 || badbad > 6
+		cubegiven = TOINT(cubegiven)
+		cubegiven = 1
 	{
-		"\0\s[0]*You give Jazz a Rubic's cube. \w8\s[52]He picks it up \s[1]with a tiny nod and puts it away immediately. \w8Won't he even try to solve it?...%(cubeg)%(ConvCancel)\e"
+		"\0\s[0]*You give Jazz a Rubic's cube. \w8\s[52]He picks it up \s[1]with a tiny nod and puts it away immediately. \w8Won't he even try to solve it?... %(ConvCancel)\e"
 	 
 	}
 	
 	else
 	{
+		cubegiven = TOINT(cubegiven)
+		cubegiven = 1
 	
-	"\0\s[0]*You give Jazz a Rubic's cube. \w8\n\n\s[3]%(jf)OH,\w4 IT IS THAT LOGIC PUZZLE THING? \w8LET ME SEE... %(df)\w8\n\n\s[33]He picks it up \s[37]and busies himself... \w8only to put it away for later after a few shifts. \w8\n\n\s[24]WELP! \w8I SAW THAT I AM STILL SLOW AT THAT.%(cubeg)%(ConvCancel)\e"
+	"\0\s[0]*You give Jazz a Rubic's cube. \w8\n\n\s[3]%(jf)OH,\w4 IT IS THAT LOGIC PUZZLE THING? \w8LET ME SEE... %(df)\w8\n\n\s[33]He picks it up \s[37]and busies himself... \w8only to put it away for later after a few shifts. \w8\n\n\s[24]WELP! \w8I SAW THAT I AM STILL SLOW AT THAT. %(ConvCancel)\e"
 	
 	}
 	}
@@ -2243,12 +2247,16 @@ Select.trckt
 	{
 		if totappoints > 30 || badbad > 6
 	{
-		"\0\s[0]*You hand Jazz a toy rocket. \w8\s[33]He grabs it in a blink \s[37]and genuinely grins for a moment \s[43]before abruptly remembering himself. \w8\s[44]And yourself. \w8Mostly your self.%(rockg)%(ConvCancel)\e"
+		rocketgiven = TOINT(rocketgiven)
+		rocketgiven = 1
+		"\0\s[0]*You hand Jazz a toy rocket. \w8\s[33]He grabs it in a blink \s[37]and genuinely grins for a moment \s[43]before abruptly remembering himself. \w8\s[44]And yourself. \w8Mostly your self. %(ConvCancel)\e"
 
 	}
 	else 
 	{
-	"\0\s[0]*You give Jazz a toy rocket. \w8\s[33]He grabs it out of your hands \s[37]faster than you can blink! \w8Looks like someone is already practicing rocket sounds. \w8Oh,\w4 no,\w4 that's just his purr. %(rockg)%(ConvCancel)\e"
+		rocketgiven = TOINT(rocketgiven)
+		rocketgiven = 1
+	"\0\s[0]*You give Jazz a toy rocket. \w8\s[33]He grabs it out of your hands \s[37]faster than you can blink! \w8Looks like someone is already practicing rocket sounds. \w8Oh,\w4 no,\w4 that's just his purr.  %(ConvCancel)\e"
 	}
 	
 	}
@@ -2265,23 +2273,27 @@ Select.trckt
 	   givegift += 1
 		if totappoints > 30 || badbad > 6
 	{
-		"\0\s[0]*You give Jazz a %(numberp)-piece jigsaw puzzle. \w8\s[52]He reluctantly picks it up,\w4 \s[1]sweating. \w8He wonders if you are laughing at him.%(puzg)%(ConvCancel)\e"	
-		"\0\s[0]*You hand Jazz a %(numberp)-piece jigsaw puzzle. \w8\s[52]He does not want to take it,\w4 \s[1]but he still does. \w8Perhaps doing what you want is the right answer. \w8He is not a stranger to being tested in strange ways.%(puzg)%(ConvCancel)\e"
-		"\0\s[0]*You give Jazz a %(numberp)-piece jigsaw puzzle. \w8\s[52]He takes it,\w4 \s[1]thoroughly intimidated... %(puzg)%(ConvCancel)\e"
-		"\0\s[0]*You give Jazz a %(numberp)-piece jigsaw puzzle. \w8\s[52]He takes it,\w4 \s[1]even though he is not thrilled. %(puzg)%(ConvCancel)\e"
-		"\0\s[0]*You give Jazz a %(numberp)-piece jigsaw puzzle. \w8\s[52]He reaches out for it,\w4 \s[1]wincing all the way through. \w8Are your gifts as tricky as you are? %(puzg)%(ConvCancel)\e"
+		puzzlegiven = TOINT(puzzlegiven)
+		puzzlegiven += 1
+		"\0\s[0]*You give Jazz a %(numberp)-piece jigsaw puzzle. \w8\s[52]He reluctantly picks it up,\w4 \s[1]sweating. \w8He wonders if you are laughing at him. %(ConvCancel)\e"	
+		"\0\s[0]*You hand Jazz a %(numberp)-piece jigsaw puzzle. \w8\s[52]He does not want to take it,\w4 \s[1]but he still does. \w8Perhaps doing what you want is the right answer. \w8He is not a stranger to being tested in strange ways. %(ConvCancel)\e"
+		"\0\s[0]*You give Jazz a %(numberp)-piece jigsaw puzzle. \w8\s[52]He takes it,\w4 \s[1]thoroughly intimidated...  %(ConvCancel)\e"
+		"\0\s[0]*You give Jazz a %(numberp)-piece jigsaw puzzle. \w8\s[52]He takes it,\w4 \s[1]even though he is not thrilled.  %(ConvCancel)\e"
+		"\0\s[0]*You give Jazz a %(numberp)-piece jigsaw puzzle. \w8\s[52]He reaches out for it,\w4 \s[1]wincing all the way through. \w8Are your gifts as tricky as you are?  %(ConvCancel)\e"
 	}
 	     
 		else
 		{
-		"\0\s[0]*You give Jazz a %(numberp)-piece jigsaw puzzle. \w8\s[52]He picks it up,\w4 \s[1]slightly sweating. \w8You guess that it will take him a while... %(puzg)%(ConvCancel)\e"
-		"\0\s[0]*You give Jazz a %(numberp)-piece jigsaw puzzle. \w8\s[52]He picks it up,\w4 \s[1]visibly worried. \w8\n\n\s[40]%(jf)I LIKE PUZZLES,\w4 DON'T WORRY! \w8BUT THEY MAKE MY EYES BURN VERY QUICK. \w8ALL THOSE SMALL PIECES... \w8THEY CONFUSE ME. \w8\s[6]YOU CAN SAY THAT THEY PU- \w8\s[3]... \w8\w8\w8...I REFUSE TO SAY THAT. %(puzg)%(ConvCancel)\e"
-		"\0\s[0]*You give Jazz a %(numberp)-piece jigsaw puzzle. \w8\s[52]He picks it up \s[1]after a moment of hesitation. \w8Looks like he is a little daunted by the task... %(puzg)%(ConvCancel)\e"
-		"\0\s[0]*You give Jazz a %(numberp)-piece jigsaw puzzle. \w8\s[52]He takes it,\w4 \s[1]thoroughly intimidated... %(puzg)%(ConvCancel)\e"
-		"\0\s[0]*You give Jazz a %(numberp)-piece jigsaw puzzle. \w8\s[52]He takes it \s[1]with a shiver in his claws and a resolve in his eyesockets. \w8The bridges are burned. \w8The only way to go is forward.%(puzg)%(ConvCancel)\e"
-		"\0\s[0]*You give Jazz a %(numberp)-piece jigsaw puzzle. \w8\s[52]He takes it,\w4 \s[1]gulping. \w8You should probably wait a while for him to solve it. %(puzg)%(ConvCancel)\e"
-        "\0\s[0]*You give Jazz a %(numberp)-piece jigsaw puzzle. \w8\s[52]He picks it \s[1]with a quiet whimper when he sees the number of pieces printed on the box...%(puzg)%(ConvCancel)\e"
-		"\0\s[0]*You give Jazz a %(numberp)-piece jigsaw puzzle. \w8\s[52]He takes it,\w4 \s[1]but he puts it away quickly. \w8This is a big box for such a (relatively) small skeleton... %(puzg)%(ConvCancel)\e"
+		puzzlegiven = TOINT(puzzlegiven)
+		puzzlegiven += 1
+		"\0\s[0]*You give Jazz a %(numberp)-piece jigsaw puzzle. \w8\s[52]He picks it up,\w4 \s[1]slightly sweating. \w8You guess that it will take him a while...  %(ConvCancel)\e"
+		"\0\s[0]*You give Jazz a %(numberp)-piece jigsaw puzzle. \w8\s[52]He picks it up,\w4 \s[1]visibly worried. \w8\n\n\s[40]%(jf)I LIKE PUZZLES,\w4 DON'T WORRY! \w8BUT THEY MAKE MY EYES BURN VERY QUICK. \w8ALL THOSE SMALL PIECES... \w8THEY CONFUSE ME. \w8\s[6]YOU CAN SAY THAT THEY PU- \w8\s[3]... \w8\w8\w8...I REFUSE TO SAY THAT.  %(ConvCancel)\e"
+		"\0\s[0]*You give Jazz a %(numberp)-piece jigsaw puzzle. \w8\s[52]He picks it up \s[1]after a moment of hesitation. \w8Looks like he is a little daunted by the task...  %(ConvCancel)\e"
+		"\0\s[0]*You give Jazz a %(numberp)-piece jigsaw puzzle. \w8\s[52]He takes it,\w4 \s[1]thoroughly intimidated...  %(ConvCancel)\e"
+		"\0\s[0]*You give Jazz a %(numberp)-piece jigsaw puzzle. \w8\s[52]He takes it \s[1]with a shiver in his claws and a resolve in his eyesockets. \w8The bridges are burned. \w8The only way to go is forward. %(ConvCancel)\e"
+		"\0\s[0]*You give Jazz a %(numberp)-piece jigsaw puzzle. \w8\s[52]He takes it,\w4 \s[1]gulping. \w8You should probably wait a while for him to solve it.  %(ConvCancel)\e"
+        "\0\s[0]*You give Jazz a %(numberp)-piece jigsaw puzzle. \w8\s[52]He picks it \s[1]with a quiet whimper when he sees the number of pieces printed on the box... %(ConvCancel)\e"
+		"\0\s[0]*You give Jazz a %(numberp)-piece jigsaw puzzle. \w8\s[52]He takes it,\w4 \s[1]but he puts it away quickly. \w8This is a big box for such a (relatively) small skeleton...  %(ConvCancel)\e"
 	   
 		}
 	   
@@ -2295,38 +2307,45 @@ Select.plsh
 	
 	if totappoints > 30 || badbad > 6
 	{
-		"\0\s[0]*You give Jazz a stuffed plushie. \w8\s[52]He takes it with \s[1]a quiet ''%(jf)thank you%(df)'' and presses it to his chest before putting it away - as if afraid you might take it back.%(plushg)%(ConvCancel)\e"
-	    "\0\s[0]*You hand Jazz a stuffed plushie. \w8\s[52]He takes it with \s[4]barely a twitch in his bony fingers. \w8\w8\w8...Did he whisper something about ''keeping it safe''?%(plushg)%(ConvCancel)\e"
-		"\0\s[0]*You give Jazz a stuffed plushie. \w8\s[33]He picks it \s[37]and looks up at you with an expression of confused hope.%(plushg)%(ConvCancel)\e"
-		"\0\s[0]*You give Jazz a stuffed plushie. \w8\s[33]He takes it  \s[37]very,\w4 very carefully. \w8Looks like he likes it. \w8And also like you gained a bonus point or two in his eyes.%(plushg)%(ConvCancel)\e"
-		"\0\s[0]*You give Jazz a stuffed plushie. \w8\s[52]He picks it,\w4 \s[1]wondering if you will ever demand it back... \w8It is not like you ever did this,\w4 but he cannot help but worry. \w8You do not seem on the nice side,\w4 after all.%(plushg)%(ConvCancel)\e"
-		"\0\s[0]*You give Jazz a stuffed plushie. \w8\s[33]He takes it \s[37]and puts it away,\w4 deciding to roll with this for now even if he is slightly surprised. \w8It is not in your character,\w4 but your character is not a nice one.%(plushg)%(ConvCancel)\e"
+		plushgiven = TOINT(plushgiven)
+		plushgiven += 1
+		"\0\s[0]*You give Jazz a stuffed plushie. \w8\s[52]He takes it with \s[1]a quiet ''%(jf)thank you%(df)'' and presses it to his chest before putting it away - as if afraid you might take it back. %(ConvCancel)\e"
+	    "\0\s[0]*You hand Jazz a stuffed plushie. \w8\s[52]He takes it with \s[4]barely a twitch in his bony fingers. \w8\w8\w8...Did he whisper something about ''keeping it safe''? %(ConvCancel)\e"
+		"\0\s[0]*You give Jazz a stuffed plushie. \w8\s[33]He picks it \s[37]and looks up at you with an expression of confused hope. %(ConvCancel)\e"
+		"\0\s[0]*You give Jazz a stuffed plushie. \w8\s[33]He takes it  \s[37]very,\w4 very carefully. \w8Looks like he likes it. \w8And also like you gained a bonus point or two in his eyes. %(ConvCancel)\e"
+		"\0\s[0]*You give Jazz a stuffed plushie. \w8\s[52]He picks it,\w4 \s[1]wondering if you will ever demand it back... \w8It is not like you ever did this,\w4 but he cannot help but worry. \w8You do not seem on the nice side,\w4 after all. %(ConvCancel)\e"
+		"\0\s[0]*You give Jazz a stuffed plushie. \w8\s[33]He takes it \s[37]and puts it away,\w4 deciding to roll with this for now even if he is slightly surprised. \w8It is not in your character,\w4 but your character is not a nice one. %(ConvCancel)\e"
 	    
 		if plushgiven > 1
 		{
-			"\0\s[0]*You give Jazz a stuffed plushie. \w8\s[33]He takes it gingerly \s[37]with a rare smile... \w8\n\n%(jf)THANKS!! \w8\s[4]AND. \w8UM. \w8I FEEL LIKE YOU ARE ON THE RIGHT ROAD THERE! \w8\s[40]SOFT THINGS ARE REALLY GOOD! \w8P - PERHAPS YOU COULD LEARN SOMETHING FROM THEM?..%(plushg)%(ConvCancel)\e"
-			"\0\s[0]*You hand Jazz a stuffed plushie. \w8\s[33]He is surprised \s[37]in a good way... \w8both by getting another plushie and by you being nice more than once in a row.%(plushg)%(ConvCancel)\e"
+		plushgiven = TOINT(plushgiven)
+		plushgiven += 1
+			"\0\s[0]*You give Jazz a stuffed plushie. \w8\s[33]He takes it gingerly \s[37]with a rare smile... \w8\n\n%(jf)THANKS!! \w8\s[4]AND. \w8UM. \w8I FEEL LIKE YOU ARE ON THE RIGHT ROAD THERE! \w8\s[40]SOFT THINGS ARE REALLY GOOD! \w8P - PERHAPS YOU COULD LEARN SOMETHING FROM THEM?.. %(ConvCancel)\e"
+			"\0\s[0]*You hand Jazz a stuffed plushie. \w8\s[33]He is surprised \s[37]in a good way... \w8both by getting another plushie and by you being nice more than once in a row. %(ConvCancel)\e"
 		}
 	}
 	
 	else
 	{
-	
-	"\0\s[0]*You give Jazz a stuffed plushie. \w8\s[33]He takes it with \s[37]a sigh. \w8\s[22]\n\n%(jf)I WILL TAKE GOOD CARE OF THEM,\w4 PROMISE!%(plushg)%(ConvCancel)\e"
-	"\0\s[0]*You give Jazz a stuffed plushie. \w8\s[33]He takes it with \s[37]a smile. \w8\s[22]\n\n%(jf)THANKS!!! \w8I WILL LOVE THEM,\w4 CHERISH THEM,\w4 AND POSSIBLY CHEW ON THEM AS A SIGN OF AFFECTION! \w8\s[5]LOVE CAN BE TOUGH!!!%(plushg)%(ConvCancel)\e"
-	"\0\s[0]*You give Jazz a stuffed plushie. \w8\s[33]He takes it,\w4 \s[37]grinning. \w8\s[5]\n\n%(jf)THANKS,\w4 %(username)! \w8THEY ARE IN GOOD HANDS! \w8\s[6]THAT ARE ATTACHED TO A RIPPED BODY AND POWERED BY A BEAUTIFUL SOUL! %(plushg)%(ConvCancel)\e"
-	"\0\s[0]*You give Jazz a stuffed plushie. \w8\s[33]He grabs it \s[37]in a blink! \w8\s[20]\n\n%(jf)WOWIE!!! \w8THIS IS JUST WHAT I WANTED ALL MY LIFE! \w8\s[21]WHAT IS IT? \w8\s[22]AH,\w4 NEVERMIND,\w4 I LOVE IT ANYWAY!!!%(plushg)%(ConvCancel)\e"
-	"\0\s[0]*You give Jazz a stuffed plushie. \w8\s[33]He takes it \s[37]very gently. \w8\s[21]\n\n%(jf)AH,\w4 TO LIVE IN A WORLD WHERE SMALL SOFT WEIRD ANIMALS EXIST... \w8\s[27]AND IN SUCH AMOUNTS...%(plushg)%(ConvCancel)\e"
-	"\0\s[0]*You give Jazz a stuffed plushie. \w8\s[33]He carefully picks it up... \s[37]\w8\s[21]to never let it go,\w4 judging by his expression.%(plushg)%(ConvCancel)\e"
+	plushgiven = TOINT(plushgiven)
+	plushgiven += 1
+	"\0\s[0]*You give Jazz a stuffed plushie. \w8\s[33]He takes it with \s[37]a sigh. \w8\s[22]\n\n%(jf)I WILL TAKE GOOD CARE OF THEM,\w4 PROMISE! %(ConvCancel)\e"
+	"\0\s[0]*You give Jazz a stuffed plushie. \w8\s[33]He takes it with \s[37]a smile. \w8\s[22]\n\n%(jf)THANKS!!! \w8I WILL LOVE THEM,\w4 CHERISH THEM,\w4 AND POSSIBLY CHEW ON THEM AS A SIGN OF AFFECTION! \w8\s[5]LOVE CAN BE TOUGH!!! %(ConvCancel)\e"
+	"\0\s[0]*You give Jazz a stuffed plushie. \w8\s[33]He takes it,\w4 \s[37]grinning. \w8\s[5]\n\n%(jf)THANKS,\w4 %(username)! \w8THEY ARE IN GOOD HANDS! \w8\s[6]THAT ARE ATTACHED TO A RIPPED BODY AND POWERED BY A BEAUTIFUL SOUL!  %(ConvCancel)\e"
+	"\0\s[0]*You give Jazz a stuffed plushie. \w8\s[33]He grabs it \s[37]in a blink! \w8\s[20]\n\n%(jf)WOWIE!!! \w8THIS IS JUST WHAT I WANTED ALL MY LIFE! \w8\s[21]WHAT IS IT? \w8\s[22]AH,\w4 NEVERMIND,\w4 I LOVE IT ANYWAY!!! %(ConvCancel)\e"
+	"\0\s[0]*You give Jazz a stuffed plushie. \w8\s[33]He takes it \s[37]very gently. \w8\s[21]\n\n%(jf)AH,\w4 TO LIVE IN A WORLD WHERE SMALL SOFT WEIRD ANIMALS EXIST... \w8\s[27]AND IN SUCH AMOUNTS... %(ConvCancel)\e"
+	"\0\s[0]*You give Jazz a stuffed plushie. \w8\s[33]He carefully picks it up... \s[37]\w8\s[21]to never let it go,\w4 judging by his expression. %(ConvCancel)\e"
 
 
 	if plushgiven > 1
 		{
-			"\0\s[0]*You give Jazz a stuffed plushie. \w8\s[33]He takes it carefully \s[37]and adds it to its soft friends. \w8\s[22]\n\n%(jf)THE MORE THE MERRIER... \w8AND CASHMERIER.%(plushg)%(ConvCancel)\e"
-			"\0\s[0]*You give Jazz a stuffed plushie. \w8\s[33]He takes it with \s[37]a smile. \w8\s[6]\n\n%(jf)ANOTHER DAY,\w4 ANOTHER PLUSH... \w8ANOTHER WAY TO MAKE LIFE LUSH.%(plushg)%(ConvCancel)\e"
-			"\0\s[0]*You give Jazz a stuffed plushie. \w8\s[33]He picks it up \s[37]and places it next to the rest. \w8\s[6]\n\n%(jf)I HAVE NO IDEA WHERE YOU GET ALL THESE TINY SOFT ANIMALS FROM,\w4 BUT THAT IS NONE OF MY BUSINESS! \w8\s[24]AS LONG AS YOU ARE NOT POUCHING THEM IN THEIR TINY SOFT NATURAL HABITATS.%(plushg)%(ConvCancel)\e"
-	        "\0\s[0]*You give Jazz a stuffed plushie. \w8\s[33]He takes it with \s[37]a soft smile. \w8\s[5]\n\n%(jf)THANKS!!! \w8I AM DROWNING IN SMALL SOFT THINGS AND THIS IS THE ONLY DROWNING I ALLOW!!!!%(plushg)%(ConvCancel)\e"
-	        "\0\s[0]*You give Jazz a stuffed plushie. \w8\s[33]He grabs it \s[37]excitedly. \w8\s[21]\n\n%(jf)ANOTHER ONE?! \w8I HOPE YOU NEVER EVER RUN OUT OF THOSE!!! \w8\n\n%(df)*Don't worry. \w8You won't.%(plushg)%(ConvCancel)\e"
+			plushgiven = TOINT(plushgiven)
+		    plushgiven += 1
+			"\0\s[0]*You give Jazz a stuffed plushie. \w8\s[33]He takes it carefully \s[37]and adds it to its soft friends. \w8\s[22]\n\n%(jf)THE MORE THE MERRIER... \w8AND CASHMERIER.%(ConvCancel)\e"
+			"\0\s[0]*You give Jazz a stuffed plushie. \w8\s[33]He takes it with \s[37]a smile. \w8\s[6]\n\n%(jf)ANOTHER DAY,\w4 ANOTHER PLUSH... \w8ANOTHER WAY TO MAKE LIFE LUSH.%(ConvCancel)\e"
+			"\0\s[0]*You give Jazz a stuffed plushie. \w8\s[33]He picks it up \s[37]and places it next to the rest. \w8\s[6]\n\n%(jf)I HAVE NO IDEA WHERE YOU GET ALL THESE TINY SOFT ANIMALS FROM,\w4 BUT THAT IS NONE OF MY BUSINESS! \w8\s[24]AS LONG AS YOU ARE NOT POACHING THEM IN THEIR TINY SOFT NATURAL HABITATS.%(ConvCancel)\e"
+	        "\0\s[0]*You give Jazz a stuffed plushie. \w8\s[33]He takes it with \s[37]a soft smile. \w8\s[5]\n\n%(jf)THANKS!!! \w8I AM DROWNING IN SMALL SOFT THINGS AND THIS IS THE ONLY DROWNING I ALLOW!!!!%(ConvCancel)\e"
+	        "\0\s[0]*You give Jazz a stuffed plushie. \w8\s[33]He grabs it \s[37]excitedly. \w8\s[21]\n\n%(jf)ANOTHER ONE?! \w8I HOPE YOU NEVER EVER RUN OUT OF THOSE!!! \w8\n\n%(df)*Don't worry. \w8You won't.%(ConvCancel)\e"
 
 		}
 		
@@ -2343,33 +2362,41 @@ Select.fgrn
 	
 	if totappoints > 30 || badbad > 6
 	{
-		"\0\s[0]*You hand Jazz a plastic figurine. \w8\s[52]He takes it,\w4 \s[1]stares at it for a few seconds and then quickly hides it... \w8somewhere.%(figg)%(ConvCancel)\e"
-		"\0\s[0]*You give Jazz a plastic figurine. \w8\s[52]He carefully picks it \s[4]and puts it into his inventory without much ado.%(figg)%(ConvCancel)\e"
-		"\0\s[0]*You hand Jazz a plastic figurine. \w8\s[52]He takes it \s[1]and quickly puts it away without even looking hard at it.%(figg)%(ConvCancel)\e"
-		"\0\s[0]*You hand Jazz a plastic figurine. \w8\s[52]He carefully picks it,\w4 \s[1]halfheartedly pulls and wiggles its limbs and pockets it away.%(figg)%(ConvCancel)\e"
-		"\0\s[0]*You hand Jazz a plastic figurine. \w8\s[52]He takes it from you \s[1]and mumbles a few words of gratitude. %(figg)%(ConvCancel)\e"
-		"\0\s[0]*You hand Jazz a plastic figurine. \w8\s[52]He takes it,\w4 \s[1]carefully wrapping his claws around the plastic. \w8What made you give this to him?..%(figg)%(ConvCancel)\e"
+		figgiven = TOINT(figgiven)
+		figgiven += 1
+		"\0\s[0]*You hand Jazz a plastic figurine. \w8\s[52]He takes it,\w4 \s[1]stares at it for a few seconds and then quickly hides it... \w8somewhere.%(ConvCancel)\e"
+		"\0\s[0]*You give Jazz a plastic figurine. \w8\s[52]He carefully picks it \s[4]and puts it into his inventory without much ado.%(ConvCancel)\e"
+		"\0\s[0]*You hand Jazz a plastic figurine. \w8\s[52]He takes it \s[1]and quickly puts it away without even looking hard at it.%(ConvCancel)\e"
+		"\0\s[0]*You hand Jazz a plastic figurine. \w8\s[52]He carefully picks it,\w4 \s[1]halfheartedly pulls and wiggles its limbs and pockets it away.%(ConvCancel)\e"
+		"\0\s[0]*You hand Jazz a plastic figurine. \w8\s[52]He takes it from you \s[1]and mumbles a few words of gratitude.%(ConvCancel)\e"
+		"\0\s[0]*You hand Jazz a plastic figurine. \w8\s[52]He takes it,\w4 \s[1]carefully wrapping his claws around the plastic. \w8What made you give this to him?..%(ConvCancel)\e"
 		
 		
 		if figgiven > 1
 		{
-			 "\0\s[0]*You hand Jazz a plastic figurine. \w8\s[52]He takes it,\w4 \s[3]subtly wondering about your motives. \w8But he is not going to look a gifted figurine force in the mouth(s). %(figg)%(ConvCancel)\e"
+			figgiven = TOINT(figgiven)
+		    figgiven += 1
+			 "\0\s[0]*You hand Jazz a plastic figurine. \w8\s[52]He takes it,\w4 \s[3]subtly wondering about your motives. \w8But he is not going to look a gifted figurine force in the mouth(s).%(ConvCancel)\e"
 		}
      }
 	 
 	 else
 	 {
-	    "\0\s[0]*You hand Jazz a plastic figurine. \w8\s[33]He takes it,\w4 \s[37]moves its arms and legs a little and puts it away with a grateful nod.%(figg)%(ConvCancel)\e"
-	    "\0\s[0]*You hand Jazz a plastic figurine. \w8\s[33]He takes it,\w4 \s[42]immediately starts making battle noises and swings its arms and legs around. \w8Looks like he is having a good time!%(figg)%(ConvCancel)\e"
-	    "\0\s[0]*You hand Jazz a plastic figurine. \w8\s[33]He grabs it,\w4 \s[22]already muttering something about fight strategies and finishing moves.%(figg)%(ConvCancel)\e"
-	    "\0\s[0]*You hand Jazz a plastic figurine. \w8\s[33]He accepts \s[21]your humble offering. \w8His favor is yours. \w8The beast is pleased. \w8You did well.%(figg)%(ConvCancel)\e"
-	    "\0\s[0]*You hand Jazz a plastic figurine. \w8\s[33]He takes it,\w4 \s[22]and in a blink he is lost to the world of living people... \w8instead sinking into the world of plastic warriors and cardboard castles.%(figg)%(ConvCancel)\e"
-	    "\0\s[0]*You hand Jazz a plastic figurine. \w8\s[33]He picks it,\w4 \s[22]grinning. \w8\n\n%(jf)THANKS!! \w8I HOPE IT IS NOT MADE FROM SOMETHING TOXIC,\w4 BECAUSE I PLAY THE PART OF THE NEEDLE-TEETHED BITEY DRAGON AND SOMETIMES I GET STUCK IN THE ROLE. \w8\s[6]I AM NOT BEING WEIRD,\w4 THIS IS PURE METHOD ACTING.%(figg)%(ConvCancel)\e"
-	    "\0\s[0]*You hand Jazz a plastic figurine. \w8\s[33]He takes it from \s[37]your hands,\w4 nodding. \w8I guess this is what he is going to do now...%(figg)%(ConvCancel)\e"
+		 figgiven = TOINT(figgiven)
+		figgiven += 1
+	    "\0\s[0]*You hand Jazz a plastic figurine. \w8\s[33]He takes it,\w4 \s[37]moves its arms and legs a little and puts it away with a grateful nod.%(ConvCancel)\e"
+	    "\0\s[0]*You hand Jazz a plastic figurine. \w8\s[33]He takes it,\w4 \s[42]immediately starts making battle noises and swings its arms and legs around. \w8Looks like he is having a good time!%(ConvCancel)\e"
+	    "\0\s[0]*You hand Jazz a plastic figurine. \w8\s[33]He grabs it,\w4 \s[22]already muttering something about fight strategies and finishing moves.%(ConvCancel)\e"
+	    "\0\s[0]*You hand Jazz a plastic figurine. \w8\s[33]He accepts \s[21]your humble offering. \w8His favor is yours. \w8The beast is pleased. \w8You did well.%(ConvCancel)\e"
+	    "\0\s[0]*You hand Jazz a plastic figurine. \w8\s[33]He takes it,\w4 \s[22]and in a blink he is lost to the world of living people... \w8instead sinking into the world of plastic warriors and cardboard castles.%(ConvCancel)\e"
+	    "\0\s[0]*You hand Jazz a plastic figurine. \w8\s[33]He picks it,\w4 \s[22]grinning. \w8\n\n%(jf)THANKS!! \w8I HOPE IT IS NOT MADE FROM SOMETHING TOXIC,\w4 BECAUSE I PLAY THE PART OF THE NEEDLE-TEETHED BITEY DRAGON AND SOMETIMES I GET STUCK IN THE ROLE. \w8\s[6]I AM NOT BEING WEIRD,\w4 THIS IS PURE METHOD ACTING.%(ConvCancel)\e"
+	    "\0\s[0]*You hand Jazz a plastic figurine. \w8\s[33]He takes it from \s[37]your hands,\w4 nodding. \w8I guess this is what he is going to do now...%(ConvCancel)\e"
 		
 		if figgiven > 1
 		{
-			 "\0\s[0]*You hand Jazz a plastic figurine. \n\n\s[3]%(jf)OH. ANOTHER ONE? %(df)\n\n\w8\s[33]He takes it,\w4 \s[42]pulls out the ones he has already and enacts a tiny battle before you. \w8It is sad that such low-effort animation does not let you see his tactical genius.%(figg)%(ConvCancel)\e"
+			figgiven = TOINT(figgiven)
+		    figgiven += 1
+			 "\0\s[0]*You hand Jazz a plastic figurine. \n\n\s[3]%(jf)OH. ANOTHER ONE? %(df)\n\n\w8\s[33]He takes it,\w4 \s[42]pulls out the ones he has already and enacts a tiny battle before you. \w8It is sad that such low-effort animation does not let you see his tactical genius.%(ConvCancel)\e"
 		}
 		
 	 }
@@ -2379,8 +2406,9 @@ Select.fgrn
 	
 Select.ptrck
 {
-		
-		"\0\s[0]*You hand Jazz a pet rock. \n\n\w8\s[3]OH? \w8WHAT IS IT? \n\n\w8*You explain that it is a pet rock. \n\n\w8\w8\w8...RIGHT. \n\n\w8\w8\w8\s[52]...He takes it with \s[8]a really confused expression. \w8Looks like it did rock his world,\w4 after all. %(trurockg)%(ConvCancel)\e"
+		rockgiven = TOINT(rockgiven)
+		rockgiven = 1
+		"\0\s[0]*You hand Jazz a pet rock. \n\n\w8\s[3]OH? \w8WHAT IS IT? \n\n\w8*You explain that it is a pet rock. \n\n\w8\w8\w8...RIGHT. \n\n\w8\w8\w8\s[52]...He takes it with \s[8]a really confused expression. \w8Looks like it did rock his world,\w4 after all. %(ConvCancel)\e"
 	
 }
 		
