@@ -401,7 +401,9 @@ tsunreact3
 easybook
 
 {
+	easybookgiven = TOINT(easybookgiven)
 	easybookgiven += 1
+	
 	"little sentient animals"
     "fairies"
 	"spooky scary skeletons"
@@ -413,6 +415,7 @@ easybook
 
 hardbook
 {
+	hardbookgiven = TOINT(hardbookgiven)
 	hardbookgiven += 1
 	"astronomy"
 	"physics"
@@ -425,6 +428,7 @@ hardbook
 
 funbook 
 {
+	funbookgiven = TOINT(funbookgiven)
 	funbookgiven += 1
     "adventures"
     "friendship"
@@ -659,38 +663,6 @@ numberp
 	"420"
 	"600"
 	"1000"
-}
-
-
-cubeg
-{
-	cubegiven = 1
-}
-
-plushg
-
-{
-	plushgiven += 1
-}
-
-figg
-{
-	figgiven += 1
-}
-
-puzg
-{
-	puzzlegiven = 1
-}
-
-rockg
-{
-	rocketgiven = 1
-}
-
-trurockg
-{
-	rockgiven = 1
 }
 
 
