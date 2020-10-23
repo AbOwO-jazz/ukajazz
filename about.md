@@ -1,7 +1,8 @@
+---
 layout: page
 title: "About Jazz"
 permalink: /ukajazz/about/
-
+---
 
 Jazz the Skeleton, an UT based Ukagaka, is ready to settle on your desktop.
 
