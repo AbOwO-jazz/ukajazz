@@ -31,7 +31,7 @@ To use him, you should:
 5. Congratulations!!!
 
 
----------------------
+
 
 A little about interacting with Jazz:
 
@@ -54,17 +54,17 @@ or what is it in that photo that appears in his inventory sometimes.
 It might even lead to learning his story. After you badger him about it a little.
 However, this path is only open to his friends/lovers!
 
----------------------
+
 
 The baloon used with Jazz is z_undertale by Zarla-S! (Technically, you can use the default one as well, but it won't give you that natural feel,
 haha.)
 
----------------------
+
 
 If you encounter a bug, please tell me! 
 My Tumblr is https://closetdwellertales.tumblr.com/
 
----------------------
+
 
 Jazz has been created with the help of a template/tutorial by Zarla-S and I cannot be more grateful for those.
 You can find them at:
@@ -79,6 +79,6 @@ Dreamwidth - https://zarla.dreamwidth.org/
 
 Tumblr - zarla-s.tumblr.com
 
----------------------
+
 
 Thank you for choosing this little buddy! Good luck!
