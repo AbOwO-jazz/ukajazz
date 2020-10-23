@@ -1,3 +1,3 @@
-[About Jazz](./about.md).
+[About Jazz](./about.html).
 
 [Versions/Update information](./updates.md).
