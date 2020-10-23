@@ -1,3 +1,8 @@
+layout: page
+title: "About Jazz"
+permalink: /ukajazz/about/
+
+
 Jazz the Skeleton, an UT based Ukagaka, is ready to settle on your desktop.
 
 Ukagaka (伺か), Nanika (何か), Sakura (さくら), Nin'i-tan (任意たん) or Nise-Haruna (偽春菜) is a catch-all term for Japanese software  which shares a single format and function: to provide mascot  characters for the user’s computer desktop. These characters can  perform some useful functions such as checking e-mail or adjusting the  clock of the computer, but are most popular as an aesthetic add-on which “says” weird things. 
@@ -43,8 +48,9 @@ Aside from that, you can build up a relationship with him, either positive or ne
 Depending on the path you take, he will treat you differently, and new options will be unlocked.
 To progress either way, you need to pile on enough positive (pets, praise, gifts) or negative (beating, scolding) actions.
 
-To unlock certain secrets, you might want to 1) check his chest, 2)check a certain photograph in his inventory. 
-It might even lead to learning his story. 
+There are certain secrets you can unlock. You might want to see what he is hiding on his chest... 
+or what is it in that photo that appears in his inventory sometimes.
+It might even lead to learning his story. After you badger him about it a little.
 However, this path is only open to his friends/lovers!
 
 ---------------------
