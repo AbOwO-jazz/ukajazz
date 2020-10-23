@@ -11,12 +11,12 @@ Ukagaka (伺か), Nanika (何か), Sakura (さくら), Nin'i-tan (任意たん) 
 Jazz is meant to be a helper ghost, reminding you to take care of yourself.  He has all sorts of advice, as well as options to cheer you up or suggest some helpful links.  He will also remind you to stand up or drink some water! 
 
 Aside from that, he has:
-Abilities to change your wallpaper, check your clock, take out your trash and more!
-(Possible) secrets!
-Three relationship options: friend, beloved... or a friendly acquaintance!
-Different advice to give!
-An option to apologise for your misdeeds!
--slaps the skeleton- And all the love that he can hold!!!
+* Abilities to change your wallpaper, check your clock, take out your trash and more!
+* (Possible) secrets!
+* Three relationship options: friend, beloved... or a friendly acquaintance!
+* Different advice to give!
+* An option to apologise for your misdeeds!
+* -slaps the skeleton- And all the love that he can hold!!!
 
 To use him, you should:
 
@@ -30,8 +30,7 @@ To use him, you should:
 
 5. Congratulations!!!
 
-
-
+***
 
 A little about interacting with Jazz:
 
@@ -54,30 +53,30 @@ or what is it in that photo that appears in his inventory sometimes.
 It might even lead to learning his story. After you badger him about it a little.
 However, this path is only open to his friends/lovers!
 
-
+***
 
 The baloon used with Jazz is z_undertale by Zarla-S! (Technically, you can use the default one as well, but it won't give you that natural feel,
 haha.)
 
-
+***
 
 If you encounter a bug, please tell me! 
-My Tumblr is https://closetdwellertales.tumblr.com/
+My Tumblr is [here](https://closetdwellertales.tumblr.com/)
 
-
+***
 
 Jazz has been created with the help of a template/tutorial by Zarla-S and I cannot be more grateful for those.
 You can find them at:
 
-Walkthrough for the template for anyone interested - http://www.ashido.com/ukagaka/walkthrough.html
+[Walkthrough for the template for anyone interested](http://www.ashido.com/ukagaka/walkthrough.html)
 
 And here are some of Zarla's links:
 
-livejournal - https://zarla.livejournal.com/
+[livejournal](https://zarla.livejournal.com/)
 
-Dreamwidth - https://zarla.dreamwidth.org/
+[Dreamwidth](https://zarla.dreamwidth.org/)
 
-Tumblr - zarla-s.tumblr.com
+[Tumblr](zarla-s.tumblr.com)
 
 
 
