@@ -5,14 +5,12 @@ Ukagaka (伺か), Nanika (何か), Sakura (さくら), Nin'i-tan (任意たん) 
 Jazz is meant to be a helper ghost, reminding you to take care of yourself.  He has all sorts of advice, as well as options to cheer you up or suggest some helpful links.  He will also remind you to stand up or drink some water! 
 
 Aside from that, he has:
-
-    Abilities to change your wallpaper, check your clock, take out your trash and more!
-    (Possible) secrets!
-    Three relationship options: friend, beloved... or a friendly acquaintance!
-    Different advice to give!
-    An option to apologise for your misdeeds!
-    Varying reactions, based on your actions!
-    -slaps the skeleton- And all the love that he can hold!!!
+Abilities to change your wallpaper, check your clock, take out your trash and more!
+(Possible) secrets!
+Three relationship options: friend, beloved... or a friendly acquaintance!
+Different advice to give!
+An option to apologise for your misdeeds!
+-slaps the skeleton- And all the love that he can hold!!!
 
 To use him, you should:
 
