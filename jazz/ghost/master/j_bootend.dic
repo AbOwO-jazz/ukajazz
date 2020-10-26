@@ -42,6 +42,49 @@ OnFirstBoot
 	simplecounter    = 0
 	ifpapyrus        = "OFF"
 	punchpoints      = 0
+	nosey            = 0
+	totbooks         = 0
+	totgift          = 0
+	levelup          = 0
+	counter          = 0
+	counter2         = 0
+	skelelove        = 0
+	
+	
+	LoveTowardsUser    =  "endless"
+	
+	
+	
+	currappoints = TOINT(currappoints)
+	totappoints = TOINT(totappoints)
+	badbad = TOINT(badbad)
+	apology = TOINT(apology)
+	petpet = TOINT(petpet)
+	lovelove = TOINT(lovelove)
+	badbad = TOINT(badbad)
+	snackeat = TOINT(snackeat)
+	beatbeat = TOINT(beatbeat)
+	apology = TOINT(apology)
+	givegift = TOINT(givegift)
+	hughug = TOINT(hughug)
+	punchpoints = TOINT(punchpoints)
+	hardbookgiven = TOINT(hardbookgiven)
+	easybookgiven = TOINT(easybookgiven)
+	funbookgiven = TOINT(funbookgiven)
+	resetter = TOINT(resetter)
+	simplecounter = TOINT(simplecounter)
+	cubegiven = TOINT(cubegiven)
+	rockgiven = TOINT(rockgiven)
+	rocketgiven = TOINT(rocketgiven)
+	plushgiven = TOINT(plushgiven)
+	puzzlegiven = TOINT(puzzlegiven)
+	figgiven = TOINT(figgiven)
+	totbooks = TOINT(totbooks)
+	totgift = TOINT(totgift)
+	mindchanger = TOINT(mindchanger)
+	levelup = TOINT(levelup)
+
+
 	
 	
  	aitalkinterval = 400 
@@ -173,6 +216,40 @@ OnBoot
 	passsec = 0
 	snackeat = 0
 	
+	currappoints = TOINT(currappoints)
+	totappoints = TOINT(totappoints)
+	badbad = TOINT(badbad)
+	apology = TOINT(apology)
+	petpet = TOINT(petpet)
+	lovelove = TOINT(lovelove)
+	badbad = TOINT(badbad)
+	snackeat = TOINT(snackeat)
+	beatbeat = TOINT(beatbeat)
+	apology = TOINT(apology)
+	givegift = TOINT(givegift)
+	hughug = TOINT(hughug)
+	punchpoints = TOINT(punchpoints)
+	hardbookgiven = TOINT(hardbookgiven)
+	easybookgiven = TOINT(easybookgiven)
+	funbookgiven = TOINT(funbookgiven)
+	resetter = TOINT(resetter)
+	simplecounter = TOINT(simplecounter)
+	cubegiven = TOINT(cubegiven)
+	rockgiven = TOINT(rockgiven)
+	rocketgiven = TOINT(rocketgiven)
+	plushgiven = TOINT(plushgiven)
+	puzzlegiven = TOINT(puzzlegiven)
+	figgiven = TOINT(figgiven)
+	totbooks = TOINT(totbooks)
+	totgift = TOINT(totgift)
+	mindchanger = TOINT(mindchanger)
+	
+	if jazzlover == 1 || jazzfriend == 1 {skelelove = 1}
+	
+    counter           = 0
+	counter2          = 0 
+	
+	
 	
 	
  	"\0\s[0]" 
@@ -187,7 +264,9 @@ OnBoot
 		"\0\s[50]*..."
 	}
 	
-	if dayslot == userbirthday && gotwhatscoming != 1 //Now we're getting into the if statements. These check what the date is and, if it's a certain value, displays special dialogue. Here, the if statement is looking at the dayslot value (which we just defined) and evaluating it using the == operator to see if it equals another value, in this case the value "userbirthday". Basically this is checking to see if it's the user's birthday.
+	else {
+	
+	if dayslot == userbirthday //Now we're getting into the if statements. These check what the date is and, if it's a certain value, displays special dialogue. Here, the if statement is looking at the dayslot value (which we just defined) and evaluating it using the == operator to see if it equals another value, in this case the value "userbirthday". Basically this is checking to see if it's the user's birthday.
 	
 	{
 		"\0\s[28]%(jf)OH WAIT!!! \w8IT'S %(bornmonthprint) %(borndayprint)!\w8\s[5]HAPPY BIRTHDAY,\w4 %(username)!!!\e" 
@@ -202,9 +281,17 @@ OnBoot
 
 	}
 	
+	elseif dayslot == "9month 15day"
+	{
+		"\_v[toby.mp3]\0\s[3]%(jf)A LITTLE WHITE DOG JUST RAN PAST ME. \w8I WONDER IF IT IS A SIGN OF GOOD LUCK OR BAD LUCK?\e"
+		"\_v[toby.mp3]\0\s[3]%(jf)WHERE IS THIS MUSIC COMING FROM AND WHO HAS BEEN BLARING IT THE ENTIRE DAY?\e"
+		"\0\s[6]%(jf)IT IS A BEAUTIFUL DAY OUTSIDE. \w8MAYBE I WILL GO VISIT A CONCERT...\e"
+	}
+	
 	else
 	{
 		"%(normalboottalk)" //If none of the days above match the current date, the ghost instead will go down to the next function, normalboottalk.
+	}
 	}
 }
 
@@ -293,14 +380,16 @@ OnClose
  {
  timeslot = GetTimeSlot 
  --
-	if gotwhatscoming == 1
-	{
-		"\0\s[50]*...\w8\w8"
-	}
-	   
+	
 	
 	  if passmin >= 5	
 		{
+			if gotwhatscoming == 1
+	    {
+		"\0\s[50]*...\w8\w8"
+	    }
+	   else 
+	   {
 			if RAND(100) < 50 
 			{
 				"\0\s[31]%(jf)SEE YOU LATER!\w8\w8"
@@ -351,7 +440,7 @@ OnClose
 					
 				}
 			}
-				
+		}
  		}
 	
  		

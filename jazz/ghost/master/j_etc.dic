@@ -1,6 +1,31 @@
 ﻿//---------------------------Miscellaneous Functions--------------------------
 
 
+
+
+
+//SHIORI3FW.SetDelayEvent('FunctionName',seconds)
+
+OnPlateSeen
+ {
+	seenplate = 1 
+ }
+
+OnStorySeen
+{
+	truebackstory = 1
+}
+
+OnCubeSolved
+{
+	solvedcube = 1
+}
+
+OnSeenPhoto
+{
+	photoseen = 1
+}
+
 //--OnFileDrop2
 
 
@@ -712,7 +737,9 @@ OnUpdateFailure
  
 OnUpdate.OnDownloadBegin
  {
- 	
+ 	version = 3
+	if version == 3 {photoseen = 0}
+	
 	
 	if gotwhatscoming == 1
 	{
@@ -878,10 +905,11 @@ Select.Headline_Cancel
 	elseif badbad > 10
 		{
 			
-		"\0\s[4]%(jf)*That's enough.\e"
+		"\0\s[4]*That's enough.\e"
 		}
-	
+	else{
 	"\0\s[0]%(jf)I GUESS THAT'S ENOUGH LOOKING AT HEADLINES.\e"
+	}
 }
 
  //---- OnHeadlinesenseComplete -------------------------------------------------------
@@ -896,7 +924,7 @@ OnHeadlinesenseComplete
 	 elseif badbad > 10
 		{
 			
-		"\0\s[4]%(jf)*There is no update. \w8%(reference0).\e"
+		"\0\s[4]*There is no update. \w8%(reference0).\e"
 		}
 	 
 	 else 

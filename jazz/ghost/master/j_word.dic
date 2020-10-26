@@ -4,6 +4,33 @@
 //Essentially, what this file is for is for creating lists populated with items, and storing them in a word that can later be called during dialogue. If you've read the walkthrough or gone through any of the other .dic files, you've probably seen these before. They are always preceded with a % sign and have a word in parentheses (well, almost always) afterwards. %(username) is one, which displays the user's name, and %(heshe) is another, which displays the right pronoun depending on what the user selected in bootend.dic or menu.dic. Other ones you might not have seen include %(passmin), which shows how many minutes have passed since the ghost was started, %(screenheight) which shows the height of the display they're currently on, and %(keroname) for the name of the second character, among many, many others. Many of these are predefined by the AYA scripting and will be listed on the CROW-SSP site mentioned above, and many of them you will never have to use. By far the ones you will be using the most will be %(username) and the pronoun ones, and those are the only ones you'll have to worry about normally.
 
 
+
+
+
+experiment
+{
+	lovelove += 1
+	--
+	if lovelove == 20 {counter += 1}
+	elseif lovelove == 50 {counter += 1}
+	elseif lovelove == 100 {counter += 1}
+	elseif lovelove == 150 {counter += 1}
+	
+}
+
+experiment2
+{
+	badbad += 1
+	--
+	if badbad == 20 {counter2 += 1}
+	elseif badbad == 50 {counter2 += 1}
+	elseif badbad == 100 {counter2 += 1}
+	elseif badbad == 150 {counter2 += 1}
+	
+}
+
+
+
 jf
 {
 	if ifpapyrus == "ON"
@@ -401,8 +428,7 @@ tsunreact3
 easybook
 
 {
-	easybookgiven = TOINT(easybookgiven)
-	easybookgiven += 1
+	
 	
 	"little sentient animals"
     "fairies"
@@ -415,8 +441,7 @@ easybook
 
 hardbook
 {
-	hardbookgiven = TOINT(hardbookgiven)
-	hardbookgiven += 1
+	
 	"astronomy"
 	"physics"
 	"human biology"
@@ -428,8 +453,7 @@ hardbook
 
 funbook 
 {
-	funbookgiven = TOINT(funbookgiven)
-	funbookgiven += 1
+	
     "adventures"
     "friendship"
     "space exploration"

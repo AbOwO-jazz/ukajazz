@@ -36,7 +36,8 @@ OnTeachName
 
 OnNameTeach
 {
-	tempname = reference0 //this stores the name value temporarily in reference0
+	tempname = reference0	//this stores the name value temporarily in reference0
+	
 	
 	if reference0 == "Jazz" || reference0 == "jazz" || reference0 == "JAZZ" //this checks to see if the user input the name "Girl" OR (that's what || means) "girl". You may want to put in a check here if the user tries to name themselves the same name as your characters, since that could be confusing in dialogue. Or just a response to any kind of strange name, like Barack Obama or Cindy Crawford or Mike Nelson or Random Hajile. Or you can prevent certain offensive names if you don't want users using them. Really the power is yours here. The OR operator there with "Girl" and "girl" is to cover people using lowercase as well. More on operators in the walkthrough page on coding.
 	{
@@ -81,21 +82,22 @@ OnNameTeach
 		
 	}
 	
-	elseif reference0 == "SUZY" || reference0 == "Suzy" || reference0 == "suzy" 
+	elseif reference0 == "frisk" || reference0 == "Frisk" || reference0 == "FRISK" 
 	{
-		"\0\s[8]%(jf)...OKAY? \w8I DO NOT SEE HOW THIS IS SUPPOSED TO BE WEIRD AT ALL. \w8DO YOU WANT A TITLE WITH THAT? %(df)\w8\n\n[half]\![*]\q[Nope,titlenone]\n"
-		--
-		"\![*]\q[Mr.,titlemr]\n"
-		--
-		"\![*]\q[Ms.,titlems]\n"
-		--
-		"\![*]\q[Mx.,titlemx]\n"
-		--
-		"\![*]\q[Lady,titlelady]\n"
-		-- 
-		"\![*]\q[-ssi,titlessi]\n"
-		--
-		"\![*]\q[-san,titlesan]\e"
+		"\0\s[0]*Warning: \w4picking that name will result in a Hard Mode. \w8Do you still wish to continue? \n\n\![*]\q[Yes,yesfrisk] \n\![*]\q[No,nofrisk]\e"
+		
+	}
+	
+	elseif reference0 == "toby" || reference0 == "Toby" || reference0 == "TOBY" 
+	{
+		"\0\s[3]\_v[toby.mp3]%(jf)...I FEEL LIKE THIS IS ALREADY TAKEN, \w4SO MAYBE LET'S NOT FIGHT FOR THE COPYRIGHT.%(df)\![open,inputbox,OnNameTeach,-1]"
+		
+	}
+	
+	
+	elseif reference0 == "SUZY" || reference0 == "Suzy" || reference0 == "suzy" || reference0 == "Ralsei" || reference0 == "ralsei" || reference0 == "RALSEI" || reference0 == "KRIS" || reference0 == "kris" || reference0 == "Kris"
+	{
+		"\0\s[0]*You get a feeling that you cannot pick this option in this world. \w8Try again. \![open,inputbox,OnNameTeach,-1]"
 		
 	}
 	
@@ -291,4 +293,30 @@ NameDone
 {
 		"\0\s[6]%(jf)WELP! \w8YOU ARE NOW CALLED %(username). \w8HAVE FUN WITH THAT.%(jf)\e"
 		//Rewrite this as you like. Note the %(username) tag here, as you should be well familiar with by now from the walkthrough and the other .dic files. That will display the name the user just created.
+}
+
+
+Select.yesfrisk
+{
+	tempname = "FRISK"
+	LoveTowardsUser = TOINT(LoveTowardsUser)
+	LoveTowardsUser - 1
+	"\0\s[0]*Your playing mode is set to Hard Mode. \w8You lose one LoveTowardsUser point. \w8Have fun in this cruel, \w4harsh world. \w8Now, do you want a title? \w8\n\n[half]\![*]\q[Nope,titlenone]\n"
+		--
+		"\![*]\q[Mr.,titlemr]\n"
+		--
+		"\![*]\q[Ms.,titlems]\n"
+		--
+		"\![*]\q[Mx.,titlemx]\n"
+		--
+		"\![*]\q[Lady,titlelady]\n"
+		-- 
+		"\![*]\q[-ssi,titlessi]\n"
+		--
+		"\![*]\q[-san,titlesan]\e"
+}
+
+Select.nofrisk
+{
+	"\0\s[0]*You decide to try something easier. \![open,inputbox,OnNameTeach,-1]"
 }

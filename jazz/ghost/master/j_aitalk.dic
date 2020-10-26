@@ -64,6 +64,31 @@ RandomTalk : nonoverlap
 	   
 	   else 
 	   {
+		   
+		   if counter2 == 1
+           {
+	
+	        lovelove - 10
+			--
+			counter2 = 0
+	        --
+         	"\0\s[4]Congratulations! \w8You leveled up! \w8Jazz's affection DECREASED.\e"
+           }
+		   
+		   
+          elseif counter == 1
+           {
+	
+	         counter = 0
+			 --
+	         "\0\s[4]Level up failure! \w8If you were less of a meanie, \w4Jazz's affection would INCREASE. \w8Try making up to him first.\e"
+              }
+			  
+			  
+		   else
+		   {
+		   
+		   
 		 if badbad > 50
 	   {
 	        "\0\s[4]%(jf)...IF YOU WERE UNHAPPY WITH SOMETHING I DID OR SAID,\w4 YOU WOULD... \w8YOU WOULD TELL ME? \w8RIGHT?\e"
@@ -232,7 +257,7 @@ RandomTalk : nonoverlap
 	
 	   }
 	
-	
+	   }
 	}
 	
 	
@@ -250,10 +275,18 @@ RandomTalk : nonoverlap
 	{
 	
 	
-
+    if counter == 1
+	
+	{
+	    counter = 0
+		--
+	"\0\s[0]Congratulations! \w8You leveled up! \w8Jazz's affection INCREASED.\e"
+     }
+	 
 	
 	
-	
+	 else
+	 {
 	
 	if jazzfriend != 1 && jazzlover != 1 && jazzok != 1 
 	{
@@ -261,6 +294,9 @@ RandomTalk : nonoverlap
 		"\0\s[4]%(jf)UM... HUMAN! I WANTED TO ASK IF YOU... \w8I-IF YOU... \w8\s[1]ACTUALLY NEVERMIND PLEASE FORGET THIS.\e"
 		"\0\s[4]*Jazz wrings his hands... he looks like he wants to ask you something,\w4 but he stays silent.\e"
 	}
+	
+	
+	
 	
 	if passhour >= 1
 	{     
@@ -469,6 +505,10 @@ RandomTalk : nonoverlap
 		"\0\s[9]*Jazz is carried away. \w8Is he remembering something?\e"
 		"\0\s[9]*Jazz mumbles something. \w8You can barely hear the words. \n\n\w8HAD NO CHOICE...\e"
 		"\0\s[9]*Jazz mumbles something. \w8It is too quiet to be heard.\e"
+		"\0\s[9]*Jazz seems relaxed... \w8as if he trusts you completely.\e"
+		"\0\s[9]*Jazz seems as relaxed as he can be.\e"
+
+
 	}
 	
 		
@@ -476,7 +516,7 @@ RandomTalk : nonoverlap
 	{
 		"\0\s[9]*Jazz starts solving the Rubic's cube you gave him,\w4 mumbling something to himself. \w8After a few minutes,\w4 he decides to take a break...s\e"
 		"\0\s[9]*Jazz takes out the Rubic's cube you gave him,\w4 looks at it and puts it back. \w8Perhaps he does not feel like solving it right now...\e"
-		"\0\s[9]*Jazz takes out the Rubic's cube you gave him. \w8He shifts the colors effortlessly,\w4 mumbling,\w4 until... \w8\n\n\s[5]%(username)!!! \w8LOOK!!! \w8I SOLVED IT!!! \n\n\w8*(...You have to take his word for granted,\w4 but you are happy for him anyway.)\e"
+		"\0\s[9]*Jazz takes out the Rubic's cube you gave him. \w8He shifts the colors effortlessly,\w4 mumbling,\w4 until... \w8\n\n\s[5]%(username)!!! \w8LOOK!!! \w8I SOLVED IT!!! \n\n\w8*(...You have to take his word for granted,\w4 but you are happy for him anyway.)\![raise,OnCubeSolved]\e"
 	}
 	
 	
@@ -684,12 +724,12 @@ RandomTalk : nonoverlap
 }
 
 }
-
+}
 
 Select.hater
 {
     
-	if jazzfriend == 1 || jazzlover == 1
+	if skelelove == 1
 	{
 		"\0\s[4]*You tell Jazz that you hated every second of it. \w8You tell him that it hurt to hurt him. \w8You tell him that it felt terrible unlike anything else. \w8\n\n\s[29]%(jf)BUT... \w8BUT THEN,\w4 WHY?.. \w8YOU TOLD ME THAT YOU LIKED ME SO MUCH,\w4 AND THEN YOU... \w8WHY WOULD YOU DO THAT TO SOMEONE YOU LIKE? \w8WHY WOULD YOU,\w4 IF YOU HATED IT?.. \w8IF YOU KNEW IT WAS NOT OKAY?.. \x\c%(goodbye)"
 	
@@ -705,7 +745,7 @@ Select.hater
 Select.lover
 {
     
-	if jazzfriend == 1 || jazzlover == 1
+	if skelelove == 1
 	{
 		"\0\s[4]*You tell Jazz that you loved every second of it. \w8\s[2]You tell him that it felt great to hurt him. \w8You tell him that it was fun unlike anything else.. \w8\w8\w8\n\n\s[43]%(jf)BUT... \w8\w8\w8%(username)... \w8YOU TOLD ME THAT YOU LIKED ME SO MUCH,\w4 AND THEN YOU... \w8WHY WOULD YOU DO THAT TO SOMEONE YOU LIKE? \w8IT IS... \w8I CANNOT UNDERSTAND... \x\c%(goodbye)"
 	
@@ -720,7 +760,7 @@ Select.lover
 Select.knower
 {
     
-	if jazzfriend == 1 || jazzlover == 1
+	if skelelove == 1
 	{
 		"\0\s[4]*You tell Jazz that you wanted to know. \w8\s[2]You tell him that you were curious. \w8You tell him that you just wanted to learn more,\w4 and more,\w4 and more. \w8\w8\w8\n\n\s[43]%(jf)BUT... \w8\w8\w8%(username)... \w8YOU TOLD ME THAT YOU LIKED ME SO MUCH,\w4 AND THEN YOU... \w8\w8YOU ARE JUST LIKE... \w8\w8\w8JUST LIKE THEM... \x\c%(goodbye)"
 	
@@ -736,7 +776,7 @@ Select.knower
 goodbye
 {
 	gotwhatscoming = 1
-   "\![enter,\w4passivemode]\0\b[2]\s[4]%(jf)HUMAN... \w8%(username)... \w8\w8\w8I THINK YOU ARE NOT WELL. \w8I DO NOT UNDERSTAND,\w4 BUT... \w8I THINK YOU NEED TO THINK ABOUT THINGS YOU DO. \w8THINGS YOU ARE WILLING TO COMMIT. \w8AND... \w8\s[29]I THINK IT IS NOT MY PLACE TO FORCE YOU TO.\w8\s[45]\w2\s[46]\w3\s[47]\w8\s[48]I... \w8\w8I AM SORRY,\w4 BUT THIS IS GOODBYE,\w4 %(username). \w8FOR NOW. \w8I KNOW YOU CAN BE BETTER THAN THAT! \w8I KNOW YOU CAN CHANGE. \w8AND... \w8I WANT YOU TO HAVE THIS TO REMIND YOU TO.\w8\8\s[49]GOODBYE. \w8\w8I AM SORRY. \w8\w8I WILL ALWAYS BE YOUR FRIEND.\w8\w8\s[50]\w8\w8\w8\![leave,passivemode]\e"
+   "\![enter,passivemode]\0\b[2]\s[4]%(jf)HUMAN... \w8%(username)... \w8\w8\w8I THINK YOU ARE NOT WELL. \w8I DO NOT UNDERSTAND,\w4 BUT... \w8I THINK YOU NEED TO THINK ABOUT THINGS YOU DO. \w8THINGS YOU ARE WILLING TO COMMIT. \w8AND... \w8\s[29]I THINK IT IS NOT MY PLACE TO FORCE YOU TO.\w8\s[45]\w2\s[46]\w3\s[47]\w8\s[48]I... \w8\w8I AM SORRY,\w4 BUT THIS IS GOODBYE,\w4 %(username). \w8FOR NOW. \w8I KNOW YOU CAN BE BETTER THAN THAT! \w8I KNOW YOU CAN CHANGE. \w8AND... \w8I WANT YOU TO HAVE THIS TO REMIND YOU TO.\w8\8\s[49]GOODBYE. \w8\w8I AM SORRY. \w8\w8I WILL ALWAYS BE YOUR FRIEND.\w8\w8\s[50]\w8\w8\w8\![leave,passivemode]\e"
 
 }
 
@@ -833,6 +873,12 @@ OnSecondChange
  		{
 	 	passsec = 0
  		passmin = passmin + 1
+		
+		if timer1min == 1
+		{
+			timer1min = 0
+			"Timer message"
+		}
 		}
  	else
  		{
@@ -869,15 +915,19 @@ OnSurfaceRestore
  	
 	if gotwhatscoming == 1
 		{
-			"\0\s[50]\e"
+			"\0\s[50]"
+			--
 			if lovelove < 0 { lovelove = 0 }
+			--
 	        if badbad < 0 { badbad = 0 }
 		}
 		
 		elseif badbad > 50 || totappoints > 100
 		{
 			if lovelove < 0 { lovelove = 0 }
+			--
 	        if badbad < 0 { badbad = 0 }
+			--
 			"\0\s[4]"
 			"\0\s[9]"
 		}
@@ -885,8 +935,13 @@ OnSurfaceRestore
 	 else
 	 {
 	"\0\s[0]"
+	--
 	if lovelove < 0 { lovelove = 0 }
+	--
 	if badbad < 0 { badbad = 0 }
+	
+	
+ 
 	 }
  }
 
